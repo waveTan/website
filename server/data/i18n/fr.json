@@ -1,0 +1,4 @@
+{
+  "goodbye": "Au revoir",
+  "greeting": "Bonjour ${name}"
+}

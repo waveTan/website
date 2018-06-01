@@ -1,0 +1,5 @@
+{
+  "welcome": "Welcome, world",
+  "goodbye": "Goodbye",
+  "greeting": "Hello ${name}"
+}

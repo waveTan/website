@@ -1,0 +1,13 @@
+.idea
+.vscode/
+.DS_Store
+
+/client/node_modules
+/client/*.log*
+/client/dist
+/client/build/env.config.json
+/client/.env
+
+/server/node_modules
+/server/*.log*
+/server/.env

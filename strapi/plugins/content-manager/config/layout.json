@@ -1,0 +1,25 @@
+{
+  "product": {
+    "attributes": {
+      "name": {
+        "appearance": ""
+      },
+      "description": {
+        "appearance": ""
+      },
+      "locale": {
+        "appearance": ""
+      }
+    }
+  },
+  "languages": {
+    "attributes": {
+      "locale": {
+        "appearance": ""
+      },
+      "language": {
+        "appearance": ""
+      }
+    }
+  }
+}

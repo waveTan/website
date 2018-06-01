@@ -1,0 +1,132 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "strapi-plugin-settings-manager@alpha",
+        "scope": null,
+        "escapedName": "strapi-plugin-settings-manager",
+        "name": "strapi-plugin-settings-manager",
+        "rawSpec": "alpha",
+        "spec": "alpha",
+        "type": "tag"
+      },
+      "C:\\Users\\Josh\\Documents\\MyProjects\\nulsWebsite"
+    ]
+  ],
+  "_from": "strapi-plugin-settings-manager@alpha",
+  "_id": "strapi-plugin-settings-manager@3.0.0-alpha.12.2",
+  "_inCache": true,
+  "_location": "/strapi-plugin-settings-manager",
+  "_nodeVersion": "10.0.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/strapi-plugin-settings-manager_3.0.0-alpha.12.2_1526569862103_0.9774048756563192"
+  },
+  "_npmUser": {
+    "name": "strapi",
+    "email": "support@strapi.io"
+  },
+  "_npmVersion": "5.1.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "strapi-plugin-settings-manager@alpha",
+    "scope": null,
+    "escapedName": "strapi-plugin-settings-manager",
+    "name": "strapi-plugin-settings-manager",
+    "rawSpec": "alpha",
+    "spec": "alpha",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/strapi-plugin-settings-manager/-/strapi-plugin-settings-manager-3.0.0-alpha.12.2.tgz",
+  "_shasum": "4edc70b563ae71faf8d610758a7bc217de3d54aa",
+  "_shrinkwrap": null,
+  "_spec": "strapi-plugin-settings-manager@alpha",
+  "_where": "C:\\Users\\Josh\\Documents\\MyProjects\\nulsWebsite",
+  "author": {
+    "name": "Strapi team",
+    "email": "hi@strapi.io",
+    "url": "http://strapi.io"
+  },
+  "bugs": {
+    "url": "https://github.com/strapi/strapi/issues"
+  },
+  "dependencies": {},
+  "description": "Strapi plugin to manage settings.",
+  "devDependencies": {
+    "flag-icon-css": "^2.8.0",
+    "react-select": "^1.0.0-rc.5",
+    "strapi-helper-plugin": "3.0.0-alpha.12.2"
+  },
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-z9YmdFWj2lQ5f5Vp3jWQsCm4sxOY1M8E0vuctHPb+Nm5BW6ogjZr4FkPqd4b7y9taKuxDtUmNbIAOQuO7F2DSA==",
+    "shasum": "4edc70b563ae71faf8d610758a7bc217de3d54aa",
+    "tarball": "https://registry.npmjs.org/strapi-plugin-settings-manager/-/strapi-plugin-settings-manager-3.0.0-alpha.12.2.tgz",
+    "fileCount": 616,
+    "unpackedSize": 8281493,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa/ZuGCRA9TVsSAnZWagAAmsUQAJWmexQeLMN2QA0GLwKH\nzXfODqfvOybkJoZRwvu9s3YeGQGtvzO8PqNrDbtOt+YgJtF6qAuLOWTWRGqy\no7zY37Mgp4bd9V/EnaQVLlVpAKBtkQNGxOhR8i0zgKYnbbu3mdWmJ/Lkl1pG\nmLrCmUQmRwMJQ8zTpCcrd9YP51kdFDZBA0NvpmfKuKH+t3+1TtuGUcUBAq1R\nXdX7Qh6JJKEOWJgQ7tdHxWBjjlWjz1tWHUlTeLYFkjZQweOlDgMbsOaeBY7L\nnXQPJtnT5y9IJULwCTr9GYUGMSgp9BYyUHSAkgDjtuxNH/zxL0VG8ML7kPvN\nhbK2wbWS83i2vhNZr+VaL8g15MDol1JSrdl1BoXDTzI5Lw6MHl1yJmC6bs4U\nLusSDZE2uCFJrzXUeJ0S5Fp2/+u+QuBdbGMRU1d1A5NRIE2V0i3DwQktOeTd\nVqs/OAxIvFFk1w4a/TiB2OgdnY9qHhjPDKv8nZZCjD4JFlLJntblMKdy+U8F\nRRXhvfxZqUaG2J9UJcXQgnJgnYJpwiZpew9ZFxZGri7DZPVVujdR1IKRFQoR\nRTzUmtd0uYGu1Ato0wsU6CJiNoC6BrKchv8m8oEpPqQAn9uEOeHrD+Pi41jc\nMnhjJ3dHm/W94bS18ekS+sH+Oa/vtcqnyqRffPq2bElVpSA0kT8gUITB3AsE\nXeyb\r\n=kHtT\r\n-----END PGP SIGNATURE-----\r\n"
+  },
+  "engines": {
+    "node": ">= 9.0.0",
+    "npm": ">= 5.0.0"
+  },
+  "homepage": "https://github.com/strapi/strapi#readme",
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "Strapi team",
+      "email": "hi@strapi.io",
+      "url": "http://strapi.io"
+    }
+  ],
+  "name": "strapi-plugin-settings-manager",
+  "optionalDependencies": {},
+  "readme": "# Strapi plugin",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/strapi/strapi.git"
+  },
+  "scripts": {
+    "analyze": "node ./node_modules/strapi-helper-plugin/lib/internals/scripts/analyze.js",
+    "analyze:clean": "node ./node_modules/strapi-helper-plugin/node_modules/.bin/rimraf stats.json",
+    "build": "node ./node_modules/strapi-helper-plugin/node_modules/.bin/cross-env NODE_ENV=production node node_modules/strapi-helper-plugin/node_modules/.bin/webpack --config node_modules/strapi-helper-plugin/lib/internals/webpack/webpack.prod.babel.js --color -p --progress",
+    "build:clean": "node ./node_modules/strapi-helper-plugin/node_modules/.bin/rimraf admin/build",
+    "build:dev": "node ./node_modules/strapi-helper-plugin/node_modules/.bin/cross-env NODE_ENV=development node ./node_modules/strapi-helper-plugin/node_modules/.bin/webpack --config node_modules/strapi-helper-plugin/lib/internals/webpack/webpack.prod.babel.js --color -p --progress",
+    "generate": "node ./node_modules/strapi-helper-plugin/node_modules/.bin/plop --plopfile ./node_modules/strapi-helper-plugin/lib/internals/generators/index.js",
+    "lint": "node ./node_modules/strapi-helper-plugin/node_modules/.bin/eslint --ignore-path .gitignore --ignore-pattern '/admin/build/' --config ./node_modules/strapi-helper-plugin/lib/internals/eslint/.eslintrc.json admin",
+    "preanalyze": "npm run analyze:clean",
+    "prebuild": "npm run build:clean",
+    "prepublishOnly": "IS_MONOREPO=true npm run build",
+    "prettier": "node ./node_modules/strapi-helper-plugin/node_modules/.bin/prettier --single-quote --trailing-comma es5 --write \"{admin,__{tests,mocks}__}/**/*.js\"",
+    "start": "node ./node_modules/strapi-helper-plugin/node_modules/.bin/cross-env NODE_ENV=development node ./node_modules/strapi-helper-plugin/lib/server",
+    "test": "npm run lint"
+  },
+  "strapi": {
+    "name": "Settings Manager",
+    "icon": "wrench",
+    "description": "settings-manager.plugin.description"
+  },
+  "version": "3.0.0-alpha.12.2",
+  "warnings": [
+    {
+      "code": "ENOTSUP",
+      "required": {
+        "node": ">= 9.0.0",
+        "npm": ">= 5.0.0"
+      },
+      "pkgid": "strapi-plugin-settings-manager@3.0.0-alpha.12.2"
+    },
+    {
+      "code": "ENOTSUP",
+      "required": {
+        "node": ">= 9.0.0",
+        "npm": ">= 5.0.0"
+      },
+      "pkgid": "strapi-plugin-settings-manager@3.0.0-alpha.12.2"
+    }
+  ]
+}

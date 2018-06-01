@@ -1,0 +1,130 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "strapi-plugin-content-manager@alpha",
+        "scope": null,
+        "escapedName": "strapi-plugin-content-manager",
+        "name": "strapi-plugin-content-manager",
+        "rawSpec": "alpha",
+        "spec": "alpha",
+        "type": "tag"
+      },
+      "C:\\Users\\Josh\\Documents\\MyProjects\\nulsWebsite"
+    ]
+  ],
+  "_from": "strapi-plugin-content-manager@alpha",
+  "_id": "strapi-plugin-content-manager@3.0.0-alpha.12.2",
+  "_inCache": true,
+  "_location": "/strapi-plugin-content-manager",
+  "_nodeVersion": "10.0.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/strapi-plugin-content-manager_3.0.0-alpha.12.2_1526569755270_0.6794597788767847"
+  },
+  "_npmUser": {
+    "name": "strapi",
+    "email": "support@strapi.io"
+  },
+  "_npmVersion": "5.1.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "strapi-plugin-content-manager@alpha",
+    "scope": null,
+    "escapedName": "strapi-plugin-content-manager",
+    "name": "strapi-plugin-content-manager",
+    "rawSpec": "alpha",
+    "spec": "alpha",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/strapi-plugin-content-manager/-/strapi-plugin-content-manager-3.0.0-alpha.12.2.tgz",
+  "_shasum": "61290a70a93f9ea0f33a386df2b360ea6e92768d",
+  "_shrinkwrap": null,
+  "_spec": "strapi-plugin-content-manager@alpha",
+  "_where": "C:\\Users\\Josh\\Documents\\MyProjects\\nulsWebsite",
+  "author": {
+    "name": "Strapi team",
+    "email": "hi@strapi.io",
+    "url": "http://strapi.io"
+  },
+  "bugs": {
+    "url": "https://github.com/strapi/strapi/issues"
+  },
+  "dependencies": {},
+  "description": "A powerful UI to easily manage your data.",
+  "devDependencies": {
+    "react-select": "^1.0.0-rc.5",
+    "strapi-helper-plugin": "3.0.0-alpha.12.2"
+  },
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-sH/D3PKKuezRMg5Jce5gYRKx6GN9VUmc+NzXdV2hI7SgEN3ZfKclhoTYukP4ha6e/2Lw9Y8cJFP+BP3OWmwLWw==",
+    "shasum": "61290a70a93f9ea0f33a386df2b360ea6e92768d",
+    "tarball": "https://registry.npmjs.org/strapi-plugin-content-manager/-/strapi-plugin-content-manager-3.0.0-alpha.12.2.tgz",
+    "fileCount": 96,
+    "unpackedSize": 1697654,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa/ZscCRA9TVsSAnZWagAAW8kP/0BEREL7VhfX2Y2tzHbR\nn0myKnfceKNIcOsC6yk4JDG6zaGf++RgyUJjRLmRi+OllS1k+wkwmRH1fjX+\n9wXJaY/iu884i5EQfIR0bmniYN1YRJXAnecSrMpQlEwdPfOQcjEjw0wIefph\nudjYg+4VyVQQG7qH1Y9aiz20a06tF/M/co0VdBOjSfGODGNFQrilpBSEU8ni\nmH0jXN4CAjtAYMPFaLp4XZW/xbv7EM4aXEA4+YfFN3nEEDeDCwsDI1yvwuc8\nkTRzoYkUAQBBVWbuSF50CkbuNS+s2dRYd/sXfokvNAot1pc1EFUxf1y1aYeh\n1J6G/no30YDxBtaYKhFO7v0PBsn7Z5A1fvNt8YemWd2/4w1n7kScQYI2XR39\nHVzCg7rTfeK3GmeIC0TjT4/xKLmdRPpc6o/mfGUEIJ2sgjBs+WAYSTgIezdZ\nTcVNJSOkEH6++1KrndzYZjDjL1dU/nIv7q3FaXvfk8H556ynqzpxk9GdcMj/\nyE4K0pGAUEJQzKDjYR0sp4RpKO53Ek/cAlwTVoFJ7eV0M+xR3b7RF4nuGLOF\n/uoJRItagL3leY5IOv8Fu6ngfWpPMqTVq/DNH7ZijQlesRQsbwGOfZ53yGUg\nkUrjUtz/JwGHGXPVlPZe0q78oN+FPyMVrBuJo85mywZiWlXQNDGskTx9Ql9z\njtp5\r\n=FSzT\r\n-----END PGP SIGNATURE-----\r\n"
+  },
+  "engines": {
+    "node": ">= 9.0.0",
+    "npm": ">= 5.0.0"
+  },
+  "homepage": "https://github.com/strapi/strapi#readme",
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "Strapi team",
+      "email": "hi@strapi.io",
+      "url": "http://strapi.io"
+    }
+  ],
+  "name": "strapi-plugin-content-manager",
+  "optionalDependencies": {},
+  "readme": "# Strapi Content Manager\n\n## Description\n\nThis plugin allows you to manage your data through a UI.\n\n## Contributing\n\nNB: Please refers to the contributing section of the [monorepo](https://github.com/strapi/strapi)\n\n1. Create a new Strapi application: `strapi new myApp`.\n2. Go to your new Strapi app `cd myApp`.\n3. Create a symlink to the monorepo plugin's folder `ln -s /path/to/strapi/monorepo/packages/strapi-plugin-content-manager ./plugins/content-manager`\n3. Copy the layout SASS variables folder into your project from `admin/public/app/styles/variables` to `plugins/content-manager/public/app/styles/variables`\n4. Start your app `strapi start` (Don't forget to return to the root of your app's directory).\n\n\nln -s -f ./admin/public/app/styles/variables/variables.scss ./plugins/content-manager/public/app/styles/variables/variables.scss\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/strapi/strapi.git"
+  },
+  "scripts": {
+    "analyze": "node ./node_modules/strapi-helper-plugin/lib/internals/scripts/analyze.js",
+    "analyze:clean": "node ./node_modules/strapi-helper-plugin/node_modules/.bin/rimraf stats.json",
+    "build": "node ./node_modules/strapi-helper-plugin/node_modules/.bin/cross-env NODE_ENV=production node ./node_modules/strapi-helper-plugin/node_modules/.bin/webpack --config node_modules/strapi-helper-plugin/lib/internals/webpack/webpack.prod.babel.js --color -p --progress",
+    "build:clean": "node ./node_modules/strapi-helper-plugin/node_modules/.bin/rimraf admin/build",
+    "build:dev": "node ./node_modules/strapi-helper-plugin/node_modules/.bin/cross-env NODE_ENV=development node ./node_modules/strapi-helper-plugin/node_modules/.bin/webpack --config node_modules/strapi-helper-plugin/lib/internals/webpack/webpack.prod.babel.js --color -p --progress",
+    "generate": "node ./node_modules/plop/plop.js --plopfile ./node_modules/strapi-helper-plugin/lib/internals/generators/index.js",
+    "preanalyze": "npm run analyze:clean",
+    "prebuild": "npm run build:clean",
+    "prepublishOnly": "IS_MONOREPO=true npm run build",
+    "prettier": "node ./node_modules/strapi-helper-plugin/node_modules/.bin/prettier --single-quote --trailing-comma es5 --write \"{admin,__{tests,mocks}__}/**/*.js\"",
+    "start": "node ./node_modules/strapi-helper-plugin/node_modules/.bin/cross-env NODE_ENV=development PLUGIN=true node ./node_modules/strapi-helper-plugin/lib/server",
+    "test": "echo \"Error: no test specified\""
+  },
+  "strapi": {
+    "name": "Content Manager",
+    "icon": "plug",
+    "description": "content-manager.plugin.description"
+  },
+  "version": "3.0.0-alpha.12.2",
+  "warnings": [
+    {
+      "code": "ENOTSUP",
+      "required": {
+        "node": ">= 9.0.0",
+        "npm": ">= 5.0.0"
+      },
+      "pkgid": "strapi-plugin-content-manager@3.0.0-alpha.12.2"
+    },
+    {
+      "code": "ENOTSUP",
+      "required": {
+        "node": ">= 9.0.0",
+        "npm": ">= 5.0.0"
+      },
+      "pkgid": "strapi-plugin-content-manager@3.0.0-alpha.12.2"
+    }
+  ]
+}

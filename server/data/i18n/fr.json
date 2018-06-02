@@ -1,4 +1,36 @@
 {
   "goodbye": "Au revoir",
-  "greeting": "Bonjour ${name}"
+  "greeting": "Bonjour {name}",
+  "dates": {
+    "months": {
+      "short": [
+        "janv.",
+        "févr.",
+        "mars",
+        "avr.",
+        "mai",
+        "juin",
+        "juil.",
+        "août",
+        "sept.",
+        "oct.",
+        "nov.",
+        "déc."
+      ],
+      "long": [
+        "janvier",
+        "février",
+        "mars",
+        "avril",
+        "mai",
+        "juin",
+        "juillet",
+        "août",
+        "septembre",
+        "octobre",
+        "novembre",
+        "décembre"
+      ]
+    }
+  }
 }

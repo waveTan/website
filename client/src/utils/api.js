@@ -1,14 +1,8 @@
 import axios from 'axios';
 import store from '@/store';
 
-// An instance for general backend stuff
-// const instance = axios.create({
-// 	baseURL: API
-// });
-
-// An instance scoped ONLY to the API endpoints. Use this 99% of the time
 const apiInstance = axios.create({
-	baseURL: String(`${API}api/${API_VERSION}`)
+	baseURL: String(`${process.env.API}api/${process.env.API_VERSION}`)
 });
 
 // Convenience functions

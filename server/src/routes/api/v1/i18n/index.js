@@ -1,7 +1,8 @@
 const express = require('express');
-const router = express.Router();
-const routes = require('./routes');
+const i18n = require('@/controllers/i18n');
 
-router.get('/:locale', routes.load);
+const router = express.Router();
+
+router.get('/:locale', i18n.load);
 
 module.exports = router;

@@ -1,6 +1,6 @@
 import runtime from 'offline-plugin/runtime';
 
-export default({
+export default ({
 	run: () =>
 	{
 		runtime.install({

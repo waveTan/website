@@ -4,12 +4,16 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const config = require('./config');
 const _ = require('./utils');
-const env = require('./env.config.json');
+// const env = require('./env.config.json');
+const Dotenv = require('dotenv-webpack');
+// const GoogleFontsPlugin = require('google-fonts-webpack-plugin');
+const StylelintPlugin = require('stylelint-webpack-plugin');
+// const PreloadWebpackPlugin = require('preload-webpack-plugin');
 
 module.exports = {
+	mode: 'development',
 	entry: {
-		client: './src/index.js',
-		vendor: ['moment', 'vue']
+		client: './src/index.js'
 	},
 	output: {
 		path: _.outputPath,
@@ -31,7 +35,8 @@ module.exports = {
 		extensions: ['.js', '.vue', '.css', '.json'],
 		alias: {
 			'@': path.join(__dirname, '../src'),
-			__testConfig: path.join(__dirname, '../testConfig')
+			__testConfig: path.join(__dirname, '../testConfig'),
+			assets: path.join(__dirname, '../static')
 		},
 		modules: [
 			_.cwd('node_modules'),
@@ -41,7 +46,7 @@ module.exports = {
 		]
 	},
 	module: {
-		loaders: [
+		rules: [
 			{
 				test: /\.vue$/,
 				loaders: ['vue-loader']
@@ -57,10 +62,7 @@ module.exports = {
 			},
 			{
 				test: /\.(ico|jpg|png|gif|eot|otf|webp|ttf|woff|woff2)(\?.*)?$/,
-				loader: 'file-loader',
-				query: {
-					name: 'static/media/[name].[hash:8].[ext]'
-				}
+				loader: 'url-loader'
 			},
 			{
 				test: /\.svg$/,
@@ -69,8 +71,14 @@ module.exports = {
 		]
 	},
 	plugins: [
+		new StylelintPlugin({
+			files: ['**/*.vue'],
+			syntax: 'scss'
+		}),
+		new Dotenv(),
 		new HtmlWebpackPlugin({
 			title: config.title,
+			chunksSortMode: 'none',
 			template: path.resolve(__dirname, 'index.html'),
 			filename: _.outputIndexPath
 		}),
@@ -82,12 +90,21 @@ module.exports = {
 				to: './'
 			}
 		]),
-		new webpack.DefinePlugin({
-			URL: JSON.stringify(env.URL) || 'http://localhost:4000/',
-			API: JSON.stringify(env.API) || 'http://localhost:3000/',
-			MODE: JSON.stringify(env.MODE) || 'local',
-			API_VERSION: JSON.stringify(env.API_VERSION) || 'v1'
-		}),
+		// new PreloadWebpackPlugin(),
+		// new webpack.DefinePlugin({
+		// 	URL: JSON.stringify(env.URL) || 'http://localhost:4000/',
+		// 	API: JSON.stringify(env.API) || 'http://localhost:3000/',
+		// 	MODE: JSON.stringify(env.MODE) || 'local',
+		// 	API_VERSION: JSON.stringify(env.API_VERSION) || 'v1'
+		// }),
+		// new GoogleFontsPlugin({
+		// 	fonts: [
+		// 		{ family: 'Source Sans Pro', variants: ['300', '600', '700', 'regular', 'italic', '700italic'] }
+		// 	]
+		// }),
+		// new webpack.optimize.LimitChunkCountPlugin({
+		// 	maxChunks: 2
+		// }),
 		// new webpack.optimize.CommonsChunkPlugin({
 		// 	name: 'vendor'
 		// 	// minChunks: ({ resource }) => (
@@ -100,13 +117,13 @@ module.exports = {
 		// 	children: true,
 		// 	minChunks: 3
 		// }),
-		new webpack.optimize.CommonsChunkPlugin({
-			name: 'vendor',
-			minChunks: ({ resource }) => (
-				resource !== undefined &&
-				resource.indexOf('node_modules') !== -1
-			)
-		}),
+		// new webpack.optimize.CommonsChunkPlugin({
+		// 	name: 'vendor',
+		// 	minChunks: ({ resource }) => (
+		// 		resource !== undefined &&
+		// 		resource.indexOf('node_modules') !== -1
+		// 	)
+		// }),
 		// new webpack.optimize.CommonsChunkPlugin({
 		// 	name: 'fontawesome',
 		// 	minChunks: (module) =>
@@ -115,6 +132,11 @@ module.exports = {
 		// 	}
 		// }),
 		// new webpack.optimize.CommonsChunkPlugin({
+		// 	name: 'app',
+		// 	children: true,
+		// 	async: true,
+		// 	minChunks: Infinity
+		// })
 		// 	name: 'main',
 		// 	children: true,
 		// 	async: true,
@@ -135,7 +157,32 @@ module.exports = {
 		// 	}
 		// }),
 		new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
-
 	],
+	optimization: {
+		splitChunks: {
+			cacheGroups: {
+				// 		vendor: {
+				// 			name: 'vendor'
+				// 			// minChunks: (module) =>
+				// 			// {
+				// 			// 	return module.context && module.context.includes('node_modules');
+				// 			// }
+				// 		},
+				// 		fontawesome: {
+				// 			name: 'fontawesome'
+				// 			// minChunks: (module) =>
+				// 			// {
+				// 			// 	return module.context && module.context.includes('@fortawesome');
+				// 			// }
+				// 		},
+				// 		app: {
+				// 			name: 'app',
+				// 			// children: true,
+				// 			// async: true,
+				// 			minChunks: Infinity
+				// 		}
+			}
+		}
+	},
 	target: _.target
 };

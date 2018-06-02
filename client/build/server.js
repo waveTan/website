@@ -36,9 +36,14 @@ catch(err)
 const server = new Server(compiler, Object.assign({
 	noInfo: true,
 	hot: true,
-	historyApiFallback: true,
 	overlay: true,
 	disableHostCheck: true,
+	clientLogLevel: 'warning',
+	historyApiFallback: {
+		rewrites: [
+			{ from: /.*/, to: path.posix.join(config.assetsPublicPath, 'index.html') }
+		]
+	},
 	publicPath: compiler.options.publicPath
 }, devServerOptions));
 

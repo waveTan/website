@@ -1,9 +1,9 @@
 <template>
-    <component v-if="show" :is="wrap" :data-key="id">
-        <slot name="before"></slot>
-        {{language}}
-        <slot></slot>
-    </component>
+	<component v-if="show" :is="wrap" :data-key="id">
+		<i18n :path="id" :places="vars">
+			<slot></slot>
+		</i18n>
+	</component>
 </template>
 
 <script>
@@ -15,14 +15,6 @@
 			},
 			vars: {
 				type: Object
-			},
-			editable: {
-				type: Boolean,
-				default: true
-			},
-			alwaysEditable: {
-				type: Boolean,
-				default: false
 			},
 			// What tag to wrap the text in
 			wrap: {
@@ -36,17 +28,16 @@
 			}
 		},
 		computed: {
-			language()
-			{
-				console.log(this);
-				return this.$t(this.id, this.vars);
-			},
+			// language()
+			// {
+			// 	return this.$t(this.id, this.vars);
+			// },
 			show()
 			{
 				// `conditional` determines whether we want to completely hide the component if the lang key doesn't exist
 				if(this.conditional)
 				{
-					return this.$te(this.id)
+					return this.$te(this.id);
 				}
 
 				return true;

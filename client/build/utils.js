@@ -11,11 +11,11 @@ _.cssLoader = config.cssModules ?
 	'css-loader?-autoprefixer';
 
 _.cssProcessors = [
-	{ loader: '', test: /\.css$/ },
-	{ loader: 'sass-loader?sourceMap', test: /\.scss$/ },
-	{ loader: 'less-loader?sourceMap', test: /\.less$/ },
-	{ loader: 'stylus-loader?sourceMap', test: /\.styl$/ },
-	{ loader: 'sass-loader?indentedSyntax&sourceMap', test: /\.sass$/ }
+	{ loader: '', test: /\.css$/ }
+	// { loader: 'sass-loader?sourceMap', test: /\.scss$/ },
+	// { loader: 'less-loader?sourceMap', test: /\.less$/ },
+	// { loader: 'stylus-loader?sourceMap', test: /\.styl$/ },
+	// { loader: 'sass-loader?indentedSyntax&sourceMap', test: /\.sass$/ }
 ];
 
 _.outputPath = config.electron ?
@@ -42,6 +42,7 @@ _.loadersOptions = () =>
 		{
 			return ['vue-style-loader'].concat(langs).join('!');
 		}
+
 		return ExtractTextPlugin.extract({
 			fallback: 'vue-style-loader',
 			use: langs.join('!')
@@ -56,10 +57,10 @@ _.loadersOptions = () =>
 			vue: {
 				loaders: {
 					css: generateLoader([]),
-					sass: generateLoader(['sass-loader?indentedSyntax&sourceMap']),
-					scss: generateLoader(['sass-loader?sourceMap']),
-					less: generateLoader(['less-loader?sourceMap']),
-					stylus: generateLoader(['stylus-loader?sourceMap']),
+					// sass: generateLoader(['sass-loader?indentedSyntax&sourceMap']),
+					// scss: generateLoader(['sass-loader?sourceMap']),
+					// less: generateLoader(['less-loader?sourceMap']),
+					// stylus: generateLoader(['stylus-loader?sourceMap']),
 					js: 'babel-loader'
 				}
 			}

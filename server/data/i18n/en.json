@@ -1,5 +1,257 @@
 {
   "welcome": "Welcome, world",
   "goodbye": "Goodbye",
-  "greeting": "Hello ${name}"
+  "greeting": "Hello {name}",
+  "header": {
+	"sidebar": {
+	  "home": "Home"
+	},
+	"subSidebar": {
+	  "settings": "Settings",
+	  "language": "Language"
+	}
+  },
+  "dialog": {
+	"switchLanguage": {
+	  "title": "Change language",
+	  "chooseYourLanguage": "Choose your preferred language",
+	  "help": {
+		"body": "If you wish to help with translations you may {contactUs}.",
+		"contactUs": "contact us"
+	  }
+	},
+	"close": "Close"
+  },
+  "languages": {
+	"en": "English",
+	"fr": "French"
+  },
+  "legal": {
+	"terms": {
+	  "title": "Terms and conditions of use",
+	  "introduction": {
+		"title": "Introduction",
+		"p1": "These terms and conditions apply between you, the User of this Website (including any sub-domains, unless expressly excluded by their own terms and conditions), and {name}, the owner and operator of this Website. Please read these terms and conditions carefully, as they affect your legal rights. Your agreement to comply with and be bound by these terms and conditions is deemed to occur upon your first use of the website. If you do not agree to be bound by these terms and conditions, you should stop using the website immediately.",
+		"p2": "In these terms and conditions, User or Users means any third party that accesses the website and is not either (i) employed by {name} and acting in the course of their employment or (ii) engaged as a consultant or otherwise providing services to {name} and accessing the website in connection with the provision of such services.",
+		"p3": "You must be at least 18 years of age to use this Website. By using the website and agreeing to these terms and conditions, you represent and warrant that you are at least 18 years of age."
+	  },
+	  "acceptableUse": {
+		"title": "Intellectual property and acceptable use",
+		"li1": "All Content included on the website, unless uploaded by Users, is the property of {name}, our affiliates or other relevant third parties. In these terms and conditions, Content means any text, graphics, images, audio, video, software, data compilations, page layout, underlying code and software and any other form of information capable of being stored in a computer that appears on or forms part of this Website, including any such content uploaded by Users. By continuing to use the website you acknowledge that such Content is protected by copyright, trademarks, database rights and other intellectual property rights. Nothing on this site shall be construed as granting, by implication, estoppel, or otherwise, any license or right to use any trademark, logo or service mark displayed on the site without the owner's prior written permission",
+		"li2": "You may, for your own personal, non-commercial use only, do the following:",
+		"li2ol1": "Retrieve, display and view the Content on a computer screen",
+		"li3": "You must not otherwise reproduce, modify, copy, distribute or use for commercial purposes any Content without the written permission of {name}."
+	  },
+	  "prohibited": {
+		"title": "Prohibited use",
+		"li1": "You may not use the website for any of the following purposes:",
+		"li1ol1": "In any way which causes, or may cause, damage to the website or interferes with any other person's use or enjoyment of the website;",
+		"li1ol2": "In any way which is harmful, unlawful, illegal, abusive, harassing, threatening or otherwise objectionable or in breach of any applicable law, regulation, governmental order;",
+		"li1ol3": "Making, transmitting or storing electronic copies of Content protected by copyright without the permission of the owner."
+	  },
+	  "links": {
+		"title": "Links to other websites",
+		"li1": "This Website may contain links to other sites. Unless expressly stated, these sites are not under the control of {name} or that of our affiliates.",
+		"li2": "We assume no responsibility for the content of such Websites and disclaim liability for any and all forms of loss or damage arising out of the use of them.",
+		"li3": "The inclusion of a link to another site on this Website does not imply any endorsement of the sites themselves or of those in control of them."
+	  },
+	  "privacyCookies": {
+		"title": "Privacy Policy and Cookies Policy",
+		"li1": {
+		  "body": "Use of the website is also governed by our Privacy Policy and Cookies Policy, which are incorporated into these terms and conditions by this reference. To view the Privacy Policy and Cookies Policy, please click on the following: {privacyAndCookiesPolicy}.",
+		  "privacyAndCookiesPolicy": "Privacy and Cookies Policy"
+		}
+	  },
+	  "availability": {
+		"title": "Availability of the website and disclaimers",
+		"li1": "Any online facilities, tools, services or information that {name} makes available through the website (the <b>Service</b>) is provided \"as is\" and on an \"as available\" basis. We give no warranty that the Service will be free of defects and/or faults. To the maximum extent permitted by the law, we provide no warranties (express or implied) of fitness for a particular purpose, accuracy of information, compatibility and satisfactory quality. {name} is under no obligation to update information on the website.",
+		"li2": "Whilst {name} uses reasonable endeavours to ensure that the website is secure and free of errors, viruses and other malware, we give no warranty or guaranty in that regard and all Users take responsibility for their own security, that of their personal details and their computers.",
+		"li3": "{name} accepts no liability for any disruption or non-availability of the website.",
+		"li4": "{name} reserves the right to alter, suspend or discontinue any part (or the whole of) the website including, but not limited to, any products and/or services available. These terms and conditions shall continue to apply to any modified version of the website unless it is expressly stated otherwise."
+	  },
+	  "limitation": {
+		"title": "Limitation of liability",
+		"li1": "Nothing in these terms and conditions will: (a) limit or exclude our or your liability for death or personal injury resulting from our or your negligence, as applicable; (b) limit or exclude our or your liability for fraud or fraudulent misrepresentation; or (c) limit or exclude any of our or your liabilities in any way that is not permitted under applicable law.",
+		"li2": "We will not be liable to you in respect of any losses arising out of events beyond our reasonable control.",
+		"li3": "To the maximum extent permitted by law, {name} accepts no liability for any of the following:",
+		"li3ol1": "any personal or business losses, such as loss of profits, income, revenue, anticipated savings, business, contracts, goodwill or commercial opportunities;",
+		"li3ol2": "loss or corruption of any data, database or software;",
+		"li3ol3": "any special, indirect or consequential loss or damage."
+	  },
+	  "general": {
+		"title": "General",
+		"li1": "You may not transfer any of your rights under these terms and conditions to any other person. We may transfer our rights under these terms and conditions where we reasonably believe your rights will not be affected.",
+		"li2": "These terms and conditions may be varied by us from time to time. Such revised terms will apply to the website from the date of publication. Users should check the terms and conditions regularly to ensure familiarity with the then current version.",
+		"li3": "These terms and conditions together with the Privacy Policy and Cookies Policy contain the whole agreement between the parties relating to its subject matter and supersede all prior discussions, arrangements or agreements that might have taken place in relation to the terms and conditions.",
+		"li4": "The Contracts (Rights of Third Parties) Act 1999 shall not apply to these terms and conditions and no third party will have any right to enforce or rely on any provision of these terms and conditions.",
+		"li5": "If any court or competent authority finds that any provision of these terms and conditions (or part of any provision) is invalid, illegal or unenforceable, that provision or part-provision will, to the extent required, be deemed to be deleted, and the validity and enforceability of the other provisions of these terms and conditions will not be affected.",
+		"li6": "Unless otherwise agreed, no delay, act or omission by a party in exercising any right or remedy will be deemed a waiver of that, or any other, right or remedy.",
+		"li7": "This Agreement shall be governed by and interpreted according to the law of England and Wales and all disputes arising under the Agreement (including non-contractual disputes or claims) shall be subject to the exclusive jurisdiction of the English and Welsh courts."
+	  },
+	  "details": {
+		"title": "{name} details",
+		"li1": "{name} operates the website {websiteUrl}.",
+		"li1p1": "You can contact {name} by email on {emailAddress}."
+	  }
+	},
+	"privacy": {
+	  "title": "Privacy and Cookies Policy",
+	  "introduction": "This privacy policy has been compiled to better serve those who are concerned with how their 'Personally Identifiable Information' (PII) is being used online. PII, as described in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website.",
+	  "whatInformation": {
+		"title": "What personal information do we collect from the people that visit our blog, website or app?",
+		"p1": "When ordering or registering on our site, as appropriate, you may be asked to enter your name, email address or other details to help you with your experience."
+	  },
+	  "collect": {
+		"title": "When do we collect information?",
+		"p1": "We collect information from you when you register on our site, subscribe to a newsletter, fill out a form or enter information on our site."
+	  },
+	  "howUse": {
+		"title": "How do we use your information?",
+		"p1": "We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways:",
+		"li1": "To personalize your experience and to allow us to deliver the type of content and product offerings in which you are most interested.",
+		"li2": "To administer a contest, promotion, survey or other site feature.",
+		"li3": "To send periodic emails regarding your order or other products and services."
+	  },
+	  "protect": {
+		"title": "How do we protect your information?",
+		"p1": "We do not use vulnerability scanning and/or scanning to PCI standards.",
+		"p2": "We only provide articles and information. We never ask for credit card numbers.",
+		"p3": "We use regular Malware Scanning.",
+		"p4": "Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.",
+		"p5": "We implement a variety of security measures when a user enters, submits, or accesses their information to maintain the safety of your personal information.",
+		"p6": "All transactions are processed through a gateway provider and are not stored or processed on our servers."
+	  },
+	  "cookies": {
+		"title": "Do we use cookies?",
+		"p1": "Yes. Cookies are small files that a site or its service provider transfers to your computer's hard drive through your Web browser (if you allow) that enables the site's or service provider's systems to recognize your browser and capture and remember certain information. For instance, we use cookies to help us remember and process the items in your shopping cart. They are also used to help us understand your preferences based on previous or current site activity, which enables us to provide you with improved services. We also use cookies to help us compile aggregate data about site traffic and site interaction so that we can offer better site experiences and tools in the future.",
+		"p2": "We use cookies to understand and save user's preferences for future visits, and compile aggregate data about site traffic and site interactions in order to offer better site experiences and tools in the future. We may also use trusted third-party services that track this information on our behalf.",
+		"p3": "You can choose to have your computer warn you each time a cookie is being sent, or you can choose to turn off all cookies. You do this through your browser settings. Since browser is a little different, look at your browser's Help Menu to learn the correct way to modify your cookies.",
+		"p4": "If you turn cookies off in your browser, some of the features that make your site experience more efficient may not function properly.Some of the features that make your site experience more efficient and may not function properly."
+	  },
+	  "localeStorage": {
+		"title": "Do we use local storage?",
+		"p1": "Yes. Local storage can be viewed simplistically as an improvement on cookies, providing much greater storage capacity, up to 10MB per website on popular browsers.",
+		"p2": "We use local storage for storing basic website data such as translations and state changes. We do not store any personal user information in local storage."
+	  },
+	  "thirdParty": {
+		"title": "Third-party disclosure",
+		"p1": "We do not sell, trade, or otherwise transfer to outside parties your Personally Identifiable Information.",
+		"p2": "Occasionally, at our discretion, we may include or offer third-party products or services on our website. These third-party sites have separate and independent privacy policies. We therefore have no responsibility or liability for the content and activities of these linked sites. Nonetheless, we seek to protect the integrity of our site and welcome any feedback about these sites."
+	  },
+	  "google": {
+		"title": "Google",
+		"p1": "Google's advertising requirements can be summed up by Google's Advertising Principles. They are put in place to provide a positive experience for users. https://support.google.com/adwordspolicy/answer/1316548?hl=en",
+		"p2": "We have not enabled Google AdSense on our site but we may do so in the future."
+	  },
+	  "caloppa": {
+		"title": "According to CalOPPA, we agree to the following:",
+		"p1": "Users can visit our site anonymously.",
+		"p2": "Once this privacy policy is created, we will add a link to it on our home page or as a minimum, on the first significant page after entering our website.",
+		"p3": "Our Privacy Policy link includes the word 'Privacy' and can easily be found on the page specified above.",
+		"p4": "You will be notified of any Privacy Policy changes on our Privacy Policy Page.",
+		"p5": "Can change your personal information by logging in to your account."
+	  },
+	  "doNotTrack": {
+		"title": "How does our site handle Do Not Track signals?",
+		"p1": "We honor Do Not Track signals and Do Not Track, plant cookies, or use advertising when a Do Not Track (DNT) browser mechanism is in place.",
+		"p2": "",
+		"p3": ""
+	  },
+	  "thirdPartyTracking": {
+		"title": "Does our site allow third-party behavioral tracking?",
+		"p1": "It's also important to note that we do not allow third-party behavioral tracking"
+	  },
+	  "coppa": {
+		"title": "COPPA (Children Online Privacy Protection Act)",
+		"p1": "When it comes to the collection of personal information from children under the age of 13 years old, the Children's Online Privacy Protection Act (COPPA) puts parents in control. The Federal Trade Commission, United States' consumer protection agency, enforces the COPPA Rule, which spells out what operators of websites and online services must do to protect children's privacy and safety online.",
+		"p2": "We do not specifically market to children under the age of 13 years old."
+	  },
+	  "fairInformation": {
+		"title": "Fair Information Practices",
+		"p1": "The Fair Information Practices Principles form the backbone of privacy law in the United States and the concepts they include have played a significant role in the development of data protection laws around the globe. Understanding the Fair Information Practice Principles and how they should be implemented is critical to comply with the various privacy laws that protect personal information.",
+		"p2": "In order to be in line with Fair Information Practices we will take the following responsive action, should a data breach occur we will notify the users via in-site notification within 7 business days",
+		"p3": "We also agree to the Individual Redress Principle which requires that individuals have the right to legally pursue enforceable rights against data collectors and processors who fail to adhere to the law. This principle requires not only that individuals have enforceable rights against data users, but also that individuals have recourse to courts or government agencies to investigate and/or prosecute non-compliance by data processors."
+	  },
+	  "canSpam": {
+		"title": "CAN SPAM Act",
+		"p1": "The CAN-SPAM Act is a law that sets the rules for commercial email, establishes requirements for commercial messages, gives recipients the right to have emails stopped from being sent to them, and spells out tough penalties for violations.",
+		"p2": "We collect your email address in order to send information, respond to inquiries, and/or other requests or questions",
+		"p3": "To be in accordance with CANSPAM, we agree to the following:",
+		"p3li1": "Not use false or misleading subjects or email addresses.",
+		"p3li2": "Identify the message as an advertisement in some reasonable way.",
+		"p3li3": "Include the physical address of our business or site headquarters.",
+		"p3li4": "Monitor third-party email marketing services for compliance, if one is used.",
+		"p3li5": "Honor opt-out/unsubscribe requests quickly.",
+		"p3li6": "Allow users to unsubscribe by using the link at the bottom of each email",
+		"p4": "If at any time you would like to unsubscribe from receiving future emails, you can follow the instructions at the bottom of each email and we will promptly remove you from ALL correspondence."
+	  },
+	  "contact": {
+		"title": "Contacting Us",
+		"p1": "If there are any questions regarding this privacy policy, you may contact us at {emailAddress}",
+		"p2": "Last Edited on 2018-04-02"
+	  }
+	}
+  },
+  "pageNotFound": {
+	"title": "Page not found",
+	"header": "Oops... This is awkward!",
+	"subHeader": "404: Page not found",
+	"content": "It seems we're trying to take down the banks with blockchain technology but we can't even find the right page for you.",
+	"goHome": "Go back home"
+  },
+  "home": {
+	"title": "Welcome"
+  },
+  "dates": {
+	"months": {
+	  "short": [
+		"jan",
+		"feb",
+		"mar",
+		"apr",
+		"may",
+		"june",
+		"july",
+		"aug",
+		"sep",
+		"oct",
+		"nov",
+		"dec"
+	  ],
+	  "long": [
+		"January",
+		"February",
+		"March",
+		"April",
+		"May",
+		"June",
+		"July",
+		"August",
+		"September",
+		"October",
+		"November",
+		"December"
+	  ]
+	},
+	"dates": {
+	  "short": [
+		"Mon",
+		"Tue",
+		"Wed",
+		"Thu",
+		"Fri",
+		"Sat",
+		"Sun"
+	  ],
+	  "long": [
+		"Monday",
+		"Tuesday",
+		"Wednesday",
+		"Thursday",
+		"Friday",
+		"Saturday",
+		"Sunday"
+	  ]
+	}
+  }
 }

@@ -1,20 +1,16 @@
 import Vue from 'vue';
+import { version } from './../../../package.json';
+import { store } from '../../app';
 
 const state = {
 	loading: true,
 	rootLoading: {},
-	loadingStack: []
+	loadingStack: [],
+	drawer: null,
+	dialog: { active: false, id: null }
 };
 
 const mutations = {
-	// START_LOADING(state)
-	// {
-	// 	state.loading = true;
-	// },
-	// STOP_LOADING(state)
-	// {
-	// 	state.loading = false;
-	// },
 	PUSH_TO_LOADING_STACK(state)
 	{
 		state.loadingStack.push({});
@@ -33,14 +29,39 @@ const mutations = {
 		{
 			Vue.delete(state.rootLoading, value);
 		}
+	},
+	UPDATE_DRAWER(state, value)
+	{
+		state.drawer = value;
+	},
+	UPDATE_DIALOG(state, payload)
+	{
+		state.dialog = payload;
 	}
 };
 
 const actions = {
+	usersLocalStorage({ dispatch })
+	{
+		if(localStorage.getItem('locale'))
+		{
+			dispatch('appCallLoading', 'i18n');
+			dispatch('i18n/changeLocale', localStorage.getItem('locale'), { root: true });
+		}
+	},
 	load({ dispatch })
 	{
-		dispatch('appCallLoading', 'i18n');
+		dispatch('usersLocalStorage');
+		// dispatch('appCallLoading', 'nulsPrice');
+		// dispatch('tokens/load', 'nuls', { root: true });
 
+		// Everything below here is collected from the localStorage because they've visited before and we don't need to request the server again
+		// if(localStorage.getItem('store') && JSON.parse(localStorage.getItem('store')).version === version && process.env.NODE_ENV !== 'development')
+		// {
+		// 	return;
+		// }
+
+		dispatch('appCallLoading', 'i18n');
 		dispatch('i18n/load', null, { root: true });
 	},
 	startLoading({ commit })
@@ -60,12 +81,22 @@ const actions = {
 	appCallLoaded({ commit }, value)
 	{
 		commit('UPDATE_ROOT_LOADING', { value });
+	},
+	updateDrawer({ commit }, value)
+	{
+		commit('UPDATE_DRAWER', value);
+	},
+	updateDialog({ commit }, payload)
+	{
+		commit('UPDATE_DIALOG', payload);
 	}
 };
 
 const getters = {
 	appLoaded: (state) => state.rootLoading,
-	loadingStack: (state) => state.loadingStack
+	loadingStack: (state) => state.loadingStack,
+	drawer: (state) => state.drawer,
+	dialog: (state) => state.dialog
 };
 
 export default {

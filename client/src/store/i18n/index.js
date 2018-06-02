@@ -5,7 +5,7 @@ import { get } from '@/utils/api';
 const state = {
 	locale: 'en',
 	languages: {},
-	updating: true,
+	updating: false,
 	updatedCounter: 0
 };
 
@@ -20,9 +20,9 @@ const mutations = {
 		state.updating = true;
 		state.locale = locale;
 	},
-	SET_LANGUAGE(state, { locale, i18n })
+	SET_LANGUAGE(state, i18n)
 	{
-		Vue.set(state.languages, locale, i18n);
+		Vue.set(state.languages, state.locale, i18n);
 	}
 };
 
@@ -31,6 +31,7 @@ const actions = {
 	{
 		if(state.languages[state.locale])
 		{
+			dispatch('app/appCallLoaded', 'i18n', { root: true });
 			return commit('UPDATE_LANGUAGE');
 		}
 
@@ -43,13 +44,22 @@ const actions = {
 			{
 				commit('SET_LANGUAGE', data);
 				commit('UPDATE_LANGUAGE');
+			})
+			.then(() =>
+			{
 				dispatch('app/appCallLoaded', 'i18n', { root: true });
 			});
 	},
 	changeLocale({ commit, dispatch }, locale)
 	{
+		localStorage.setItem('locale', locale);
 		commit('CHANGE_LOCALE', locale);
 		dispatch('load');
+	},
+	updateLocale({ commit, state })
+	{
+		commit('CHANGE_LOCALE', state.locale);
+		commit('UPDATE_LANGUAGE');
 	}
 };
 
@@ -62,8 +72,9 @@ const getters = {
 	{
 		if(!key) return null;
 
-		return dot.pick(key, state.languages[state.localeActive]);
+		return dot.pick(key, state.languages[state.locale]);
 	},
+	locale: (state) => state.locale,
 	exists: (state, getters) => (key) => typeof getters.get(key) !== 'undefined'
 };
 

@@ -4,25 +4,21 @@ import { sync } from 'vuex-router-sync';
 import VueI18N from 'vue-i18n';
 import VeeValidate from 'vee-validate';
 import VueMasonry from 'vue-masonry-css';
-// import fontawesome from '@fortawesome/fontawesome';
-// import FontAwesomeIcon from '@fortawesome/vue-fontawesome';
-// import initialLoad from '@/utils/initialLoad';
-// import socket from '@/utils/socket';
-// import syncSocketAndStore from '@/utils/syncSocketAndStore';
-// import 'flexboxgrid/css/flexboxgrid.min.css';
+import fontawesome from '@fortawesome/fontawesome';
+import FontAwesomeIcon from '@fortawesome/vue-fontawesome';
+import 'flexboxgrid/css/flexboxgrid.min.css';
 import 'vuetify/dist/vuetify.min.css';
-// import { get } from '@/utils/api';
 import I18N from '@/components/I18N';
 import App from '@/components/App';
+import HeaderMeta from '@/components/HeaderMeta';
 import router from '@/router';
 import store from '@/store';
+import icons from '@/utils/fontAwesomeIcons';
 
-// import(/* webpackChunkName:"font-awesome-icons" */'@/utils/fontAwesomeIcons')
-// 	.then(({ default: icons }) => fontawesome.library.add({ ...icons }));
+fontawesome.library.add({ ...icons });
 
 store.dispatch('app/load');
 sync(store, router);
-// syncSocketAndStore(socket, store);
 
 Vue.use(VueMasonry);
 Vue.use(VueI18N);
@@ -34,23 +30,13 @@ Vue.use(VeeValidate, {
 /*
  * Register some global components
  */
-// Vue.component('FontAwesomeIcon', FontAwesomeIcon);
+Vue.component('FontAwesomeIcon', FontAwesomeIcon);
 Vue.component('I18N', I18N);
+Vue.component('HeaderMeta', HeaderMeta);
 
 const i18n = new VueI18N({
-	locale: 'en',
-	formatter: new class
-	{
-		interpolate(message, values)
-		{
-			Object.keys(values).forEach((key) =>
-			{
-				message = message.replace(new RegExp(`\\\${${key}}`, 'g'), values[key]);
-			});
-
-			return [message];
-		}
-	}()
+	locale: store.state.i18n.locale,
+	fallbackLocale: 'en'
 });
 
 const app = new Vue({
@@ -58,6 +44,21 @@ const app = new Vue({
 	store,
 	i18n,
 	...App
+});
+
+// Subscribe to store updates
+store.subscribe((mutation, state) =>
+{
+	const store = {
+		version: state.version,
+		app: {
+			drawer: state.app.drawer
+		},
+		i18n: { ...state.i18n }
+	};
+
+	// Store the state object as a JSON string
+	// localStorage.setItem('store', JSON.stringify(store));
 });
 
 /*
@@ -71,7 +72,6 @@ store.watch(
 	},
 	() => // The counter has changed value
 	{
-		console.log(store.state.i18n);
 		if(!store.state.i18n.updating) // If we've finished getting the language (ie we have it in memory)
 		{
 			// Updates frontend language being displayed
@@ -83,23 +83,3 @@ store.watch(
 );
 
 export { app, router, store };
-
-// import Vue from 'vue'
-// import { sync } from 'vuex-router-sync'
-// import Vuetify from 'vuetify'
-// import App from './components/App'
-// import router from './router'
-// import store from './store'
-// import 'vuetify/dist/vuetify.min.css'
-//
-// sync(store, router);
-//
-// Vue.use(Vuetify);
-//
-// const app = new Vue({
-// 	router,
-// 	store,
-// 	...App
-// });
-//
-// export { app, router, store }

@@ -13,7 +13,7 @@ base.plugins.push(
 	}),
 	new webpack.HotModuleReplacementPlugin(),
 	new webpack.NoEmitOnErrorsPlugin(),
-	new FriendlyErrors(),
+	new FriendlyErrors()
 	// new BundleAnalyserPlugin()
 );
 
@@ -21,6 +21,7 @@ base.plugins.push(
 _.cssProcessors.forEach((processor) =>
 {
 	let loaders;
+
 	if(processor.loader === '')
 	{
 		loaders = ['postcss-loader'];
@@ -29,7 +30,8 @@ _.cssProcessors.forEach((processor) =>
 	{
 		loaders = ['postcss-loader', processor.loader];
 	}
-	base.module.loaders.push({
+
+	base.module.rules.push({
 		test: processor.test,
 		loaders: ['style-loader', _.cssLoader].concat(loaders)
 	});

@@ -4,7 +4,8 @@ const getStackTrace = (start = null, end = null) =>
 {
 	let stack = new Error().stack || '';
 
-	stack = stack.split('\n').map((line) => line.trim());
+	stack = stack.split('\n')
+		.map((line) => line.trim());
 	stack = stack.splice(stack[0] === 'Error' ? 2 : 1);
 
 	if(start && end)

@@ -54,19 +54,48 @@
 		<div class="section white">
 			<div class="container center">
 				<div class="spaceship">
-					<h3>Mission</h3>
-					<p>Accommodate multitude of blockchain application usage</p>
-					<p>Break through technology bottleneck</p>
-					<p>Reduce technical threshold and cost</p>
-					<p>Resolving the lack of trust in a centralised database</p>
+					<h2>Mission</h2>
+					<h4>Accommodate multitude of blockchain application usage</h4>
+					<h4>Break through technology bottleneck</h4>
+					<h4>Reduce technical threshold and cost</h4>
+					<h4>Resolving the lack of trust in a centralised database</h4>
 				</div>
 			</div>
 		</div>
 		<div class="section grey">
 			<div class="container howItWorks">
 				<div class="center">
-					<h3>How it works?</h3>
-					<p>Technology & Advantages of NULS Ecosystem</p>
+					<h2>How it works?</h2>
+					<h4>Technology & Advantages of NULS Ecosystem</h4>
+					<v-layout row wrap>
+						<v-flex xs4>
+							<h3>Multiple chains</h3>
+							<p>Exchange of data and value among chains</p>
+							<p>Extensive applications & better performance</p>
+						</v-flex>
+						<v-flex xs4>
+							<h3>Smart contracts</h3>
+							<p>Less programming for defining service logic</p>
+							<p>Running login from NULSVM in a decentralized environment</p>
+						</v-flex>
+						<v-flex xs4>
+							<h3>Proof-Of-Credit</h3>
+							<p>High scalability and rapid value transmission</p>
+							<p>Connection via cross-chain consensus modules</p>
+						</v-flex>
+					</v-layout>
+					<v-layout row wrap>
+						<v-flex xs6>
+							<h3>Customizable</h3>
+							<p>Modularization & multiple chains for higher inflexibility</p>
+							<p>Selection of modules offer greater use cases</p>
+						</v-flex>
+						<v-flex xs6>
+							<h3>Sustainable improvement</h3>
+							<p>Improving network technology, storage schemes and encryption algorithms</p>
+							<p>Independent upgradable modules for continuous improvement and scalability</p>
+						</v-flex>
+					</v-layout>
 				</div>
 			</div>
 		</div>
@@ -132,10 +161,46 @@
 <style>
 	body {
 		font-family: SofiaProLight, sans-serif;
-		font-size: 24px;
+		font-size: 16px;
 		color: #445569;
 		letter-spacing: 0;
-		line-height: 28px;
+		line-height: 25px;
+	}
+
+	h1 {
+		font-family: NeuzeitGro-Bol, sans-serif;
+		font-size: 72px;
+		color: #fff;
+		text-align: center;
+		width: 75%;
+		margin: 190px auto 0 auto;
+		letter-spacing: -0.77px;
+		line-height: 88px;
+	}
+
+	h2 {
+		font-family: NeuzeitGro-Bol, sans-serif;
+		font-size: 56px;
+		color: #0a2140;
+		letter-spacing: 0;
+		line-height: 77px;
+	}
+
+	h3 {
+		font-family: NeuzeitGro-Bol, sans-serif;
+		font-size: 28px;
+		color: #0a2140;
+		letter-spacing: -0.88px;
+		line-height: 34px;
+	}
+
+	h4 {
+		font-family: SofiaProLight, sans-serif;
+		font-size: 24px;
+		opacity: 0.7;
+		color: #445569;
+		letter-spacing: 0;
+		line-height: 32px;
 	}
 
 	.header {
@@ -252,7 +317,7 @@
 
 	.rectangle.thirteen {
 		opacity: 0.4;
-		background-color: none;
+		background-color: transparent;
 		top: 480px;
 		left: 50px;
 	}
@@ -266,7 +331,7 @@
 
 	.rectangle.fifteen {
 		opacity: 0.4;
-		background-color: none;
+		background-color: transparent;
 		top: 500px;
 		left: 1470px;
 	}
@@ -392,17 +457,6 @@
 		color: white;
 	}
 
-	h1 {
-		font-family: NeuzeitGro-Bol, sans-serif;
-		font-size: 72px;
-		color: #fff;
-		text-align: center;
-		width: 75%;
-		margin: 190px auto 0 auto;
-		letter-spacing: -0.77px;
-		line-height: 88px;
-	}
-
 	.playButtonContainer {
 		width: 90px;
 		margin: 40px auto 0 auto;
@@ -410,24 +464,20 @@
 
 	button.play-button {
 		background: #fff;
-		box-shadow: -1px 12px 16px 0 rgba(6, 27, 55);
+		box-shadow: -1px 12px 16px 0 rgba(6, 27, 55, 1);
 		height: 90px;
 		width: 90px;
 		border-radius: 45px;
-	}
-
-	h3 {
-		font-family: NeuzeitGro-Bol, sans-serif;
-		font-size: 56px;
-		color: #0a2140;
-		letter-spacing: -1.6px;
-		line-height: 76px;
 	}
 
 	.spaceship {
 		height: 517px;
 		margin: 66px 0 78px 0;
 		background: url(/static/images/rocket.png) no-repeat center;
+	}
+
+	.spaceship h4 {
+		padding: 20px;
 	}
 
 	button.play-button img {

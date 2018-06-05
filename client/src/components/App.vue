@@ -170,8 +170,7 @@
 	}
 
 	.rectangle.grid {
-		background-image: url('https://i.imgur.com/6gNjDcd.png');
-		background-repeat: repeat;
+		background: url('/static/images/header-grid.png') repeat;
 	}
 
 	.rectangle.one {

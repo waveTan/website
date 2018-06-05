@@ -87,7 +87,7 @@
 					<v-layout row wrap>
 						<v-flex xs6>
 							<h3>Customizable</h3>
-							<p>Modularization & multiple chains for higher inflexibility</p>
+							<p>Modularization & multiple chains for higher flexibility</p>
 							<p>Selection of modules offer greater use cases</p>
 						</v-flex>
 						<v-flex xs6>
@@ -97,6 +97,40 @@
 						</v-flex>
 					</v-layout>
 				</div>
+			</div>
+		</div>
+		<div class="section white">
+			<div class="container architecture">
+				<h2>Architecture</h2>
+				<v-layout row wrap>
+					<v-flex xs6>
+						<ul>
+							<li class="active">
+								<h3>Login layer</h3>
+								<p>Smart contracts as logic containers</p>
+								<p>Higher flexibility and wider application</p>
+							</li>
+							<li>
+								<h3>Module layer</h3>
+								<p>Ongoing development of new modules by core/community developers</p>
+								<p>Online management under NULS module depository</p>
+							</li>
+							<li>
+								<h3>Chain layer</h3>
+								<p>Variable as needed and easily customized</p>
+								<p>Various customizable modules for public, private, and enterprise blockchains</p>
+							</li>
+							<li>
+								<h3>Cross-chain</h3>
+								<p>High scalability and rapid value transmission</p>
+								<p>Connection via cross-chain consensus modules</p>
+							</li>
+						</ul>
+					</v-flex>
+					<v-flex xs6>
+						<div class="graph"></div>
+					</v-flex>
+				</v-layout>
 			</div>
 		</div>
 		<router-view></router-view>
@@ -521,5 +555,59 @@
 
 	.howItWorks {
 		padding: 200px 0 135px 0;
+	}
+
+	.architecture ul {
+		margin-top: 58px;
+	}
+
+	.architecture ul li {
+		list-style: none;
+		border-left: 4px solid #9cbe82;
+		padding-left: 28px;
+		opacity: 0.25;
+	}
+
+	.architecture ul li h3 {
+		font-size: 32px;
+		letter-spacing: 1px;
+		line-height: 34px;
+		padding-bottom: 18px;
+		color: #445569;
+	}
+
+	.architecture ul li p {
+		line-height: 10px;
+	}
+
+	.architecture ul li.active,
+	.architecture ul li:hover {
+		opacity: 1;
+		border-left: 6px solid #56c400;
+		padding-left: 26px;
+		cursor: pointer;
+	}
+
+	.architecture ul li.active:hover {
+		cursor: auto;
+	}
+
+	.architecture .graph {
+		position: relative;
+		overflow: hidden;
+		width: 675px;
+		height: 607px;
+	}
+
+	.architecture .graph::after {
+		content: '';
+		display: block;
+		height: 100%;
+		opacity: 0.6;
+		background: url('/static/images/architecture-background.png') 50% 0;
+		-o-background-size: cover;
+		-moz-background-size: cover;
+		-webkit-background-size: cover;
+		background-size: cover;
 	}
 </style>

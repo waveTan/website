@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div data-app>
 		<div class="header">
 			<div class="rectangleContainer">
 				<div class="rectangle one grid"></div>
@@ -67,35 +67,39 @@
 				<div class="center">
 					<h2>How it works?</h2>
 					<h4>Technology & Advantages of NULS Ecosystem</h4>
-					<v-layout row wrap>
-						<v-flex xs4>
-							<h3>Multiple chains</h3>
-							<p>Exchange of data and value among chains</p>
-							<p>Extensive applications & better performance</p>
-						</v-flex>
-						<v-flex xs4>
-							<h3>Smart contracts</h3>
-							<p>Less programming for defining service logic</p>
-							<p>Running login from NULSVM in a decentralized environment</p>
-						</v-flex>
-						<v-flex xs4>
-							<h3>Proof-Of-Credit</h3>
-							<p>High scalability and rapid value transmission</p>
-							<p>Connection via cross-chain consensus modules</p>
-						</v-flex>
-					</v-layout>
-					<v-layout row wrap>
-						<v-flex xs6>
-							<h3>Customizable</h3>
-							<p>Modularization & multiple chains for higher flexibility</p>
-							<p>Selection of modules offer greater use cases</p>
-						</v-flex>
-						<v-flex xs6>
-							<h3>Sustainable improvement</h3>
-							<p>Improving network technology, storage schemes and encryption algorithms</p>
-							<p>Independent upgradable modules for continuous improvement and scalability</p>
-						</v-flex>
-					</v-layout>
+					<v-container grid-list-xl text-xs-center>
+						<v-layout row wrap>
+							<v-flex xs4>
+								<h3>Multiple chains</h3>
+								<p>Exchange of data and value among chains</p>
+								<p>Extensive applications & better performance</p>
+							</v-flex>
+							<v-flex xs4>
+								<h3>Smart contracts</h3>
+								<p>Less programming for defining service logic</p>
+								<p>Running login from NULSVM in a decentralized environment</p>
+							</v-flex>
+							<v-flex xs4>
+								<h3>Proof-Of-Credit</h3>
+								<p>High scalability and rapid value transmission</p>
+								<p>Connection via cross-chain consensus modules</p>
+							</v-flex>
+						</v-layout>
+						<v-layout row wrap>
+							<v-flex xs2>&nbsp;</v-flex>
+							<v-flex xs4>
+								<h3>Customizable</h3>
+								<p>Modularization & multiple chains for higher flexibility</p>
+								<p>Selection of modules offer greater use cases</p>
+							</v-flex>
+							<v-flex xs4>
+								<h3>Sustainable improvement</h3>
+								<p>Improving network technology, storage schemes and encryption algorithms</p>
+								<p>Independent upgradable modules for continuous improvement and scalability</p>
+							</v-flex>
+							<v-flex xs2>&nbsp;</v-flex>
+						</v-layout>
+					</v-container>
 				</div>
 			</div>
 		</div>
@@ -105,23 +109,23 @@
 				<v-layout row wrap>
 					<v-flex xs6>
 						<ul>
-							<li class="active">
+							<li :class="{ active: isActive('loginLayer') }" @mouseover="setActive('loginLayer')">
 								<h3>Login layer</h3>
 								<p>Smart contracts as logic containers</p>
 								<p>Higher flexibility and wider application</p>
 							</li>
-							<li>
+							<li :class="{ active: isActive('moduleLayer') }" @mouseover="setActive('moduleLayer')">
 								<h3>Module layer</h3>
 								<p>Ongoing development of new modules by core/community developers</p>
 								<p>Online management under NULS module depository</p>
 							</li>
-							<li>
+							<li :class="{ active: isActive('chainLayer') }" @mouseover="setActive('chainLayer')">
 								<h3>Chain layer</h3>
 								<p>Variable as needed and easily customized</p>
 								<p>Various customizable modules for public, private, and enterprise blockchains</p>
 							</li>
-							<li>
-								<h3>Cross-chain</h3>
+							<li :class="{ active: isActive('crossChain') }" @mouseover="setActive('crossChain')">
+								<h3>Cross-isActive</h3>
 								<p>High scalability and rapid value transmission</p>
 								<p>Connection via cross-chain consensus modules</p>
 							</li>
@@ -133,22 +137,31 @@
 				</v-layout>
 			</div>
 		</div>
+		<div class="section blue">
+			<h2>Download NULS Wallet</h2>
+			<p>NULS wallet is developed by NULS core technical team</p>
+			<p>Supported on various platforms</p>
+			<Dropdown
+				title="Computer Wallet"
+				:items="[
+					{ title: 'Windows Download' },
+					{ title: 'MacOS Download' }
+				]"
+			/>
+		</div>
 		<router-view></router-view>
 	</div>
 </template>
 
 <script>
-	import Sidebar from '@/views/layout/main/Sidebar';
-	import SidebarSub from '@/views/layout/main/SidebarSub';
-	import HeaderLayout from '@/views/layout/main/HeaderLayout';
-	import FooterLayout from '@/views/layout/main/FooterLayout';
-	import Dialog from '@/components/dialog/Main';
+	import Dropdown from '@/components/vuetify/Dropdown';
 
 	export default {
 		data()
 		{
 			return {
-				drawer: this.getDrawer()
+				drawer: this.getDrawer(),
+				active: 'loginLayer'
 			};
 		},
 		methods: {
@@ -159,7 +172,16 @@
 			updateDrawer()
 			{
 				this.drawer = !this.drawer;
+			},
+			setActive(key)
+			{
+				this.active = key;
+			},
+			isActive(key)
+			{
+				return this.active === key;
 			}
+
 		},
 		computed: {
 			loadingStack()
@@ -173,6 +195,7 @@
 			percentageLoader()
 			{
 				if(this.loadingStack === 0) return 100;
+
 				return ((this.loadingStack - Object.keys(this.appLoaded).length) * 100) / Object.keys(this.appLoaded).length;
 			}
 		},
@@ -183,11 +206,7 @@
 			}
 		},
 		components: {
-			Sidebar,
-			SidebarSub,
-			HeaderLayout,
-			FooterLayout,
-			Dialog
+			Dropdown
 		}
 	};
 </script>
@@ -207,7 +226,7 @@
 		color: #fff;
 		text-align: center;
 		width: 75%;
-		margin: 190px auto 0 auto;
+		margin: 180px auto 0 auto;
 		letter-spacing: -0.77px;
 		line-height: 88px;
 	}
@@ -506,8 +525,10 @@
 
 	.spaceship {
 		height: 517px;
-		margin: 66px 0 78px 0;
+		margin: 66px auto 78px auto;
+		width: 517px;
 		background: url(/static/images/rocket.png) no-repeat center;
+		padding-top: 90px;
 	}
 
 	.spaceship h4 {

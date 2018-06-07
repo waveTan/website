@@ -91,6 +91,8 @@
 </template>
 
 <script>
+	import Dropdown from '@/components/vuetify/Dropdown';
+
 	export default {
 		computed: {
 			loadingStack()
@@ -107,6 +109,9 @@
 
 				return ((this.loadingStack - Object.keys(this.appLoaded).length) * 100) / Object.keys(this.appLoaded).length;
 			}
+		},
+		components: {
+			Dropdown
 		}
 	};
 </script>

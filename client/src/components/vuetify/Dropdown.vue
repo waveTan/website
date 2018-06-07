@@ -1,7 +1,7 @@
 <template>
 	<v-menu offset-y class="dropdown" content-class="test" :open-on-hover="true">
 		<div slot="activator">
-			<Button class="button" v-if="buttonTitle">
+			<Button class="button" v-if="buttonTitle" :colour="buttonColour">
 				{{title}}
 				<img src="/static/images/icons/arrow-down.png" alt="" class="arrow" />
 			</Button>
@@ -23,6 +23,10 @@
 
 	export default {
 		props: {
+			buttonColour: {
+				type: String,
+				default: ''
+			},
 			buttonTitle: {
 				type: Boolean,
 				default: true
@@ -65,7 +69,6 @@
 					#e6f4fa 92%,
 					#e6f4fa 100%
 				);
-		margin-top: 13px;
 		/*box-shadow: 0 14px 28px 0 rgba(10, 33, 64, 0.85);*/
 		border-radius: 16px;
 		padding: 0;
@@ -75,7 +78,7 @@
 		font-size: 17px;
 		color: #445569;
 		text-align: center;
-		padding: 0 33px;
+		padding: 0 15px;
 		margin-top: 4px;
 		cursor: pointer;
 	}

@@ -44,8 +44,10 @@
 										:buttonTitle="false"
 										title="About"
 										:items="[
-										{ title: 'Windows Download' },
-										{ title: 'MacOS Download' }
+										{ title: 'Team' },
+										{ title: 'Partners' },
+										{ title: 'Join Us' },
+										{ title: 'News' }
 										]"
 									/>
 								</a>
@@ -159,6 +161,14 @@
 					{ title: 'MacOS Download' }
 				]"
 			/>
+			<Dropdown
+				title="Mobile Wallet"
+				:items="[
+					{ title: 'Android' },
+					{ title: 'iPhone' }
+				]"
+			/>
+			<Button colour="blue" icon="arrow-left">Web Wallet</Button>
 		</div>
 		<router-view></router-view>
 	</div>
@@ -166,6 +176,7 @@
 
 <script>
 	import Dropdown from '@/components/vuetify/Dropdown';
+	import Button from '@/components/vuetify/Button';
 
 	export default {
 		data()
@@ -217,7 +228,8 @@
 			}
 		},
 		components: {
-			Dropdown
+			Dropdown,
+			Button
 		}
 	};
 </script>
@@ -647,7 +659,15 @@
 		box-shadow: none;
 	}
 
+	.menu__content .list__tile {
+		padding: 0 34px;
+	}
+
 	.menu__content .item:not(:first-child) .list__tile {
 		border-top: 1px solid #445569;
+	}
+
+	.menu__content .item:first-child .list__tile {
+		padding-top: 10px;
 	}
 </style>

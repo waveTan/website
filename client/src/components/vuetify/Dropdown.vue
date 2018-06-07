@@ -1,6 +1,15 @@
 <template>
-	<v-menu offset-y class="container">
-		<Button slot="activator">{{title}}</Button>
+	<v-menu offset-y class="dropdown" content-class="test" :open-on-hover="true">
+		<div slot="activator">
+			<Button class="button" v-if="buttonTitle">
+				{{title}}
+				<img src="/static/images/icons/arrow-down.png" alt="" class="arrow" />
+			</Button>
+			<div v-else>
+				{{title}}
+				<img src="/static/images/icons/arrow-down.png" alt="" class="arrow" />
+			</div>
+		</div>
 		<v-list class="items">
 			<v-list-tile v-for="(item, index) in items" :key="index" class="item">
 				<v-list-tile-title>{{ item.title }}</v-list-tile-title>
@@ -14,6 +23,10 @@
 
 	export default {
 		props: {
+			buttonTitle: {
+				type: Boolean,
+				default: true
+			},
 			title: {
 				type: String,
 				required: true
@@ -30,7 +43,7 @@
 </script>
 
 <style scoped>
-	.container {
+	.dropdown {
 		box-shadow: none;
 		border-radius: 0;
 	}
@@ -55,13 +68,24 @@
 		margin-top: 13px;
 		/*box-shadow: 0 14px 28px 0 rgba(10, 33, 64, 0.85);*/
 		border-radius: 16px;
+		padding: 0;
 	}
 
 	.item {
 		font-size: 17px;
 		color: #445569;
 		text-align: center;
-		padding: 8px 33px;
-		border-top: 1px solid #445569;
+		padding: 0 33px;
+		margin-top: 4px;
+		cursor: pointer;
+	}
+
+	.button img {
+		margin-left: 12px;
+	}
+
+	.button:hover img {
+		opacity: 0.6;
+		transform: rotate(-180deg);
 	}
 </style>

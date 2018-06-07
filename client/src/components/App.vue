@@ -38,7 +38,18 @@
 							<li><a href="#">DApps</a></li>
 							<li><a href="#">Documentation</a></li>
 							<li><a href="#">Blochchain Explorer</a></li>
-							<li><a href="#">About</a></li>
+							<li>
+								<a href="#">
+									<Dropdown
+										:buttonTitle="false"
+										title="About"
+										:items="[
+										{ title: 'Windows Download' },
+										{ title: 'MacOS Download' }
+										]"
+									/>
+								</a>
+							</li>
 							<li><a href="#">Forum</a></li>
 						</ul>
 					</div>
@@ -125,7 +136,7 @@
 								<p>Various customizable modules for public, private, and enterprise blockchains</p>
 							</li>
 							<li :class="{ active: isActive('crossChain') }" @mouseover="setActive('crossChain')">
-								<h3>Cross-isActive</h3>
+								<h3>Cross-chain</h3>
 								<p>High scalability and rapid value transmission</p>
 								<p>Connection via cross-chain consensus modules</p>
 							</li>
@@ -630,5 +641,13 @@
 		-moz-background-size: cover;
 		-webkit-background-size: cover;
 		background-size: cover;
+	}
+
+	.menu__content {
+		box-shadow: none;
+	}
+
+	.menu__content .item:not(:first-child) .list__tile {
+		border-top: 1px solid #445569;
 	}
 </style>

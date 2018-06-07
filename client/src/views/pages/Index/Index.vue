@@ -1,5 +1,6 @@
 <template>
 	<div class="page">
+		<Header />
 		<HeaderMeta title="home.title" />
 		<Mission />
 		<HowItWorks />
@@ -12,6 +13,7 @@
 
 <script>
 	import SwitchLanguage from '@/components/SwitchLanguage';
+	import Header from '@/views/pages/Index/Header';
 	import Mission from '@/views/pages/Index/Mission';
 	import HowItWorks from '@/views/pages/Index/HowItWorks';
 	import Architecture from '@/views/pages/Index/Architecture';
@@ -20,6 +22,7 @@
 	export default {
 		components: {
 			SwitchLanguage,
+			Header,
 			Mission,
 			HowItWorks,
 			Architecture,

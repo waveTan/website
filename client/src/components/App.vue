@@ -21,67 +21,59 @@
 			</v-content>
 		</div>
 		<div v-else>
-			<div class="header">
-				<div class="rectangleContainer">
-					<div class="rectangle one grid"></div>
-					<div class="rectangle two grid"></div>
-					<div class="rectangle three"></div>
-					<div class="rectangle four"></div>
-					<div class="rectangle five"></div>
-					<div class="rectangle six grid"></div>
-					<div class="rectangle seven"></div>
-					<div class="rectangle eight"></div>
-					<div class="rectangle nine grid"></div>
-					<div class="rectangle ten"></div>
-					<div class="rectangle eleven grid"></div>
-					<div class="rectangle twelve"></div>
-					<div class="rectangle thirteen grid"></div>
-					<div class="rectangle fourteen"></div>
-					<div class="rectangle fifteen"></div>
-					<div class="rectangle sixteen"></div>
-					<div class="rectangle seventeen"></div>
-					<div class="rectangle eighteen grid"></div>
-					<div class="rectangle nineteen"></div>
-					<div class="rectangle twenty"></div>
-					<div class="rectangle twentyone"></div>
-					<div class="rectangle twentytwo"></div>
-					<div class="rectangle twentythree"></div>
-					<div class="rectangle twentyfour"></div>
-					<div class="rectangle twentyfive"></div>
-				</div>
-				<div class="containerParent">
-					<div class="container">
-						<div class="logo"></div>
-						<div class="navigation">
-							<ul>
-								<li><a href="#">Home</a></li>
-								<li><a href="#">Wallet</a></li>
-								<li><a href="#">DApps</a></li>
-								<li><a href="#">Documentation</a></li>
-								<li><a href="#">Blochchain Explorer</a></li>
-								<li>
-									<a href="#">
-										<Dropdown
-												:buttonTitle="false"
-												title="About"
-												:items="[
+			<div class="rectangleContainer">
+				<div class="rectangle one grid"></div>
+				<div class="rectangle two grid"></div>
+				<div class="rectangle three"></div>
+				<div class="rectangle four"></div>
+				<div class="rectangle five"></div>
+				<div class="rectangle six grid"></div>
+				<div class="rectangle seven"></div>
+				<div class="rectangle eight"></div>
+				<div class="rectangle nine grid"></div>
+				<div class="rectangle ten"></div>
+				<div class="rectangle eleven grid"></div>
+				<div class="rectangle twelve"></div>
+				<div class="rectangle thirteen grid"></div>
+				<div class="rectangle fourteen"></div>
+				<div class="rectangle fifteen"></div>
+				<div class="rectangle sixteen"></div>
+				<div class="rectangle seventeen"></div>
+				<div class="rectangle eighteen grid"></div>
+				<div class="rectangle nineteen"></div>
+				<div class="rectangle twenty"></div>
+				<div class="rectangle twentyone"></div>
+				<div class="rectangle twentytwo"></div>
+				<div class="rectangle twentythree"></div>
+				<div class="rectangle twentyfour"></div>
+				<div class="rectangle twentyfive"></div>
+			</div>
+			<div class="containerParent">
+				<div class="container">
+					<div class="logo"></div>
+					<div class="navigation">
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">Wallet</a></li>
+							<li><a href="#">DApps</a></li>
+							<li><a href="#">Documentation</a></li>
+							<li><a href="#">Blochchain Explorer</a></li>
+							<li>
+								<a href="#">
+									<Dropdown
+											:buttonTitle="false"
+											title="About"
+											:items="[
 											{ title: 'Team' },
 											{ title: 'Partners' },
 											{ title: 'Join Us' },
 											{ title: 'News' }
 											]"
-										/>
-									</a>
-								</li>
-								<li><a href="#">Forum</a></li>
-							</ul>
-						</div>
-						<h1>Adaptable blockchain for enterprise solutions</h1>
-						<div class="playButtonContainer">
-							<button class="play-button">
-								<img src="/static/images/icons/play.png" alt="Play"/>
-							</button>
-						</div>
+									/>
+								</a>
+							</li>
+							<li><a href="#">Forum</a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -161,20 +153,12 @@
 		line-height: 32px;
 	}
 
-	.header {
-		position: relative;
-		width: 100%;
-		/*background: linear-gradient(rgba(2, 17, 50), rgba(3, 33, 87));*/
-		background-image: linear-gradient(-132deg, #04265f 0%, #021234 92%, #021131 100%);
-		/*webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);*/
-		clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-		height: 800px;
-	}
-
 	.rectangleContainer {
 		position: relative;
+		background-image: linear-gradient(-132deg, #04265f 0%, #021234 92%, #021131 100%);
+		clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 		overflow: hidden;
-		height: 100%;
+		height: 800px;
 		width: 100%;
 		top: 0;
 		left: 0;
@@ -381,6 +365,12 @@
 		padding-top: 40px;
 		margin: auto;
 		max-width: 1280px;
+	}
+
+	.header {
+		position: absolute;
+		top: 0;
+		width: 100%;
 	}
 
 	.logo {

@@ -1,7 +1,7 @@
 <template>
 	<v-menu offset-y class="dropdown" content-class="test" :open-on-hover="true">
 		<div slot="activator">
-			<Button class="button" v-if="buttonTitle" :colour="buttonColour">
+			<Button class="button" v-if="useButton" :colour="buttonColour">
 				{{title}}
 				<img src="/static/images/icons/arrow-down.png" alt="" class="arrow" />
 			</Button>
@@ -27,7 +27,7 @@
 				type: String,
 				default: ''
 			},
-			buttonTitle: {
+			useButton: {
 				type: Boolean,
 				default: true
 			},

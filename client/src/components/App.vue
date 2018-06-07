@@ -1,72 +1,115 @@
 <template>
 	<div data-app>
-		<div class="header">
-			<div class="rectangleContainer">
-				<div class="rectangle one grid"></div>
-				<div class="rectangle two grid"></div>
-				<div class="rectangle three"></div>
-				<div class="rectangle four"></div>
-				<div class="rectangle five"></div>
-				<div class="rectangle six grid"></div>
-				<div class="rectangle seven"></div>
-				<div class="rectangle eight"></div>
-				<div class="rectangle nine grid"></div>
-				<div class="rectangle ten"></div>
-				<div class="rectangle eleven grid"></div>
-				<div class="rectangle twelve"></div>
-				<div class="rectangle thirteen grid"></div>
-				<div class="rectangle fourteen"></div>
-				<div class="rectangle fifteen"></div>
-				<div class="rectangle sixteen"></div>
-				<div class="rectangle seventeen"></div>
-				<div class="rectangle eighteen grid"></div>
-				<div class="rectangle nineteen"></div>
-				<div class="rectangle twenty"></div>
-				<div class="rectangle twentyone"></div>
-				<div class="rectangle twentytwo"></div>
-				<div class="rectangle twentythree"></div>
-				<div class="rectangle twentyfour"></div>
-				<div class="rectangle twentyfive"></div>
-			</div>
-			<div class="containerParent">
-				<div class="container">
-					<div class="logo"></div>
-					<div class="navigation">
-						<ul>
-							<li><a href="#">Home</a></li>
-							<li><a href="#">Wallet</a></li>
-							<li><a href="#">DApps</a></li>
-							<li><a href="#">Documentation</a></li>
-							<li><a href="#">Blochchain Explorer</a></li>
-							<li>
-								<a href="#">
-									<Dropdown
-										:buttonTitle="false"
-										title="About"
-										:items="[
-										{ title: 'Team' },
-										{ title: 'Partners' },
-										{ title: 'Join Us' },
-										{ title: 'News' }
-										]"
-									/>
-								</a>
-							</li>
-							<li><a href="#">Forum</a></li>
-						</ul>
-					</div>
-					<h1>Adaptable blockchain for enterprise solutions</h1>
-					<div class="playButtonContainer">
-						<button class="play-button">
-							<img src="/static/images/icons/play.png" alt="Play"/>
-						</button>
+		<v-progress-linear v-if="loadingStack > 0" :indeterminate="true"></v-progress-linear>
+		<div v-if="Object.keys(appLoaded).length !== 0">
+			<v-content>
+				<v-container fill-height>
+					<v-layout justify-center align-center>
+						<v-flex shrink>
+							<v-progress-circular
+									:size="100"
+									:width="15"
+									:rotate="-90"
+									:value="percentageLoader"
+									color="primary"
+							>
+								{{percentageLoader}}%
+							</v-progress-circular>
+						</v-flex>
+					</v-layout>
+				</v-container>
+			</v-content>
+		</div>
+		<div v-else>
+			<div class="header">
+				<div class="rectangleContainer">
+					<div class="rectangle one grid"></div>
+					<div class="rectangle two grid"></div>
+					<div class="rectangle three"></div>
+					<div class="rectangle four"></div>
+					<div class="rectangle five"></div>
+					<div class="rectangle six grid"></div>
+					<div class="rectangle seven"></div>
+					<div class="rectangle eight"></div>
+					<div class="rectangle nine grid"></div>
+					<div class="rectangle ten"></div>
+					<div class="rectangle eleven grid"></div>
+					<div class="rectangle twelve"></div>
+					<div class="rectangle thirteen grid"></div>
+					<div class="rectangle fourteen"></div>
+					<div class="rectangle fifteen"></div>
+					<div class="rectangle sixteen"></div>
+					<div class="rectangle seventeen"></div>
+					<div class="rectangle eighteen grid"></div>
+					<div class="rectangle nineteen"></div>
+					<div class="rectangle twenty"></div>
+					<div class="rectangle twentyone"></div>
+					<div class="rectangle twentytwo"></div>
+					<div class="rectangle twentythree"></div>
+					<div class="rectangle twentyfour"></div>
+					<div class="rectangle twentyfive"></div>
+				</div>
+				<div class="containerParent">
+					<div class="container">
+						<div class="logo"></div>
+						<div class="navigation">
+							<ul>
+								<li><a href="#">Home</a></li>
+								<li><a href="#">Wallet</a></li>
+								<li><a href="#">DApps</a></li>
+								<li><a href="#">Documentation</a></li>
+								<li><a href="#">Blochchain Explorer</a></li>
+								<li>
+									<a href="#">
+										<Dropdown
+												:buttonTitle="false"
+												title="About"
+												:items="[
+											{ title: 'Team' },
+											{ title: 'Partners' },
+											{ title: 'Join Us' },
+											{ title: 'News' }
+											]"
+										/>
+									</a>
+								</li>
+								<li><a href="#">Forum</a></li>
+							</ul>
+						</div>
+						<h1>Adaptable blockchain for enterprise solutions</h1>
+						<div class="playButtonContainer">
+							<button class="play-button">
+								<img src="/static/images/icons/play.png" alt="Play"/>
+							</button>
+						</div>
 					</div>
 				</div>
 			</div>
+			<router-view></router-view>
 		</div>
-		<router-view></router-view>
 	</div>
 </template>
+
+<script>
+	export default {
+		computed: {
+			loadingStack()
+			{
+				return this.$store.getters['app/loadingStack'].length;
+			},
+			appLoaded()
+			{
+				return this.$store.getters['app/appLoaded'];
+			},
+			percentageLoader()
+			{
+				if(this.loadingStack === 0) return 100;
+
+				return ((this.loadingStack - Object.keys(this.appLoaded).length) * 100) / Object.keys(this.appLoaded).length;
+			}
+		}
+	};
+</script>
 
 <style>
 	body {

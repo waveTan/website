@@ -1,6 +1,6 @@
 <template>
 	<div class="section white">
-		<div class="container architecture">
+		<div class="container">
 			<h2>Architecture</h2>
 			<v-layout row wrap>
 				<v-flex xs6>
@@ -35,7 +35,6 @@
 	</div>
 </template>
 
-
 <script>
 	export default {
 		data()
@@ -56,3 +55,59 @@
 		}
 	};
 </script>
+
+<style scoped>
+	ul {
+		margin-top: 58px;
+	}
+
+	ul li {
+		list-style: none;
+		border-left: 4px solid #9cbe82;
+		padding-left: 28px;
+		opacity: 0.25;
+	}
+
+	ul li h3 {
+		font-size: 32px;
+		letter-spacing: 1px;
+		line-height: 34px;
+		padding-bottom: 18px;
+		color: #445569;
+	}
+
+	ul li p {
+		line-height: 10px;
+	}
+
+	ul li.active,
+	ul li:hover {
+		opacity: 1;
+		border-left: 6px solid #56c400;
+		padding-left: 26px;
+		cursor: pointer;
+	}
+
+	.ul li.active:hover {
+		cursor: auto;
+	}
+
+	.graph {
+		position: relative;
+		overflow: hidden;
+		width: 675px;
+		height: 607px;
+	}
+
+	.graph::after {
+		content: '';
+		display: block;
+		height: 100%;
+		opacity: 0.6;
+		background: url('/static/images/architecture-background.png') 50% 0;
+		-o-background-size: cover;
+		-moz-background-size: cover;
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+</style>

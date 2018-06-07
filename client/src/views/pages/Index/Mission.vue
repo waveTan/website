@@ -11,3 +11,17 @@
 		</div>
 	</div>
 </template>
+
+<style scoped>
+	.spaceship {
+		height: 517px;
+		margin: 66px auto 78px auto;
+		width: 517px;
+		background: url(/static/images/rocket.png) no-repeat center;
+		padding-top: 90px;
+	}
+
+	.spaceship h4 {
+		padding: 20px;
+	}
+</style>

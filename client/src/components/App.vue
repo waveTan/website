@@ -418,18 +418,6 @@
 		border-radius: 45px;
 	}
 
-	.spaceship {
-		height: 517px;
-		margin: 66px auto 78px auto;
-		width: 517px;
-		background: url(/static/images/rocket.png) no-repeat center;
-		padding-top: 90px;
-	}
-
-	.spaceship h4 {
-		padding: 20px;
-	}
-
 	button.play-button img {
 		padding: 6px 0 0 10px;
 	}
@@ -467,64 +455,6 @@
 
 	.center {
 		text-align: center;
-	}
-
-	.howItWorks {
-		padding: 200px 0 135px 0;
-	}
-
-	.architecture ul {
-		margin-top: 58px;
-	}
-
-	.architecture ul li {
-		list-style: none;
-		border-left: 4px solid #9cbe82;
-		padding-left: 28px;
-		opacity: 0.25;
-	}
-
-	.architecture ul li h3 {
-		font-size: 32px;
-		letter-spacing: 1px;
-		line-height: 34px;
-		padding-bottom: 18px;
-		color: #445569;
-	}
-
-	.architecture ul li p {
-		line-height: 10px;
-	}
-
-	.architecture ul li.active,
-	.architecture ul li:hover {
-		opacity: 1;
-		border-left: 6px solid #56c400;
-		padding-left: 26px;
-		cursor: pointer;
-	}
-
-	.architecture ul li.active:hover {
-		cursor: auto;
-	}
-
-	.architecture .graph {
-		position: relative;
-		overflow: hidden;
-		width: 675px;
-		height: 607px;
-	}
-
-	.architecture .graph::after {
-		content: '';
-		display: block;
-		height: 100%;
-		opacity: 0.6;
-		background: url('/static/images/architecture-background.png') 50% 0;
-		-o-background-size: cover;
-		-moz-background-size: cover;
-		-webkit-background-size: cover;
-		background-size: cover;
 	}
 
 	.menu__content {

@@ -41,3 +41,9 @@
 		</div>
 	</div>
 </template>
+
+<style scoped>
+	.howItWorks {
+		padding: 200px 0 135px 0;
+	}
+</style>

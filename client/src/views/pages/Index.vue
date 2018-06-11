@@ -6,6 +6,7 @@
 		<HowItWorks />
 		<Architecture />
 		<Download />
+		<Roadmap />
 		<p>To get started, edit files in <code>./client</code> and save.</p>
 		<SwitchLanguage />
 	</div>
@@ -18,6 +19,7 @@
 	import HowItWorks from '@/views/pages/Index/HowItWorks';
 	import Architecture from '@/views/pages/Index/Architecture';
 	import Download from '@/views/pages/Index/Download';
+	import Roadmap from '@/views/pages/Index/Roadmap';
 
 	export default {
 		components: {
@@ -26,7 +28,8 @@
 			Mission,
 			HowItWorks,
 			Architecture,
-			Download
+			Download,
+			Roadmap
 		}
 	};
 </script>

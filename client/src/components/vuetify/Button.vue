@@ -15,6 +15,10 @@
 			icon: {
 				type: [String, Boolean],
 				default: false
+			},
+			textStyle: {
+				type: String,
+				default: ''
 			}
 		}
 	}
@@ -45,6 +49,24 @@
 	.button.blue .btn__content {
 		background: #031b47;
 		border: 1px solid #fff;
+	}
+
+	.button.white .btn__content {
+		opacity: 0.8;
+		background: #fff;
+		box-shadow: 0 8px 24px 0 rgba(186, 194, 198, 0.5), 0 3px 6px 0 rgba(186, 194, 198, 0.2);
+		border-radius: 100px;
+		color: #56c400;
+	}
+
+	.button.transparent .btn__content {
+		background: none;
+		box-shadow: none;
+		color: #445569;
+	}
+
+	.btn:not(.btn--depressed) {
+		box-shadow: none;
 	}
 
 	.button img {

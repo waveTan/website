@@ -1,23 +1,25 @@
 <template>
 	<div class="section blue">
-		<h2>Download NULS Wallet</h2>
-		<p>NULS wallet is developed by NULS core technical team</p>
-		<p>Supported on various platforms</p>
-		<Dropdown
-			title="Computer Wallet"
-			:items="[
-				{ title: 'Windows Download' },
-				{ title: 'MacOS Download' }
-			]"
-		/>
-		<Dropdown
-			title="Mobile Wallet"
-			:items="[
-				{ title: 'Android' },
-				{ title: 'iPhone' }
-			]"
-		/>
-		<Button colour="blue" icon="arrow-left">Web Wallet</Button>
+		<div class="container">
+			<h3>Download NULS Wallet</h3>
+			<p>NULS wallet is developed by NULS core technical team</p>
+			<p>Supported on various platforms</p>
+			<Dropdown
+				title="Computer Wallet"
+				:items="[
+					{ title: 'Windows Download' },
+					{ title: 'MacOS Download' }
+				]"
+			/>
+			<Dropdown
+				title="Mobile Wallet"
+				:items="[
+					{ title: 'Android' },
+					{ title: 'iPhone' }
+				]"
+			/>
+			<Button colour="blue" icon="arrow-left">Web Wallet</Button>
+		</div>
 	</div>
 </template>
 
@@ -32,3 +34,9 @@
 		}
 	};
 </script>
+
+<style scoped>
+	h3 {
+		color: #fff;
+	}
+</style>

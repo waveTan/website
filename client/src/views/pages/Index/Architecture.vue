@@ -6,22 +6,22 @@
 				<v-flex xs6>
 					<ul>
 						<li :class="{ active: isActive('loginLayer') }" @mouseover="setActive('loginLayer')">
-							<h3>Login layer</h3>
+							<h4>Login layer</h4>
 							<p>Smart contracts as logic containers</p>
 							<p>Higher flexibility and wider application</p>
 						</li>
 						<li :class="{ active: isActive('moduleLayer') }" @mouseover="setActive('moduleLayer')">
-							<h3>Module layer</h3>
+							<h4>Module layer</h4>
 							<p>Ongoing development of new modules by core/community developers</p>
 							<p>Online management under NULS module depository</p>
 						</li>
 						<li :class="{ active: isActive('chainLayer') }" @mouseover="setActive('chainLayer')">
-							<h3>Chain layer</h3>
+							<h4>Chain layer</h4>
 							<p>Variable as needed and easily customized</p>
 							<p>Various customizable modules for public, private, and enterprise blockchains</p>
 						</li>
 						<li :class="{ active: isActive('crossChain') }" @mouseover="setActive('crossChain')">
-							<h3>Cross-chain</h3>
+							<h4>Cross-chain</h4>
 							<p>High scalability and rapid value transmission</p>
 							<p>Connection via cross-chain consensus modules</p>
 						</li>
@@ -68,7 +68,7 @@
 		opacity: 0.25;
 	}
 
-	ul li h3 {
+	ul li h4 {
 		font-size: 32px;
 		letter-spacing: 1px;
 		line-height: 34px;

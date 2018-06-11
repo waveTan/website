@@ -2,7 +2,7 @@
 	<div class="container">
 		<HeaderMeta title="pageNotFound.title" />
 		<h1><I18N id="pageNotFound.header" /></h1>
-		<h3><I18N id="pageNotFound.subHeader" /></h3>
+		<h4><I18N id="pageNotFound.subHeader" /></h4>
 		<p><I18N id="pageNotFound.content" /></p>
 		<v-btn
 			@click.native="goHome"

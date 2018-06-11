@@ -83,13 +83,22 @@
 
 	h3 {
 		font-family: NeuzeitGro-Bol, sans-serif;
+		font-size: 48px;
+		color: #0a2140;
+		letter-spacing: -1.37px;
+		line-height: 77px;
+		padding-bottom: 30px;
+	}
+
+	h4 {
+		font-family: NeuzeitGro-Bol, sans-serif;
 		font-size: 28px;
 		color: #0a2140;
 		letter-spacing: -0.88px;
 		line-height: 34px;
 	}
 
-	h4 {
+	h5 {
 		font-family: SofiaProLight, sans-serif;
 		font-size: 24px;
 		opacity: 0.7;

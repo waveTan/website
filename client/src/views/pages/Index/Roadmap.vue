@@ -3,60 +3,118 @@
 		<div class="container">
 			<h3>Roadmap</h3>
 			<div>
-				<Button colour="roadmapButton white">ICE</Button>
-				<Button colour="roadmapButton transparent">WATER</Button>
-				<Button colour="roadmapButton transparent">STEAM</Button>
+				<div class="buttonParent" @mouseover="setActive('ice')">
+					<Button colour="roadmapButton" :class="isActive('ice') ? 'white' : 'transparent'">ICE</Button>
+				</div>
+				<div class="buttonParent" @mouseover="setActive('water')">
+					<Button colour="roadmapButton" :class="isActive('water') ? 'white' : 'transparent'">WATER</Button>
+				</div>
+				<div class="buttonParent" @mouseover="setActive('steam')">
+					<Button colour="roadmapButton" :class="isActive('steam') ? 'white' : 'transparent'">STEAM</Button>
+				</div>
 			</div>
 		</div>
 		<div class="roadmap">
 			<div class="line"></div>
 			<div class="container">
-				<v-layout row wrap>
-					<v-flex xs3>
-						<div class="item">
-							<p class="date">2018.03</p>
-							<div class="triangle"></div>
-							<p class="bold">Main-net testing</p>
-							<p>Complete the main-net's development, testing phase commence</p>
-							<p class="bold">Improve the technical design documentation</p>
-							<p class="bold">Establish and expand the open-source development community</p>
-						</div>
-					</v-flex>
-					<v-flex xs3>
-						<div class="item">
-							<p class="date">2018.05</p>
-							<div class="triangle active"></div>
-							<p class="bold">Continuous improvement</p>
-							<p>Complete development of basic modules. Continuously improve build-in modules, such as smart contracts,
-								multi-chain modules and cross-chain consensus.</p>
-							<p class="bold">Application Promotion</p>
-							<p>Start and promte more applications to be accessed within the NULS ecosystem.</p>
-							<p class="bold">Main-net launch</p>
-							<p class="bold">Release PC wallet</p>
-							<p class="bold">Release mobile wallet</p>
-							<p class="bold">Release blockchain explorer</p>
-						</div>
-					</v-flex>
-					<v-flex xs3>
-						<div class="item">
-							<p class="date">2018.07</p>
-							<div class="triangle"></div>
-							<p class="bold">Release Smart Contract module</p>
-							<p class="bold">Inchain joins NULS</p>
-							<p class="bold">Technology: main-chain's ecosystem improvements</p>
-							<p>Improve the main-chains overall ecosystem, including a blockchain browser, e-wallet, mobile wallet, Smart Contact virtual machinbe compiler,
-								development tools, and multilingual adapters.</p>
-						</div>
-					</v-flex>
-					<v-flex xs3>
-						<div class="item">
-							<p class="date">2018.10</p>
-							<div class="triangle"></div>
-							<p class="bold">3 New programming languages</p>
-							<p>Add support for 3 programming languages to Smart Contracts</p>
-						</div>
-					</v-flex>
-				</v-layout>
+				<carousel :perPage=1 v-if="isActive('ice')">
+					<slide>
+						<v-layout row wrap>
+							<v-flex xs3>
+								<div class="item">
+									<p class="date">2018.03</p>
+									<div class="triangle"></div>
+									<p class="bold">Main-net testing</p>
+									<p>Complete the main-net's development, testing phase commence</p>
+									<p class="bold">Improve the technical design documentation</p>
+									<p class="bold">Establish and expand the open-source development community</p>
+								</div>
+							</v-flex>
+							<v-flex xs3>
+								<div class="item">
+									<p class="date">2018.05</p>
+									<div class="triangle active"></div>
+									<p class="bold">Continuous improvement</p>
+									<p>Complete development of basic modules. Continuously improve build-in modules, such as smart contracts,
+										multi-chain modules and cross-chain consensus.</p>
+									<p class="bold">Application Promotion</p>
+									<p>Start and promte more applications to be accessed within the NULS ecosystem.</p>
+									<p class="bold">Main-net launch</p>
+									<p class="bold">Release PC wallet</p>
+									<p class="bold">Release mobile wallet</p>
+									<p class="bold">Release blockchain explorer</p>
+								</div>
+							</v-flex>
+							<v-flex xs3>
+								<div class="item">
+									<p class="date">2018.07</p>
+									<div class="triangle"></div>
+									<p class="bold">Release Smart Contract module</p>
+									<p class="bold">Inchain joins NULS</p>
+									<p class="bold">Technology: main-chain's ecosystem improvements</p>
+									<p>Improve the main-chains overall ecosystem, including a blockchain browser, e-wallet, mobile wallet, Smart Contact virtual machinbe compiler,
+										development tools, and multilingual adapters.</p>
+								</div>
+							</v-flex>
+							<v-flex xs3>
+								<div class="item">
+									<p class="date">2018.10</p>
+									<div class="triangle"></div>
+									<p class="bold">3 New programming languages</p>
+									<p>Add support for 3 programming languages to Smart Contracts</p>
+								</div>
+							</v-flex>
+						</v-layout>
+					</slide>
+					<slide>
+						<v-layout row wrap>
+							<v-flex xs3>
+								<div class="item">
+									<p class="date">2018.03</p>
+									<div class="triangle"></div>
+									<p class="bold">Main-net testing</p>
+									<p>Complete the main-net's development, testing phase commence</p>
+									<p class="bold">Improve the technical design documentation</p>
+									<p class="bold">Establish and expand the open-source development community</p>
+								</div>
+							</v-flex>
+							<v-flex xs3>
+								<div class="item">
+									<p class="date">2018.05</p>
+									<div class="triangle active"></div>
+									<p class="bold">Continuous improvement</p>
+									<p>Complete development of basic modules. Continuously improve build-in modules, such as smart contracts,
+										multi-chain modules and cross-chain consensus.</p>
+									<p class="bold">Application Promotion</p>
+									<p>Start and promte more applications to be accessed within the NULS ecosystem.</p>
+									<p class="bold">Main-net launch</p>
+									<p class="bold">Release PC wallet</p>
+									<p class="bold">Release mobile wallet</p>
+									<p class="bold">Release blockchain explorer</p>
+								</div>
+							</v-flex>
+							<v-flex xs3>
+								<div class="item">
+									<p class="date">2018.07</p>
+									<div class="triangle"></div>
+									<p class="bold">Release Smart Contract module</p>
+									<p class="bold">Inchain joins NULS</p>
+									<p class="bold">Technology: main-chain's ecosystem improvements</p>
+									<p>Improve the main-chains overall ecosystem, including a blockchain browser, e-wallet, mobile wallet, Smart Contact virtual machinbe compiler,
+										development tools, and multilingual adapters.</p>
+								</div>
+							</v-flex>
+							<v-flex xs3>
+								<div class="item">
+									<p class="date">2018.10</p>
+									<div class="triangle"></div>
+									<p class="bold">3 New programming languages</p>
+									<p>Add support for 3 programming languages to Smart Contracts</p>
+								</div>
+							</v-flex>
+						</v-layout>
+					</slide>
+				</carousel>
 			</div>
 		</div>
 	</div>
@@ -64,10 +122,13 @@
 
 <script>
 	import Button from '@/components/vuetify/Button';
+	import { Carousel, Slide } from 'vue-carousel';
 
 	export default {
 		components: {
-			Button
+			Button,
+			Carousel,
+			Slide
 		},
 		data()
 		{
@@ -89,6 +150,10 @@
 </script>
 
 <style>
+	.buttonParent {
+		display: inline-block;
+	}
+
 	.button.roadmapButton .btn__content {
 		font-size: 24px;
 		letter-spacing: 1px;

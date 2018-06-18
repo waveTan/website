@@ -26,6 +26,10 @@
 				]"
 			/>
 			<Button colour="blue" icon="arrow-left">Web Wallet</Button>
+			<div class="mobile images">
+				<div class="ipad"></div>
+				<div class="iphone"></div>
+			</div>
 		</div>
 	</div>
 </template>
@@ -68,7 +72,7 @@
 
 	.section {
 		clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-		height: 770px;
+		height: 740px;
 		position: relative;
 		top: 30px;
 	}
@@ -81,12 +85,81 @@
 
 	.container.images {
 		position: relative;
-		top: 30px;
+		top: 85px;
 		left: 390px;
 		z-index: 1;
 	}
 
+	.mobile.images {
+		display: none;
+		left: -100px;
+		position: absolute;
+	}
+
+	.mobile.images .ipad {
+		background-image: url('/static/images/iPad-small.png');
+		width: 703px;
+		height: 330px;
+		top: 110px;
+	}
+
+	.mobile.images .iphone {
+		background-image: url('/static/images/iPhone-small.png');
+		width: 244px;
+		height: 320px;
+		top: 143px;
+		left: 260px;
+	}
+
 	.main {
-		height: 840px;
+		height: 925px;
+		overflow: hidden;
+		margin-bottom: -40px;
+	}
+
+	@media screen and (max-width: 990px) {
+		.container.images {
+			display: none;
+		}
+
+		.mobile.images {
+			display: block;
+		}
+	}
+
+	@media screen and (max-width: 350px) {
+		.main {
+			height: 1070px;
+		}
+
+		.container.information {
+			top: -950px;
+		}
+
+		.mobile.images {
+			margin-top: -70px;
+		}
+
+		.section.blue {
+			height: 800px;
+		}
+	}
+
+	@media screen and (max-width: 450px) {
+		.main {
+			height: 1070px;
+		}
+
+		.container.information {
+			top: -950px;
+		}
+
+		.mobile.images {
+			margin-top: -70px;
+		}
+
+		.section.blue {
+			height: 800px;
+		}
 	}
 </style>

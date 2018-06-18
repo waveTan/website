@@ -168,6 +168,18 @@
 		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
 	}
 
+	@media screen and (max-width: 600px) {
+		.section.grey {
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+		}
+	}
+
+	@media screen and (max-width: 350px) {
+		.section.grey {
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 97%);
+		}
+	}
+
 	.section.blue {
 		background: url('/static/images/wallet-section-bg.jpg') no-repeat center, linear-gradient(to right, #08265e 40%, #021234 60%);
 	}

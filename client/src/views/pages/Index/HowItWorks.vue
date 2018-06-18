@@ -46,4 +46,10 @@
 	.howItWorks {
 		padding: 200px 0 135px 0;
 	}
+
+	@media screen and (max-width: 600px) {
+		.howItWorks {
+			padding: 100px 0 70px 0;
+		}
+	}
 </style>

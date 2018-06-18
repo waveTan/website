@@ -168,6 +168,10 @@
 		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
 	}
 
+	.section.blue {
+		background: url('/static/images/wallet-section-bg.jpg') no-repeat center, linear-gradient(to right, #08265e 40%, #021234 60%);
+	}
+
 	.center {
 		text-align: center;
 	}

@@ -24,4 +24,10 @@
 	.spaceship h5 {
 		padding: 20px;
 	}
+
+	@media screen and (max-width: 517px) {
+		.spaceship {
+			width: initial;
+		}
+	}
 </style>

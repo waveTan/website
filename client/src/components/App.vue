@@ -168,6 +168,12 @@
 		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
 	}
 
+	@media screen and (max-width: 800px) {
+		.section.grey {
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 93%);
+		}
+	}
+
 	@media screen and (max-width: 600px) {
 		.section.grey {
 			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);

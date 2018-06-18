@@ -2,35 +2,33 @@
 	<div class="section white">
 		<div class="container">
 			<h2>Architecture</h2>
-			<v-layout row wrap>
-				<v-flex xs6>
-					<ul>
-						<li :class="{ active: isActive('loginLayer') }" @mouseover="setActive('loginLayer')">
-							<h4>Login layer</h4>
-							<p>Smart contracts as logic containers</p>
-							<p>Higher flexibility and wider application</p>
-						</li>
-						<li :class="{ active: isActive('moduleLayer') }" @mouseover="setActive('moduleLayer')">
-							<h4>Module layer</h4>
-							<p>Ongoing development of new modules by core/community developers</p>
-							<p>Online management under NULS module depository</p>
-						</li>
-						<li :class="{ active: isActive('chainLayer') }" @mouseover="setActive('chainLayer')">
-							<h4>Chain layer</h4>
-							<p>Variable as needed and easily customized</p>
-							<p>Various customizable modules for public, private, and enterprise blockchains</p>
-						</li>
-						<li :class="{ active: isActive('crossChain') }" @mouseover="setActive('crossChain')">
-							<h4>Cross-chain</h4>
-							<p>High scalability and rapid value transmission</p>
-							<p>Connection via cross-chain consensus modules</p>
-						</li>
-					</ul>
-				</v-flex>
-				<v-flex xs6>
-					<div class="graph"></div>
-				</v-flex>
-			</v-layout>
+			<ul>
+				<li :class="{ active: isActive('loginLayer') }" @click="setActive('loginLayer')">
+					<h4>Login layer</h4>
+					<p>Smart contracts as logic containers</p>
+					<p>Higher flexibility and wider application</p>
+					<div class="mobile graph" :class="{ active: isActive('loginLayer') }"></div>
+				</li>
+				<li :class="{ active: isActive('moduleLayer') }" @click="setActive('moduleLayer')">
+					<h4>Module layer</h4>
+					<p>Ongoing development of new modules by core/community developers</p>
+					<p>Online management under NULS module depository</p>
+					<div class="mobile graph" :class="{ active: isActive('moduleLayer') }"></div>
+				</li>
+				<li :class="{ active: isActive('chainLayer') }" @click="setActive('chainLayer')">
+					<h4>Chain layer</h4>
+					<p>Variable as needed and easily customized</p>
+					<p>Various customizable modules for public, private, and enterprise blockchains</p>
+					<div class="mobile graph" :class="{ active: isActive('chainLayer') }"></div>
+				</li>
+				<li :class="{ active: isActive('crossChain') }" @click="setActive('crossChain')">
+					<h4>Cross-chain</h4>
+					<p>High scalability and rapid value transmission</p>
+					<p>Connection via cross-chain consensus modules</p>
+					<div class="mobile graph" :class="{ active: isActive('crossChain') }"></div>
+				</li>
+			</ul>
+			<div class="graph"></div>
 		</div>
 	</div>
 </template>
@@ -58,6 +56,8 @@
 
 <style scoped>
 	ul {
+		float: left;
+		width: 50%;
 		margin-top: 58px;
 	}
 
@@ -95,8 +95,9 @@
 	.graph {
 		position: relative;
 		overflow: hidden;
-		width: 675px;
+		/*width: 675px;*/
 		height: 607px;
+		width: 50%;
 	}
 
 	.graph::after {
@@ -109,5 +110,25 @@
 		-moz-background-size: cover;
 		-webkit-background-size: cover;
 		background-size: cover;
+	}
+
+	.mobile {
+		display: none;
+	}
+
+	@media screen and (max-width: 800px) {
+		ul {
+			float: none;
+			width: 100%;
+		}
+
+		.graph {
+			width: 100%;
+			display: none;
+		}
+
+		.mobile.active {
+			display: block;
+		}
 	}
 </style>

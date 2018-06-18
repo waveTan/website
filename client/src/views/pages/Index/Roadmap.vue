@@ -3,13 +3,13 @@
 		<div class="container">
 			<h3>Roadmap</h3>
 			<div>
-				<div class="buttonParent" @mouseover="setActive('ice')">
+				<div class="buttonParent" @click="setActive('ice')">
 					<Button colour="roadmapButton" :class="isActive('ice') ? 'white' : 'transparent'">ICE</Button>
 				</div>
-				<div class="buttonParent" @mouseover="setActive('water')">
+				<div class="buttonParent" @click="setActive('water')">
 					<Button colour="roadmapButton" :class="isActive('water') ? 'white' : 'transparent'">WATER</Button>
 				</div>
-				<div class="buttonParent" @mouseover="setActive('steam')">
+				<div class="buttonParent" @click="setActive('steam')">
 					<Button colour="roadmapButton" :class="isActive('steam') ? 'white' : 'transparent'">STEAM</Button>
 				</div>
 			</div>

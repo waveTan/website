@@ -151,29 +151,6 @@
 		max-width: 1280px;
 	}
 
-	.header {
-		position: absolute;
-		top: 120px;
-		width: 100%;
-	}
-
-	.playButtonContainer {
-		width: 90px;
-		margin: 40px auto 0 auto;
-	}
-
-	button.play-button {
-		background: #fff;
-		box-shadow: -1px 12px 16px 0 rgba(6, 27, 55, 1);
-		height: 90px;
-		width: 90px;
-		border-radius: 45px;
-	}
-
-	button.play-button img {
-		padding: 6px 0 0 10px;
-	}
-
 	.section {
 		position: static;
 		padding-top: 0;

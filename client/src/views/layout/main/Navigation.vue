@@ -2,29 +2,88 @@
 	<div class="containerParent">
 		<div class="container">
 			<div class="logo" />
-			<div class="navigation">
-				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Wallet</a></li>
-					<li><a href="#">DApps</a></li>
-					<li><a href="#">Documentation</a></li>
-					<li><a href="#">Blochchain Explorer</a></li>
-					<li>
-						<a href="#">
-							<Dropdown
-								:useButton="false"
-								:items="[
-									{ title: 'Team' },
-									{ title: 'Partners' },
-									{ title: 'Join Us' },
-									{ title: 'News' }
-								]"
-								title="About"
-							/>
-						</a>
-					</li>
-					<li><a href="#">Forum</a></li>
-				</ul>
+			<div class="desktop">
+				<div class="navigation">
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Wallet</a></li>
+						<li><a href="#">DApps</a></li>
+						<li><a href="#">Documentation</a></li>
+						<li><a href="#">Blockchain Explorer</a></li>
+						<li>
+							<a href="#">
+								<Dropdown
+									:useButton="false"
+									:items="[
+										{ title: 'Team' },
+										{ title: 'Partners' },
+										{ title: 'Join Us' },
+										{ title: 'News' }
+									]"
+									title="About"
+								/>
+							</a>
+						</li>
+						<li><a href="#">Forum</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="laptop">
+				<div class="navigation">
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Wallet</a></li>
+						<li><a href="#">Blockchain Explorer</a></li>
+						<li>
+							<a href="#">
+								<Dropdown
+									:useButton="false"
+									:items="[
+										{ title: 'DApps' },
+										{ title: 'Documentation' },
+										{ title: 'Team' },
+										{ title: 'Partners' },
+										{ title: 'Join Us' },
+										{ title: 'News' },
+										{ title: 'Forum' }
+									]"
+									title="More"
+								/>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="mobile">
+				<div class="hamburger" @click="toggleMobileNavigation" />
+				<div :class="{ closed: !mobileNavigation }" class="navigation">
+					<div class="logo" />
+					<div class="close" @click="toggleMobileNavigation" />
+					<div>
+						<ul>
+							<li><a href="#" @click="toggleMobileNavigation">Home</a></li>
+							<li><a href="#">Wallet</a></li>
+							<li><a href="#">DApps</a></li>
+							<li><a href="#">Documentation</a></li>
+							<li><a href="#">Blockchain Explorer</a></li>
+							<li>
+								<a href="#">
+									<Dropdown
+										:useButton="false"
+										:items="[
+											{ title: 'Team' },
+											{ title: 'Partners' },
+											{ title: 'Join Us' },
+											{ title: 'News' }
+										]"
+										title="About"
+									/>
+								</a>
+							</li>
+							<li><a href="#">Forum</a></li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -36,6 +95,35 @@
 	export default {
 		components: {
 			Dropdown
+		},
+		data: () => ({
+			mobileNavigation: false
+		}),
+		destroyed()
+		{
+			document.documentElement.removeEventListener('click', this.clickAway, false);
+		},
+		methods: {
+			toggleMobileNavigation()
+			{
+				this.mobileNavigation = !this.mobileNavigation;
+
+				if(this.mobileNavigation)
+				{
+					this.$nextTick(() => document.documentElement.addEventListener('click', this.clickAway, false));
+				}
+				else
+				{
+					document.documentElement.removeEventListener('click', this.clickAway, false);
+				}
+			},
+			clickAway(e)
+			{
+				if(!e.target.closest('.mobile') && this.mobileNavigation)
+				{
+					this.toggleMobileNavigation();
+				}
+			}
 		}
 	};
 </script>
@@ -61,27 +149,110 @@
 		margin-top: 10px;
 	}
 
-	.navigation {
-		margin: auto;
-		width: 100%;
+	.mobile {
+		& .navigation {
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: #0a2140;
+			width: 100%;
+			z-index: 1;
+			font-size: 20px;
+			overflow-y: hidden;
+			max-height: 500px;
+			transition-property: all;
+			transition-duration: 1s;
+			transition-timing-function: ease;
+		}
+
+		& .navigation.closed {
+			max-height: 0;
+		}
+
+		& ul {
+			margin: 90px 0 50px 0;
+		}
+
+		& li {
+			text-align: center;
+		}
+
+		& a {
+			color: #fff;
+			display: block;
+			padding: 15px;
+		}
+
+		.logo {
+			margin: 25px;
+		}
 	}
 
-	.navigation ul {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		overflow: hidden;
-		text-align: center;
+	.desktop,
+	.laptop {
+		& .navigation {
+			margin: auto;
+			width: 100%;
+		}
+
+		& .navigation ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			text-align: center;
+		}
+
+		& .navigation ul li {
+			display: inline-block;
+		}
+
+		& .navigation ul li a {
+			display: block;
+			padding: 23px;
+			text-decoration: none;
+			color: white;
+		}
 	}
 
-	.navigation ul li {
-		display: inline-block;
+	.laptop,
+	.mobile {
+		display: none;
 	}
 
-	.navigation ul li a {
-		display: block;
-		padding: 23px;
-		text-decoration: none;
-		color: white;
+	.hamburger {
+		float: right;
+		background: url('/static/images/icons/hamburger.png') no-repeat center;
+		width: 27px;
+		height: 16px;
+		padding: 37px;
+	}
+
+	.close {
+		float: right;
+		background: url('/static/images/icons/close.png') no-repeat center;
+		width: 21px;
+		height: 22px;
+		padding: 37px;
+	}
+
+	@media screen and (max-width: 1279px) {
+		.desktop {
+			display: none;
+		}
+
+		.laptop {
+			display: block;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.laptop {
+			display: none;
+		}
+
+		.mobile {
+			display: block;
+		}
 	}
 </style>

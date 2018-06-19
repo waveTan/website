@@ -111,7 +111,7 @@
 		position: relative;
 		padding-top: 40px;
 		margin: auto;
-		width: 1280px;
+		max-width: 1280px;
 	}
 
 	.header {

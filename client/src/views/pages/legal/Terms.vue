@@ -80,7 +80,7 @@
 					<li><I18N id="legal.terms.general.li7" /></li>
 				</ol>
 			</SimpleExpansionPanel>
-			<SimpleExpansionPanel title="legal.terms.details.title" :titleVars="{ name }">
+			<SimpleExpansionPanel :titleVars="{ name }" title="legal.terms.details.title">
 				<ol class="clauses">
 					<li><I18N id="legal.terms.details.li1" :vars="{ name, websiteUrl }" />
 						<p><I18N id="legal.terms.details.li1p1" :vars="{ name, emailAddress }" /></p>
@@ -93,17 +93,17 @@
 
 <script>
 	export default {
+		components: {
+			SimpleExpansionPanel: () => import(/* webpackChunkName:"vuetify" */ '@/components/vuetify/SimpleExpansionPanel'),
+			SimpleExpansionPanels: () => import(/* webpackChunkName:"vuetify" */ '@/components/vuetify/SimpleExpansionPanels')
+		},
 		data()
 		{
 			return {
 				name: 'Josh Welham',
 				websiteUrl: 'http://www.example.com',
 				emailAddress: 'hello@example.com'
-			}
-		},
-		components: {
-			SimpleExpansionPanel: () => import(/* webpackChunkName:"vuetify" */ '@/components/vuetify/SimpleExpansionPanel'),
-			SimpleExpansionPanels: () => import(/* webpackChunkName:"vuetify" */ '@/components/vuetify/SimpleExpansionPanels')
+			};
 		}
 	};
 </script>

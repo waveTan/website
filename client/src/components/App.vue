@@ -1,19 +1,19 @@
 <template>
 	<div data-app>
-		<v-progress-linear v-if="loadingStack > 0" :indeterminate="true"></v-progress-linear>
+		<v-progress-linear v-if="loadingStack > 0" :indeterminate="true" />
 		<div v-if="Object.keys(appLoaded).length !== 0">
 			<v-content>
 				<v-container fill-height>
 					<v-layout justify-center align-center>
 						<v-flex shrink>
 							<v-progress-circular
-									:size="100"
-									:width="15"
-									:rotate="-90"
-									:value="percentageLoader"
-									color="primary"
+								:size="100"
+								:width="15"
+								:rotate="-90"
+								:value="percentageLoader"
+								color="primary"
 							>
-								{{percentageLoader}}%
+								{{ percentageLoader }}%
 							</v-progress-circular>
 						</v-flex>
 					</v-layout>
@@ -21,8 +21,8 @@
 			</v-content>
 		</div>
 		<div v-else>
-			<HeaderLayout />
-			<router-view></router-view>
+			<HeaderLayout/>
+			<router-view />
 		</div>
 	</div>
 </template>
@@ -31,6 +31,9 @@
 	import HeaderLayout from '@/views/layout/main/HeaderLayout';
 
 	export default {
+		components: {
+			HeaderLayout
+		},
 		computed: {
 			loadingStack()
 			{
@@ -46,9 +49,6 @@
 
 				return ((this.loadingStack - Object.keys(this.appLoaded).length) * 100) / Object.keys(this.appLoaded).length;
 			}
-		},
-		components: {
-			HeaderLayout
 		}
 	};
 </script>
@@ -111,7 +111,7 @@
 		position: relative;
 		padding-top: 40px;
 		margin: auto;
-		max-width: 1280px;
+		width: 1280px;
 	}
 
 	.header {

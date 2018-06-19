@@ -1,30 +1,30 @@
 <template>
 	<div class="rectangleContainer">
-		<div class="rectangle one grid"></div>
-		<div class="rectangle two grid"></div>
-		<div class="rectangle three"></div>
-		<div class="rectangle four"></div>
-		<div class="rectangle five"></div>
-		<div class="rectangle six grid"></div>
-		<div class="rectangle seven"></div>
-		<div class="rectangle eight"></div>
-		<div class="rectangle nine grid"></div>
-		<div class="rectangle ten"></div>
-		<div class="rectangle eleven grid"></div>
-		<div class="rectangle twelve"></div>
-		<div class="rectangle thirteen grid"></div>
-		<div class="rectangle fourteen"></div>
-		<div class="rectangle fifteen"></div>
-		<div class="rectangle sixteen"></div>
-		<div class="rectangle seventeen"></div>
-		<div class="rectangle eighteen grid"></div>
-		<div class="rectangle nineteen"></div>
-		<div class="rectangle twenty"></div>
-		<div class="rectangle twentyone"></div>
-		<div class="rectangle twentytwo"></div>
-		<div class="rectangle twentythree"></div>
-		<div class="rectangle twentyfour"></div>
-		<div class="rectangle twentyfive"></div>
+		<div class="rectangle one grid" />
+		<div class="rectangle two grid" />
+		<div class="rectangle three" />
+		<div class="rectangle four" />
+		<div class="rectangle five" />
+		<div class="rectangle six grid" />
+		<div class="rectangle seven" />
+		<div class="rectangle eight" />
+		<div class="rectangle nine grid" />
+		<div class="rectangle ten" />
+		<div class="rectangle eleven grid" />
+		<div class="rectangle twelve" />
+		<div class="rectangle thirteen grid" />
+		<div class="rectangle fourteen" />
+		<div class="rectangle fifteen" />
+		<div class="rectangle sixteen" />
+		<div class="rectangle seventeen" />
+		<div class="rectangle eighteen grid" />
+		<div class="rectangle nineteen" />
+		<div class="rectangle twenty" />
+		<div class="rectangle twentyone" />
+		<div class="rectangle twentytwo" />
+		<div class="rectangle twentythree" />
+		<div class="rectangle twentyfour" />
+		<div class="rectangle twentyfive" />
 	</div>
 </template>
 

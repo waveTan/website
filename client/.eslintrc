@@ -166,7 +166,7 @@
 			"multiline": "always"
 		}],
 		"vue/prop-name-casing": ["error", "camelCase"],
-		"vue/attribute-hyphenation": ["error", "never"],
+		"vue/attribute-hyphenation": ["off", "never"],
 		"vue/max-attributes-per-line": ["error", {
 			"singleline": 2
 		}],

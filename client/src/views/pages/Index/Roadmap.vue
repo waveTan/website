@@ -4,26 +4,26 @@
 			<h3>Roadmap</h3>
 			<div>
 				<div class="buttonParent" @click="setActive('ice')">
-					<Button colour="roadmapButton" :class="isActive('ice') ? 'white' : 'transparent'">ICE</Button>
+					<Button :class="isActive('ice') ? 'white' : 'transparent'" colour="roadmapButton">ICE</Button>
 				</div>
 				<div class="buttonParent" @click="setActive('water')">
-					<Button colour="roadmapButton" :class="isActive('water') ? 'white' : 'transparent'">WATER</Button>
+					<Button :class="isActive('water') ? 'white' : 'transparent'" colour="roadmapButton">WATER</Button>
 				</div>
 				<div class="buttonParent" @click="setActive('steam')">
-					<Button colour="roadmapButton" :class="isActive('steam') ? 'white' : 'transparent'">STEAM</Button>
+					<Button :class="isActive('steam') ? 'white' : 'transparent'" colour="roadmapButton">STEAM</Button>
 				</div>
 			</div>
 		</div>
 		<div class="roadmap">
-			<div class="line"></div>
+			<div class="line" />
 			<div class="container">
-				<carousel :perPage=1 v-if="isActive('ice')">
+				<carousel v-if="isActive('ice')" :perPage="1">
 					<slide>
 						<v-layout row wrap>
 							<v-flex xs3>
 								<div class="item">
 									<p class="date">2018.03</p>
-									<div class="triangle"></div>
+									<div class="triangle" />
 									<p class="bold">Main-net testing</p>
 									<p>Complete the main-net's development, testing phase commence</p>
 									<p class="bold">Improve the technical design documentation</p>
@@ -33,10 +33,10 @@
 							<v-flex xs3>
 								<div class="item">
 									<p class="date">2018.05</p>
-									<div class="triangle active"></div>
+									<div class="triangle active" />
 									<p class="bold">Continuous improvement</p>
 									<p>Complete development of basic modules. Continuously improve build-in modules, such as smart contracts,
-										multi-chain modules and cross-chain consensus.</p>
+									multi-chain modules and cross-chain consensus.</p>
 									<p class="bold">Application Promotion</p>
 									<p>Start and promte more applications to be accessed within the NULS ecosystem.</p>
 									<p class="bold">Main-net launch</p>
@@ -48,18 +48,18 @@
 							<v-flex xs3>
 								<div class="item">
 									<p class="date">2018.07</p>
-									<div class="triangle"></div>
+									<div class="triangle" />
 									<p class="bold">Release Smart Contract module</p>
 									<p class="bold">Inchain joins NULS</p>
 									<p class="bold">Technology: main-chain's ecosystem improvements</p>
 									<p>Improve the main-chains overall ecosystem, including a blockchain browser, e-wallet, mobile wallet, Smart Contact virtual machinbe compiler,
-										development tools, and multilingual adapters.</p>
+									development tools, and multilingual adapters.</p>
 								</div>
 							</v-flex>
 							<v-flex xs3>
 								<div class="item">
 									<p class="date">2018.10</p>
-									<div class="triangle"></div>
+									<div class="triangle" />
 									<p class="bold">3 New programming languages</p>
 									<p>Add support for 3 programming languages to Smart Contracts</p>
 								</div>
@@ -71,7 +71,7 @@
 							<v-flex xs3>
 								<div class="item">
 									<p class="date">2018.03</p>
-									<div class="triangle"></div>
+									<div class="triangle" />
 									<p class="bold">Main-net testing</p>
 									<p>Complete the main-net's development, testing phase commence</p>
 									<p class="bold">Improve the technical design documentation</p>
@@ -81,10 +81,10 @@
 							<v-flex xs3>
 								<div class="item">
 									<p class="date">2018.05</p>
-									<div class="triangle active"></div>
+									<div class="triangle active" />
 									<p class="bold">Continuous improvement</p>
 									<p>Complete development of basic modules. Continuously improve build-in modules, such as smart contracts,
-										multi-chain modules and cross-chain consensus.</p>
+									multi-chain modules and cross-chain consensus.</p>
 									<p class="bold">Application Promotion</p>
 									<p>Start and promte more applications to be accessed within the NULS ecosystem.</p>
 									<p class="bold">Main-net launch</p>
@@ -96,18 +96,18 @@
 							<v-flex xs3>
 								<div class="item">
 									<p class="date">2018.07</p>
-									<div class="triangle"></div>
+									<div class="triangle" />
 									<p class="bold">Release Smart Contract module</p>
 									<p class="bold">Inchain joins NULS</p>
 									<p class="bold">Technology: main-chain's ecosystem improvements</p>
 									<p>Improve the main-chains overall ecosystem, including a blockchain browser, e-wallet, mobile wallet, Smart Contact virtual machinbe compiler,
-										development tools, and multilingual adapters.</p>
+									development tools, and multilingual adapters.</p>
 								</div>
 							</v-flex>
 							<v-flex xs3>
 								<div class="item">
 									<p class="date">2018.10</p>
-									<div class="triangle"></div>
+									<div class="triangle" />
 									<p class="bold">3 New programming languages</p>
 									<p>Add support for 3 programming languages to Smart Contracts</p>
 								</div>

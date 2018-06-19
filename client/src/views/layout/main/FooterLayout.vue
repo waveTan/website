@@ -1,6 +1,10 @@
 <template>
 	<div>
-		<v-footer app inset absolute>
+		<v-footer
+			app
+			inset
+			absolute
+		>
 			<div>
 				<span class="white--text">
 					&copy; 2018 -

@@ -95,15 +95,15 @@
 
 <script>
 	export default {
+		components: {
+			SimpleExpansionPanel: () => import(/* webpackChunkName:"vuetify" */ '@/components/vuetify/SimpleExpansionPanel'),
+			SimpleExpansionPanels: () => import(/* webpackChunkName:"vuetify" */ '@/components/vuetify/SimpleExpansionPanels')
+		},
 		data()
 		{
 			return {
 				emailAddress: 'hello@example.com'
-			}
-		},
-		components: {
-			SimpleExpansionPanel: () => import(/* webpackChunkName:"vuetify" */ '@/components/vuetify/SimpleExpansionPanel'),
-			SimpleExpansionPanels: () => import(/* webpackChunkName:"vuetify" */ '@/components/vuetify/SimpleExpansionPanels')
+			};
 		}
 	};
 </script>

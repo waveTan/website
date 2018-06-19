@@ -7,28 +7,28 @@
 					<h4>Login layer</h4>
 					<p>Smart contracts as logic containers</p>
 					<p>Higher flexibility and wider application</p>
-					<div class="mobile graph" :class="{ active: isActive('loginLayer') }"></div>
+					<div :class="{ active: isActive('loginLayer') }" class="mobile graph" />
 				</li>
 				<li :class="{ active: isActive('moduleLayer') }" @click="setActive('moduleLayer')">
 					<h4>Module layer</h4>
 					<p>Ongoing development of new modules by core/community developers</p>
 					<p>Online management under NULS module depository</p>
-					<div class="mobile graph" :class="{ active: isActive('moduleLayer') }"></div>
+					<div :class="{ active: isActive('moduleLayer') }" class="mobile graph" />
 				</li>
 				<li :class="{ active: isActive('chainLayer') }" @click="setActive('chainLayer')">
 					<h4>Chain layer</h4>
 					<p>Variable as needed and easily customized</p>
 					<p>Various customizable modules for public, private, and enterprise blockchains</p>
-					<div class="mobile graph" :class="{ active: isActive('chainLayer') }"></div>
+					<div :class="{ active: isActive('chainLayer') }" class="mobile graph" />
 				</li>
 				<li :class="{ active: isActive('crossChain') }" @click="setActive('crossChain')">
 					<h4>Cross-chain</h4>
 					<p>High scalability and rapid value transmission</p>
 					<p>Connection via cross-chain consensus modules</p>
-					<div class="mobile graph" :class="{ active: isActive('crossChain') }"></div>
+					<div :class="{ active: isActive('crossChain') }" class="mobile graph" />
 				</li>
 			</ul>
-			<div class="graph"></div>
+			<div class="graph" />
 		</div>
 	</div>
 </template>
@@ -121,6 +121,10 @@
 			float: none;
 			width: 100%;
 		}
+
+		/*ul li p {*/
+		/*line-height: initial;*/
+		/*}*/
 
 		.graph {
 			width: 100%;

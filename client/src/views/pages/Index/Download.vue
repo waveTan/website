@@ -1,34 +1,34 @@
 <template>
 	<div class="main">
 		<div class="container images">
-			<div class="ipad"></div>
-			<div class="iphone"></div>
+			<div class="ipad" />
+			<div class="iphone" />
 		</div>
 		<div class="section blue">
-			<div class="container"></div>
+			<div class="container" />
 		</div>
 		<div class="container information">
 			<h3>Download NULS Wallet</h3>
 			<p>NULS wallet is developed by NULS core technical team</p>
 			<p>Supported on various platforms</p>
 			<Dropdown
-					title="Computer Wallet"
-					:items="[
+				:items="[
 					{ title: 'Windows Download' },
 					{ title: 'MacOS Download' }
 				]"
+				title="Computer Wallet"
 			/>
 			<Dropdown
-					title="Mobile Wallet"
-					:items="[
+				:items="[
 					{ title: 'Android' },
 					{ title: 'iPhone' }
 				]"
+				title="Mobile Wallet"
 			/>
 			<Button colour="blue" icon="arrow-left">Web Wallet</Button>
 			<div class="mobile images">
-				<div class="ipad"></div>
-				<div class="iphone"></div>
+				<div class="ipad" />
+				<div class="iphone" />
 			</div>
 		</div>
 	</div>

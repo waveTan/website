@@ -1,7 +1,7 @@
 <template>
 	<div class="containerParent">
 		<div class="container">
-			<div class="logo"></div>
+			<div class="logo" />
 			<div class="navigation">
 				<ul>
 					<li><a href="#">Home</a></li>
@@ -13,13 +13,13 @@
 						<a href="#">
 							<Dropdown
 								:useButton="false"
-								title="About"
 								:items="[
 									{ title: 'Team' },
 									{ title: 'Partners' },
 									{ title: 'Join Us' },
 									{ title: 'News' }
 								]"
+								title="About"
 							/>
 						</a>
 					</li>

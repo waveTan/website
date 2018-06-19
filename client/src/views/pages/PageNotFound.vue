@@ -5,9 +5,9 @@
 		<h4><I18N id="pageNotFound.subHeader" /></h4>
 		<p><I18N id="pageNotFound.content" /></p>
 		<v-btn
-			@click.native="goHome"
 			color="blue-grey"
 			class="white--text"
+			@click.native="goHome"
 		>
 			<I18N id="pageNotFound.goHome" />
 		</v-btn>

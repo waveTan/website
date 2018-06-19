@@ -1,17 +1,38 @@
 <template>
-	<v-menu offset-y class="dropdown" content-class="test" :open-on-hover="true">
+	<v-menu
+		:open-on-hover="true"
+		offset-y
+		class="dropdown"
+		content-class="test"
+	>
 		<div slot="activator">
-			<Button class="button" v-if="useButton" :colour="buttonColour">
-				{{title}}
-				<img src="/static/images/icons/arrow-down.png" alt="" class="arrow" />
+			<Button
+				v-if="useButton"
+				:colour="buttonColour"
+				class="button"
+			>
+				{{ title }}
+				<img
+					src="/static/images/icons/arrow-down.png"
+					alt=""
+					class="arrow"
+				>
 			</Button>
 			<div v-else>
-				{{title}}
-				<img src="/static/images/icons/arrow-down.png" alt="" class="arrow" />
+				{{ title }}
+				<img
+					src="/static/images/icons/arrow-down.png"
+					alt=""
+					class="arrow"
+				>
 			</div>
 		</div>
 		<v-list class="items">
-			<v-list-tile v-for="(item, index) in items" :key="index" class="item">
+			<v-list-tile
+				v-for="(item, index) in items"
+				:key="index"
+				class="item"
+			>
 				<v-list-tile-title>{{ item.title }}</v-list-tile-title>
 			</v-list-tile>
 		</v-list>
@@ -22,6 +43,9 @@
 	import Button from '@/components/vuetify/Button';
 
 	export default {
+		components: {
+			Button
+		},
 		props: {
 			buttonColour: {
 				type: String,
@@ -39,9 +63,6 @@
 				type: Array,
 				required: true
 			}
-		},
-		components: {
-			Button
 		}
 	};
 </script>

@@ -107,6 +107,43 @@
 		line-height: 32px;
 	}
 
+	@media screen and (max-width: 600px) {
+		body {
+			font-size: 14px;
+			line-height: 20.74px;
+		}
+
+		h1 {
+			font-size: 40px;
+			letter-spacing: -0.43px;
+			line-height: 40px;
+		}
+
+		h2 {
+			font-size: 32px;
+			letter-spacing: -0.91px;
+			line-height: 46.08px;
+		}
+
+		h3 {
+			font-size: 28px;
+			letter-spacing: -0.8px;
+			line-height: 32px;
+		}
+
+		h4 {
+			font-size: 21px;
+			letter-spacing: -0.66px;
+			line-height: 25.5px;
+		}
+
+		h5 {
+			font-size: 15px;
+			letter-spacing: 0;
+			line-height: 18.8px;
+		}
+	}
+
 	.container {
 		position: relative;
 		padding-top: 40px;

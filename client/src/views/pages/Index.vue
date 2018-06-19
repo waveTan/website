@@ -3,6 +3,7 @@
 		<Header />
 		<HeaderMeta title="home.title" />
 		<Mission />
+		<SectionFloatingCubes />
 		<HowItWorks />
 		<Architecture />
 		<Download />
@@ -20,6 +21,7 @@
 	import Architecture from '@/views/pages/Index/Architecture';
 	import Download from '@/views/pages/Index/Download';
 	import Roadmap from '@/views/pages/Index/Roadmap';
+	import SectionFloatingCubes from '@/components/SectionFloatingCubes';
 
 	export default {
 		components: {
@@ -29,7 +31,8 @@
 			HowItWorks,
 			Architecture,
 			Download,
-			Roadmap
+			Roadmap,
+			SectionFloatingCubes
 		}
 	};
 </script>

@@ -21,7 +21,7 @@
 			</v-content>
 		</div>
 		<div v-else>
-			<HeaderLayout/>
+			<HeaderLayout />
 			<router-view />
 		</div>
 	</div>
@@ -145,14 +145,12 @@
 	}
 
 	.container {
-		position: relative;
 		padding-top: 40px;
 		margin: auto;
 		max-width: 1280px;
 	}
 
 	.section {
-		position: static;
 		padding-top: 0;
 	}
 
@@ -180,6 +178,11 @@
 					#e6f4fa 100%
 				);
 		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+		padding-bottom: 70px;
+	}
+
+	.section.blue {
+		background: url('/static/images/wallet-section-bg.jpg') no-repeat center, linear-gradient(to right, #08265e 40%, #021234 60%);
 	}
 
 	@media screen and (max-width: 800px) {
@@ -198,10 +201,6 @@
 		.section.grey {
 			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 97%);
 		}
-	}
-
-	.section.blue {
-		background: url('/static/images/wallet-section-bg.jpg') no-repeat center, linear-gradient(to right, #08265e 40%, #021234 60%);
 	}
 
 	.center {

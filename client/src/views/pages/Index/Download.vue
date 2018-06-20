@@ -115,6 +115,7 @@
 		height: 925px;
 		overflow: hidden;
 		margin-bottom: -40px;
+		background: #eff4f8;
 	}
 
 	@media screen and (max-width: 990px) {

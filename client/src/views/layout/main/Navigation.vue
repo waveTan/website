@@ -8,7 +8,7 @@
 						<li><a href="#">Home</a></li>
 						<li><a href="#">Wallet</a></li>
 						<li><a href="#">DApps</a></li>
-						<li><a href="#">Documentation</a></li>
+						<li><a href="#">Documents</a></li>
 						<li><a href="#">Blockchain Explorer</a></li>
 						<li>
 							<a href="#">

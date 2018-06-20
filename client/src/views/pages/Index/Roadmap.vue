@@ -1,5 +1,5 @@
 <template>
-	<div class="section white">
+	<div class="section grey">
 		<div class="container">
 			<h3>Roadmap</h3>
 			<div>

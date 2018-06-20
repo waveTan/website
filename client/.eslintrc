@@ -62,7 +62,8 @@
 					"vue-croppa/dist/vue-croppa.css",
 					"babel-register",
 					"@/store",
-					"vue-multiselect/dist/vue-multiselect.min.css"
+					"vue-multiselect/dist/vue-multiselect.min.css",
+					"swiper/dist/css/swiper.css"
 				]
 			}
 		],

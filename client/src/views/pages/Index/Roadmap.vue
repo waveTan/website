@@ -63,19 +63,22 @@
 						<div class="item">
 							<div class="triangle" />
 							<p class="bold">Technology</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ipsum augue, pretium in placerat sit amet, tristique id purus. Nunc sit amet hendrerit tortor. Fusce vel odio metus. Duis at enim volutpat,
-							fringilla diam et, efficitur ante. Nulla facilisi. Fusce scelerisque luctus tristique. Nam imperdiet nulla quis pellentesque laoreet. Proin varius libero sed nibh luctus finibus. Duis convallis
-							pellentesque ipsum id lobortis. Vestibulum dictum semper cursus. Sed faucibus enim ac purus bibendum malesuada.</p>
+							<p>Complete more consensus module implementations</p>
+							<p>Grasp self-evolution of network and storage modules (support Exabyte of data volume storage)</p>
+							<p>Form a set of standard technical solutions to be used in various industries</p>
+							<p>Establish a new ecosystem which is composed of blockchain and other fields such as big data and artificial intelligence</p>
 						</div>
 						<div class="item">
 							<div class="triangle" />
-							<p>Lorem ipsum dolor Nunc sit amet hendrerit tortor. Fusce vel odio metus. Duis at enim volutpat, fringilla diam et, efficitur ante. Nulla facilisi. Fusce scelerisque luctus tristique.</p>
+							<p>Complete more functional modules, including POWER module and POS module</p>
+							<p>At least 5 sub-chains join NULS</p>
+							<p>At least 15 applications run on NULS</p>
+							<p>Provide technicals solutions for at least 3 industries</p>
 						</div>
 						<div class="item">
 							<div class="triangle" />
 							<p class="bold">Ecology</p>
-							<p>Lorem ipsum vestibulum dictum semper cursus. Sed faucibus enim ac purus bibendum malesuada. Pellentesque pretium lacus erat, in lacinia nisi vulputate at. Morbi auctor arcu non pulvinar blandit.
-							Donec id risus lacus. Pellentesque aliquam nulla leo, sit amet interdum tellus varius ac. Curabitur dignissim, purus id ullamcorper placerat, tellus massa auctor massa, vel feugiat mauris nisi ut neque.</p>
+							<p>Build a mature open-source community, large scale set up application sub-chain</p>
 						</div>
 					</div>
 				</div>
@@ -84,20 +87,19 @@
 						<div class="item">
 							<div class="triangle" />
 							<p class="bold">Technology</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum ullamcorper augue, vel vestibulum ligula convallis sit amet. Mauris sed efficitur ante. Nullam malesuada ligula ligula, in venenatis nunc fermentum ac.</p>
+							<p>Providing a complete solution to solve production and management in both industry and agriculture. Consisting of a complete technology platform for the integration of blockchain big data and artificial intelligence
+							all in one ecosystem.</p>
 						</div>
 						<div class="item">
 							<div class="triangle" />
-							<p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin in nisl eu erat tincidunt molestie. Integer sit amet posuere dui. Quisque vitae quam dui. Cras tincidunt vitae odio eu tempor.
-							Suspendisse eget finibus nisl. Nulla porttitor, est sed fermentum consequat, sapien est maximus urna, in consequat nibh lectus eget enim. In nec justo tristique, placerat erat ut, faucibus nulla.
-							Sed nisi urna, scelerisque ac eleifend ac, faucibus quis odio.</p>
+							<p>At least 30 sub-chains join NULS</p>
+							<p>At least 50 applications run on NULS</p>
+							<p>Provides technical solutions for at least 20 industries, build eco ecosystem based on NULS, such as big data</p>
 						</div>
 						<div class="item">
 							<div class="triangle" />
 							<p class="bold">Ecology</p>
-							<p>Donec in erat cursus, commodo enim sit amet, porttitor nulla. Proin nec dolor et purus pretium tincidunt. Aliquam cursus vel elit at eleifend. Donec molestie libero vel eros accumsan fringilla.
-							Nunc ac lorem et nunc eleifend elementum id fringilla est. Phasellus dapibus lobortis nulla, eget bibendum dolor vestibulum vel. Ut pulvinar enim ut ligula lobortis imperdiet. Vestibulum ut nunc eu
-							sapien vulputate semper. Morbi iaculis dictum leo quis dictum. </p>
+							<p>Build an open-source community integrated within the blockchain, big data, artificial intelligence sectors. Provide comprehensive value docking and collaboration platforms.</p>
 						</div>
 					</div>
 				</div>

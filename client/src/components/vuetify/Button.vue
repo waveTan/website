@@ -1,7 +1,15 @@
 <template>
-	<v-btn class="button" :class="colour" round>
-		<slot />
-		<img v-if="icon" :src="`/static/images/icons/${icon}.png`" alt="" class="arrow" />
+	<v-btn
+		:class="{[colour]: true, noShadow: !shadow, [`text-${textClass}`]: true}"
+		class="button"
+		round
+	>		<slot />
+		<img
+			v-if="icon"
+			:src="`/static/images/icons/${icon}.png`"
+			alt=""
+			class="arrow"
+		>
 	</v-btn>
 </template>
 
@@ -19,9 +27,17 @@
 			textStyle: {
 				type: String,
 				default: ''
+			},
+			shadow: {
+				type: Boolean,
+				default: true
+			},
+			textClass: {
+				type: String,
+				default: ''
 			}
 		}
-	}
+	};
 </script>
 
 <style>
@@ -46,9 +62,8 @@
 		opacity: 0.7;
 	}
 
-	.button.blue .btn__content {
-		background: #031b47;
-		border: 1px solid #fff;
+	.button.white {
+		background: #fff;
 	}
 
 	.button.white .btn__content {
@@ -59,10 +74,15 @@
 		color: #56c400;
 	}
 
+	.button.noShadow .btn__content {
+		box-shadow: none;
+	}
+
 	.button.transparent .btn__content {
 		background: none;
 		box-shadow: none;
-		color: #445569;
+		color: #fff;
+		border: 1px solid #fff;
 	}
 
 	.btn:not(.btn--depressed) {
@@ -71,5 +91,13 @@
 
 	.button img {
 		margin-left: 12px;
+	}
+
+	.button.text-blue .btn__content {
+		color: #0a2140;
+	}
+
+	.button.text-white .btn__content {
+		color: #fff;
 	}
 </style>

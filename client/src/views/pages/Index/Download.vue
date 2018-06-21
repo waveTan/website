@@ -25,7 +25,7 @@
 				]"
 				title="Mobile Wallet"
 			/>
-			<Button colour="blue" icon="arrow-left">Web Wallet</Button>
+			<Button colour="transparent" textClass="white" icon="arrow-left">Web Wallet</Button>
 			<div class="mobile images">
 				<div class="ipad" />
 				<div class="iphone" />

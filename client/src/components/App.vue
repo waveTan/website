@@ -23,16 +23,19 @@
 		<div v-else>
 			<HeaderLayout />
 			<router-view />
+			<FooterLayout />
 		</div>
 	</div>
 </template>
 
 <script>
 	import HeaderLayout from '@/views/layout/main/HeaderLayout';
+	import FooterLayout from '@/views/layout/main/FooterLayout';
 
 	export default {
 		components: {
-			HeaderLayout
+			HeaderLayout,
+			FooterLayout
 		},
 		computed: {
 			loadingStack()

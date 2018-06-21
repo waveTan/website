@@ -161,7 +161,7 @@
 	.social {
 		background-image: linear-gradient(-133deg, #002e5e 0%, #092243 89%, #0a2140 100%);
 		box-shadow: 0 16px 64px 0 rgba(0, 0, 0, 0.24);
-		border-radius: 6px;
+		border-radius: 8px;
 		position: relative;
 		top: -60px;
 		padding: 50px 85px;

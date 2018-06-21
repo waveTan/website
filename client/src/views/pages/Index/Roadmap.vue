@@ -112,6 +112,7 @@
 	import 'swiper/dist/css/swiper.css';
 	import { swiper, swiperSlide } from 'vue-awesome-swiper';
 	import Button from '@/components/vuetify/Button';
+	import swiperOption from '@/utils/sliderConfiguration';
 
 	export default {
 		components: {
@@ -121,31 +122,9 @@
 		},
 		data()
 		{
-			let slidesPerView = 4;
-
-			if(window.innerWidth < 550)
-			{
-				slidesPerView = 1;
-			}
-			else if(window.innerWidth < 750)
-			{
-				slidesPerView = 2;
-			}
-			else if(window.innerWidth < 1000)
-			{
-				slidesPerView = 3;
-			}
-
 			return {
 				active: 'ice',
-				swiperOption: {
-					slidesPerView,
-					spaceBetween: 30,
-					grabCursor: true,
-					pagination: {
-						el: '.swiper-pagination'
-					}
-				}
+				swiperOption: swiperOption()
 			};
 		},
 		methods: {

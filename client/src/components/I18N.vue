@@ -1,7 +1,11 @@
 <template>
-	<component v-if="show" :is="wrap" :data-key="id">
+	<component
+		v-if="show"
+		:is="wrap"
+		:data-key="id"
+	>
 		<i18n :path="id" :places="vars">
-			<slot></slot>
+			<slot />
 		</i18n>
 	</component>
 </template>
@@ -14,7 +18,8 @@
 				required: true
 			},
 			vars: {
-				type: Object
+				type: Object,
+				default: () => ({})
 			},
 			// What tag to wrap the text in
 			wrap: {

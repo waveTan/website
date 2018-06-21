@@ -1,7 +1,7 @@
 <template>
 	<div class="section">
 		<div class="container">
-			<h3>Latest Happenings</h3>
+			<h3><I18N id="page.index.latestHappenings.title" /></h3>
 		</div>
 		<div class="container">
 			<swiper :options="swiperOption">

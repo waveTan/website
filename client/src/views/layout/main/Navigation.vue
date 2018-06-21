@@ -5,49 +5,49 @@
 			<div class="desktop">
 				<div class="navigation">
 					<ul>
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Wallet</a></li>
-						<li><a href="#">DApps</a></li>
-						<li><a href="#">Documents</a></li>
-						<li><a href="#">Blockchain Explorer</a></li>
+						<li><a href="#"><I18N id="header.navigation.home" /></a></li>
+						<li><a href="#"><I18N id="header.navigation.wallet" /></a></li>
+						<li><a href="#"><I18N id="header.navigation.dApps" /></a></li>
+						<li><a href="#"><I18N id="header.navigation.documents" /></a></li>
+						<li><a href="#"><I18N id="header.navigation.blockchainExplorer" /></a></li>
 						<li>
 							<a href="#">
 								<Dropdown
 									:useButton="false"
 									:items="[
-										{ title: 'Team' },
-										{ title: 'Partners' },
-										{ title: 'Join Us' },
-										{ title: 'News' }
+										{ title: 'header.navigation.team' },
+										{ title: 'header.navigation.partners' },
+										{ title: 'header.navigation.joinUs' },
+										{ title: 'header.navigation.news' }
 									]"
-									title="About"
+									title="header.navigation.about"
 								/>
 							</a>
 						</li>
-						<li><a href="#">Forum</a></li>
+						<li><a href="#"><I18N id="header.navigation.forum" /></a></li>
 					</ul>
 				</div>
 			</div>
 			<div class="laptop">
 				<div class="navigation">
 					<ul>
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Wallet</a></li>
-						<li><a href="#">Blockchain Explorer</a></li>
+						<li><a href="#"><I18N id="header.navigation.home" /></a></li>
+						<li><a href="#"><I18N id="header.navigation.wallet" /></a></li>
+						<li><a href="#"><I18N id="header.navigation.blockchainExplorer" /></a></li>
 						<li>
 							<a href="#">
 								<Dropdown
 									:useButton="false"
 									:items="[
-										{ title: 'DApps' },
-										{ title: 'Documentation' },
-										{ title: 'Team' },
-										{ title: 'Partners' },
-										{ title: 'Join Us' },
-										{ title: 'News' },
-										{ title: 'Forum' }
+										{ title: 'header.navigation.dApps' },
+										{ title: 'header.navigation.documentation' },
+										{ title: 'header.navigation.team' },
+										{ title: 'header.navigation.partners' },
+										{ title: 'header.navigation.joinUs' },
+										{ title: 'header.navigation.news' },
+										{ title: 'header.navigation.forum' }
 									]"
-									title="More"
+									title="header.navigation.more"
 								/>
 							</a>
 						</li>
@@ -61,26 +61,26 @@
 					<div class="close" @click="toggleMobileNavigation" />
 					<div>
 						<ul>
-							<li><a href="#" @click="toggleMobileNavigation">Home</a></li>
-							<li><a href="#">Wallet</a></li>
-							<li><a href="#">DApps</a></li>
-							<li><a href="#">Documentation</a></li>
-							<li><a href="#">Blockchain Explorer</a></li>
+							<li><a href="#"><I18N id="header.navigation.home" /></a></li>
+							<li><a href="#"><I18N id="header.navigation.wallet" /></a></li>
+							<li><a href="#"><I18N id="header.navigation.dApps" /></a></li>
+							<li><a href="#"><I18N id="header.navigation.documents" /></a></li>
+							<li><a href="#"><I18N id="header.navigation.blockchainExplorer" /></a></li>
 							<li>
 								<a href="#">
 									<Dropdown
 										:useButton="false"
 										:items="[
-											{ title: 'Team' },
-											{ title: 'Partners' },
-											{ title: 'Join Us' },
-											{ title: 'News' }
+											{ title: 'header.navigation.team' },
+											{ title: 'header.navigation.partners' },
+											{ title: 'header.navigation.joinUs' },
+											{ title: 'header.navigation.news' }
 										]"
-										title="About"
+										title="header.navigation.about"
 									/>
 								</a>
 							</li>
-							<li><a href="#">Forum</a></li>
+							<li><a href="#"><I18N id="header.navigation.forum" /></a></li>
 						</ul>
 					</div>
 				</div>

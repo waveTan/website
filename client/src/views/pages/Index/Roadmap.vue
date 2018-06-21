@@ -1,7 +1,7 @@
 <template>
 	<div class="section grey">
 		<div class="container">
-			<h3>Roadmap</h3>
+			<h3><I18N id="page.index.roadmap.title" /></h3>
 			<div>
 				<div class="buttonParent" @click="setActive('ice')">
 					<Button
@@ -10,7 +10,7 @@
 						:border="isActive('ice')"
 						colour="roadmapButton"
 					>
-						ICE
+						<I18N id="page.index.roadmap.ice.title" />
 					</Button>
 				</div>
 				<div class="buttonParent" @click="setActive('water')">
@@ -20,7 +20,7 @@
 						:border="isActive('water')"
 						colour="roadmapButton"
 					>
-						WATER
+						<I18N id="page.index.roadmap.water.title" />
 					</Button>
 				</div>
 				<div class="buttonParent" @click="setActive('steam')">
@@ -30,7 +30,7 @@
 						:border="isActive('steam')"
 						colour="roadmapButton"
 					>
-						STEAM
+						<I18N id="page.index.roadmap.steam.title" />
 					</Button>
 				</div>
 			</div>
@@ -40,38 +40,38 @@
 			<div class="container">
 				<swiper v-if="isActive('ice')" :options="swiperOption">
 					<swiper-slide>
-						<p class="date">2018.03</p>
+						<p class="date"><I18N id="page.index.roadmap.ice.mainNetTesting.date" /></p>
 						<div class="triangle" />
-						<p class="bold">Main-net testing</p>
-						<p>Complete the main-net's development, testing phase commence</p>
-						<p class="bold">Improve the technical design documentation</p>
-						<p class="bold">Establish and expand the open-source development community</p>
+						<p class="bold"><I18N id="page.index.roadmap.ice.mainNetTesting.p1" /></p>
+						<p><I18N id="page.index.roadmap.ice.mainNetTesting.p2" /></p>
+						<p class="bold"><I18N id="page.index.roadmap.ice.mainNetTesting.p3" /></p>
+						<p class="bold"><I18N id="page.index.roadmap.ice.mainNetTesting.p4" /></p>
 					</swiper-slide>
 					<swiper-slide>
-						<p class="date">2018.05</p>
+						<p class="date"><I18N id="page.index.roadmap.ice.continuousImprovement.date" /></p>
 						<div class="triangle active" />
-						<p class="bold">Continuous improvement</p>
-						<p>Complete development of basic modules. Continuously improve build-in modules, such as smart contracts, multi-chain modules and cross-chain consensus.</p>
-						<p class="bold">Application Promotion</p>
-						<p>Start and promte more applications to be accessed within the NULS ecosystem.</p>
-						<p class="bold">Main-net launch</p>
-						<p class="bold">Release PC wallet</p>
-						<p class="bold">Release mobile wallet</p>
-						<p class="bold">Release blockchain explorer</p>
+						<p class="bold"><I18N id="page.index.roadmap.ice.continuousImprovement.p1" /></p>
+						<p><I18N id="page.index.roadmap.ice.continuousImprovement.p2" /></p>
+						<p class="bold"><I18N id="page.index.roadmap.ice.continuousImprovement.p3" /></p>
+						<p><I18N id="page.index.roadmap.ice.continuousImprovement.p4" /></p>
+						<p class="bold"><I18N id="page.index.roadmap.ice.continuousImprovement.p5" /></p>
+						<p class="bold"><I18N id="page.index.roadmap.ice.continuousImprovement.p6" /></p>
+						<p class="bold"><I18N id="page.index.roadmap.ice.continuousImprovement.p7" /></p>
+						<p class="bold"><I18N id="page.index.roadmap.ice.continuousImprovement.p8" /></p>
 					</swiper-slide>
 					<swiper-slide>
-						<p class="date">2018.07</p>
+						<p class="date"><I18N id="page.index.roadmap.ice.releaseSmartContractModule.date" /></p>
 						<div class="triangle" />
-						<p class="bold">Release Smart Contract module</p>
-						<p class="bold">Inchain joins NULS</p>
-						<p class="bold">Technology: main-chain's ecosystem improvements</p>
-						<p>Improve the main-chains overall ecosystem, including a blockchain browser, e-wallet, mobile wallet, Smart Contact virtual machinbe compiler, development tools, and multilingual adapters.</p>
+						<p class="bold"><I18N id="page.index.roadmap.ice.releaseSmartContractModule.p1" /></p>
+						<p class="bold"><I18N id="page.index.roadmap.ice.releaseSmartContractModule.p2" /></p>
+						<p class="bold"><I18N id="page.index.roadmap.ice.releaseSmartContractModule.p3" /></p>
+						<p><I18N id="page.index.roadmap.ice.releaseSmartContractModule.p4" /></p>
 					</swiper-slide>
 					<swiper-slide>
-						<p class="date">2018.10</p>
+						<p class="date"><I18N id="page.index.roadmap.ice.3NewProgrammingLanguages.date" /></p>
 						<div class="triangle" />
-						<p class="bold">3 New programming languages</p>
-						<p>Add support for 3 programming languages to Smart Contracts</p>
+						<p class="bold"><I18N id="page.index.roadmap.ice.3NewProgrammingLanguages.p1" /></p>
+						<p><I18N id="page.index.roadmap.ice.3NewProgrammingLanguages.p2" /></p>
 					</swiper-slide>
 					<swiper-slide>Roadmap Demo Slide 6</swiper-slide>
 					<swiper-slide>Roadmap Demo Slide 7</swiper-slide>
@@ -83,23 +83,23 @@
 					<div class="items">
 						<div class="item">
 							<div class="triangle" />
-							<p class="bold">Technology</p>
-							<p>Complete more consensus module implementations</p>
-							<p>Grasp self-evolution of network and storage modules (support Exabyte of data volume storage)</p>
-							<p>Form a set of standard technical solutions to be used in various industries</p>
-							<p>Establish a new ecosystem which is composed of blockchain and other fields such as big data and artificial intelligence</p>
+							<p class="bold"><I18N id="page.index.roadmap.water.one.p1" /></p>
+							<p><I18N id="page.index.roadmap.water.one.p2" /></p>
+							<p><I18N id="page.index.roadmap.water.one.p3" /></p>
+							<p><I18N id="page.index.roadmap.water.one.p4" /></p>
+							<p><I18N id="page.index.roadmap.water.one.p5" /></p>
 						</div>
 						<div class="item">
 							<div class="triangle" />
-							<p>Complete more functional modules, including POWER module and POS module</p>
-							<p>At least 5 sub-chains join NULS</p>
-							<p>At least 15 applications run on NULS</p>
-							<p>Provide technicals solutions for at least 3 industries</p>
+							<p><I18N id="page.index.roadmap.water.two.p1" /></p>
+							<p><I18N id="page.index.roadmap.water.two.p2" /></p>
+							<p><I18N id="page.index.roadmap.water.two.p3" /></p>
+							<p><I18N id="page.index.roadmap.water.two.p4" /></p>
 						</div>
 						<div class="item">
 							<div class="triangle" />
-							<p class="bold">Ecology</p>
-							<p>Build a mature open-source community, large scale set up application sub-chain</p>
+							<p class="bold"><I18N id="page.index.roadmap.water.three.p1" /></p>
+							<p><I18N id="page.index.roadmap.water.three.p2" /></p>
 						</div>
 					</div>
 				</div>
@@ -107,20 +107,19 @@
 					<div class="items">
 						<div class="item">
 							<div class="triangle" />
-							<p class="bold">Technology</p>
-							<p>Providing a complete solution to solve production and management in both industry and agriculture. Consisting of a complete technology platform for the integration of blockchain big data and artificial intelligence
-							all in one ecosystem.</p>
+							<p class="bold"><I18N id="page.index.roadmap.steam.one.p1" /></p>
+							<p><I18N id="page.index.roadmap.steam.one.p2" /></p>
 						</div>
 						<div class="item">
 							<div class="triangle" />
-							<p>At least 30 sub-chains join NULS</p>
-							<p>At least 50 applications run on NULS</p>
-							<p>Provides technical solutions for at least 20 industries, build eco ecosystem based on NULS, such as big data</p>
+							<p><I18N id="page.index.roadmap.steam.two.p1" /></p>
+							<p><I18N id="page.index.roadmap.steam.two.p2" /></p>
+							<p><I18N id="page.index.roadmap.steam.two.p3" /></p>
 						</div>
 						<div class="item">
 							<div class="triangle" />
-							<p class="bold">Ecology</p>
-							<p>Build an open-source community integrated within the blockchain, big data, artificial intelligence sectors. Provide comprehensive value docking and collaboration platforms.</p>
+							<p class="bold"><I18N id="page.index.roadmap.steam.three.p1" /></p>
+							<p><I18N id="page.index.roadmap.steam.three.p2" /></p>
 						</div>
 					</div>
 				</div>

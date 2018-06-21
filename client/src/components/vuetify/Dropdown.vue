@@ -11,7 +11,7 @@
 				:colour="buttonColour"
 				class="button"
 			>
-				{{ title }}
+				{{ $t(title) }}
 				<img
 					src="/static/images/icons/arrow-down.png"
 					alt=""
@@ -19,7 +19,7 @@
 				>
 			</Button>
 			<div v-else>
-				{{ title }}
+				{{ $t(title) }}
 				<img
 					src="/static/images/icons/arrow-down.png"
 					alt=""
@@ -33,7 +33,7 @@
 				:key="index"
 				class="item"
 			>
-				<v-list-tile-title>{{ item.title }}</v-list-tile-title>
+				<v-list-tile-title>{{ $t(item.title) }}</v-list-tile-title>
 			</v-list-tile>
 		</v-list>
 	</v-menu>

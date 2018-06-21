@@ -2,9 +2,13 @@
 	<div class="section footer">
 		<div class="container social">
 			<div>
-				<h3>Join <b>NULS</b> community</h3>
-				<p>We believe that NULS has the most cutting-edge modular thinking towards reshaping the world.</p>
-				<p>We encourage fans to join our global community!</p>
+				<h3>
+					<I18N id="footer.social.title.body">
+						<I18N id="footer.social.title.nuls" place="nuls" />
+					</I18N>
+				</h3>
+				<p><I18N id="footer.social.cuttingEdge" /></p>
+				<p><I18N id="footer.social.globalCommunity" /></p>
 			</div>
 			<div class="buttons">
 				<Button
@@ -12,9 +16,9 @@
 					colour="white"
 					textClass="blue"
 				>
-					View NULS Team
+					<I18N id="footer.social.viewTeam" />
 				</Button>
-				<Button colour="transparent">Join us</Button>
+				<Button colour="transparent"><I18N id="footer.social.joinUs" /></Button>
 			</div>
 			<div class="links">
 				<a href="#"><img src="/static/images/icons/slack.png" alt="Slack"></a>
@@ -29,8 +33,8 @@
 		<div class="container">
 			<hr class="top">
 			<h4>
-				Let's talk about how NULS can help your enterprise
-				<Button class="contactUs">Contact us</Button>
+				<I18N id="footer.contact.title" />
+				<Button class="contactUs"><I18N id="footer.contact.button" /></Button>
 			</h4>
 			<hr class="bottom">
 			<v-container grid-list-md text-xs-center>
@@ -42,9 +46,9 @@
 					>
 						<div class="disclaimer">
 							<div class="logo" />
-							<p>Copyright &copy; 2017 NULS</p>
-							<p>Proudly built in Singapore</p>
-							<p>Website design by petravic</p>
+							<p><I18N id="footer.links.copyright" /></p>
+							<p><I18N id="footer.links.singapore" /></p>
+							<p><I18N id="footer.links.design" /></p>
 						</div>
 					</v-flex>
 					<v-flex
@@ -59,12 +63,12 @@
 								md3
 							>
 								<div>
-									<h5>About</h5>
+									<h5><I18N id="footer.links.about.title" /></h5>
 									<ul>
-										<li>NULS</li>
-										<li>Team</li>
-										<li>Partners</li>
-										<li>News</li>
+										<li><I18N id="footer.links.about.nuls" /></li>
+										<li><I18N id="footer.links.about.team" /></li>
+										<li><I18N id="footer.links.about.partners" /></li>
+										<li><I18N id="footer.links.about.news" /></li>
 									</ul>
 								</div>
 							</v-flex>
@@ -74,12 +78,12 @@
 								md3
 							>
 								<div>
-									<h5>Downloads</h5>
+									<h5><I18N id="footer.links.downloads.title" /></h5>
 									<ul>
-										<li>Whitepaper</li>
-										<li>Yellowpaper</li>
-										<li>Wallet</li>
-										<li>DAPPS</li>
+										<li><I18N id="footer.links.downloads.whitepaper" /></li>
+										<li><I18N id="footer.links.downloads.yellowpaper" /></li>
+										<li><I18N id="footer.links.downloads.wallet" /></li>
+										<li><I18N id="footer.links.downloads.dApps" /></li>
 									</ul>
 								</div>
 							</v-flex>
@@ -89,14 +93,14 @@
 								md3
 							>
 								<div>
-									<h5>Follow us</h5>
+									<h5>F<I18N id="footer.links.social.title" /></h5>
 									<ul>
-										<li>Twitter</li>
-										<li>Facebook</li>
-										<li>Medium</li>
-										<li>Youtube</li>
-										<li>WeChat</li>
-										<li>Weibo</li>
+										<li><I18N id="footer.links.social.twitter" /></li>
+										<li><I18N id="footer.links.social.facebook" /></li>
+										<li><I18N id="footer.links.social.medium" /></li>
+										<li><I18N id="footer.links.social.youtube" /></li>
+										<li><I18N id="footer.links.social.weChat" /></li>
+										<li><I18N id="footer.links.social.weibo" /></li>
 									</ul>
 								</div>
 							</v-flex>
@@ -106,10 +110,10 @@
 								md3
 							>
 								<div>
-									<h5>Support</h5>
+									<h5><I18N id="footer.links.support.title" /></h5>
 									<ul>
-										<li>FAQ's</li>
-										<li>Join us</li>
+										<li><I18N id="footer.links.support.faq" /></li>
+										<li><I18N id="footer.links.support.joinUs" /></li>
 									</ul>
 								</div>
 							</v-flex>

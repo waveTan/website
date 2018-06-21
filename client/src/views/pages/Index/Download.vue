@@ -8,24 +8,24 @@
 			<div class="container" />
 		</div>
 		<div class="container information">
-			<h3>Download NULS Wallet</h3>
-			<p>NULS wallet is developed by NULS core technical team</p>
-			<p>Supported on various platforms</p>
+			<h3><I18N id="page.index.download.title" /></h3>
+			<p><I18N id="page.index.download.maintainers" /></p>
+			<p><I18N id="page.index.download.platformSupport" /></p>
 			<Dropdown
 				:items="[
-					{ title: 'Windows Download' },
-					{ title: 'MacOS Download' }
+					{ title: 'page.index.download.platforms.windows' },
+					{ title: 'page.index.download.platforms.mac' }
 				]"
-				title="Computer Wallet"
+				title="page.index.download.computer"
 			/>
 			<Dropdown
 				:items="[
-					{ title: 'Android' },
-					{ title: 'iPhone' }
+					{ title: 'page.index.download.platforms.android' },
+					{ title: 'page.index.download.platforms.iPhone' }
 				]"
-				title="Mobile Wallet"
+				title="page.index.download.mobile"
 			/>
-			<Button colour="transparent" textClass="white" icon="arrow-left">Web Wallet</Button>
+			<Button colour="transparent" textClass="white" icon="arrow-left"><I18N id="page.index.download.platforms.web" /></Button>
 			<div class="mobile images">
 				<div class="ipad" />
 				<div class="iphone" />

@@ -1,30 +1,30 @@
 <template>
 	<div class="section white">
 		<div class="container">
-			<h2>Architecture</h2>
+			<h2><I18N id="page.index.architecture.title" /></h2>
 			<ul>
 				<li :class="{ active: isActive('loginLayer') }" @click="setActive('loginLayer')">
-					<h4>Login layer</h4>
-					<p>Smart contracts as logic containers</p>
-					<p>Higher flexibility and wider application</p>
+					<h4><I18N id="page.index.architecture.loginLayer.title" /></h4>
+					<p><I18N id="page.index.architecture.loginLayer.p1" /></p>
+					<p><I18N id="page.index.architecture.loginLayer.p2" /></p>
 					<div :class="{ active: isActive('loginLayer') }" class="mobile graph" />
 				</li>
 				<li :class="{ active: isActive('moduleLayer') }" @click="setActive('moduleLayer')">
-					<h4>Module layer</h4>
-					<p>Ongoing development of new modules by core/community developers</p>
-					<p>Online management under NULS module depository</p>
+					<h4><I18N id="page.index.architecture.moduleLayer.title" /></h4>
+					<p><I18N id="page.index.architecture.moduleLayer.p1" /></p>
+					<p><I18N id="page.index.architecture.moduleLayer.p2" /></p>
 					<div :class="{ active: isActive('moduleLayer') }" class="mobile graph" />
 				</li>
 				<li :class="{ active: isActive('chainLayer') }" @click="setActive('chainLayer')">
-					<h4>Chain layer</h4>
-					<p>Variable as needed and easily customized</p>
-					<p>Various customizable modules for public, private, and enterprise blockchains</p>
+					<h4><I18N id="page.index.architecture.chainLayer.title" /></h4>
+					<p><I18N id="page.index.architecture.chainLayer.p1" /></p>
+					<p><I18N id="page.index.architecture.chainLayer.p2" /></p>
 					<div :class="{ active: isActive('chainLayer') }" class="mobile graph" />
 				</li>
 				<li :class="{ active: isActive('crossChain') }" @click="setActive('crossChain')">
-					<h4>Cross-chain</h4>
-					<p>High scalability and rapid value transmission</p>
-					<p>Connection via cross-chain consensus modules</p>
+					<h4><I18N id="page.index.architecture.crossChain.title" /></h4>
+					<p><I18N id="page.index.architecture.crossChain.p1" /></p>
+					<p><I18N id="page.index.architecture.crossChain.p2" /></p>
 					<div :class="{ active: isActive('crossChain') }" class="mobile graph" />
 				</li>
 			</ul>

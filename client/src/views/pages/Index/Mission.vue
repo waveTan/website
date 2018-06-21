@@ -2,11 +2,11 @@
 	<div class="section white">
 		<div class="container center">
 			<div class="spaceship">
-				<h2>Mission</h2>
-				<h5>Accommodate multitude of blockchain application usage</h5>
-				<h5>Break through technology bottleneck</h5>
-				<h5>Reduce technical threshold and cost</h5>
-				<h5>Resolving the lack of trust in a centralised database</h5>
+				<h2><I18N id="page.index.mission.title" /></h2>
+				<h5><I18N id="page.index.mission.usage" /></h5>
+				<h5><I18N id="page.index.mission.bottleneck" /></h5>
+				<h5><I18N id="page.index.mission.technical" /></h5>
+				<h5><I18N id="page.index.mission.trust" /></h5>
 			</div>
 		</div>
 	</div>

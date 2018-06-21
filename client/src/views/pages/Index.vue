@@ -8,7 +8,7 @@
 		<Architecture />
 		<Download />
 		<Roadmap />
-		<p>To get started, edit files in <code>./client</code> and save.</p>
+		<LatestHappenings />
 		<SwitchLanguage />
 	</div>
 </template>
@@ -22,6 +22,7 @@
 	import Download from '@/views/pages/Index/Download';
 	import Roadmap from '@/views/pages/Index/Roadmap';
 	import SectionFloatingCubes from '@/components/SectionFloatingCubes';
+	import LatestHappenings from '@/views/pages/Index/LatestHappenings';
 
 	export default {
 		components: {
@@ -32,7 +33,8 @@
 			Architecture,
 			Download,
 			Roadmap,
-			SectionFloatingCubes
+			SectionFloatingCubes,
+			LatestHappenings
 		}
 	};
 </script>

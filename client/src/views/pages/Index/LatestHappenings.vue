@@ -1,7 +1,7 @@
 <template>
 	<div class="section white">
 		<div class="container">
-			<h3>Roadmap</h3>
+			<h3>Latest Happenings</h3>
 			<p>sdfg</p>
 		</div>
 	</div>

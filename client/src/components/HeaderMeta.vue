@@ -1,6 +1,6 @@
 <template>
 	<vue-headful
-		:title="`${translatedTitle} - Example`"
+		:title="`${translatedTitle}`"
 	/>
 </template>
 
@@ -8,12 +8,14 @@
 	import vueHeadful from 'vue-headful';
 
 	export default {
-		props: vueHeadful.props,
 		components: { vueHeadful },
+		props: vueHeadful.props,
 		computed: {
 			translatedTitle()
 			{
-				return this.$t(this.title);
+				const pageTitle = this.$t(this.title) || '';
+
+				return `${(pageTitle ? `${pageTitle} - ` : '')} ${this.$t('header.websiteTitle')}`;
 			}
 		}
 	};

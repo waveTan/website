@@ -40,7 +40,7 @@
 									:useButton="false"
 									:items="[
 										{ title: 'header.navigation.dApps' },
-										{ title: 'header.navigation.documentation' },
+										{ title: 'header.navigation.documents' },
 										{ title: 'header.navigation.team' },
 										{ title: 'header.navigation.partners' },
 										{ title: 'header.navigation.joinUs' },

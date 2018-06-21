@@ -25,7 +25,13 @@
 				]"
 				title="page.index.download.mobile"
 			/>
-			<Button colour="transparent" textClass="white" icon="arrow-left"><I18N id="page.index.download.platforms.web" /></Button>
+			<Button
+				colour="transparent"
+				textClass="white"
+				icon="arrow-left"
+			>
+				<I18N id="page.index.download.platforms.web" />
+			</Button>
 			<div class="mobile images">
 				<div class="ipad" />
 				<div class="iphone" />

@@ -14,6 +14,7 @@
 	"goHome": "Go back home"
   },
   "header": {
+    "websiteTitle": "NULS",
     "navigation": {
       "home": "Home",
       "wallet": "Wallet",
@@ -25,7 +26,8 @@
       "joinUs": "Join Us",
       "news": "News",
       "about": "About",
-      "forum": "Forum"
+      "forum": "Forum",
+      "more": "More"
     }
   },
   "footer": {
@@ -79,6 +81,7 @@
   },
   "page": {
     "index": {
+      "pageTitle": "Home",
       "header": {
         "title": "Adaptable blockchain for enterprise solutions"
       },

@@ -1,5 +1,6 @@
 <template>
 	<div class="header">
+		<HeaderMeta />
 		<h1><I18N id="page.index.header.title" /></h1>
 		<div class="playButtonContainer">
 			<button class="play-button">

@@ -4,13 +4,34 @@
 			<h3>Roadmap</h3>
 			<div>
 				<div class="buttonParent" @click="setActive('ice')">
-					<Button :class="isActive('ice') ? 'white' : 'transparent'" colour="roadmapButton">ICE</Button>
+					<Button
+						:class="isActive('ice') ? 'white' : 'transparent'"
+						:textClass="isActive('ice') ? 'green' : 'black'"
+						:border="isActive('ice')"
+						colour="roadmapButton"
+					>
+						ICE
+					</Button>
 				</div>
 				<div class="buttonParent" @click="setActive('water')">
-					<Button :class="isActive('water') ? 'white' : 'transparent'" colour="roadmapButton">WATER</Button>
+					<Button
+						:class="isActive('water') ? 'white' : 'transparent'"
+						:textClass="isActive('water') ? 'green' : 'black'"
+						:border="isActive('water')"
+						colour="roadmapButton"
+					>
+						WATER
+					</Button>
 				</div>
 				<div class="buttonParent" @click="setActive('steam')">
-					<Button :class="isActive('steam') ? 'white' : 'transparent'" colour="roadmapButton">STEAM</Button>
+					<Button
+						:class="isActive('steam') ? 'white' : 'transparent'"
+						:textClass="isActive('steam') ? 'green' : 'black'"
+						:border="isActive('steam')"
+						colour="roadmapButton"
+					>
+						STEAM
+					</Button>
 				</div>
 			</div>
 		</div>

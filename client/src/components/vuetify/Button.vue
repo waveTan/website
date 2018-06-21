@@ -1,9 +1,10 @@
 <template>
 	<v-btn
-		:class="{[colour]: true, noShadow: !shadow, [`text-${textClass}`]: true}"
+		:class="{[colour]: true, noShadow: !shadow, noBorder: !border, [`text-${textClass}`]: true}"
 		class="button"
 		round
-	>		<slot />
+	>
+		<slot />
 		<img
 			v-if="icon"
 			:src="`/static/images/icons/${icon}.png`"
@@ -35,6 +36,10 @@
 			textClass: {
 				type: String,
 				default: ''
+			},
+			border: {
+				type: Boolean,
+				default: true
 			}
 		}
 	};
@@ -74,15 +79,19 @@
 		color: #56c400;
 	}
 
-	.button.noShadow .btn__content {
-		box-shadow: none;
-	}
-
 	.button.transparent .btn__content {
 		background: none;
 		box-shadow: none;
 		color: #fff;
 		border: 1px solid #fff;
+	}
+
+	.button.noShadow .btn__content {
+		box-shadow: none;
+	}
+
+	.button.noBorder .btn__content {
+		border: none;
 	}
 
 	.btn:not(.btn--depressed) {
@@ -99,5 +108,13 @@
 
 	.button.text-white .btn__content {
 		color: #fff;
+	}
+
+	.button.text-green .btn__content {
+		color: #56c400;
+	}
+
+	.button.text-black .btn__content {
+		color: #445569;
 	}
 </style>

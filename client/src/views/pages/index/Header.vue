@@ -1,8 +1,7 @@
 <template>
 	<div class="header">
-		<HeaderMeta />
 		<h1><I18N id="page.index.header.title" /></h1>
-		<div class="playButtonContainer">
+		<div class="iconContainer">
 			<button class="play-button">
 				<img src="/static/images/icons/play.png" alt="Play" >
 			</button>
@@ -23,17 +22,6 @@
 </template>
 
 <style scoped>
-	.header {
-		position: absolute;
-		top: 120px;
-		width: 100%;
-	}
-
-	.playButtonContainer {
-		width: 90px;
-		margin: 40px auto 0 auto;
-	}
-
 	button.play-button {
 		background: #fff;
 		box-shadow: -1px 12px 16px 0 rgba(6, 27, 55, 1);

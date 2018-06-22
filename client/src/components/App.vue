@@ -1,5 +1,6 @@
 <template>
 	<div data-app>
+		<HeaderMeta />
 		<v-progress-linear v-if="loadingStack > 0" :indeterminate="true" />
 		<div v-if="Object.keys(appLoaded).length !== 0">
 			<v-content>
@@ -228,5 +229,16 @@
 
 	.menu__content .item:first-child .list__tile {
 		padding-top: 10px;
+	}
+
+	.header {
+		position: absolute;
+		top: 120px;
+		width: 100%;
+	}
+
+	.header .iconContainer {
+		width: 90px;
+		margin: 40px auto 0 auto;
 	}
 </style>

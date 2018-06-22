@@ -34,8 +34,9 @@
 				:key="index"
 				class="item"
 			>
-				<v-list-tile-title v-if="item.click" @click="item.click(item)">{{ $t(item.title) }}</v-list-tile-title>
-				<v-list-tile-title v-else>{{ $t(item.title) }}</v-list-tile-title>
+				<v-list-tile-title v-if="item.click" @click="item.click(item)"><span>{{ $t(item.title) }}</span></v-list-tile-title>
+				<v-list-tile-title v-else-if="item.link"><router-link :to="{ name: item.link }">{{ $t(item.title) }}</router-link></v-list-tile-title>
+				<v-list-tile-title v-else><span>{{ $t(item.title) }}</span></v-list-tile-title>
 			</v-list-tile>
 		</v-list>
 	</v-menu>
@@ -113,5 +114,13 @@
 	.button:hover img {
 		opacity: 0.6;
 		transform: rotate(-180deg);
+	}
+
+	a,
+	span {
+		color: inherit;
+		text-decoration: inherit;
+		padding: 10px 30px;
+		display: block;
 	}
 </style>

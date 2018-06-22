@@ -215,7 +215,11 @@
 	}
 
 	.menu__content .list__tile {
-		padding: 0 34px;
+		padding: 0;
+	}
+
+	.menu__content .list__tile__title {
+		height: initial;
 	}
 
 	.menu__content .item:not(:first-child) .list__tile {

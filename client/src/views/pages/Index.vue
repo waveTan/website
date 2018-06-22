@@ -9,12 +9,10 @@
 		<Download />
 		<Roadmap />
 		<LatestHappenings />
-		<SwitchLanguage />
 	</div>
 </template>
 
 <script>
-	import SwitchLanguage from '@/components/SwitchLanguage';
 	import Header from '@/views/pages/Index/Header';
 	import Mission from '@/views/pages/Index/Mission';
 	import HowItWorks from '@/views/pages/Index/HowItWorks';
@@ -26,7 +24,6 @@
 
 	export default {
 		components: {
-			SwitchLanguage,
 			Header,
 			Mission,
 			HowItWorks,

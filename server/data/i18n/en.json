@@ -6,6 +6,10 @@
 	"en": "English",
 	"fr": "French"
   },
+  "i18n": {
+    "en": "English",
+    "fr": "French"
+  },
   "pageNotFound": {
 	"title": "Page not found",
 	"header": "Oops... This is awkward!",

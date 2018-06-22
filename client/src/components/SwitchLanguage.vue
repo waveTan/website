@@ -1,17 +1,46 @@
 <template>
-	<div>
-		<p>
-			<I18N id="welcome" />
-		</p>
-		<p>
-			<I18N id="goodbye" />
-		</p>
-		<p>
-			<I18N id="greeting" :vars="{name: 'Josh'}" />
-		</p>
-
-		<v-btn color="info" @click="$store.dispatch('i18n/changeLocale', 'en')">English</v-btn>
-		<v-btn color="info" @click="$store.dispatch('i18n/changeLocale', 'fr')">French</v-btn>
-	</div>
+	<Dropdown
+		:useButton="false"
+		:items="[
+			{ title: 'i18n.en', click: changeLocale, locale: 'en' },
+			{ title: 'i18n.fr', click: changeLocale, locale: 'fr' }
+		]"
+	>
+		<FontAwesomeIcon :icon="['fas', 'globe']" />
+	</Dropdown>
 </template>
 
+<script>
+	import Dropdown from '@/components/vuetify/Dropdown';
+
+	export default {
+		components: {
+			Dropdown
+		},
+		methods: {
+			changeLocale(item)
+			{
+				this.$store.dispatch('i18n/changeLocale', item.locale);
+			}
+		}
+	};
+</script>
+
+<style scoped>
+	div {
+		position: absolute;
+		right: 50px;
+		margin-top: 10px;
+	}
+
+	svg {
+		text-align: right;
+		font-size: 32px;
+	}
+
+	@media screen and (max-width: 950px) {
+		div {
+			right: 59px;
+		}
+	}
+</style>

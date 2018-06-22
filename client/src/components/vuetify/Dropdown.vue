@@ -18,7 +18,7 @@
 					class="arrow"
 				>
 			</Button>
-			<div v-else>
+			<div v-else-if="title">
 				{{ $t(title) }}
 				<img
 					src="/static/images/icons/arrow-down.png"
@@ -26,6 +26,7 @@
 					class="arrow"
 				>
 			</div>
+			<slot v-else />
 		</div>
 		<v-list class="items">
 			<v-list-tile
@@ -33,7 +34,8 @@
 				:key="index"
 				class="item"
 			>
-				<v-list-tile-title>{{ $t(item.title) }}</v-list-tile-title>
+				<v-list-tile-title v-if="item.click" @click="item.click(item)">{{ $t(item.title) }}</v-list-tile-title>
+				<v-list-tile-title v-else>{{ $t(item.title) }}</v-list-tile-title>
 			</v-list-tile>
 		</v-list>
 	</v-menu>
@@ -57,7 +59,7 @@
 			},
 			title: {
 				type: String,
-				required: true
+				default: ''
 			},
 			items: {
 				type: Array,

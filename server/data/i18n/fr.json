@@ -1,6 +1,16 @@
 {
-  "goodbye": "Au revoir",
-  "greeting": "Bonjour {name}",
+  "i18n": {
+    "en":"Anglais",
+    "fr": "Français"
+  },
+  "page": {
+    "index": {
+      "pageTitle": "Home",
+      "header": {
+        "title": "Blockchain adaptable pour les solutions d'entreprise"
+      }
+    }
+  },
   "dates": {
     "months": {
       "short": [

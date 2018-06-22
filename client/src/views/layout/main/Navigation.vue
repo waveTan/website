@@ -1,6 +1,7 @@
 <template>
 	<div class="containerParent">
 		<div class="container">
+			<SwitchLanguage />
 			<div class="logo" />
 			<div class="desktop">
 				<div class="navigation">
@@ -90,11 +91,13 @@
 </template>
 
 <script>
+	import SwitchLanguage from '@/components/SwitchLanguage';
 	import Dropdown from '@/components/vuetify/Dropdown';
 
 	export default {
 		components: {
-			Dropdown
+			Dropdown,
+			SwitchLanguage
 		},
 		data: () => ({
 			mobileNavigation: false
@@ -246,7 +249,7 @@
 		}
 	}
 
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 950px) {
 		.laptop {
 			display: none;
 		}

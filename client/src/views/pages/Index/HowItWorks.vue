@@ -7,19 +7,19 @@
 				<v-container grid-list-xl text-xs-center>
 					<v-layout row wrap>
 						<v-flex md4 xs12>
-							<img src="/static/images/animations/multipleChains.svg" width="156px">
+							<img src="/static/images/animations/multiple-chains.svg" width="156px">
 							<h4><I18N id="page.index.howItWorks.multipleChains.title" /></h4>
 							<p><I18N id="page.index.howItWorks.multipleChains.p1" /></p>
 							<p><I18N id="page.index.howItWorks.multipleChains.p2" /></p>
 						</v-flex>
 						<v-flex md4 xs12>
-							<img src="/static/images/animations/smartContracts.svg" width="156px">
+							<img src="/static/images/animations/smart-contracts.svg" width="156px">
 							<h4><I18N id="page.index.howItWorks.smartContracts.title" /></h4>
 							<p><I18N id="page.index.howItWorks.smartContracts.p1" /></p>
 							<p><I18N id="page.index.howItWorks.smartContracts.p2" /></p>
 						</v-flex>
 						<v-flex md4 xs12>
-							<img src="/static/images/animations/proofOfCredit.svg" width="156px">
+							<img src="/static/images/animations/proof-of-credit.svg" width="156px">
 							<h4><I18N id="page.index.howItWorks.proofOfCredit.title" /></h4>
 							<p><I18N id="page.index.howItWorks.proofOfCredit.p1" /></p>
 							<p><I18N id="page.index.howItWorks.proofOfCredit.p2" /></p>
@@ -34,7 +34,7 @@
 							<p><I18N id="page.index.howItWorks.customizable.p2" /></p>
 						</v-flex>
 						<v-flex md4 xs12>
-							<img src="/static/images/animations/sustainableImprovement.svg" width="156px">
+							<img src="/static/images/animations/sustainable-improvement.svg" width="156px">
 							<h4><I18N id="page.index.howItWorks.sustainableImprovement.title" /></h4>
 							<p><I18N id="page.index.howItWorks.sustainableImprovement.p1" /></p>
 							<p><I18N id="page.index.howItWorks.sustainableImprovement.p2" /></p>

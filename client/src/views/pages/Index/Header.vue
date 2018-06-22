@@ -15,7 +15,7 @@
 			>
 			<img
 				class="cubes"
-				src="/static/images/animations/cubesSync.svg"
+				src="/static/images/animations/cubes-sync.svg"
 				width="350px"
 			>
 		</div>

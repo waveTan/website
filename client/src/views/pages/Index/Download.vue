@@ -1,8 +1,23 @@
 <template>
 	<div class="main">
 		<div class="container images">
+			<img
+				class="top"
+				src="/static/images/animations/download-cube-small.svg"
+				width="110px"
+			>
 			<div class="ipad" />
 			<div class="iphone" />
+			<img
+				class="bottom"
+				src="/static/images/animations/download-cube-large.svg"
+				width="110px"
+			>
+			<img
+				class="middle"
+				src="/static/images/animations/download-cube-medium.svg"
+				width="110px"
+			>
 		</div>
 		<div class="section blue">
 			<div class="container" />
@@ -127,6 +142,24 @@
 		overflow: hidden;
 		margin-bottom: -40px;
 		background: #eff4f8;
+	}
+
+	.images .bottom {
+		position: absolute;
+		top: 700px;
+		left: 360px;
+	}
+
+	.images .middle {
+		position: absolute;
+		top: 400px;
+		left: 750px;
+	}
+
+	.images .top {
+		position: absolute;
+		top: 105px;
+		left: 500px;
 	}
 
 	@media screen and (max-width: 990px) {

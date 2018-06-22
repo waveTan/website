@@ -244,6 +244,26 @@
 			"pageTitle": "About NULS",
 			"header": {
 				"title": "What is NULS?"
+			},
+			"information": {
+				"title": "NULS is a highly customizable modular blockchain infrastructure",
+				"meta": "It consists of a microkernel and functional modules. NULS provides smart contract, multi-chain mechanism and cross-chain consensus. It aims to break the technical barriers of blockchain, to reduce the cost of development, and to promote the usage of blockchain technology in the commercial field."
+			},
+			"github": {
+				"title": "NULS is a global blockchain open-source project.",
+				"meta": "NULS provides basic function modules and standard interfaces and promotes the concept of modularization and customization. Developers can develop various modules and customize their own subchains as needed. NULS is now acting as a blockchain technology platform for discovery, use and communication among developers.",
+				"link": "Visit our GitHub"
+			},
+			"faq": {
+				"title": "Learn more",
+				"faq": "FAQ",
+				"whitepaper": "Download Whitepaper",
+				"yellowpaper": "Download Yellowpaper",
+				"poc": "POC (Proof of Credit) Consensus Mechanism Analysis",
+				"Modularization": "In-depth Analysis on Modularization",
+				"multiChainMechanism": "Multi-chain Mechanism Analysis",
+				"dAppDevelopment": "NULS DApp Development",
+				"bounty": "NULS Bounty Program"
 			}
 		}
   },

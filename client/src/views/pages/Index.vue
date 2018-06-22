@@ -13,14 +13,14 @@
 </template>
 
 <script>
-	import Header from '@/views/pages/Index/Header';
-	import Mission from '@/views/pages/Index/Mission';
-	import HowItWorks from '@/views/pages/Index/HowItWorks';
-	import Architecture from '@/views/pages/Index/Architecture';
-	import Download from '@/views/pages/Index/Download';
-	import Roadmap from '@/views/pages/Index/Roadmap';
+	import Header from '@/views/pages/index/Header';
+	import Mission from '@/views/pages/index/Mission';
+	import HowItWorks from '@/views/pages/index/HowItWorks';
+	import Architecture from '@/views/pages/index/Architecture';
+	import Download from '@/views/pages/index/Download';
+	import Roadmap from '@/views/pages/index/Roadmap';
 	import SectionFloatingCubes from '@/components/SectionFloatingCubes';
-	import LatestHappenings from '@/views/pages/Index/LatestHappenings';
+	import LatestHappenings from '@/views/pages/index/LatestHappenings';
 
 	export default {
 		components: {

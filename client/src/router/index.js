@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Index from '@/views/pages/Index';
+import About from '@/views/pages/About';
 import LegalTerms from '@/views/pages/legal/Terms';
 import LegalPrivacy from '@/views/pages/legal/Privacy';
 import PageNotFound from '@/views/pages/PageNotFound';
@@ -13,6 +14,11 @@ const routeConfig = [
 		path: '/',
 		component: Index
 		// redirect: { name: 'nodes.calculator' }
+	},
+	{
+		name: 'about',
+		path: '/about',
+		component: About
 	},
 	{
 		name: 'legal.terms',

@@ -3,7 +3,7 @@
 		<h1><I18N id="page.index.header.title" /></h1>
 		<div class="iconContainer">
 			<button class="play-button">
-				<img src="/static/images/icons/play.png" alt="Play" >
+				<img src="/static/images/icons/arrow-right-green.png" alt="Play" >
 			</button>
 		</div>
 		<div class="container">

@@ -239,7 +239,13 @@
       "latestHappenings": {
         "title": "Latest Happenings"
       }
-    }
+    },
+		"about": {
+			"pageTitle": "About NULS",
+			"header": {
+				"title": "What is NULS?"
+			}
+		}
   },
   "dates": {
 	"months": {

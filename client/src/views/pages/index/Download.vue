@@ -43,7 +43,7 @@
 			<Button
 				colour="transparent"
 				textClass="white"
-				icon="arrow-left"
+				icon="arrow-right"
 			>
 				<I18N id="page.index.download.platforms.web" />
 			</Button>

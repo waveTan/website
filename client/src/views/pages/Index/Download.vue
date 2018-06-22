@@ -96,6 +96,11 @@
 		z-index: 1;
 	}
 
+	p {
+		color: #fff;
+		opacity: 0.7;
+	}
+
 	.mobile.images {
 		display: none;
 		left: -100px;

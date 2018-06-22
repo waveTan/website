@@ -3,32 +3,83 @@
 		<div class="container">
 			<h2><I18N id="page.index.architecture.title" /></h2>
 			<ul>
-				<li :class="{ active: isActive('loginLayer') }" @click="setActive('loginLayer')">
-					<h4><I18N id="page.index.architecture.loginLayer.title" /></h4>
-					<p><I18N id="page.index.architecture.loginLayer.p1" /></p>
-					<p><I18N id="page.index.architecture.loginLayer.p2" /></p>
-					<div :class="{ active: isActive('loginLayer') }" class="mobile graph" />
+				<li :class="{ active: isActive('logicLayer') }" @mouseover="setActive('logicLayer')">
+					<h4><I18N id="page.index.architecture.logicLayer.title" /></h4>
+					<p><I18N id="page.index.architecture.logicLayer.p1" /></p>
+					<p><I18N id="page.index.architecture.logicLayer.p2" /></p>
+					<div :class="{ active: isActive('logicLayer') }" class="mobile graph">
+						<img
+							src="/static/images/logic-layer.jpg"
+							alt=""
+							width="100%"
+						>
+					</div>
 				</li>
-				<li :class="{ active: isActive('moduleLayer') }" @click="setActive('moduleLayer')">
+				<li :class="{ active: isActive('moduleLayer') }" @mouseover="setActive('moduleLayer')">
 					<h4><I18N id="page.index.architecture.moduleLayer.title" /></h4>
 					<p><I18N id="page.index.architecture.moduleLayer.p1" /></p>
 					<p><I18N id="page.index.architecture.moduleLayer.p2" /></p>
-					<div :class="{ active: isActive('moduleLayer') }" class="mobile graph" />
+					<div :class="{ active: isActive('moduleLayer') }" class="mobile graph">
+						<img
+							src="/static/images/module-layer.jpg"
+							alt=""
+							width="100%"
+						>
+					</div>
 				</li>
-				<li :class="{ active: isActive('chainLayer') }" @click="setActive('chainLayer')">
+				<li :class="{ active: isActive('chainLayer') }" @mouseover="setActive('chainLayer')">
 					<h4><I18N id="page.index.architecture.chainLayer.title" /></h4>
 					<p><I18N id="page.index.architecture.chainLayer.p1" /></p>
 					<p><I18N id="page.index.architecture.chainLayer.p2" /></p>
-					<div :class="{ active: isActive('chainLayer') }" class="mobile graph" />
+					<div :class="{ active: isActive('chainLayer') }" class="mobile graph">
+						<img
+							src="/static/images/chain-layer.jpg"
+							alt=""
+							width="100%"
+						>
+					</div>
 				</li>
-				<li :class="{ active: isActive('crossChain') }" @click="setActive('crossChain')">
+				<li :class="{ active: isActive('crossChain') }" @mouseover="setActive('crossChain')">
 					<h4><I18N id="page.index.architecture.crossChain.title" /></h4>
 					<p><I18N id="page.index.architecture.crossChain.p1" /></p>
 					<p><I18N id="page.index.architecture.crossChain.p2" /></p>
-					<div :class="{ active: isActive('crossChain') }" class="mobile graph" />
+					<div :class="{ active: isActive('crossChain') }" class="mobile graph">
+						<img
+							src="/static/images/cross-chain.jpg"
+							alt=""
+							width="100%"
+						>
+					</div>
 				</li>
 			</ul>
-			<div class="graph" />
+			<div :class="active" class="graph">
+				<div class="images">
+					<img
+						ref="img-logicLayer"
+						src="/static/images/logic-layer.jpg"
+						alt=""
+						width="100%"
+					>
+					<img
+						ref="img-moduleLayer"
+						src="/static/images/module-layer.jpg"
+						alt=""
+						width="100%"
+					>
+					<img
+						ref="img-chainLayer"
+						src="/static/images/chain-layer.jpg"
+						alt=""
+						width="100%"
+					>
+					<img
+						ref="img-crossChain"
+						src="/static/images/cross-chain.jpg"
+						alt=""
+						width="100%"
+					>
+				</div>
+			</div>
 		</div>
 	</div>
 </template>
@@ -38,13 +89,16 @@
 		data()
 		{
 			return {
-				active: 'loginLayer'
+				active: 'logicLayer'
 			};
 		},
 		methods: {
 			setActive(key)
 			{
 				this.active = key;
+
+				['logicLayer', 'moduleLayer', 'chainLayer', 'crossChain'].forEach((i) => this.$refs[`img-${i}`].classList.add('transparent'));
+				this.$refs[`img-${key}`].classList.remove('transparent');
 			},
 			isActive(key)
 			{
@@ -98,18 +152,22 @@
 		/*width: 675px;*/
 		height: 607px;
 		width: 50%;
+		background: url('/static/images/architecture-background.png') 50% 0;
 	}
 
-	.graph::after {
-		content: '';
-		display: block;
-		height: 100%;
-		opacity: 0.6;
-		background: url('/static/images/architecture-background.png') 50% 0;
-		-o-background-size: cover;
-		-moz-background-size: cover;
-		-webkit-background-size: cover;
-		background-size: cover;
+	.images {
+		position: relative;
+		margin: 0 auto;
+	}
+
+	.images img {
+		position: absolute;
+		left: 0;
+		transition: opacity 1s ease-in-out;
+	}
+
+	.images img.transparent {
+		opacity: 0;
 	}
 
 	.mobile {

@@ -141,7 +141,7 @@
 	}
 
 	.footer {
-		background-image: linear-gradient(-1deg, #04265f 0%, #021131 97%);
+		background: url('/static/images/footer.png') bottom repeat-x, linear-gradient(-1deg, #04265f 0%, #021131 97%);
 		color: #fff;
 		letter-spacing: 0;
 		line-height: 23px;

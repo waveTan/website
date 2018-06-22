@@ -103,7 +103,7 @@
         "smartContracts": {
           "title": "Smart contracts",
           "p1": "Less programming for defining service logic",
-          "p2": "Running login from NULSVM in a decentralized environment"
+          "p2": "Running logic from NULSVM in a decentralized environment"
         },
         "proofOfCredit": {
           "title": "Proof-Of-Credit",
@@ -123,8 +123,8 @@
       },
       "architecture": {
         "title": "Architecture",
-        "loginLayer": {
-          "title": "Login layer",
+        "logicLayer": {
+          "title": "Logic layer",
           "p1": "Smart contracts as logic containers",
           "p2": "Higher flexibility and wider application"
         },

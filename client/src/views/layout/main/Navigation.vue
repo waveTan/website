@@ -155,6 +155,10 @@
 		margin-top: 10px;
 	}
 
+	a {
+		border: none;
+	}
+
 	.mobile {
 		& .navigation {
 			position: absolute;

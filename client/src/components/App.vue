@@ -211,6 +211,17 @@
 		text-align: center;
 	}
 
+	.container .centered {
+		padding: 110px 0;
+		text-align: center;
+		max-width: 810px;
+		margin: 0 auto;
+	}
+
+	.container .centered p {
+		font-size: 20px;
+	}
+
 	.menu__content {
 		box-shadow: none;
 	}
@@ -240,5 +251,15 @@
 	.header .iconContainer {
 		width: 90px;
 		margin: 40px auto 0 auto;
+	}
+
+	a {
+		color: #0a2140;
+		text-decoration: none;
+		border-bottom: 1px solid #0a2140;
+	}
+
+	a:hover {
+		border-bottom: 1px dashed;
 	}
 </style>

@@ -30,7 +30,7 @@
 	div {
 		position: absolute;
 		right: 50px;
-		margin-top: 10px;
+		margin-top: 20px;
 	}
 
 	svg {
@@ -40,7 +40,7 @@
 
 	@media screen and (max-width: 950px) {
 		div {
-			right: 59px;
+			right: 120px;
 		}
 	}
 </style>

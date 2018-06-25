@@ -3,9 +3,7 @@
 		<div class="container">
 			<h1><I18N id="page.dApps.header.title" /></h1>
 			<p class="centered"><I18N id="page.dApps.header.meta" /></p>
-		</div>
-		<div class="iconContainer">
-			<Button>Button!</Button>
+			<div class="centered"><Button><I18N id="page.dApps.header.create" /></Button></div>
 		</div>
 	</div>
 </template>

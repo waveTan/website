@@ -265,6 +265,22 @@
 				"dAppDevelopment": "NULS DApp Development",
 				"bounty": "NULS Bounty Program"
 			}
+		},
+		"partnerships": {
+			"pageTitle": "Partnerships",
+			"header": {
+				"title": "Our Partnerships",
+				"meta": "NULS Partner Network is a collaborative framework between NULS and partners to meet different types of cooperation needs, including technical support, communication, community assistance, market expansion and marketing, to ensure that partners and NULS to achieve their goals."
+			},
+			"cooperationProjects": "Cooperation projects",
+			"cooperationMedia": "Cooperation media",
+			"platforms": "Platforms",
+			"becomeAPartner": {
+				"title": "Become a Partner",
+				"sidechain": "Become a Sidechain",
+				"modules": "Develop modules on NULS",
+				"collaborator": "Become a NULS Collaborator"
+			}
 		}
   },
   "dates": {

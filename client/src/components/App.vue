@@ -23,7 +23,10 @@
 		</div>
 		<div v-else>
 			<HeaderLayout />
-			<router-view />
+			<router-view v-if="!pageLoading" />
+			<div v-else class="center">
+				<v-progress-circular :size="50" indeterminate color="primary" />
+			</div>
 			<FooterLayout />
 		</div>
 	</div>
@@ -52,6 +55,10 @@
 				if(this.loadingStack === 0) return 100;
 
 				return ((this.loadingStack - Object.keys(this.appLoaded).length) * 100) / Object.keys(this.appLoaded).length;
+			},
+			pageLoading()
+			{
+				return this.$store.getters['app/pageLoading'];
 			}
 		}
 	};

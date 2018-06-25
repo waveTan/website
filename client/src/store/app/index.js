@@ -1,13 +1,12 @@
 import Vue from 'vue';
-import { version } from './../../../package.json';
-import { store } from '../../app';
 
 const state = {
 	loading: true,
 	rootLoading: {},
 	loadingStack: [],
 	drawer: null,
-	dialog: { active: false, id: null }
+	dialog: { active: false, id: null },
+	pageLoading: false
 };
 
 const mutations = {
@@ -37,6 +36,10 @@ const mutations = {
 	UPDATE_DIALOG(state, payload)
 	{
 		state.dialog = payload;
+	},
+	LOADING_CONTENT(state, value)
+	{
+		state.pageLoading = value;
 	}
 };
 
@@ -89,6 +92,10 @@ const actions = {
 	updateDialog({ commit }, payload)
 	{
 		commit('UPDATE_DIALOG', payload);
+	},
+	pageLoading({ commit }, value)
+	{
+		commit('LOADING_CONTENT', value);
 	}
 };
 
@@ -96,7 +103,8 @@ const getters = {
 	appLoaded: (state) => state.rootLoading,
 	loadingStack: (state) => state.loadingStack,
 	drawer: (state) => state.drawer,
-	dialog: (state) => state.dialog
+	dialog: (state) => state.dialog,
+	pageLoading: (state) => state.pageLoading
 };
 
 export default {

@@ -282,6 +282,19 @@
 				"collaborator": "Become a NULS Collaborator",
 				"join": "Join Now"
 			}
+		},
+		"dApps": {
+			"header": {
+				"title": "NULS DApps",
+				"meta": "Developers from NULS Community can develop various modules and applications as needed or select proper modules to customize subchains. NULS is building a future for distributed applications.",
+				"create": "Create a NULS DApp"
+			},
+			"items": {
+				"search": "Search for DApps",
+				"status": "Current status",
+				"beta": "BETA",
+				"live": "LIVE"
+			}
 		}
   },
   "dates": {

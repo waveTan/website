@@ -93,7 +93,7 @@
 								md3
 							>
 								<div>
-									<h5>F<I18N id="footer.links.social.title" /></h5>
+									<h5><I18N id="footer.links.social.title" /></h5>
 									<ul>
 										<li><I18N id="footer.links.social.twitter" /></li>
 										<li><I18N id="footer.links.social.facebook" /></li>

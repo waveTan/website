@@ -1,4 +1,4 @@
-import { get } from '@/utils/api-strapi';
+import { get } from '@/utils/api';
 
 const state = {
 	items: {},

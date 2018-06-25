@@ -66,7 +66,7 @@
 		},
 		async mounted()
 		{
-			await this.$store.dispatch('strapi/loadItems', 'nulsPartners');
+			await this.$store.dispatch('strapi/loadItems', 'partners');
 		},
 		data()
 		{

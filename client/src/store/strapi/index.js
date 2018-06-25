@@ -47,7 +47,8 @@ const actions = {
 };
 
 const getters = {
-	getItems: (state) => (path) => state.items[path]
+	getItems: (state) => (path) => state.items[path],
+	urlPath: () => process.env.STRAPI
 };
 
 export default {

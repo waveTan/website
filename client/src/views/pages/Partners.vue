@@ -9,19 +9,19 @@
 		<div class="section">
 			<div class="container">
 				<h2 class="center"><I18N id="page.partnerships.cooperationProjects" /></h2>
-				<p>{{ getItems('cooperation projects') }}</p>
+				<Items :items="getItems('cooperation projects')" />
 			</div>
 		</div>
 		<div class="section grey">
 			<div class="container">
 				<h2 class="center"><I18N id="page.partnerships.cooperationMedia" /></h2>
-				<p>{{ getItems('cooperation media') }}</p>
+				<Items :items="getItems('cooperation media')" :container="true" />
 			</div>
 		</div>
 		<div class="section">
 			<div class="container">
 				<h2 class="center"><I18N id="page.partnerships.platforms" /></h2>
-				<p>{{ getItems('platform') }}</p>
+				<Items :items="getItems('platform')" />
 			</div>
 		</div>
 		<div class="section grey noClip">
@@ -35,7 +35,12 @@
 
 
 <script>
+	import Items from '@/views/pages/partners/Items';
+
 	export default {
+		components: {
+			Items
+		},
 		async mounted()
 		{
 			await this.$store.dispatch('strapi/loadItems', 'nulsPartners');
@@ -49,6 +54,8 @@
 		methods: {
 			getItems(type)
 			{
+				if(!this.partnerships) return [];
+
 				return this.partnerships.filter((item) => item.type.toLowerCase() === type);
 			}
 		}

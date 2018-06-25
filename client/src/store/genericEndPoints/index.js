@@ -17,14 +17,14 @@ const mutations = {
 			state.items[path] = data;
 		}
 	},
-	SET_ITEM(state, { path, item })
+	SET_ITEM(state, { path, data })
 	{
 		if(!state.item[path])
 		{
 			state.item[path] = [];
 		}
 
-		state.item[path][item.id] = item;
+		state.item[path][data.id] = data;
 	}
 };
 
@@ -43,12 +43,28 @@ const actions = {
 		}
 
 		return state.items[path];
+	},
+	async loadItem({ dispatch, state, commit }, { path, id })
+	{
+		if(!state.item[path] || !state.item[path][id])
+		{
+			dispatch('app/pageLoading', true, { root: true });
+
+			const { data } = await get(path);
+
+			dispatch('app/pageLoading', false, { root: true });
+
+			commit('SET_ITEM', { path, data });
+		}
+
+		return state.item[path][id];
 	}
 };
 
 const getters = {
 	getItems: (state) => (path) => state.items[path],
-	urlPath: () => process.env.STRAPI
+	getItem: (state) => (path, id) => state.item[path][id],
+	strapiUrl: () => process.env.STRAPI
 };
 
 export default {

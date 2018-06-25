@@ -4,13 +4,13 @@ import Vuex, { Store } from 'vuex';
 // import { version } from './../../package.json';
 import app from '@/store/app';
 import i18n from '@/store/i18n';
-import strapi from '@/store/strapi';
+import genericEndPoints from '@/store/genericEndPoints';
 // import tokens from '@/store/tokens';
 
 const modules = {
 	app,
 	i18n,
-	strapi
+	genericEndPoints
 	// tokens
 };
 

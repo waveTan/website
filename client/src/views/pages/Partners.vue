@@ -67,12 +67,12 @@
 		},
 		async mounted()
 		{
-			await this.$store.dispatch('strapi/loadItems', 'partners');
+			await this.$store.dispatch('genericEndPoints/loadItems', 'partners');
 		},
 		data()
 		{
 			return {
-				partnerships: this.$store.getters['strapi/getItems']('partners'),
+				partnerships: this.$store.getters['genericEndPoints/getItems']('partners'),
 				becomeAPartnerTypes: ['sidechain', 'modules', 'collaborator']
 			};
 		},

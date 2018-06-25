@@ -31,7 +31,7 @@
 		data()
 		{
 			return {
-				url: this.$store.getters['strapi/urlPath']
+				url: this.$store.getters['genericEndPoints/strapiUrl']
 			};
 		},
 		methods: {

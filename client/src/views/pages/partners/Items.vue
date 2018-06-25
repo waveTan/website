@@ -1,12 +1,12 @@
 <template>
 	<v-container grid-list-md text-xs-center class="partnerItems">
 		<v-layout row wrap>
-			<v-flex  v-for="(item, i) in items" :key="i" sm6 md3>
+			<v-flex v-for="(item, i) in items" :key="i" sm6 md3>
 				<v-card flat tile>
 					<a :href="item.link" target="_blank">
 						<v-card-media
 							:class="{ box: container }"
-							:src="createPath(item.image.url)"
+							:src="createPath(item.image)"
 							height="150px"
 						/>
 					</a>

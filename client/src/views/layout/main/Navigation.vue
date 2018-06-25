@@ -18,7 +18,7 @@
 									:items="[
 										{ title: 'header.navigation.whatIsNuls', link: 'about' },
 										{ title: 'header.navigation.team', link: 'home' },
-										{ title: 'header.navigation.partners', link: 'home' },
+										{ title: 'header.navigation.partners', link: 'partners' },
 										{ title: 'header.navigation.joinUs', link: 'home' },
 										{ title: 'header.navigation.news', link: 'home' }
 									]"
@@ -45,7 +45,7 @@
 										{ title: 'header.navigation.documents', link: 'home' },
 										{ title: 'header.navigation.whatIsNuls', link: 'about' },
 										{ title: 'header.navigation.team', link: 'home' },
-										{ title: 'header.navigation.partners', link: 'home' },
+										{ title: 'header.navigation.partners', link: 'partners' },
 										{ title: 'header.navigation.joinUs', link: 'home' },
 										{ title: 'header.navigation.news', link: 'home' },
 										{ title: 'header.navigation.forum', link: 'home' }
@@ -76,7 +76,7 @@
 										:items="[
 											{ title: 'header.navigation.whatIsNuls', link: 'about' },
 											{ title: 'header.navigation.team', link: 'home' },
-											{ title: 'header.navigation.partners', link: 'home' },
+											{ title: 'header.navigation.partners', link: 'partners' },
 											{ title: 'header.navigation.joinUs', link: 'home' },
 											{ title: 'header.navigation.news', link: 'home' }
 										]"

@@ -44,6 +44,7 @@ const router = new Router({
 router.beforeEach(async (to, from, next) =>
 {
 	// document.title = to.meta.title(to);
+	window.scrollTo(0, 0);
 	next();
 });
 

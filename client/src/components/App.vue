@@ -192,6 +192,12 @@
 		padding-bottom: 70px;
 	}
 
+	.section.grey.noClip {
+		clip-path: none;
+		margin-bottom: -140px;
+		padding-bottom: 140px;
+	}
+
 	.section.blue {
 		background: url('/static/images/wallet-section-bg.jpg') no-repeat center, linear-gradient(to right, #08265e 40%, #021234 60%);
 	}
@@ -216,6 +222,13 @@
 
 	.center {
 		text-align: center;
+	}
+
+	.header p {
+		font-size: 20px;
+		color: #fff;
+		letter-spacing: 0;
+		line-height: 29px;
 	}
 
 	.container .centered {

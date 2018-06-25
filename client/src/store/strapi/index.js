@@ -1,5 +1,3 @@
-// import Vue from 'vue';
-// import dot from 'dot-object';
 import { get } from '@/utils/api-strapi';
 
 const state = {
@@ -8,59 +6,47 @@ const state = {
 };
 
 const mutations = {
-	SET_ITEMS(state, { category, items })
+	SET_ITEMS(state, { path, data })
 	{
-		if(state.items[category])
+		if(state.items[path])
 		{
-			state.items[category].push(items);
+			state.items[path].push(data);
 		}
 		else
 		{
-			state.items[category] = items;
+			state.items[path] = data;
 		}
 	},
-	SET_ITEM(state, { category, item })
+	SET_ITEM(state, { path, item })
 	{
-		if(!state.item[category])
+		if(!state.item[path])
 		{
-			state.item[category] = [];
+			state.item[path] = [];
 		}
 
-		state.item[category][item.id] = item;
+		state.item[path][item.id] = item;
 	}
 };
 
 const actions = {
-	async loadItems({ dispatch, state, commit }, category)
+	async loadItems({ dispatch, state, commit }, path)
 	{
-		const { data } = await get('nulsPartners');
-		console.log(data);
+		if(!state.items[path])
+		{
+			dispatch('app/pageLoading', true, { root: true });
+
+			const { data } = await get(path);
+
+			dispatch('app/pageLoading', false, { root: true });
+
+			commit('SET_ITEMS', { path, data });
+		}
+
+		return state.items[path];
 	}
-	// load({ dispatch, state, commit }, token)
-	// {
-	// 	if(state.tokens[token]) return false;
-	//
-	// 	return get(`tokens/price/${token}/`)
-	// 		.then((res) =>
-	// 		{
-	// 			return res.data;
-	// 		})
-	// 		.then((data) =>
-	// 		{
-	// 			commit('SET_TOKEN', { token, data });
-	// 		})
-	// 		.then(() =>
-	// 		{
-	// 			dispatch('app/appCallLoaded', 'nulsPrice', { root: true });
-	// 		});
-	// }
 };
 
 const getters = {
-	// get: (state) => (token) =>
-	// {
-	// 	return dot.pick(token, state.tokens);
-	// }
 };
 
 export default {

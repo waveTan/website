@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Nulspartners.js service
+ * Partners.js service
  *
  * @description: A set of functions similar to controller's actions to avoid code duplication.
  */
@@ -15,20 +15,20 @@ const utils = require('strapi-bookshelf/lib/utils/');
 module.exports = {
 
   /**
-   * Promise to fetch all nulspartners.
+   * Promise to fetch all partners.
    *
    * @return {Promise}
    */
 
   fetchAll: (params) => {
     // Convert `params` object to filters compatible with Bookshelf.
-    const filters = strapi.utils.models.convertParams('nulspartners', params);
+    const filters = strapi.utils.models.convertParams('partners', params);
     // Select field to populate.
-    const populate = Nulspartners.associations
+    const populate = Partners.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias);
 
-    return Nulspartners.query(function(qb) {
+    return Partners.query(function(qb) {
       _.forEach(filters.where, (where, key) => {
         if (_.isArray(where.value)) {
           for (const value in where.value) {
@@ -51,33 +51,33 @@ module.exports = {
   },
 
   /**
-   * Promise to fetch a/an nulspartners.
+   * Promise to fetch a/an partners.
    *
    * @return {Promise}
    */
 
   fetch: (params) => {
     // Select field to populate.
-    const populate = Nulspartners.associations
+    const populate = Partners.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias);
 
-    return Nulspartners.forge(_.pick(params, 'id')).fetch({
+    return Partners.forge(_.pick(params, 'id')).fetch({
       withRelated: populate
     });
   },
 
   /**
-   * Promise to count a/an nulspartners.
+   * Promise to count a/an partners.
    *
    * @return {Promise}
    */
 
   count: (params) => {
     // Convert `params` object to filters compatible with Bookshelf.
-    const filters = strapi.utils.models.convertParams('nulspartners', params);
+    const filters = strapi.utils.models.convertParams('partners', params);
 
-    return Nulspartners.query(function(qb) {
+    return Partners.query(function(qb) {
       _.forEach(filters.where, (where, key) => {
         if (_.isArray(where.value)) {
           for (const value in where.value) {
@@ -91,54 +91,54 @@ module.exports = {
   },
 
   /**
-   * Promise to add a/an nulspartners.
+   * Promise to add a/an partners.
    *
    * @return {Promise}
    */
 
   add: async (values) => {
     // Extract values related to relational data.
-    const relations = _.pick(values, Nulspartners.associations.map(ast => ast.alias));
-    const data = _.omit(values, Nulspartners.associations.map(ast => ast.alias));
+    const relations = _.pick(values, Partners.associations.map(ast => ast.alias));
+    const data = _.omit(values, Partners.associations.map(ast => ast.alias));
 
     // Create entry with no-relational data.
-    const entry = await Nulspartners.forge(data).save();
+    const entry = await Partners.forge(data).save();
 
     // Create relational data and return the entry.
-    return Nulspartners.updateRelations({ id: entry.id , values: relations });
+    return Partners.updateRelations({ id: entry.id , values: relations });
   },
 
   /**
-   * Promise to edit a/an nulspartners.
+   * Promise to edit a/an partners.
    *
    * @return {Promise}
    */
 
   edit: async (params, values) => {
     // Extract values related to relational data.
-    const relations = _.pick(values, Nulspartners.associations.map(ast => ast.alias));
-    const data = _.omit(values, Nulspartners.associations.map(ast => ast.alias));
+    const relations = _.pick(values, Partners.associations.map(ast => ast.alias));
+    const data = _.omit(values, Partners.associations.map(ast => ast.alias));
 
     // Create entry with no-relational data.
-    const entry = Nulspartners.forge(params).save(data, { path: true });
+    const entry = Partners.forge(params).save(data, { path: true });
 
     // Create relational data and return the entry.
-    return Nulspartners.updateRelations(Object.assign(params, { values: relations }));
+    return Partners.updateRelations(Object.assign(params, { values: relations }));
   },
 
   /**
-   * Promise to remove a/an nulspartners.
+   * Promise to remove a/an partners.
    *
    * @return {Promise}
    */
 
   remove: async (params) => {
     await Promise.all(
-      Nulspartners.associations.map(association =>
-        Nulspartners.forge(params)[association.alias]().detach()
+      Partners.associations.map(association =>
+        Partners.forge(params)[association.alias]().detach()
       )
     );
 
-    return Nulspartners.forge(params).destroy();
+    return Partners.forge(params).destroy();
   }
 };

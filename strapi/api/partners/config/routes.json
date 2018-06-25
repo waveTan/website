@@ -2,72 +2,72 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/nulspartners",
-      "handler": "Nulspartners.find",
+      "path": "/partners",
+      "handler": "Partners.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/nulspartners/count",
-      "handler": "Nulspartners.count",
+      "path": "/partners/count",
+      "handler": "Partners.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/nulspartners/:id",
-      "handler": "Nulspartners.findOne",
+      "path": "/partners/:id",
+      "handler": "Partners.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/nulspartners",
-      "handler": "Nulspartners.create",
+      "path": "/partners",
+      "handler": "Partners.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/nulspartners/:id",
-      "handler": "Nulspartners.update",
+      "path": "/partners/:id",
+      "handler": "Partners.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/nulspartners/:id",
-      "handler": "Nulspartners.destroy",
+      "path": "/partners/:id",
+      "handler": "Partners.destroy",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/nulspartners/:id/relationships/:relation",
-      "handler": "Nulspartners.createRelation",
+      "path": "/partners/:id/relationships/:relation",
+      "handler": "Partners.createRelation",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/nulspartners/:id/relationships/:relation",
-      "handler": "Nulspartners.updateRelation",
+      "path": "/partners/:id/relationships/:relation",
+      "handler": "Partners.updateRelation",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/nulspartners/:id/relationships/:relation",
-      "handler": "Nulspartners.destroyRelation",
+      "path": "/partners/:id/relationships/:relation",
+      "handler": "Partners.destroyRelation",
       "config": {
         "policies": []
       }

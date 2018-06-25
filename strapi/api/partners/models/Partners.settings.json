@@ -1,8 +1,8 @@
 {
   "connection": "default",
-  "collectionName": "nulspartners",
+  "collectionName": "partners",
   "info": {
-    "name": "nulspartners",
+    "name": "partners",
     "description": "The various partners that work with NULS"
   },
   "options": {

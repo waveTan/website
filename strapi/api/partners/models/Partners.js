@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Lifecycle callbacks for the `Nulspartners` model.
+ * Lifecycle callbacks for the `Partners` model.
  */
 
 module.exports = {

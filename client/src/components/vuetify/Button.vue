@@ -86,6 +86,10 @@
 		border: 1px solid #fff;
 	}
 
+	.button.blueBorder .btn__content {
+		border: 1px solid #0a2140;
+	}
+
 	.button.noShadow .btn__content {
 		box-shadow: none;
 	}

@@ -1,3 +1,3 @@
-# Example
+# strapi
 
-A quick description of example.
+A quick description of strapi.

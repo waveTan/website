@@ -1,23 +1,13 @@
 {
-  "product": {
+  "nulsPartners": {
     "attributes": {
-      "name": {
+      "Serial Number": {
         "appearance": ""
       },
-      "description": {
+      "Type": {
         "appearance": ""
       },
-      "locale": {
-        "appearance": ""
-      }
-    }
-  },
-  "languages": {
-    "attributes": {
-      "locale": {
-        "appearance": ""
-      },
-      "language": {
+      "Link": {
         "appearance": ""
       }
     }

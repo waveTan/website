@@ -1,75 +1,45 @@
 {
-  "_args": [
-    [
-      {
-        "raw": "strapi-admin@3.0.0-alpha.12.2",
-        "scope": null,
-        "escapedName": "strapi-admin",
-        "name": "strapi-admin",
-        "rawSpec": "3.0.0-alpha.12.2",
-        "spec": "3.0.0-alpha.12.2",
-        "type": "version"
-      },
-      "C:\\Users\\Josh\\AppData\\Roaming\\npm\\node_modules\\strapi\\node_modules\\strapi-generate-admin"
-    ]
-  ],
-  "_from": "strapi-admin@3.0.0-alpha.12.2",
-  "_id": "strapi-admin@3.0.0-alpha.12.2",
-  "_inCache": true,
+  "_from": "strapi-admin@3.0.0-alpha.12.5",
+  "_id": "strapi-admin@3.0.0-alpha.12.5",
+  "_inBundle": false,
+  "_integrity": "sha512-cxQK1kU/0WMpBimmzK0f4IXcO7AuR1ORIWmWizm0WLr8/TOVNJFMQ5u3+bXL6KAQ/yAMuH00GXA1LBQ1EsIRYw==",
   "_location": "/strapi/strapi-admin",
-  "_nodeVersion": "10.0.0",
-  "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/strapi-admin_3.0.0-alpha.12.2_1526569587728_0.935025510529959"
-  },
-  "_npmUser": {
-    "name": "strapi",
-    "email": "support@strapi.io"
-  },
-  "_npmVersion": "5.1.0",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "strapi-admin@3.0.0-alpha.12.2",
-    "scope": null,
-    "escapedName": "strapi-admin",
+    "type": "version",
+    "registry": true,
+    "raw": "strapi-admin@3.0.0-alpha.12.5",
     "name": "strapi-admin",
-    "rawSpec": "3.0.0-alpha.12.2",
-    "spec": "3.0.0-alpha.12.2",
-    "type": "version"
+    "escapedName": "strapi-admin",
+    "rawSpec": "3.0.0-alpha.12.5",
+    "saveSpec": null,
+    "fetchSpec": "3.0.0-alpha.12.5"
   },
   "_requiredBy": [
     "/strapi/strapi-generate-admin"
   ],
-  "_resolved": "https://registry.npmjs.org/strapi-admin/-/strapi-admin-3.0.0-alpha.12.2.tgz",
-  "_shasum": "84185f62a3853c13b7a1b24f82ef35ac76638ece",
-  "_shrinkwrap": null,
-  "_spec": "strapi-admin@3.0.0-alpha.12.2",
-  "_where": "C:\\Users\\Josh\\AppData\\Roaming\\npm\\node_modules\\strapi\\node_modules\\strapi-generate-admin",
+  "_resolved": "https://registry.npmjs.org/strapi-admin/-/strapi-admin-3.0.0-alpha.12.5.tgz",
+  "_shasum": "f07b5be275cb9d92e68eb62cc01d6788466f9e1e",
+  "_spec": "strapi-admin@3.0.0-alpha.12.5",
+  "_where": "C:\\Users\\josh\\AppData\\Roaming\\npm\\node_modules\\strapi\\node_modules\\strapi-generate-admin",
   "author": {
     "name": "Strapi"
   },
   "bugs": {
     "url": "https://github.com/strapi/strapi-admin/issues"
   },
+  "bundleDependencies": false,
   "dependencies": {
     "react-ga": "^2.4.1",
     "remove-markdown": "^0.2.2",
     "shelljs": "^0.7.8"
   },
+  "deprecated": false,
   "description": "Strapi Admin",
   "devDependencies": {
     "sanitize.css": "^4.1.0",
-    "strapi-helper-plugin": "3.0.0-alpha.12.2",
-    "strapi-utils": "3.0.0-alpha.12.2"
-  },
-  "directories": {},
-  "dist": {
-    "integrity": "sha512-JbqQq0Okcl41H8sjYhvsHMPb1gIn4XY66J7IJ3cuvgHsqlBX7GezMRASB5SBkSsRRGhSXfciyK5Ba+b0pHFjSg==",
-    "shasum": "84185f62a3853c13b7a1b24f82ef35ac76638ece",
-    "tarball": "https://registry.npmjs.org/strapi-admin/-/strapi-admin-3.0.0-alpha.12.2.tgz",
-    "fileCount": 449,
-    "unpackedSize": 26509274,
-    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa/Zp2CRA9TVsSAnZWagAAPpAQAJJGY3NEWPvx5vwv5OO/\nixK4izQrxfqVUqnP+8+dbJEGN/g7pj2gU8QD0UJc0DuUX2lJCjNZ7zlsMBbT\nSQKNv7dZytD9m1YEWkXKlwPqd0FM9ITjd63GjlidtWmUI0bxGvnbOGwcJAga\nFONGb94D0JY+oml1o4r3Y/t2aJLkeE4ahpVfA1C7oNKzQlQqtf08+t7RU/gv\nSZuKiwoINtbrO9mBcuD4ivNNAZi6YlrlXDEzEq9J6v0qqQweTjIPOaSD+2tA\n/S8BYvJHzVn9bz6pqnwwxJE7RV+js+asKXVT3y9UxNlrom6Fh+Rqx9F83a7L\nvNjV467j4ACV/F0Mf3Nkr3cgXCQm4xomWy6MKZJQfsx7kirgvom8kBesapjI\nq7vIFxaE8icRcL2CGhoLF+s6NuisAhmd4G4MJwLZdoxa2ieKO+CPkMQa/+54\nOs6B4ck+H/Ele3CEY5JisPeioy6V9W+G6GzfghaReEHZPF1Gx2MzgmvHSyvf\nTU6DP08824ZFARLxpnWGj8kRp0sI9u/w83L1SWReSfkFRRGLx9FT5tXhQNfc\nvvNynLqs8bwwS0xwCzMYH3R4KuP/mhyLcoRlmAm7zqXrf7tMYfow4U4dByfB\n5EOivsJ+aB1+ai52+ouw49od02SQ5unExXInjqb3YhTEY9njrj4eeBNxxOja\ngi6I\r\n=TV6W\r\n-----END PGP SIGNATURE-----\r\n"
+    "strapi-helper-plugin": "3.0.0-alpha.12.5",
+    "strapi-utils": "3.0.0-alpha.12.5"
   },
   "engines": {
     "node": ">= 9.0.0",
@@ -83,9 +53,6 @@
     }
   ],
   "name": "strapi-admin",
-  "optionalDependencies": {},
-  "readme": "# Strapi built-in admin panel\n\n## Description\n\nTODO\n\n## Contribute\n\n### Setup\n\nCreate a new Strapi project: `strapi new myApp`.\n\nGo in your project: `cd myApp`.\n\nRemove the generated admin panel: `rm -rf admin`.\n\nCreate a symlink in order to be able to easily develop the admin panel from your generated\nStrapi application: `ln -s /usr/local/lib/node_modules/strapi-generate-admin admin`\n(supposing `/usr/local/lib/node_modules` is your global node modules folder).\n\n### Development\n\nStart the React application: `cd myApp/admin`, then `npm start`.\n\nThe admin panel should now be available at [http://localhost:4000](http://localhost:4000).\n\n### Build\n\nIn order to check your updates, you can build the admin panel: `cd myApp`, then `npm run build`.\n",
-  "readmeFilename": "README.md",
   "repository": {
     "type": "git",
     "url": "git://github.com/strapi/strapi-admin.git"
@@ -108,15 +75,5 @@
     "start": "node ./node_modules/strapi-helper-plugin/node_modules/.bin/cross-env NODE_ENV=development PORT=4000 IS_ADMIN=true node ./node_modules/strapi-helper-plugin/lib/server",
     "test": "echo \"Error: no test specified\""
   },
-  "version": "3.0.0-alpha.12.2",
-  "warnings": [
-    {
-      "code": "ENOTSUP",
-      "required": {
-        "node": ">= 9.0.0",
-        "npm": ">= 5.0.0"
-      },
-      "pkgid": "strapi-admin@3.0.0-alpha.12.2"
-    }
-  ]
+  "version": "3.0.0-alpha.12.5"
 }

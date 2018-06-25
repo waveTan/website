@@ -1,5 +1,5 @@
 {
-  "name": "nulsWebsite",
+  "name": "strapi",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application.",
@@ -20,9 +20,9 @@
   },
   "dependencies": {
     "lodash": "4.x.x",
-    "strapi": "3.0.0-alpha.12.2",
-    "strapi-bookshelf": "3.0.0-alpha.12.2",
-    "strapi-knex": "3.0.0-alpha.12.2",
+    "strapi": "3.0.0-alpha.12.5",
+    "strapi-bookshelf": "3.0.0-alpha.12.5",
+    "strapi-knex": "3.0.0-alpha.12.5",
     "knex": "latest",
     "mysql": "2.15.0"
   },
@@ -39,7 +39,7 @@
     }
   ],
   "strapi": {
-    "uuid": "975f8d5f-f087-44ce-9736-700bcef523a1"
+    "uuid": "f5d0ba12-a25f-4b25-89fc-20c44c2aa812"
   },
   "engines": {
     "node": ">= 9.0.0",

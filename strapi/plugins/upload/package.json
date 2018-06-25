@@ -1,71 +1,41 @@
 {
-  "_args": [
-    [
-      {
-        "raw": "strapi-plugin-upload@alpha",
-        "scope": null,
-        "escapedName": "strapi-plugin-upload",
-        "name": "strapi-plugin-upload",
-        "rawSpec": "alpha",
-        "spec": "alpha",
-        "type": "tag"
-      },
-      "C:\\Users\\Josh\\Documents\\MyProjects\\nulsWebsite"
-    ]
-  ],
   "_from": "strapi-plugin-upload@alpha",
-  "_id": "strapi-plugin-upload@3.0.0-alpha.12.2",
-  "_inCache": true,
+  "_id": "strapi-plugin-upload@3.0.0-alpha.12.5",
+  "_inBundle": false,
+  "_integrity": "sha512-bsX4JcCe2L2Z56eTr189+eeK1eQIBEcxJTZ+++IHXKNq/YPWqSG5sOctvtv7UTyDq5SbPoMWHYIQ4C9i+RlTIQ==",
   "_location": "/strapi-plugin-upload",
-  "_nodeVersion": "10.0.0",
-  "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/strapi-plugin-upload_3.0.0-alpha.12.2_1526569913058_0.6714475798812016"
-  },
-  "_npmUser": {
-    "name": "strapi",
-    "email": "support@strapi.io"
-  },
-  "_npmVersion": "5.1.0",
   "_phantomChildren": {},
   "_requested": {
+    "type": "tag",
+    "registry": true,
     "raw": "strapi-plugin-upload@alpha",
-    "scope": null,
-    "escapedName": "strapi-plugin-upload",
     "name": "strapi-plugin-upload",
+    "escapedName": "strapi-plugin-upload",
     "rawSpec": "alpha",
-    "spec": "alpha",
-    "type": "tag"
+    "saveSpec": null,
+    "fetchSpec": "alpha"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "https://registry.npmjs.org/strapi-plugin-upload/-/strapi-plugin-upload-3.0.0-alpha.12.2.tgz",
-  "_shasum": "120895178272e926c8c075e5fc21fd74f1efcf40",
-  "_shrinkwrap": null,
+  "_resolved": "https://registry.npmjs.org/strapi-plugin-upload/-/strapi-plugin-upload-3.0.0-alpha.12.5.tgz",
+  "_shasum": "83110d2f10d116e05a18a809170bb5afc0604feb",
   "_spec": "strapi-plugin-upload@alpha",
-  "_where": "C:\\Users\\Josh\\Documents\\MyProjects\\nulsWebsite",
+  "_where": "C:\\Users\\josh\\Documents\\Repos\\nuls\\website\\source\\strapi",
   "author": {
     "name": "A Strapi developer"
   },
+  "bundleDependencies": false,
   "dependencies": {
     "react-copy-to-clipboard": "^5.0.1",
-    "strapi-upload-local": "3.0.0-alpha.12.2",
+    "strapi-upload-local": "3.0.0-alpha.12.5",
     "stream-to-array": "^2.3.0",
     "uuid": "^3.2.1"
   },
+  "deprecated": false,
   "description": "This is the description of the plugin.",
   "devDependencies": {
-    "strapi-helper-plugin": "3.0.0-alpha.12.2"
-  },
-  "directories": {},
-  "dist": {
-    "integrity": "sha512-pUs4QGDwZtOciZb17JWW4f4rETc5HmIC5dTiMqEyKFMYJNGtEw5DeG5xto9VoObaS+vrAXrpWNzvc2fqtZrLMw==",
-    "shasum": "120895178272e926c8c075e5fc21fd74f1efcf40",
-    "tarball": "https://registry.npmjs.org/strapi-plugin-upload/-/strapi-plugin-upload-3.0.0-alpha.12.2.tgz",
-    "fileCount": 76,
-    "unpackedSize": 1514783,
-    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa/Zu5CRA9TVsSAnZWagAAO58P/RQ1IU3q3rK22iaHw4+p\nQA11TdaupC33LmxlRmkbi41lKb6Q2GyV+feyFLe5EhUVCtNHl3KCr1+ja3aV\ntAHqyAkkQy5wm7I4ICM8xQOVfrHKumsBaF+54a36zNtvAqRE8ZraOmQwULIg\nmjmmubh0bibJQX9fvGdwX/R7ApWhYiJk/dpYzy5qfIeeOCS5F3+qb3rcvBr+\nt0UlYE31kLYBfbU56ONYkP67ZUi0QTg7OhYZzxLaK7EKK1M4LY2Px2rRxt/+\n7g9rdqLEnR1bbCrqi8iTbOwB+qPTrSFhvDCwkpsESrggvMXX8AkJOuXopy+I\n8aHGcD2uXI7FDJQ0GqTsq8JgciRmdkOXaEvt3aqbA7IN5ot7senKvPUk8+LD\n+YNJZUsmvcyxcCQRHaUjHjBbYtdJG9uaKvT2hRXgp4Rn7KdAu24XJURoaQjk\nYMYhi6CUrWqBeNEHCIZ+rqFzBOYg8trgavwhKNaoG+nOSyBx4o9Q+7rTaY78\n2YwU4nCwbb6+hwvN26wBLLzuhEPlbEUVDle2HhxOhJs/jPwkfhNkziEZfITa\nLZv+yYBKu0fexvaiGzCenFeBiRr9hlWyLhTLPBNRSNM6ef8kCkJoFGb5jPtQ\nXTp4iJkqLIiXA+unP77xfU+7Qy2bXI0saJ8MnOlqsJSmgHsumbJntc3Rt0R6\n6MIr\r\n=eOTw\r\n-----END PGP SIGNATURE-----\r\n"
+    "strapi-helper-plugin": "3.0.0-alpha.12.5"
   },
   "engines": {
     "node": ">= 7.0.0",
@@ -78,9 +48,6 @@
     }
   ],
   "name": "strapi-plugin-upload",
-  "optionalDependencies": {},
-  "readme": "# Strapi plugin",
-  "readmeFilename": "README.md",
   "scripts": {
     "analyze": "node ./node_modules/strapi-helper-plugin/lib/internals/scripts/analyze.js",
     "analyze:clean": "node ./node_modules/strapi-helper-plugin/node_modules/.bin/rimraf stats.json",
@@ -100,5 +67,5 @@
     "icon": "cloud-upload",
     "description": "Description of upload plugin."
   },
-  "version": "3.0.0-alpha.12.2"
+  "version": "3.0.0-alpha.12.5"
 }

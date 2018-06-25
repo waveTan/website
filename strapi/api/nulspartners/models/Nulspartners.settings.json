@@ -1,0 +1,37 @@
+{
+  "connection": "default",
+  "collectionName": "nulspartners",
+  "info": {
+    "name": "nulspartners",
+    "description": "The various partners that work with NULS"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "serialNumber": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "",
+        "Cooperation Project",
+        "Cooperation Media",
+        "Platform"
+      ],
+      "required": true
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "link": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/nulspartners",
+      "handler": "Nulspartners.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/nulspartners/count",
+      "handler": "Nulspartners.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/nulspartners/:id",
+      "handler": "Nulspartners.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/nulspartners",
+      "handler": "Nulspartners.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/nulspartners/:id",
+      "handler": "Nulspartners.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/nulspartners/:id",
+      "handler": "Nulspartners.destroy",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/nulspartners/:id/relationships/:relation",
+      "handler": "Nulspartners.createRelation",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/nulspartners/:id/relationships/:relation",
+      "handler": "Nulspartners.updateRelation",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/nulspartners/:id/relationships/:relation",
+      "handler": "Nulspartners.destroyRelation",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

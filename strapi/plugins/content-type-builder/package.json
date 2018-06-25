@@ -1,50 +1,27 @@
 {
-  "_args": [
-    [
-      {
-        "raw": "strapi-plugin-content-type-builder@alpha",
-        "scope": null,
-        "escapedName": "strapi-plugin-content-type-builder",
-        "name": "strapi-plugin-content-type-builder",
-        "rawSpec": "alpha",
-        "spec": "alpha",
-        "type": "tag"
-      },
-      "C:\\Users\\Josh\\Documents\\MyProjects\\nulsWebsite"
-    ]
-  ],
   "_from": "strapi-plugin-content-type-builder@alpha",
-  "_id": "strapi-plugin-content-type-builder@3.0.0-alpha.12.2",
-  "_inCache": true,
+  "_id": "strapi-plugin-content-type-builder@3.0.0-alpha.12.5",
+  "_inBundle": false,
+  "_integrity": "sha512-8cVLrKkDoKnHs2knUEEH88gBMpvBTJuTi4c4pipcvVy4Mam/gP5yJ46v2bS+NiTpetv18B0qyHTKQcNIbFwDkg==",
   "_location": "/strapi-plugin-content-type-builder",
-  "_nodeVersion": "10.0.0",
-  "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/strapi-plugin-content-type-builder_3.0.0-alpha.12.2_1526569806308_0.36129193828790696"
-  },
-  "_npmUser": {
-    "name": "strapi",
-    "email": "support@strapi.io"
-  },
-  "_npmVersion": "5.1.0",
   "_phantomChildren": {},
   "_requested": {
+    "type": "tag",
+    "registry": true,
     "raw": "strapi-plugin-content-type-builder@alpha",
-    "scope": null,
-    "escapedName": "strapi-plugin-content-type-builder",
     "name": "strapi-plugin-content-type-builder",
+    "escapedName": "strapi-plugin-content-type-builder",
     "rawSpec": "alpha",
-    "spec": "alpha",
-    "type": "tag"
+    "saveSpec": null,
+    "fetchSpec": "alpha"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "https://registry.npmjs.org/strapi-plugin-content-type-builder/-/strapi-plugin-content-type-builder-3.0.0-alpha.12.2.tgz",
-  "_shasum": "2a8be776bbebb2156c1ee887f44c8fcaa070f37c",
-  "_shrinkwrap": null,
+  "_resolved": "https://registry.npmjs.org/strapi-plugin-content-type-builder/-/strapi-plugin-content-type-builder-3.0.0-alpha.12.5.tgz",
+  "_shasum": "a492965d1316a75ffe38aa38aaa0bfaf579264a2",
   "_spec": "strapi-plugin-content-type-builder@alpha",
-  "_where": "C:\\Users\\Josh\\Documents\\MyProjects\\nulsWebsite",
+  "_where": "C:\\Users\\josh\\Documents\\Repos\\nuls\\website\\source\\strapi",
   "author": {
     "name": "Strapi team",
     "email": "hi@strapi.io",
@@ -53,23 +30,16 @@
   "bugs": {
     "url": "https://github.com/strapi/strapi/issues"
   },
+  "bundleDependencies": false,
   "dependencies": {
     "pluralize": "^7.0.0",
-    "strapi-generate": "3.0.0-alpha.12.2",
-    "strapi-generate-api": "3.0.0-alpha.12.2"
+    "strapi-generate": "3.0.0-alpha.12.5",
+    "strapi-generate-api": "3.0.0-alpha.12.5"
   },
+  "deprecated": false,
   "description": "Strapi plugin to create content type (API).",
   "devDependencies": {
-    "strapi-helper-plugin": "3.0.0-alpha.12.2"
-  },
-  "directories": {},
-  "dist": {
-    "integrity": "sha512-jS0c8pHTgaSAr4q2VUX8OC2n2Dox9i/gDJgL+1RGGaLOQWyE1AWsw9i68JpRrz1v8Kaeh0wQkhFhF48l+LpI7A==",
-    "shasum": "2a8be776bbebb2156c1ee887f44c8fcaa070f37c",
-    "tarball": "https://registry.npmjs.org/strapi-plugin-content-type-builder/-/strapi-plugin-content-type-builder-3.0.0-alpha.12.2.tgz",
-    "fileCount": 161,
-    "unpackedSize": 2071803,
-    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa/ZtPCRA9TVsSAnZWagAAOJgQAIptTXpGdr44GZ2VWWcr\nU/ClQGTMy3yYhAxd0hQ/0OlINGsww1ePNWSqhBVbNHlg+m78299HzS5eYgvY\nXpDfGm99UPntvA/kwbHia6mGp4R+QOzI898m6B4XZw1PIi2kdWM3BCEv9sXM\n1kceshJDZvvvOntSO10YvpWBUtpfMDPUFPEtokEISClZ8SIfZ/MD9DJMGQGA\nM2cnvuBIjAdnnwfibidkAi3D/ypiARLrgQKS8erTeEnizTIeNUAoqYgyekBJ\n2JvOrMrnrgzC2eOt871K+lng/Hdx9ZSx+qC2oJSV7YSiAWRcHumogLrZryM4\nW9Jk4oIhHiY0ma1qvas2B2MyyOVkveJks5jGLTWn3A4IZJVvJ37kUmwbYZsZ\nKCHFk/0pRmhTzWppibwR0KzO3P79xVkjhS+hoq01qAHVAqoMjjE+Cc6zqwJv\nHU0a1fNU0ETc7PDX/ZlIuSJ0DN1B1KiQCFBhJHNPGvQ2CRTDi509PFnmLvqB\nlWjh7B7P4XMsNzw8jd8ouCxS4/bqHtHbeKzPciMbF7Qso28RAW6g34kdGq8b\neGEtYXuA4x6xYGvdTxHiIhPS19ikPZP/T4JtQkxljEVG9Yah/4GVsnGt5blT\nvthxfCq4tmN+hFSzwSqGH5uhOqZaXUznHyIljts7VOGZOx/7ucrBz31jXhzx\nyLeq\r\n=sZJI\r\n-----END PGP SIGNATURE-----\r\n"
+    "strapi-helper-plugin": "3.0.0-alpha.12.5"
   },
   "engines": {
     "node": ">= 9.0.0",
@@ -85,9 +55,6 @@
     }
   ],
   "name": "strapi-plugin-content-type-builder",
-  "optionalDependencies": {},
-  "readme": "# Strapi plugin",
-  "readmeFilename": "README.md",
   "repository": {
     "type": "git",
     "url": "git://github.com/strapi/strapi.git"
@@ -111,23 +78,5 @@
     "icon": "paint-brush",
     "description": "content-type-builder.plugin.description"
   },
-  "version": "3.0.0-alpha.12.2",
-  "warnings": [
-    {
-      "code": "ENOTSUP",
-      "required": {
-        "node": ">= 9.0.0",
-        "npm": ">= 5.0.0"
-      },
-      "pkgid": "strapi-plugin-content-type-builder@3.0.0-alpha.12.2"
-    },
-    {
-      "code": "ENOTSUP",
-      "required": {
-        "node": ">= 9.0.0",
-        "npm": ">= 5.0.0"
-      },
-      "pkgid": "strapi-plugin-content-type-builder@3.0.0-alpha.12.2"
-    }
-  ]
+  "version": "3.0.0-alpha.12.5"
 }

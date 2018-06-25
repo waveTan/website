@@ -114,8 +114,11 @@ module.exports = {
 
       user.password =  await strapi.plugins['users-permissions'].services.user.hashPassword(params);
 
+      // Remove relations data to update user password.
+      const data = _.omit(user, strapi.plugins['users-permissions'].models.user.associations.map(ast => ast.alias));
+
       // Update the user.
-      await strapi.query('user', 'users-permissions').update(user);
+      await strapi.query('user', 'users-permissions').update(data);
 
       ctx.send({
         jwt: strapi.plugins['users-permissions'].services.jwt.issue(_.pick(user.toJSON ? user.toJSON() : user, ['_id', 'id'])),
@@ -143,7 +146,7 @@ module.exports = {
       }
     });
 
-    const provider = ctx.request.url.split('/')[2];
+    const provider = process.platform === 'win32' ? ctx.request.url.split('\\')[2] : ctx.request.url.split('/')[2];
     const config = grantConfig[provider];
 
     if (!_.get(config, 'enabled')) {
@@ -203,8 +206,11 @@ module.exports = {
       return ctx.badRequest(null, err);
     }
 
+    // Remove relations data to update user code.
+    const data = _.omit(user, strapi.plugins['users-permissions'].models.user.associations.map(ast => ast.alias));
+
     // Update the user.
-    await strapi.query('user', 'users-permissions').update(user);
+    await strapi.query('user', 'users-permissions').update(data);
 
     ctx.send({ ok: true });
   },

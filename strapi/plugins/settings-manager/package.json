@@ -1,50 +1,27 @@
 {
-  "_args": [
-    [
-      {
-        "raw": "strapi-plugin-settings-manager@alpha",
-        "scope": null,
-        "escapedName": "strapi-plugin-settings-manager",
-        "name": "strapi-plugin-settings-manager",
-        "rawSpec": "alpha",
-        "spec": "alpha",
-        "type": "tag"
-      },
-      "C:\\Users\\Josh\\Documents\\MyProjects\\nulsWebsite"
-    ]
-  ],
   "_from": "strapi-plugin-settings-manager@alpha",
-  "_id": "strapi-plugin-settings-manager@3.0.0-alpha.12.2",
-  "_inCache": true,
+  "_id": "strapi-plugin-settings-manager@3.0.0-alpha.12.5",
+  "_inBundle": false,
+  "_integrity": "sha512-yW4a15Rx6Vx/jYTP4UbZt9oYHapOPkeYVMYAt+2Vn/5U1CDETdjuEQOHgLmtlcgT8qx7JQx1ec/iq+X9Q9O7KQ==",
   "_location": "/strapi-plugin-settings-manager",
-  "_nodeVersion": "10.0.0",
-  "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/strapi-plugin-settings-manager_3.0.0-alpha.12.2_1526569862103_0.9774048756563192"
-  },
-  "_npmUser": {
-    "name": "strapi",
-    "email": "support@strapi.io"
-  },
-  "_npmVersion": "5.1.0",
   "_phantomChildren": {},
   "_requested": {
+    "type": "tag",
+    "registry": true,
     "raw": "strapi-plugin-settings-manager@alpha",
-    "scope": null,
-    "escapedName": "strapi-plugin-settings-manager",
     "name": "strapi-plugin-settings-manager",
+    "escapedName": "strapi-plugin-settings-manager",
     "rawSpec": "alpha",
-    "spec": "alpha",
-    "type": "tag"
+    "saveSpec": null,
+    "fetchSpec": "alpha"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "https://registry.npmjs.org/strapi-plugin-settings-manager/-/strapi-plugin-settings-manager-3.0.0-alpha.12.2.tgz",
-  "_shasum": "4edc70b563ae71faf8d610758a7bc217de3d54aa",
-  "_shrinkwrap": null,
+  "_resolved": "https://registry.npmjs.org/strapi-plugin-settings-manager/-/strapi-plugin-settings-manager-3.0.0-alpha.12.5.tgz",
+  "_shasum": "80849106ff62894858619e7e44564aa36232d2e5",
   "_spec": "strapi-plugin-settings-manager@alpha",
-  "_where": "C:\\Users\\Josh\\Documents\\MyProjects\\nulsWebsite",
+  "_where": "C:\\Users\\josh\\Documents\\Repos\\nuls\\website\\source\\strapi",
   "author": {
     "name": "Strapi team",
     "email": "hi@strapi.io",
@@ -53,21 +30,13 @@
   "bugs": {
     "url": "https://github.com/strapi/strapi/issues"
   },
-  "dependencies": {},
+  "bundleDependencies": false,
+  "deprecated": false,
   "description": "Strapi plugin to manage settings.",
   "devDependencies": {
     "flag-icon-css": "^2.8.0",
     "react-select": "^1.0.0-rc.5",
-    "strapi-helper-plugin": "3.0.0-alpha.12.2"
-  },
-  "directories": {},
-  "dist": {
-    "integrity": "sha512-z9YmdFWj2lQ5f5Vp3jWQsCm4sxOY1M8E0vuctHPb+Nm5BW6ogjZr4FkPqd4b7y9taKuxDtUmNbIAOQuO7F2DSA==",
-    "shasum": "4edc70b563ae71faf8d610758a7bc217de3d54aa",
-    "tarball": "https://registry.npmjs.org/strapi-plugin-settings-manager/-/strapi-plugin-settings-manager-3.0.0-alpha.12.2.tgz",
-    "fileCount": 616,
-    "unpackedSize": 8281493,
-    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa/ZuGCRA9TVsSAnZWagAAmsUQAJWmexQeLMN2QA0GLwKH\nzXfODqfvOybkJoZRwvu9s3YeGQGtvzO8PqNrDbtOt+YgJtF6qAuLOWTWRGqy\no7zY37Mgp4bd9V/EnaQVLlVpAKBtkQNGxOhR8i0zgKYnbbu3mdWmJ/Lkl1pG\nmLrCmUQmRwMJQ8zTpCcrd9YP51kdFDZBA0NvpmfKuKH+t3+1TtuGUcUBAq1R\nXdX7Qh6JJKEOWJgQ7tdHxWBjjlWjz1tWHUlTeLYFkjZQweOlDgMbsOaeBY7L\nnXQPJtnT5y9IJULwCTr9GYUGMSgp9BYyUHSAkgDjtuxNH/zxL0VG8ML7kPvN\nhbK2wbWS83i2vhNZr+VaL8g15MDol1JSrdl1BoXDTzI5Lw6MHl1yJmC6bs4U\nLusSDZE2uCFJrzXUeJ0S5Fp2/+u+QuBdbGMRU1d1A5NRIE2V0i3DwQktOeTd\nVqs/OAxIvFFk1w4a/TiB2OgdnY9qHhjPDKv8nZZCjD4JFlLJntblMKdy+U8F\nRRXhvfxZqUaG2J9UJcXQgnJgnYJpwiZpew9ZFxZGri7DZPVVujdR1IKRFQoR\nRTzUmtd0uYGu1Ato0wsU6CJiNoC6BrKchv8m8oEpPqQAn9uEOeHrD+Pi41jc\nMnhjJ3dHm/W94bS18ekS+sH+Oa/vtcqnyqRffPq2bElVpSA0kT8gUITB3AsE\nXeyb\r\n=kHtT\r\n-----END PGP SIGNATURE-----\r\n"
+    "strapi-helper-plugin": "3.0.0-alpha.12.5"
   },
   "engines": {
     "node": ">= 9.0.0",
@@ -83,9 +52,6 @@
     }
   ],
   "name": "strapi-plugin-settings-manager",
-  "optionalDependencies": {},
-  "readme": "# Strapi plugin",
-  "readmeFilename": "README.md",
   "repository": {
     "type": "git",
     "url": "git://github.com/strapi/strapi.git"
@@ -110,23 +76,5 @@
     "icon": "wrench",
     "description": "settings-manager.plugin.description"
   },
-  "version": "3.0.0-alpha.12.2",
-  "warnings": [
-    {
-      "code": "ENOTSUP",
-      "required": {
-        "node": ">= 9.0.0",
-        "npm": ">= 5.0.0"
-      },
-      "pkgid": "strapi-plugin-settings-manager@3.0.0-alpha.12.2"
-    },
-    {
-      "code": "ENOTSUP",
-      "required": {
-        "node": ">= 9.0.0",
-        "npm": ">= 5.0.0"
-      },
-      "pkgid": "strapi-plugin-settings-manager@3.0.0-alpha.12.2"
-    }
-  ]
+  "version": "3.0.0-alpha.12.5"
 }

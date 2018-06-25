@@ -1,50 +1,27 @@
 {
-  "_args": [
-    [
-      {
-        "raw": "strapi-plugin-email@alpha",
-        "scope": null,
-        "escapedName": "strapi-plugin-email",
-        "name": "strapi-plugin-email",
-        "rawSpec": "alpha",
-        "spec": "alpha",
-        "type": "tag"
-      },
-      "C:\\Users\\Josh\\Documents\\MyProjects\\nulsWebsite"
-    ]
-  ],
   "_from": "strapi-plugin-email@alpha",
-  "_id": "strapi-plugin-email@3.0.0-alpha.12.2",
-  "_inCache": true,
+  "_id": "strapi-plugin-email@3.0.0-alpha.12.5",
+  "_inBundle": false,
+  "_integrity": "sha512-KmGrLOkTG9C4bRJI1BcHrpdUZUw+bEnD1E2iy7a0emB1swwVZeHvPbrB3AGankJ42LbkbeFsTbREITBZ4TD4hg==",
   "_location": "/strapi-plugin-email",
-  "_nodeVersion": "10.0.0",
-  "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/strapi-plugin-email_3.0.0-alpha.12.2_1526569812750_0.025890815258826638"
-  },
-  "_npmUser": {
-    "name": "strapi",
-    "email": "support@strapi.io"
-  },
-  "_npmVersion": "5.1.0",
   "_phantomChildren": {},
   "_requested": {
+    "type": "tag",
+    "registry": true,
     "raw": "strapi-plugin-email@alpha",
-    "scope": null,
-    "escapedName": "strapi-plugin-email",
     "name": "strapi-plugin-email",
+    "escapedName": "strapi-plugin-email",
     "rawSpec": "alpha",
-    "spec": "alpha",
-    "type": "tag"
+    "saveSpec": null,
+    "fetchSpec": "alpha"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "https://registry.npmjs.org/strapi-plugin-email/-/strapi-plugin-email-3.0.0-alpha.12.2.tgz",
-  "_shasum": "aafd68e634ac8022e44b649b44fd2ccdc0d0fd17",
-  "_shrinkwrap": null,
+  "_resolved": "https://registry.npmjs.org/strapi-plugin-email/-/strapi-plugin-email-3.0.0-alpha.12.5.tgz",
+  "_shasum": "978f638224516e6fa718a81dcec1efcf9a56894d",
   "_spec": "strapi-plugin-email@alpha",
-  "_where": "C:\\Users\\Josh\\Documents\\MyProjects\\nulsWebsite",
+  "_where": "C:\\Users\\josh\\Documents\\Repos\\nuls\\website\\source\\strapi",
   "author": {
     "name": "Strapi team",
     "email": "hi@strapi.io",
@@ -53,21 +30,15 @@
   "bugs": {
     "url": "https://github.com/strapi/strapi/issues"
   },
+  "bundleDependencies": false,
   "dependencies": {
-    "sendmail": "^1.2.0"
+    "strapi-email-sendmail": "3.0.0-alpha.12.5"
   },
+  "deprecated": false,
   "description": "This is the description of the plugin.",
   "devDependencies": {
-    "strapi-helper-plugin": "3.0.0-alpha.12.2"
-  },
-  "directories": {},
-  "dist": {
-    "integrity": "sha512-HPWvX82l8g7ed5pqKrDsjeWr8wnYaFDJne+1gwJOax1AsEczgDUHWS0LM4og2OFOVeoBLrpJHU79wmQlxNZMdg==",
-    "shasum": "aafd68e634ac8022e44b649b44fd2ccdc0d0fd17",
-    "tarball": "https://registry.npmjs.org/strapi-plugin-email/-/strapi-plugin-email-3.0.0-alpha.12.2.tgz",
-    "fileCount": 15,
-    "unpackedSize": 6492,
-    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa/ZtVCRA9TVsSAnZWagAAoq0P/27FjBAn1A6htH6/SVAQ\nwZ7TZIYAtkTEz+RrZwBfzMovm/8sjkLaC5uhhd66poCS5Eve8ekWA4OpwyEh\nnc6uxNLTdLyMSGMZDlKjl9/XmCXqZ9SNAfGjcyI5kAwgwzIm2FNqhhsGi7uE\n+QASwIBji35xPyfIAaK8SxJfjXEaT9n49klyMNNGb2rzp2p/tWe0+tSpHzg+\nzWme2b02snevK+sP3/yl7Ls1vk/X8wCQ/hoCBVv6NzMEL9OdXRDxitrPyJBq\n1e978Qu+ijSZRU/12b6KSogq9ORKAWGEsNUubPEcVJesSRxmiUD+r19mz3M+\n5yWw5X4poFguEOn5y8EzbClFNVNbL+mdfbnMubu3QLRscxI6DGNGDZGeDCnv\newIgBvc6k2yJEmS7cGw0iJrhNncZ1Bkqs7IevdK/CDeoCEfXOd5KWQ2VX7sL\nBLhZgregDUHRX9dCWojorm/wF0Q2rA4dYLODQ0gVdqlTnNWnngHTBvJfJYgD\nHklt+izriPrJuyeDIxd2YbRl+ZZrTLQtno3MenmVsRoRBuc40BfEqjjFgaQ2\nD9lwBLzQ7GQQgS1oAJaar2tECWvMlRes2o/Oky8WfFhr8mSiAw0QjbVsb8aY\nTyLKoHNiStZCwfPTyWFrEv2afpv50ZbCRgZc/G94Z2LEbFjoMWlpiR4XKlIr\nhWgj\r\n=dByj\r\n-----END PGP SIGNATURE-----\r\n"
+    "react-copy-to-clipboard": "5.0.1",
+    "strapi-helper-plugin": "3.0.0-alpha.12.5"
   },
   "engines": {
     "node": ">= 9.0.0",
@@ -83,9 +54,6 @@
     }
   ],
   "name": "strapi-plugin-email",
-  "optionalDependencies": {},
-  "readme": "# Strapi plugin",
-  "readmeFilename": "README.md",
   "repository": {
     "type": "git",
     "url": "git://github.com/strapi/strapi.git"
@@ -96,9 +64,10 @@
     "build": "node ./node_modules/strapi-helper-plugin/node_modules/.bin/cross-env NODE_ENV=production node node_modules/strapi-helper-plugin/node_modules/.bin/webpack --config node_modules/strapi-helper-plugin/lib/internals/webpack/webpack.prod.babel.js --color -p --progress",
     "build:clean": "node ./node_modules/strapi-helper-plugin/node_modules/.bin/rimraf admin/build",
     "build:dev": "node ./node_modules/strapi-helper-plugin/node_modules/.bin/cross-env NODE_ENV=development node ./node_modules/strapi-helper-plugin/node_modules/.bin/webpack --config node_modules/strapi-helper-plugin/lib/internals/webpack/webpack.prod.babel.js --color -p --progress",
-    "generate": "node ./node_modules/strapi-helper-plugin/node_modules/.bin/plop --plopfile ./node_modules/strapi-helper-plugin/lib/internals/generators/index.js",
+    "generate": "node ./node_modules/plop/plop.js --plopfile node_modules/strapi-helper-plugin/lib/internals/generators/index.js",
     "preanalyze": "npm run analyze:clean",
     "prebuild": "npm run build:clean",
+    "prepublishOnly": "IS_MONOREPO=true npm run build",
     "prettier": "node ./node_modules/strapi-helper-plugin/node_modules/.bin/prettier --single-quote --trailing-comma es5 --write \"{admin,__{tests,mocks}__}/**/*.js\"",
     "start": "node ./node_modules/strapi-helper-plugin/node_modules/.bin/cross-env NODE_ENV=development node ./node_modules/strapi-helper-plugin/lib/server",
     "test": "echo \"Error: no test specified\""
@@ -108,23 +77,5 @@
     "icon": "paper-plane",
     "description": "email.plugin.description"
   },
-  "version": "3.0.0-alpha.12.2",
-  "warnings": [
-    {
-      "code": "ENOTSUP",
-      "required": {
-        "node": ">= 9.0.0",
-        "npm": ">= 5.0.0"
-      },
-      "pkgid": "strapi-plugin-email@3.0.0-alpha.12.2"
-    },
-    {
-      "code": "ENOTSUP",
-      "required": {
-        "node": ">= 9.0.0",
-        "npm": ">= 5.0.0"
-      },
-      "pkgid": "strapi-plugin-email@3.0.0-alpha.12.2"
-    }
-  ]
+  "version": "3.0.0-alpha.12.5"
 }

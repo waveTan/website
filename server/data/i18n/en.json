@@ -284,6 +284,7 @@
 			}
 		},
 		"dApps": {
+			"pageTitle": "DApps",
 			"header": {
 				"title": "NULS DApps",
 				"meta": "Developers from NULS Community can develop various modules and applications as needed or select proper modules to customize subchains. NULS is building a future for distributed applications.",

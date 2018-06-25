@@ -5,13 +5,13 @@ import Vuex, { Store } from 'vuex';
 import app from '@/store/app';
 import i18n from '@/store/i18n';
 import genericEndPoints from '@/store/genericEndPoints';
-// import tokens from '@/store/tokens';
+import dApps from '@/store/dApps';
 
 const modules = {
 	app,
 	i18n,
-	genericEndPoints
-	// tokens
+	genericEndPoints,
+	dApps
 };
 
 Vue.use(Vuex);

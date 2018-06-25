@@ -47,6 +47,7 @@ const actions = {
 };
 
 const getters = {
+	getItems: (state) => (path) => state.items[path]
 };
 
 export default {

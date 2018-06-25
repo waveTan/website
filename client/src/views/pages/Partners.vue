@@ -2,7 +2,7 @@
 	<div class="section container">
 		<div class="centered">
 			<h2>Hello world</h2>
-			<p>Foo bar</p>
+			<p>{{ getItems('platform') }}</p>
 		</div>
 	</div>
 </template>
@@ -13,6 +13,19 @@
 		async mounted()
 		{
 			await this.$store.dispatch('strapi/loadItems', 'nulsPartners');
+		},
+		data()
+		{
+			return {
+				partnerships: this.$store.getters['strapi/getItems']('nulsPartners')
+			};
+		},
+		methods: {
+			getItems(type)
+			{
+				console.log(this.partnerships);
+				return this.partnerships.filter((item) => item.type.toLowerCase() === type);
+			}
 		}
 	};
 </script>

@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<HeaderMeta title="page.about.pageTitle" />
+		<HeaderMeta title="page.partnerships.pageTitle" />
 		<div class="header">
 			<div class="container">
 				<h1><I18N id="page.partnerships.header.title" /></h1>

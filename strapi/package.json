@@ -19,12 +19,13 @@
     "eslint-plugin-react": "^6.8.0"
   },
   "dependencies": {
+    "dotenv": "^6.0.0",
+    "knex": "latest",
     "lodash": "4.x.x",
+    "mysql": "2.15.0",
     "strapi": "3.0.0-alpha.12.5",
     "strapi-bookshelf": "3.0.0-alpha.12.5",
-    "strapi-knex": "3.0.0-alpha.12.5",
-    "knex": "latest",
-    "mysql": "2.15.0"
+    "strapi-knex": "3.0.0-alpha.12.5"
   },
   "author": {
     "name": "A Strapi developer",

@@ -7,6 +7,8 @@
  * This is handy in situations where the Strapi CLI is not relevant or useful.
  */
 
+require('dotenv').config();
+
 process.chdir(__dirname);
 
 (() => {

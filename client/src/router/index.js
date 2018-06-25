@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Index from '@/views/pages/Index';
 import About from '@/views/pages/About';
 import Partners from '@/views/pages/Partners';
+import DApps from '@/views/pages/DApps';
 import LegalTerms from '@/views/pages/legal/Terms';
 import LegalPrivacy from '@/views/pages/legal/Privacy';
 import PageNotFound from '@/views/pages/PageNotFound';
@@ -25,6 +26,11 @@ const routeConfig = [
 		name: 'partners',
 		path: '/partners',
 		component: Partners
+	},
+	{
+		name: 'dApps',
+		path: '/dApps',
+		component: DApps
 	},
 	{
 		name: 'legal.terms',

@@ -1,0 +1,32 @@
+{
+  "connection": "default",
+  "collectionName": "dapps",
+  "info": {
+    "name": "dapps",
+    "description": "Decentralised applications that run on NULS"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "link": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "active": {
+      "type": "boolean"
+    }
+  }
+}

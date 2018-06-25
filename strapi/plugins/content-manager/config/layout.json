@@ -11,5 +11,21 @@
         "appearance": ""
       }
     }
+  },
+  "dApps": {
+    "attributes": {
+      "title": {
+        "appearance": ""
+      },
+      "description": {
+        "appearance": ""
+      },
+      "link": {
+        "appearance": ""
+      },
+      "active": {
+        "appearance": ""
+      }
+    }
   }
 }

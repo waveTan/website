@@ -21,7 +21,7 @@ const load = async (req, res) =>
 		END
 		ORDER BY d.id desc
 		LIMIT ?
-	`, [offsetId, offsetId, resultsLimit]);
+		`, [offsetId, offsetId, resultsLimit]);
 
 	if(offsetId === 0) // This means it's the initial load so get additional data such as total number of applications
 	{
@@ -53,7 +53,16 @@ const search = async (req, res) =>
 		AND MATCH (d.title, d.description) AGAINST (? IN BOOLEAN MODE)
 		ORDER BY d.id desc
 		LIMIT ?
-	`, [offsetId, offsetId, searchQuery, resultsLimit]);
+		`, [offsetId, offsetId, searchQuery, resultsLimit]);
+
+	if(offsetId === 0) // This means it's the initial load so get additional data such as total number of applications
+	{
+		extra.count = await db.connection.execute(`
+			SELECT COUNT(d.id) AS count FROM dapps AS d
+			WHERE MATCH (d.title, d.description) AGAINST (? IN BOOLEAN MODE)
+			`, [searchQuery]);
+		extra.count = extra.count[0][0].count;
+	}
 
 	res.status(200).json({ ...extra, rows });
 };
@@ -71,7 +80,7 @@ const item = async (req, res) =>
 		LEFT JOIN upload_file AS u ON m.upload_file_id = u.id
 		WHERE d.id = ?
 		LIMIT 1
-	`, [item]);
+		`, [item]);
 
 	res.status(200).json(rows);
 };

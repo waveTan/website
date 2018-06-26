@@ -3,14 +3,19 @@
 		<div v-if="loading" class="center">
 			<v-progress-circular :size="50" indeterminate color="primary" />
 		</div>
-		<div v-else>
+		<div v-else>>
 			<ul>
 				<li v-for="(app, i) in apps" :key="i">
 					{{ app.id }} -> {{ app.title }}
 				</li>
 			</ul>
 			<div class="text-xs-center">
-				<v-pagination :length="totalPages" v-model="page" :total-visible="7" />
+				<v-pagination
+					:length="totalPages"
+					v-model="page"
+					:total-visible="7"
+					@input="pageUpdated"
+				/>
 			</div>
 		</div>
 	</div>
@@ -18,22 +23,21 @@
 
 <script>
 	export default {
+		mounted()
+		{
+			this.loadApps();
+		},
 		data()
 		{
 			return {
-				page: 1
+				page: 1,
+				apps: []
 			};
 		},
 		computed: {
 			loading()
 			{
 				return this.$store.getters['dApps/getLoading'];
-			},
-			apps()
-			{
-				this.$store.dispatch('dApps/loadApps', this.page);
-
-				return this.$store.getters['dApps/getApps'](this.page);
 			},
 			totalPages()
 			{
@@ -43,6 +47,21 @@
 			{
 				return this.$store.getters['dApps/getTotalApps'];
 			}
+		},
+		methods: {
+			async loadApps()
+			{
+				await this.$store.dispatch('dApps/loadApps', this.page);
+
+				this.apps = this.$store.getters['dApps/getApps'](this.page);
+			},
+			pageUpdated()
+			{
+				this.loadApps()
+			}
 		}
 	}
 </script>
+
+<style scoped>
+</style>

@@ -15,7 +15,7 @@ const load = async (req, res) =>
 		LEFT JOIN upload_file AS u ON m.upload_file_id = u.id
 		WHERE
 		CASE
-			WHEN 0 != ? THEN id < ?
+			WHEN 0 != ? THEN d.id < ?
 			ELSE 1=1
 		END
 		ORDER BY d.id desc
@@ -39,7 +39,7 @@ const search = async (req, res) =>
 		LEFT JOIN upload_file AS u ON m.upload_file_id = u.id
 		WHERE
 		CASE
-			WHEN 0 != ? THEN id < ?
+			WHEN 0 != ? THEN d.id < ?
 			ELSE 1=1
 		END
 		AND MATCH (d.title, d.description) AGAINST (? IN BOOLEAN MODE)

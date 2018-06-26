@@ -1,6 +1,7 @@
 import { get } from '@/utils/api';
 
 const state = {
+	loading: false,
 	apps: [],
 	fullApps: []
 };
@@ -13,6 +14,10 @@ const mutations = {
 	SET_APP(state, data)
 	{
 		state.apps[data.id] = data;
+	},
+	TOGGLE_LOADING(state)
+	{
+		state.loading = !state.loading;
 	}
 };
 
@@ -22,6 +27,8 @@ const actions = {
 		if(state.apps.length === 0 || nextPage)
 		{
 			let data = [];
+
+			commit('TOGGLE_LOADING');
 
 			if(nextPage)
 			{
@@ -33,6 +40,7 @@ const actions = {
 			}
 
 			commit('SET_APPS', data);
+			commit('TOGGLE_LOADING');
 		}
 
 		return state.apps;
@@ -41,9 +49,12 @@ const actions = {
 	{
 		if(!state.fullApps[id])
 		{
+			commit('TOGGLE_LOADING');
+
 			const { data } = await get(`dApps/item/${id}`);
 
 			commit('SET_APP', data);
+			commit('TOGGLE_LOADING');
 		}
 
 		return state.fullApps[id];
@@ -57,7 +68,8 @@ const getters = {
 
 		return state.apps.slice((page - 1) * perPage, ((page - 1) * perPage) + perPage);
 	},
-	getApp: (state) => (id) => state.fullApps[id]
+	getApp: (state) => (id) => state.fullApps[id],
+	getLoading: (state) => state.loading
 };
 
 export default {

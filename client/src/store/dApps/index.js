@@ -1,4 +1,4 @@
-import { get } from '@/utils/api';
+import { get, post } from '@/utils/api';
 
 const state = {
 	loading: false,
@@ -66,6 +66,16 @@ const actions = {
 		}
 
 		return state.fullApps[id];
+	},
+	async search({ commit }, { searchQuery })
+	{
+		commit('TOGGLE_LOADING');
+
+		const { data } = await post('dApps/search/', { searchQuery });
+
+		commit('TOGGLE_LOADING');
+
+		return data.rows;
 	}
 };
 

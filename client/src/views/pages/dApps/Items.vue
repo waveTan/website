@@ -1,9 +1,16 @@
 <template>
 	<div class="section container">
+		<v-text-field
+			class="searchInput"
+			v-model="searchQuery"
+			append-icon="search"
+			label="Search for DApps"
+			@input="inputUpdated"
+		/>
 		<div v-if="loading" class="center">
 			<v-progress-circular :size="50" indeterminate color="primary" />
 		</div>
-		<div v-else>>
+		<div v-else>
 			<ul>
 				<li v-for="(app, i) in apps" :key="i">
 					{{ app.id }} -> {{ app.title }}
@@ -22,6 +29,8 @@
 </template>
 
 <script>
+	import debounce from 'lodash/debounce';
+
 	export default {
 		mounted()
 		{
@@ -30,6 +39,7 @@
 		data()
 		{
 			return {
+				searchQuery: '',
 				page: 1,
 				apps: []
 			};
@@ -55,6 +65,10 @@
 
 				this.apps = this.$store.getters['dApps/getApps'](this.page);
 			},
+			inputUpdated: debounce(async function run()
+			{
+				this.apps = await this.$store.dispatch('dApps/search', { searchQuery: this.searchQuery, page: this.page });
+			}, 500),
 			pageUpdated()
 			{
 				this.loadApps()

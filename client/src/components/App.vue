@@ -282,4 +282,9 @@
 	a:hover {
 		border-bottom: 1px dashed;
 	}
+
+	.searchInput.input-group--text-field:not(.input-group--focused):not(.input-group--dirty) label {
+		text-align: center;
+		max-width: 100%;
+	}
 </style>

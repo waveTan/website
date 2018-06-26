@@ -33,8 +33,10 @@ const search = async (req, res) =>
 	await db.init();
 
 	const [rows] = await db.connection.execute(`
-		SELECT d.id, d.title, d.description, d.link, d.active
+		SELECT d.id, d.title, d.description, d.link, d.active, u.url AS image
 		FROM dapps AS d
+		LEFT JOIN upload_file_morph AS m ON m.related_type = "dapps" AND m.related_id = d.id
+		LEFT JOIN upload_file AS u ON m.upload_file_id = u.id
 		WHERE
 		CASE
 			WHEN 0 != ? THEN id < ?
@@ -48,7 +50,26 @@ const search = async (req, res) =>
 	res.status(200).json(rows);
 };
 
+const item = async (req, res) =>
+{
+	const db = new Database();
+	const { item } = req.params;
+	await db.init();
+
+	const [rows] = await db.connection.execute(`
+		SELECT d.*, u.url AS image
+		FROM dapps AS d
+		LEFT JOIN upload_file_morph AS m ON m.related_type = "dapps" AND m.related_id = d.id
+		LEFT JOIN upload_file AS u ON m.upload_file_id = u.id
+		WHERE d.id = ?
+		LIMIT 1
+	`, [item]);
+
+	res.status(200).json(rows);
+};
+
 module.exports = {
 	load,
-	search
+	search,
+	item
 };

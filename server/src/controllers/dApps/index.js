@@ -1,11 +1,12 @@
 const Database = require('@/models/Database');
 
-const resultsLimit = 2;
+const resultsLimit = 2; // This should be changed on the frontend too -> `\client\src\store\dApps\index.js::appsPerPage`
 
 const load = async (req, res) =>
 {
 	const db = new Database();
 	const { offsetId = 0 } = req.params;
+	const extra = {};
 	await db.init();
 
 	const [rows] = await db.connection.execute(`
@@ -22,7 +23,13 @@ const load = async (req, res) =>
 		LIMIT ?
 	`, [offsetId, offsetId, resultsLimit]);
 
-	res.status(200).json(rows);
+	if(offsetId === 0) // This means it's the initial load so get additional data such as total number of applications
+	{
+		extra.count = await db.connection.execute('SELECT COUNT(id) AS count FROM dapps');
+		extra.count = extra.count[0][0].count;
+	}
+
+	res.status(200).json({ ...extra, rows });
 };
 
 const search = async (req, res) =>

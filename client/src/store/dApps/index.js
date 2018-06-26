@@ -3,7 +3,9 @@ import { get } from '@/utils/api';
 const state = {
 	loading: false,
 	apps: [],
-	fullApps: []
+	fullApps: [],
+	totalApps: 0,
+	appsPerPage: 2 // This should be changed on the backend too -> `\server\src\controllers\dApps\index.js::resultsLimit`
 };
 
 const mutations = {
@@ -15,6 +17,10 @@ const mutations = {
 	{
 		state.apps[data.id] = data;
 	},
+	SET_TOTAL_APPS(state, count)
+	{
+		state.totalApps = count;
+	},
 	TOGGLE_LOADING(state)
 	{
 		state.loading = !state.loading;
@@ -22,24 +28,26 @@ const mutations = {
 };
 
 const actions = {
-	async loadApps({ state, commit }, nextPage = false)
+	async loadApps({ state, commit }, page)
 	{
-		if(state.apps.length === 0 || nextPage)
+		if(state.apps.length === 0 || page !== 1)
 		{
-			let data = [];
+			let data = { rows: [] };
 
 			commit('TOGGLE_LOADING');
 
-			if(nextPage)
-			{
-				({ data } = await get(`dApps/${state.apps[state.apps.length].id}`));
-			}
-			else
+			if(state.apps.length === 0)
 			{
 				({ data } = await get('dApps/'));
+
+				commit('SET_TOTAL_APPS', data.count);
+			}
+			else if(((page - 1) * state.appsPerPage) < state.totalApps && state.apps.length < state.totalApps)
+			{
+				({ data } = await get(`dApps/${state.apps[state.apps.length - 1].id}`));
 			}
 
-			commit('SET_APPS', data);
+			commit('SET_APPS', data.rows);
 			commit('TOGGLE_LOADING');
 		}
 
@@ -62,14 +70,11 @@ const actions = {
 };
 
 const getters = {
-	getApps: (state) => (page) =>
-	{
-		const perPage = 1;
-
-		return state.apps.slice((page - 1) * perPage, ((page - 1) * perPage) + perPage);
-	},
+	getApps: (state) => (page) => state.apps.slice((page - 1) * state.appsPerPage, ((page - 1) * state.appsPerPage) + state.appsPerPage),
 	getApp: (state) => (id) => state.fullApps[id],
-	getLoading: (state) => state.loading
+	getLoading: (state) => state.loading,
+	getTotalApps: (state) => state.totalApps,
+	appsPerPage: (state) => state.appsPerPage
 };
 
 export default {

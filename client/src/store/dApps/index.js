@@ -8,7 +8,7 @@ const state = {
 const mutations = {
 	SET_APPS(state, data)
 	{
-		state.apps.push(data);
+		state.apps.push(...data);
 	},
 	SET_APP(state, data)
 	{
@@ -17,11 +17,20 @@ const mutations = {
 };
 
 const actions = {
-	async loadApps({ state, commit }, force = false)
+	async loadApps({ state, commit }, nextPage = false)
 	{
-		if(state.apps.length === 0 || force)
+		if(state.apps.length === 0 || nextPage)
 		{
-			const { data } = await get(`dApps/items/${state.apps[state.apps.length].id}`);
+			let data = [];
+
+			if(nextPage)
+			{
+				({ data } = await get(`dApps/${state.apps[state.apps.length].id}`));
+			}
+			else
+			{
+				({ data } = await get('dApps/'));
+			}
 
 			commit('SET_APPS', data);
 		}
@@ -42,7 +51,12 @@ const actions = {
 };
 
 const getters = {
-	getApps: (state) => state.apps,
+	getApps: (state) => (page) =>
+	{
+		const perPage = 1;
+
+		return state.apps.slice((page - 1) * perPage, ((page - 1) * perPage) + perPage);
+	},
 	getApp: (state) => (id) => state.fullApps[id]
 };
 

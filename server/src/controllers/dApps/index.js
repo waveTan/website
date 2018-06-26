@@ -36,7 +36,8 @@ const search = async (req, res) =>
 {
 	const db = new Database();
 	const { offsetId = 0 } = req.params;
-	const { query } = req.body;
+	const { searchQuery } = req.body;
+	const extra = {};
 	await db.init();
 
 	const [rows] = await db.connection.execute(`
@@ -52,9 +53,9 @@ const search = async (req, res) =>
 		AND MATCH (d.title, d.description) AGAINST (? IN BOOLEAN MODE)
 		ORDER BY d.id desc
 		LIMIT ?
-	`, [offsetId, offsetId, query, resultsLimit]);
+	`, [offsetId, offsetId, searchQuery, resultsLimit]);
 
-	res.status(200).json(rows);
+	res.status(200).json({ ...extra, rows });
 };
 
 const item = async (req, res) =>

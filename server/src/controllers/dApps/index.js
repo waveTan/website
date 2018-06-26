@@ -10,7 +10,7 @@ const load = async (req, res) =>
 	const [rows] = await db.connection.execute(`
 		SELECT d.id, d.title, d.description, d.link, d.active, u.url AS image
 		FROM dapps AS d
-		LEFT JOIN upload_file_morph AS m ON m.related_type = "partners" AND m.related_id = d.id
+		LEFT JOIN upload_file_morph AS m ON m.related_type = "dapps" AND m.related_id = d.id
 		LEFT JOIN upload_file AS u ON m.upload_file_id = u.id
 		WHERE d.id < ?
 		ORDER BY d.id desc

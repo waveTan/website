@@ -1,10 +1,11 @@
 const Database = require('@/models/Database');
 
+const resultsLimit = 5;
+
 const load = async (req, res) =>
 {
 	const db = new Database();
-	const { offsetId } = req.params;
-	const limit = 2;
+	const { offsetId = 0 } = req.params;
 	await db.init();
 
 	const [rows] = await db.connection.execute(`
@@ -12,10 +13,10 @@ const load = async (req, res) =>
 		FROM dapps AS d
 		LEFT JOIN upload_file_morph AS m ON m.related_type = "dapps" AND m.related_id = d.id
 		LEFT JOIN upload_file AS u ON m.upload_file_id = u.id
-		WHERE d.id < ?
+		WHERE CASE WHEN 0 != ? THEN d.id < ? ELSE 1=1 END
 		ORDER BY d.id desc
 		LIMIT ?
-	`, [offsetId, limit]);
+	`, [offsetId, offsetId, resultsLimit]);
 
 	res.status(200).json(rows);
 };

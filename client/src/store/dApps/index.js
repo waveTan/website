@@ -28,30 +28,38 @@ const mutations = {
 };
 
 const actions = {
-	async loadApps({ state, commit }, page)
+	async loadApps({ state, commit, getters }, page)
 	{
 		if(state.apps.length === 0 || page !== 1)
 		{
-			let data = { rows: [] };
-
-			commit('TOGGLE_LOADING');
+			let data = { };
 
 			if(state.apps.length === 0)
 			{
+				commit('TOGGLE_LOADING');
+
 				({ data } = await get('dApps/'));
 
 				commit('SET_TOTAL_APPS', data.count);
+				commit('SET_APPS', data.rows);
+				commit('TOGGLE_LOADING');
+
+				return data;
 			}
 			else if(((page - 1) * state.appsPerPage) < state.totalApps && state.apps.length < state.totalApps)
 			{
-				({ data } = await get(`dApps/${state.apps[state.apps.length - 1].id}`));
-			}
+				commit('TOGGLE_LOADING');
 
-			commit('SET_APPS', data.rows);
-			commit('TOGGLE_LOADING');
+				({ data } = await get(`dApps/${state.apps[state.apps.length - 1].id}`));
+
+				commit('SET_APPS', data.rows);
+				commit('TOGGLE_LOADING');
+
+				return data;
+			}
 		}
 
-		return state.apps;
+		return { rows: getters.getApps(page) };
 	},
 	async loadApp({ state, commit }, id)
 	{
@@ -75,7 +83,7 @@ const actions = {
 
 		commit('TOGGLE_LOADING');
 
-		return data.rows;
+		return data;
 	}
 };
 

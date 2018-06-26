@@ -41,37 +41,43 @@
 			return {
 				searchQuery: '',
 				page: 1,
-				apps: []
+				apps: [],
+				totalApps: 0,
+				totalPages: 0
 			};
 		},
 		computed: {
 			loading()
 			{
 				return this.$store.getters['dApps/getLoading'];
-			},
-			totalPages()
-			{
-				return Math.ceil(this.$store.getters['dApps/getTotalApps'] / this.$store.getters['dApps/appsPerPage']);
-			},
-			totalApps()
-			{
-				return this.$store.getters['dApps/getTotalApps'];
 			}
 		},
 		methods: {
 			async loadApps()
 			{
-				await this.$store.dispatch('dApps/loadApps', this.page);
+				const data = await this.$store.dispatch('dApps/loadApps', this.page);
 
-				this.apps = this.$store.getters['dApps/getApps'](this.page);
+				this.setAppsListData(data);
 			},
 			inputUpdated: debounce(async function run()
 			{
-				this.apps = await this.$store.dispatch('dApps/search', { searchQuery: this.searchQuery, page: this.page });
+				const data = await this.$store.dispatch('dApps/search', { searchQuery: this.searchQuery, page: this.page });
+
+				this.setAppsListData(data);
 			}, 500),
 			pageUpdated()
 			{
 				this.loadApps()
+			},
+			setAppsListData(data)
+			{
+				if(data.count)
+				{
+					this.totalApps = data.count;
+					this.totalPages = Math.ceil(this.totalApps / this.$store.getters['dApps/appsPerPage']);
+				}
+
+				this.apps = data.rows;
 			}
 		}
 	}

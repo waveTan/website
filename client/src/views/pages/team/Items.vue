@@ -11,7 +11,9 @@
 						<div>
 							<h4 class="headline mb-0">{{ item.name }}</h4>
 							<p class="center jobTitle">{{ item.title }}</p>
-							<p class="center readMore">Read More</p>
+							<p class="center readMore">
+								<I18N id="page.team.learnMore" /> <img src="/static/images/icons/arrow-right-grey.png" alt="">
+							</p>
 						</div>
 					</v-card-title>
 				</v-card>

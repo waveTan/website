@@ -27,5 +27,21 @@
         "appearance": ""
       }
     }
+  },
+  "team": {
+    "attributes": {
+      "name": {
+        "appearance": ""
+      },
+      "title": {
+        "appearance": ""
+      },
+      "description": {
+        "appearance": ""
+      },
+      "linkedin": {
+        "appearance": ""
+      }
+    }
   }
 }

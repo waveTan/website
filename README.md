@@ -16,7 +16,8 @@ as well as having custom ones, please review `.eslint` files for each top direct
 
 ### Testing
 [Jest](https://github.com/facebook/jest) is used for testing both frontend and backend.
-######TODO - Write tests
+
+_TODO - Write tests_
 
 
 ## Getting Started

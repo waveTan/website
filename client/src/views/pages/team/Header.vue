@@ -6,3 +6,9 @@
 		</div>
 	</div>
 </template>
+
+<style scoped>
+	.header {
+		padding-bottom: 200px;
+	}
+</style>

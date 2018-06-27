@@ -4,9 +4,9 @@
 			<Header />
 		</HeaderLayout>
 		<HeaderMeta title="page.team.pageTitle" />
-		<Developers />
-		<Community />
-		<Advisors />
+		<Developers :items="getItems('developer')" />
+		<Community :items="getItems('operation')" />
+		<Advisors :items="getItems('advisor')" />
 	</div>
 </template>
 
@@ -22,6 +22,24 @@
 			Advisors,
 			Community,
 			Developers
+		},
+		async mounted()
+		{
+			await this.$store.dispatch('genericEndPoints/loadItems', 'team');
+		},
+		data()
+		{
+			return {
+				team: this.$store.getters['genericEndPoints/getItems']('team'),
+			};
+		},
+		methods: {
+			getItems(type)
+			{
+				if(!this.team) return [];
+
+				return this.team.filter((item) => item.category.toLowerCase() === type);
+			}
 		}
 	};
 </script>

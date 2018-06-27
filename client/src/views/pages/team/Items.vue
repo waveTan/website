@@ -1,31 +1,41 @@
 <template>
-	<v-container grid-list-md text-xs-center class="teamItems">
-		<v-layout row wrap>
-			<v-flex v-for="(item, i) in items" :key="i" sm6 md4>
-				<v-card flat tile @click="open(i)">
-					<div @click="open(i)">
-						<v-card-media
-								:src="`${imageDirectory}${item.image}`"
-								height="340px"
-						/>
-						<v-card-title primary-title>
-							<div>
-								<h4 class="headline mb-0">{{ item.name }}</h4>
-								<p class="center jobTitle">{{ item.title }}</p>
-								<p class="center readMore">
-									<I18N id="page.team.learnMore" /> <img src="/static/images/icons/arrow-right-grey.png" alt="">
-								</p>
-							</div>
-						</v-card-title>
-					</div>
-				</v-card>
-			</v-flex>
-		</v-layout>
-	</v-container>
+	<div>
+		<v-container grid-list-md text-xs-center class="teamItems">
+			<v-layout row wrap>
+				<v-flex v-for="(item, i) in items" :key="i" sm6 md4>
+					<v-card flat tile @click="open(i)">
+						<div @click="open(i)">
+							<v-card-media
+									:src="`${imageDirectory}${item.image}`"
+									height="340px"
+							/>
+							<v-card-title primary-title>
+								<div>
+									<h4 class="headline mb-0">{{ item.name }}</h4>
+									<p class="center jobTitle">{{ item.title }}</p>
+									<p class="center readMore">
+										<I18N id="page.team.learnMore" /> <img src="/static/images/icons/arrow-right-grey.png" alt="">
+									</p>
+								</div>
+							</v-card-title>
+						</div>
+					</v-card>
+				</v-flex>
+			</v-layout>
+		</v-container>
+		<Dialog v-if="dialogState" :open="dialogState">
+			<p>{{ items[dialogItem].description }}</p>
+		</Dialog>
+	</div>
 </template>
 
 <script>
+	import Dialog from '@/components/vuetify/Dialog';
+
 	export default {
+		components: {
+			Dialog
+		},
 		props: {
 			items: {
 				type: Array,
@@ -39,13 +49,21 @@
 		data()
 		{
 			return {
-				imageDirectory: this.$store.getters['genericEndPoints/strapiUrl']
+				imageDirectory: this.$store.getters['genericEndPoints/strapiUrl'],
+				dialogItem: null
 			};
+		},
+		computed: {
+			dialogState()
+			{
+				return this.dialogItem !== null;
+			}
 		},
 		methods: {
 			open(i)
 			{
-				console.log('Open', i);
+				this.dialogItem = null; // This turns it off so it detects a change
+				this.$nextTick(() => (this.dialogItem = i));
 			}
 		}
 	};

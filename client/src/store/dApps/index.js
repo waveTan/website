@@ -59,7 +59,7 @@ const actions = {
 			}
 		}
 
-		return { rows: getters.getApps(page) };
+		return { count: state.totalApps, rows: getters.getApps(page) };
 	},
 	async loadApp({ state, commit }, id)
 	{

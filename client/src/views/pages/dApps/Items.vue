@@ -55,12 +55,22 @@
 		methods: {
 			async loadApps()
 			{
+				if(this.searchQuery !== '') return;
+
 				const data = await this.$store.dispatch('dApps/loadApps', this.page);
 
 				this.setAppsListData(data);
 			},
 			inputUpdated: debounce(async function run()
 			{
+				this.page = 1;
+
+				if(this.searchQuery === '')
+				{
+					this.loadApps();
+					return;
+				}
+
 				const data = await this.$store.dispatch('dApps/search', { searchQuery: this.searchQuery, page: this.page });
 
 				this.setAppsListData(data);

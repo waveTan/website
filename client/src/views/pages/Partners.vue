@@ -1,12 +1,14 @@
 <template>
 	<div>
 		<HeaderMeta title="page.partnerships.pageTitle" />
-		<div class="header">
-			<div class="container">
-				<h1><I18N id="page.partnerships.header.title" /></h1>
-				<p class="centered"><I18N id="page.partnerships.header.meta" /></p>
+		<HeaderLayout>
+			<div class="header">
+				<div class="container">
+					<h1><I18N id="page.partnerships.header.title" /></h1>
+					<p class="centered"><I18N id="page.partnerships.header.meta" /></p>
+				</div>
 			</div>
-		</div>
+		</HeaderLayout>
 		<div class="section">
 			<div class="container">
 				<h2 class="center"><I18N id="page.partnerships.cooperationProjects" /></h2>

@@ -1,7 +1,9 @@
 <template>
 	<div class="page">
 		<HeaderMeta title="page.about.pageTitle" />
-		<Header />
+		<HeaderLayout>
+			<Header />
+		</HeaderLayout>
 		<Information />
 		<GitHub />
 		<FAQ />

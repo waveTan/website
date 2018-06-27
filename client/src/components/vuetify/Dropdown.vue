@@ -13,7 +13,7 @@
 			>
 				{{ $t(title) }}
 				<img
-					src="/static/images/icons/arrow-down.png"
+					:src="`/static/images/icons/arrow-down${arrow}.png`"
 					alt=""
 					class="arrow"
 				>
@@ -21,7 +21,7 @@
 			<div v-else-if="title">
 				{{ $t(title) }}
 				<img
-					src="/static/images/icons/arrow-down.png"
+					:src="`/static/images/icons/arrow-down${arrow}.png`"
 					alt=""
 					class="arrow"
 				>
@@ -65,6 +65,10 @@
 			items: {
 				type: Array,
 				required: true
+			},
+			arrow: {
+				type: String,
+				default: ''
 			}
 		}
 	};

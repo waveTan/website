@@ -1,43 +1,69 @@
 <template>
-	<div class="rectangleContainer">
-		<div class="rectangle one grid" />
-		<div class="rectangle two grid" />
-		<div class="rectangle three" />
-		<div class="rectangle four" />
-		<div class="rectangle five" />
-		<div class="rectangle six grid" />
-		<div class="rectangle seven" />
-		<div class="rectangle eight" />
-		<div class="rectangle nine grid" />
-		<div class="rectangle ten" />
-		<div class="rectangle eleven grid" />
-		<div class="rectangle twelve" />
-		<div class="rectangle thirteen grid" />
-		<div class="rectangle fourteen" />
-		<div class="rectangle fifteen" />
-		<div class="rectangle sixteen" />
-		<div class="rectangle seventeen" />
-		<div class="rectangle eighteen grid" />
-		<div class="rectangle nineteen" />
-		<div class="rectangle twenty" />
-		<div class="rectangle twentyone" />
-		<div class="rectangle twentytwo" />
-		<div class="rectangle twentythree" />
-		<div class="rectangle twentyfour" />
-		<div class="rectangle twentyfive" />
+	<div :class="{ rectangleContainer: !whiteBackground, clip: clipBackground, whiteBackground: whiteBackground }">
+		<div v-if="!whiteBackground">
+			<div class="rectangle one grid" />
+			<div class="rectangle two grid" />
+			<div class="rectangle three" />
+			<div class="rectangle four" />
+			<div class="rectangle five" />
+			<div class="rectangle six grid" />
+			<div class="rectangle seven" />
+			<div class="rectangle eight" />
+			<div class="rectangle nine grid" />
+			<div class="rectangle ten" />
+			<div class="rectangle eleven grid" />
+			<div class="rectangle twelve" />
+			<div class="rectangle thirteen grid" />
+			<div class="rectangle fourteen" />
+			<div class="rectangle fifteen" />
+			<div class="rectangle sixteen" />
+			<div class="rectangle seventeen" />
+			<div class="rectangle eighteen grid" />
+			<div class="rectangle nineteen" />
+			<div class="rectangle twenty" />
+			<div class="rectangle twentyone" />
+			<div class="rectangle twentytwo" />
+			<div class="rectangle twentythree" />
+			<div class="rectangle twentyfour" />
+			<div class="rectangle twentyfive" />
+		</div>
+		<slot />
 	</div>
 </template>
 
+<script>
+	export default {
+		props: {
+			clipBackground: {
+				type: Boolean,
+				default: true
+			},
+			whiteBackground: {
+				type: Boolean,
+				default: false
+			}
+		}
+	}
+</script>
+
 <style scoped>
+	.whiteBackground {
+		box-shadow: 0 2px 34px 0 rgba(68, 85, 105, 0.1);
+	}
+
 	.rectangleContainer {
 		position: relative;
 		background-image: linear-gradient(-132deg, #04265f 0%, #021234 92%, #021131 100%);
-		clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 		overflow: hidden;
-		height: 800px;
+		/*height: 800px;*/
+		background-size: 100% 1100px;
 		width: 100%;
 		top: 0;
 		left: 0;
+	}
+
+	.rectangleContainer.clip {
+		clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 	}
 
 	.rectangle {

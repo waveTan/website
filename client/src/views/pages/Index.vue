@@ -1,7 +1,9 @@
 <template>
 	<div class="page">
 		<HeaderMeta title="page.index.pageTitle" />
-		<Header />
+		<HeaderLayout>
+			<Header />
+		</HeaderLayout>
 		<Mission />
 		<SectionFloatingCubes />
 		<HowItWorks />

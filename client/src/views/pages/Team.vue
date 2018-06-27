@@ -1,12 +1,12 @@
 <template>
 	<div>
-		<div>
-			<HeaderMeta title="page.team.pageTitle" />
+		<HeaderLayout>
 			<Header />
-			<Developers />
-			<Community />
-			<Advisors />
-		</div>
+		</HeaderLayout>
+		<HeaderMeta title="page.team.pageTitle" />
+		<Developers />
+		<Community />
+		<Advisors />
 	</div>
 </template>
 

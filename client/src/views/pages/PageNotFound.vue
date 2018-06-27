@@ -1,6 +1,9 @@
 <template>
 	<div class="container">
 		<HeaderMeta title="pageNotFound.title" />
+		<HeaderLayout>
+			<Header />
+		</HeaderLayout>
 		<h1><I18N id="pageNotFound.header" /></h1>
 		<h4><I18N id="pageNotFound.subHeader" /></h4>
 		<p><I18N id="pageNotFound.content" /></p>

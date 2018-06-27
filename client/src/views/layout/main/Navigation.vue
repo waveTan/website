@@ -1,5 +1,5 @@
 <template>
-	<div class="containerParent">
+	<div :class="{ whiteBackground: whiteBackground }" class="containerParent">
 		<div class="container">
 			<SwitchLanguage />
 			<div class="logo" />
@@ -23,6 +23,7 @@
 										{ title: 'header.navigation.news', link: 'home' }
 									]"
 									title="header.navigation.about"
+									:arrow="whiteBackground ? '-black' : ''"
 								/>
 							</router-link>
 						</li>
@@ -90,6 +91,7 @@
 				</div>
 			</div>
 		</div>
+		<slot />
 	</div>
 </template>
 
@@ -101,6 +103,12 @@
 		components: {
 			Dropdown,
 			SwitchLanguage
+		},
+		props: {
+			whiteBackground: {
+				type: Boolean,
+				default: false
+			}
 		},
 		data: () => ({
 			mobileNavigation: false
@@ -140,10 +148,15 @@
 		font-size: 18px;
 		color: #fff;
 		letter-spacing: 0.24px;
-		position: absolute;
+		position: inherit;
 		top: 0;
 		left: 0;
 		width: 100%;
+	}
+
+	.whiteBackground {
+		color: #0a2140;
+		margin-bottom: 70px;
 	}
 
 	.logo {
@@ -158,70 +171,74 @@
 		border: none;
 	}
 
-	.mobile {
-		& .navigation {
-			position: absolute;
-			top: 0;
-			left: 0;
-			background: #0a2140;
-			width: 100%;
-			z-index: 1;
-			font-size: 20px;
-			overflow-y: hidden;
-			max-height: 500px;
-			transition-property: all;
-			transition-duration: 1s;
-			transition-timing-function: ease;
-		}
-
-		& .navigation.closed {
-			max-height: 0;
-		}
-
-		& ul {
-			margin: 90px 0 50px 0;
-		}
-
-		& li {
-			text-align: center;
-		}
-
-		& a {
-			color: #fff;
-			display: block;
-			padding: 15px;
-		}
-
-		.logo {
-			margin: 25px;
-		}
+	.mobile .navigation {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: #0a2140;
+		width: 100%;
+		z-index: 1;
+		font-size: 20px;
+		overflow-y: hidden;
+		max-height: 500px;
+		transition-property: all;
+		transition-duration: 1s;
+		transition-timing-function: ease;
 	}
 
-	.desktop,
-	.laptop {
-		& .navigation {
-			margin: auto;
-			width: 100%;
-		}
+	.mobile .navigation.closed {
+		max-height: 0;
+	}
 
-		& .navigation ul {
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-			overflow: hidden;
-			text-align: center;
-		}
+	.mobile ul {
+		margin: 90px 0 50px 0;
+	}
 
-		& .navigation ul li {
-			display: inline-block;
-		}
+	.mobile li {
+		text-align: center;
+	}
 
-		& .navigation ul li a {
-			display: block;
-			padding: 23px;
-			text-decoration: none;
-			color: white;
-		}
+	.mobile a {
+		color: #fff;
+		display: block;
+		padding: 15px;
+	}
+
+	.mobile .logo {
+		margin: 25px;
+	}
+
+	.desktop .navigation,
+	.laptop .navigation {
+		margin: auto;
+		width: 100%;
+	}
+
+	.desktop .navigation ul,
+	.laptop .navigation ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		text-align: center;
+	}
+
+	.desktop .navigation ul li,
+	.laptop .navigation ul li {
+		display: inline-block;
+	}
+
+	.desktop .navigation ul li a,
+	.laptop .navigation ul li a {
+		display: block;
+		padding: 23px;
+		text-decoration: none;
+		color: #fff;
+	}
+
+	.whiteBackground .desktop .navigation ul li a,
+	.whiteBackground .laptop .navigation ul li a {
+		color: #0a2140;
 	}
 
 	.laptop,

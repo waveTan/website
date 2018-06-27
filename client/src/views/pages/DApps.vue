@@ -1,7 +1,9 @@
 <template>
 	<div>
 		<HeaderMeta title="page.dApps.pageTitle" />
-		<Header />
+		<HeaderLayout>
+			<Header />
+		</HeaderLayout>
 		<Items />
 	</div>
 </template>

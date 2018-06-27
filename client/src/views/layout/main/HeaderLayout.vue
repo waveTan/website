@@ -1,7 +1,10 @@
 <template>
 	<div>
-		<Rectangles />
-		<Navigation />
+		<Rectangles :clipBackground="clipBackground" :whiteBackground="whiteBackground">
+			<Navigation :whiteBackground="whiteBackground">
+				<slot />
+			</Navigation>
+		</Rectangles>
 	</div>
 </template>
 
@@ -13,6 +16,16 @@
 		components: {
 			Rectangles,
 			Navigation
+		},
+		props: {
+			clipBackground: {
+				type: Boolean,
+				default: true
+			},
+			whiteBackground: {
+				type: Boolean,
+				default: false
+			}
 		}
 	};
 </script>

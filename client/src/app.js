@@ -9,6 +9,7 @@ import FontAwesomeIcon from '@fortawesome/vue-fontawesome';
 import 'flexboxgrid/css/flexboxgrid.min.css';
 import 'vuetify/dist/vuetify.min.css';
 import I18N from '@/components/I18N';
+import HeaderLayout from '@/views/layout/main/HeaderLayout';
 import App from '@/components/App';
 import HeaderMeta from '@/components/HeaderMeta';
 import router from '@/router';
@@ -33,6 +34,7 @@ Vue.use(VeeValidate, {
 Vue.component('FontAwesomeIcon', FontAwesomeIcon);
 Vue.component('I18N', I18N);
 Vue.component('HeaderMeta', HeaderMeta);
+Vue.component('HeaderLayout', HeaderLayout);
 
 const i18n = new VueI18N({
 	locale: store.state.i18n.locale,

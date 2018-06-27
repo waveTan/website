@@ -22,7 +22,6 @@
 			</v-content>
 		</div>
 		<div v-else>
-			<HeaderLayout />
 			<router-view v-if="!pageLoading" />
 			<div v-else class="center">
 				<v-progress-circular :size="50" indeterminate color="primary" />
@@ -267,9 +266,14 @@
 	}
 
 	.header {
-		position: absolute;
-		top: 120px;
+		/*position: absolute;*/
+		/*top: 120px;*/
 		width: 100%;
+		padding-bottom: 35px;
+	}
+
+	.header .container {
+		padding: 0;
 	}
 
 	.header .iconContainer {

@@ -11,7 +11,7 @@
 							/>
 							<v-card-title primary-title>
 								<div>
-									<h4 class="headline mb-0">{{ item.name }}</h4>
+									<h4>{{ item.name }}</h4>
 									<p class="center jobTitle">{{ item.title }}</p>
 									<p class="center readMore">
 										<I18N id="page.team.learnMore" /> <img src="/static/images/icons/arrow-right-grey.png" alt="">
@@ -23,8 +23,23 @@
 				</v-flex>
 			</v-layout>
 		</v-container>
-		<Dialog v-if="dialogState" :open="dialogState">
-			<p>{{ items[dialogItem].description }}</p>
+		<Dialog v-if="dialogState" :open="dialogState" dialogClass="teamMember">
+			<v-layout row wrap>
+				<v-flex lg5 md12>
+					<v-card-media
+						:src="`${imageDirectory}${dialogItem.image}`"
+						height="500px"
+						contain
+					/>
+				</v-flex>
+				<v-flex lg7 md12>
+					<div>
+						<h2>{{ dialogItem.name }}</h2>
+						<p class="jobTitle">{{ dialogItem.title }}</p>
+						<div v-html="dialogItem.description" />
+					</div>
+				</v-flex>
+			</v-layout>
 		</Dialog>
 	</div>
 </template>
@@ -50,20 +65,24 @@
 		{
 			return {
 				imageDirectory: this.$store.getters['genericEndPoints/strapiUrl'],
-				dialogItem: null
+				dialogItemInt: null
 			};
 		},
 		computed: {
 			dialogState()
 			{
-				return this.dialogItem !== null;
+				return this.dialogItemInt !== null;
+			},
+			dialogItem()
+			{
+				return this.items[this.dialogItemInt];
 			}
 		},
 		methods: {
 			open(i)
 			{
-				this.dialogItem = null; // This turns it off so it detects a change
-				this.$nextTick(() => (this.dialogItem = i));
+				this.dialogItemInt = null; // This turns it off so it detects a change
+				this.$nextTick(() => (this.dialogItemInt = i));
 			}
 		}
 	};
@@ -96,6 +115,7 @@
 		padding: 16px;
 	}
 
+	.dialog__content .jobTitle,
 	.container.teamItems .jobTitle {
 		font-size: 16px;
 		color: #56c400;

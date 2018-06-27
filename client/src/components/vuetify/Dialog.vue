@@ -1,6 +1,6 @@
 <template>
 	<v-dialog :value="open" max-width="50%">
-		<v-card>
+		<v-card :class="dialogClass">
 			<v-card-title>
 				<slot name="header" />
 			</v-card-title>
@@ -24,6 +24,10 @@
 			open: {
 				type: Boolean,
 				default: false
+			},
+			dialogClass: {
+				type: String,
+				default: ''
 			}
 		}
 	};
@@ -33,5 +37,21 @@
 	.dialog__content .card {
 		background: #0a2140;
 		border-radius: 6px;
+	}
+
+	.dialog__content .card__text {
+		padding: 16px 30px;
+	}
+
+	.dialog__content .card__media__background {
+		background-position: center top !important;
+	}
+
+	.dialog__content h2 {
+		color: #fff;
+	}
+
+	.dialog__content {
+		color: #fff;
 	}
 </style>

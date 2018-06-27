@@ -300,4 +300,10 @@
 	.searchInput .input-group__details {
 		min-height: 10px;
 	}
+
+	.pagination__item:hover,
+	.pagination__item--active {
+		background: #56c400;
+		color: #fff;
+	}
 </style>

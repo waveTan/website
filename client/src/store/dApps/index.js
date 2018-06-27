@@ -5,7 +5,7 @@ const state = {
 	apps: [],
 	fullApps: [],
 	totalApps: 0,
-	appsPerPage: 2, // This should be changed on the backend too -> `\server\src\controllers\dApps\index.js::resultsLimit`
+	appsPerPage: 12, // This should be changed on the backend too -> `\server\src\controllers\dApps\index.js::resultsLimit`
 	searchResults: [],
 	searchQuery: '',
 	searchTotalApps: 0

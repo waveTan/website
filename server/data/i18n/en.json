@@ -299,8 +299,10 @@
 		},
 		"team": {
 			"pageTitle": "Team",
-			"nulsTeam": "NULS Team",
-			"meta": "The core members are highly-experienced and well-versed blockchain technology enthusiasts with experiences in managing community operation. Their shared purpose and philosophical ideology led them together to develop a novel Blockchain Internet Economy that aims to simplify trust in the blockchain technology.",
+			"header": {
+				"title": "NULS Team",
+				"meta": "The core members are highly-experienced and well-versed blockchain technology enthusiasts with experiences in managing community operation. Their shared purpose and philosophical ideology led them together to develop a novel Blockchain Internet Economy that aims to simplify trust in the blockchain technology."
+			},
 			"developers": "Technology Development",
 			"community": "Community Operation",
 			"advisors": "Advisors",

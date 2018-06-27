@@ -61,6 +61,12 @@
 
 				this.setAppsListData(data);
 			},
+			async searchApps()
+			{
+				const data = await this.$store.dispatch('dApps/search', { searchQuery: this.searchQuery, page: this.page });
+
+				this.setAppsListData(data);
+			},
 			inputUpdated: debounce(async function run()
 			{
 				this.page = 1;
@@ -71,13 +77,18 @@
 					return;
 				}
 
-				const data = await this.$store.dispatch('dApps/search', { searchQuery: this.searchQuery, page: this.page });
-
-				this.setAppsListData(data);
+				this.searchApps();
 			}, 500),
 			pageUpdated()
 			{
-				this.loadApps()
+				if(this.searchQuery === '')
+				{
+					this.loadApps();
+				}
+				else
+				{
+					this.searchApps();
+				}
 			},
 			setAppsListData(data)
 			{

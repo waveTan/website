@@ -5,7 +5,10 @@ const state = {
 	apps: [],
 	fullApps: [],
 	totalApps: 0,
-	appsPerPage: 2 // This should be changed on the backend too -> `\server\src\controllers\dApps\index.js::resultsLimit`
+	appsPerPage: 2, // This should be changed on the backend too -> `\server\src\controllers\dApps\index.js::resultsLimit`
+	searchResults: [],
+	searchQuery: '',
+	searchTotalApps: 0
 };
 
 const mutations = {
@@ -24,6 +27,18 @@ const mutations = {
 	TOGGLE_LOADING(state)
 	{
 		state.loading = !state.loading;
+	},
+	SET_SEARCH_TOTAL_APPS(state, count)
+	{
+		state.searchTotalApps = count;
+	},
+	SET_SEARCH_RESULTS(state, data)
+	{
+		state.searchResults = data;
+	},
+	SET_SEARCH_QUERY(state, query)
+	{
+		state.searchQuery = query;
 	}
 };
 
@@ -75,20 +90,46 @@ const actions = {
 
 		return state.fullApps[id];
 	},
-	async search({ commit }, { searchQuery })
+	async search({ state, commit, getters }, { searchQuery, page })
 	{
-		commit('TOGGLE_LOADING');
+		if(state.searchQuery !== searchQuery || page !== 1)
+		{
+			let data = { };
 
-		const { data } = await post('dApps/search/', { searchQuery });
+			if(state.searchQuery !== searchQuery)
+			{
+				commit('TOGGLE_LOADING');
 
-		commit('TOGGLE_LOADING');
+				({ data } = await post('dApps/search/', { searchQuery }));
 
-		return data;
+				commit('SET_SEARCH_TOTAL_APPS', data.count);
+				commit('SET_SEARCH_RESULTS', data.rows);
+				commit('SET_SEARCH_QUERY', searchQuery);
+				commit('TOGGLE_LOADING');
+
+				return data;
+			}
+			else if(((page - 1) * state.appsPerPage) < state.searchTotalApps && state.searchResults.length < state.searchTotalApps)
+			{
+				commit('TOGGLE_LOADING');
+
+				({ data } = await post(`dApps/search/${state.searchResults[state.searchResults.length - 1].id}`, { searchQuery }));
+
+				commit('SET_SEARCH_RESULTS', [...state.searchResults, ...data.rows]);
+				commit('TOGGLE_LOADING');
+				commit('SET_SEARCH_QUERY', searchQuery);
+
+				return data;
+			}
+		}
+
+		return { count: state.searchTotalApps, rows: getters.getSearchApps(page) };
 	}
 };
 
 const getters = {
 	getApps: (state) => (page) => state.apps.slice((page - 1) * state.appsPerPage, ((page - 1) * state.appsPerPage) + state.appsPerPage),
+	getSearchApps: (state) => (page) => state.searchResults.slice((page - 1) * state.appsPerPage, ((page - 1) * state.appsPerPage) + state.appsPerPage),
 	getApp: (state) => (id) => state.fullApps[id],
 	getLoading: (state) => state.loading,
 	getTotalApps: (state) => state.totalApps,

@@ -1,6 +1,5 @@
 <template>
 	<div data-app>
-		<HeaderMeta />
 		<v-progress-linear v-if="loadingStack > 0" :indeterminate="true" />
 		<div v-if="Object.keys(appLoaded).length !== 0">
 			<v-content>
@@ -22,6 +21,7 @@
 			</v-content>
 		</div>
 		<div v-else>
+			<HeaderMeta />
 			<router-view v-if="!pageLoading" />
 			<div v-else class="center">
 				<v-progress-circular :size="50" indeterminate color="primary" />

@@ -22,6 +22,19 @@
     },
     "linkedin": {
       "type": "string"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "developer",
+        "operation",
+        "advisor"
+      ]
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
     }
   }
 }

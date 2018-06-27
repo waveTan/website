@@ -314,4 +314,12 @@
 		background: #56c400;
 		color: #fff;
 	}
+
+	.overlay--active::before {
+		opacity: 0.7;
+	}
+
+	.overlay::before {
+		background-color: #0a2140;
+	}
 </style>

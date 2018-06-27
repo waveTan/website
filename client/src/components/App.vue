@@ -287,4 +287,17 @@
 		text-align: center;
 		max-width: 100%;
 	}
+
+	.searchInput {
+		background-image: linear-gradient(-134deg, #f1f4f8 0%, #eff4f8 14%, #eff4f8 18%, #eff4f8 20%, #ecf4f9 46%, #ebf4f9 49%, #ebf4f9 54%, #eaf4f9 65%, #e7f4fa 90%, #e7f4fa 90%, #e6f4fa 92%, #e6f4fa 100%);
+		border-radius: 10px;
+		font-size: 18px;
+		color: #0a2140;
+		letter-spacing: 0.24px;
+		margin: 55px 0;
+	}
+
+	.searchInput .input-group__details {
+		min-height: 10px;
+	}
 </style>

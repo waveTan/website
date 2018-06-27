@@ -6,7 +6,7 @@
 					<a :href="item.link" target="_blank">
 						<v-card-media
 							:class="{ box: container }"
-							:src="createPath(item.image)"
+							:src="`${imageDirectory}${item.image}`"
 							height="150px"
 						/>
 					</a>
@@ -31,14 +31,8 @@
 		data()
 		{
 			return {
-				url: this.$store.getters['genericEndPoints/strapiUrl']
+				imageDirectory: this.$store.getters['genericEndPoints/strapiUrl']
 			};
-		},
-		methods: {
-			createPath(img)
-			{
-				return `${this.url}${img}`
-			}
 		}
 	};
 </script>

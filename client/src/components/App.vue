@@ -238,6 +238,10 @@
 		margin: 0 auto;
 	}
 
+	.header .centered {
+		padding: 35px 0;
+	}
+
 	.container .centered p {
 		font-size: 20px;
 	}

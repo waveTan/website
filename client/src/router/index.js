@@ -1,12 +1,13 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+import LegalTerms from '@/views/pages/legal/Terms';
+import LegalPrivacy from '@/views/pages/legal/Privacy';
+import PageNotFound from '@/views/pages/PageNotFound';
 import Index from '@/views/pages/Index';
 import About from '@/views/pages/About';
 import Partners from '@/views/pages/Partners';
 import DApps from '@/views/pages/DApps';
-import LegalTerms from '@/views/pages/legal/Terms';
-import LegalPrivacy from '@/views/pages/legal/Privacy';
-import PageNotFound from '@/views/pages/PageNotFound';
+import Team from '@/views/pages/Team';
 
 Vue.use(Router);
 
@@ -31,6 +32,11 @@ const routeConfig = [
 		name: 'dApps',
 		path: '/dApps',
 		component: DApps
+	},
+	{
+		name: 'team',
+		path: '/team',
+		component: Team
 	},
 	{
 		name: 'legal.terms',

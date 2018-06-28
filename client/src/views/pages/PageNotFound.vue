@@ -1,29 +1,26 @@
 <template>
-	<div class="container">
+	<div>
 		<HeaderMeta title="pageNotFound.title" />
 		<HeaderLayout>
 			<Header />
 		</HeaderLayout>
-		<h1><I18N id="pageNotFound.header" /></h1>
-		<h4><I18N id="pageNotFound.subHeader" /></h4>
-		<p><I18N id="pageNotFound.content" /></p>
-		<v-btn
-			color="blue-grey"
-			class="white--text"
-			@click.native="goHome"
-		>
-			<I18N id="pageNotFound.goHome" />
-		</v-btn>
+		<div class="section container">
+			<h1><I18N id="pageNotFound.header" /></h1>
+			<h4><I18N id="pageNotFound.subHeader" /></h4>
+			<p><I18N id="pageNotFound.content" /></p>
+			<Button routeLink="home">
+				<I18N id="pageNotFound.goHome" />
+			</Button>
+		</div>
 	</div>
 </template>
 
 <script>
+	import Button from '@/components/vuetify/Button';
+
 	export default {
-		methods: {
-			goHome()
-			{
-				this.$router.push({ name: 'home' });
-			}
+		components: {
+			Button
 		}
 	};
 </script>

@@ -6,32 +6,42 @@ const state = {
 };
 
 const mutations = {
-	SET_ITEMS(state, { path, data })
+	SET_ITEMS(state, { locale, path, data })
 	{
-		if(state.items[path])
+		if(!state.items[locale])
 		{
-			state.items[path].push(data);
+			state.items[locale] = {};
+		}
+
+		if(state.items[locale][path])
+		{
+			state.items[locale][path].push(data);
 		}
 		else
 		{
-			state.items[path] = data;
+			state.items[locale][path] = data;
 		}
 	},
-	SET_ITEM(state, { path, data })
+	SET_ITEM(state, { locale, path, data })
 	{
-		if(!state.item[path])
+		if(!state.items[locale])
 		{
-			state.item[path] = [];
+			state.items[locale] = {};
 		}
 
-		state.item[path][data.id] = data;
+		if(!state.item[locale][path])
+		{
+			state.item[locale][path] = [];
+		}
+
+		state.item[locale][path][data.id] = data;
 	}
 };
 
 const actions = {
-	async loadItems({ dispatch, state, commit }, path)
+	async loadItems({ dispatch, state, commit, rootGetters }, path)
 	{
-		if(!state.items[path])
+		if(!state.items[rootGetters['i18n/locale']] || !state.items[rootGetters['i18n/locale']][path])
 		{
 			dispatch('app/pageLoading', true, { root: true });
 
@@ -39,14 +49,14 @@ const actions = {
 
 			dispatch('app/pageLoading', false, { root: true });
 
-			commit('SET_ITEMS', { path, data });
+			commit('SET_ITEMS', { locale: rootGetters['i18n/locale'], path, data });
 		}
 
-		return state.items[path];
+		return state.items[rootGetters['i18n/locale']][path];
 	},
-	async loadItem({ dispatch, state, commit }, { path, id })
+	async loadItem({ dispatch, state, commit, rootGetters }, { path, id })
 	{
-		if(!state.item[path] || !state.item[path][id])
+		if(!state.items[rootGetters['i18n/locale']] || !state.itemrootGetters['i18n/locale'][path] || !state.itemrootGetters['i18n/locale'][path][id])
 		{
 			dispatch('app/pageLoading', true, { root: true });
 
@@ -54,16 +64,26 @@ const actions = {
 
 			dispatch('app/pageLoading', false, { root: true });
 
-			commit('SET_ITEM', { path, data });
+			commit('SET_ITEM', { locale: rootGetters['i18n/locale'], path, data });
 		}
 
-		return state.item[path][id];
+		return state.itemrootGetters['i18n/locale'][path][id];
 	}
 };
 
 const getters = {
-	getItems: (state) => (path) => state.items[path],
-	getItem: (state) => (path, id) => state.item[path][id],
+	getItems: (state, getters, rootState, rootGetters) => (path) =>
+	{
+		if(!state.items[rootGetters['i18n/locale']]) return null;
+
+		return state.items[rootGetters['i18n/locale']][path];
+	},
+	getItem: (state, getters, rootState, rootGetters) => (path, id) =>
+	{
+		if(!state.items[rootGetters['i18n/locale']]) return null;
+
+		return state.item[rootGetters['i18n/locale']][path][id];
+	},
 	strapiUrl: () => process.env.STRAPI
 };
 

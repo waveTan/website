@@ -287,6 +287,12 @@
 		border-bottom: 1px solid #0a2140;
 	}
 
+	a.green {
+		color: #56c100;
+		border-bottom: 1px solid #56c100;
+		background: none !important;
+	}
+
 	a:hover {
 		border-bottom: 1px dashed;
 	}
@@ -321,5 +327,9 @@
 
 	.overlay::before {
 		background-color: #0a2140;
+	}
+
+	.card__text ul {
+		padding-left: 15px;
 	}
 </style>

@@ -5,10 +5,10 @@
 			<v-card>
 				<v-card-text>
 					<v-card-text>
-						22<slot />
+						<slot />
 					</v-card-text>
 					<v-card-text class="footer">
-						33<slot name="footer" />
+						<slot name="footer" />
 					</v-card-text>
 				</v-card-text>
 			</v-card>

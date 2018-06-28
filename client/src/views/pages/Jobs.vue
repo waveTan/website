@@ -8,8 +8,8 @@
 </template>
 
 <script>
-	import Header from '@/views/pages/join/Header';
-	import JobsBoard from '@/views/pages/join/JobsBoard';
+	import Header from '@/views/pages/jobs/Header';
+	import JobsBoard from '@/views/pages/jobs/JobsBoard';
 
 	export default {
 		components: {

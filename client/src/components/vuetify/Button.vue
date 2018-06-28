@@ -72,7 +72,7 @@
 				}
 				else if(this.routeLink)
 				{
-					this.$router.push(this.routeLink);
+					this.$router.push({ name: this.routeLink });
 				}
 
 				this.$emit('click', event);

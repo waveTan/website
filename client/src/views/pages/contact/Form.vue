@@ -1,18 +1,20 @@
 <template>
 	<div class="section container">
 		<div class="centered">
-			<v-form v-model="valid">
+			<v-form v-model="valid" :class="{ success }">
 				<v-text-field
 					v-model="name"
 					:rules="nameRules"
 					:label="`${$t('page.contact.form.name')}`"
 					required
+					:disabled="success"
 				/>
 				<v-text-field
 					v-model="email"
 					:rules="emailRules"
 					:label="`${$t('page.contact.form.email')}`"
 					required
+					:disabled="success"
 				/>
 				<v-text-field
 					v-model="message"
@@ -20,9 +22,11 @@
 					:label="`${$t('page.contact.form.message')}`"
 					multi-line
 					required
+					:disabled="success"
 				/>
 				<Button class="contactUs" :onClick="submit"><I18N id="page.contact.form.submit" /></Button>
 			</v-form>
+			<h4 v-if="success"><I18N id="page.contact.form.success" /></h4>
 		</div>
 	</div>
 </template>
@@ -51,14 +55,17 @@
 				messageRules: [
 					v => !!v || 'Message is required'
 				],
-				valid: false
+				valid: false,
+				success: false
 			}
 		},
 		methods: {
 			submit()
 			{
+				this.success = true;
 				if(!this.valid) return;
 
+				this.success = true;
 				console.log(this.name);
 				console.log(this.email);
 				console.log(this.message);
@@ -70,5 +77,9 @@
 <style scoped>
 	.centered {
 		padding: 0;
+	}
+
+	form.success .button {
+		opacity: 0.5;
 	}
 </style>

@@ -315,6 +315,10 @@
 		margin: 55px 0;
 	}
 
+	.input-group.input-group--disabled {
+		opacity: 0.5;
+	}
+
 	.input-group .input-group__input {
 		margin: 0 10px;
 	}

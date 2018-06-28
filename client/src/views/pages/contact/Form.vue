@@ -62,7 +62,6 @@
 		methods: {
 			submit()
 			{
-				this.success = true;
 				if(!this.valid) return;
 
 				this.success = true;

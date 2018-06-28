@@ -1,8 +1,8 @@
 <template>
 	<div class="section grey">
 		<div class="container">
-			<h1><I18N id="page.join.header.title" /></h1>
-			<p class="centered"><I18N id="page.join.header.meta" /></p>
+			<h1><I18N id="page.jobs.header.title" /></h1>
+			<p class="centered"><I18N id="page.jobs.header.meta" /></p>
 		</div>
 	</div>
 </template>

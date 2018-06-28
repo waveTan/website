@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<HeaderMeta title="page.join.pageTitle" />
+		<HeaderMeta title="page.jobs.pageTitle" />
 		<HeaderLayout :whiteBackground="true" />
 		<Header />
 		<JobsBoard />

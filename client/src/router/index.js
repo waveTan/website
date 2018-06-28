@@ -8,7 +8,7 @@ import About from '@/views/pages/About';
 import Partners from '@/views/pages/Partners';
 import DApps from '@/views/pages/DApps';
 import Team from '@/views/pages/Team';
-import Join from '@/views/pages/Join';
+import Jobs from '@/views/pages/Jobs';
 
 Vue.use(Router);
 
@@ -40,9 +40,9 @@ const routeConfig = [
 		component: Team
 	},
 	{
-		name: 'join',
-		path: '/join',
-		component: Join
+		name: 'jobs',
+		path: '/jobs',
+		component: Jobs
 	},
 	{
 		name: 'legal.terms',

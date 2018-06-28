@@ -1,5 +1,6 @@
 <template>
 	<v-btn
+		@click="executeFunction($event)"
 		:class="{[colour]: true, noShadow: !shadow, noBorder: !border, [`text-${textClass}`]: true}"
 		class="button"
 		round
@@ -17,6 +18,19 @@
 <script>
 	export default {
 		props: {
+			onClick: {
+				type: [Function, Boolean],
+				required: false,
+				default: false
+			},
+			onClickVars: {
+				type: [Array, Boolean],
+				default: false
+			},
+			routeLink: {
+				type: [String, Boolean],
+				default: false
+			},
 			colour: {
 				type: String,
 				default: 'green'
@@ -40,6 +54,30 @@
 			border: {
 				type: Boolean,
 				default: true
+			}
+		},
+		methods: {
+			executeFunction(event)
+			{
+				if(this.onClick)
+				{
+					if(this.onClickVars)
+					{
+						this.onClick(...this.onClickVars);
+					}
+					else
+					{
+						this.onClick(event);
+					}
+				}
+				else if(this.routeLink)
+				{
+					this.$router.push(this.routeLink);
+				}
+
+				this.$emit('click', event);
+
+				return true;
 			}
 		}
 	};

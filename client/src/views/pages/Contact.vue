@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<HeaderMeta title="page.jobs.pageTitle" />
+		<HeaderMeta title="page.contact.pageTitle" />
 		<HeaderLayout :whiteBackground="true" />
 		<Header />
 		<HereToHelp />

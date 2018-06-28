@@ -19,7 +19,7 @@
 										{ title: 'header.navigation.whatIsNuls', link: 'about' },
 										{ title: 'header.navigation.team', link: 'team' },
 										{ title: 'header.navigation.partners', link: 'partners' },
-										{ title: 'header.navigation.joinUs', link: 'home' },
+										{ title: 'header.navigation.joinUs', link: 'join' },
 										{ title: 'header.navigation.news', link: 'home' }
 									]"
 									title="header.navigation.about"
@@ -47,7 +47,7 @@
 										{ title: 'header.navigation.whatIsNuls', link: 'about' },
 										{ title: 'header.navigation.team', link: 'team' },
 										{ title: 'header.navigation.partners', link: 'partners' },
-										{ title: 'header.navigation.joinUs', link: 'home' },
+										{ title: 'header.navigation.joinUs', link: 'join' },
 										{ title: 'header.navigation.news', link: 'home' },
 										{ title: 'header.navigation.forum', link: 'home' }
 									]"
@@ -78,7 +78,7 @@
 											{ title: 'header.navigation.whatIsNuls', link: 'about' },
 											{ title: 'header.navigation.team', link: 'team' },
 											{ title: 'header.navigation.partners', link: 'partners' },
-											{ title: 'header.navigation.joinUs', link: 'home' },
+											{ title: 'header.navigation.joinUs', link: 'join' },
 											{ title: 'header.navigation.news', link: 'home' }
 										]"
 										title="header.navigation.about"

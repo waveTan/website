@@ -5,6 +5,13 @@ const apiInstance = axios.create({
 	baseURL: String(`${process.env.API}api/${process.env.API_VERSION}`)
 });
 
+apiInstance.interceptors.request.use((config) =>
+{
+	config.headers.i18n = store.getters['i18n/locale'];
+
+	return config;
+});
+
 // Convenience functions
 const get = (url, data = {}) =>
 {

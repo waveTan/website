@@ -41,7 +41,15 @@ const search = async (req, res) =>
 	await db.init();
 
 	const [rows] = await db.connection.execute(`
-		SELECT d.id, d.title, d.description, d.link, d.active, u.url AS image
+		SELECT
+			d.id,
+			d.title,
+			d.description,
+			d.link,
+			d.active,
+			u.url AS image,
+			MATCH (d.title) AGAINST (? IN BOOLEAN MODE) AS title_relevance,
+			MATCH (d.title, d.description) AGAINST (? IN BOOLEAN MODE) AS relevance
 		FROM dapps AS d
 		LEFT JOIN upload_file_morph AS m ON m.related_type = "dapps" AND m.related_id = d.id
 		LEFT JOIN upload_file AS u ON m.upload_file_id = u.id
@@ -51,9 +59,9 @@ const search = async (req, res) =>
 			ELSE 1=1
 		END
 		AND MATCH (d.title, d.description) AGAINST (? IN BOOLEAN MODE)
-		ORDER BY d.id DESC
+		ORDER BY title_relevance DESC, relevance DESC
 		LIMIT ?
-		`, [offsetId, offsetId, searchQuery, resultsLimit]);
+		`, [searchQuery, searchQuery, offsetId, offsetId, searchQuery, resultsLimit]);
 
 	if(offsetId === 0) // This means it's the initial load so get additional data such as total number of applications
 	{

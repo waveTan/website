@@ -2,7 +2,12 @@
 	<v-dialog :value="open" max-width="50%">
 		<v-card :class="dialogClass">
 			<v-card-title>
-				<slot name="header" />
+				<div class="title">
+					<slot name="header" />
+				</div>
+				<div class="close" @click="toggleOpen">
+					<img src="/static/images/icons/close-icon.png" alt="X" />
+				</div>
 			</v-card-title>
 			<v-card-text>
 				<v-container fluid>
@@ -29,6 +34,12 @@
 				type: String,
 				default: ''
 			}
+		},
+		methods: {
+			toggleOpen()
+			{
+				this.open = !this.open;
+			}
 		}
 	};
 </script>
@@ -41,6 +52,23 @@
 
 	.dialog__content .card__text {
 		padding: 16px 30px;
+	}
+
+	.dialog__content .card__title {
+		position: absolute;
+		width: 100%;
+	}
+
+	.dialog__content .card__title .title {
+		width: 100%;
+		text-align: center;
+	}
+
+	.dialog__content .card__title .close {
+		position: absolute;
+		right: 16px;
+		cursor: pointer;
+		top: 16px;
 	}
 
 	.dialog__content .card__media__background {

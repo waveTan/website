@@ -11,14 +11,17 @@
     "comment": ""
   },
   "attributes": {
-    "name": {
-      "type": "string"
+    "en_name": {
+      "type": "string",
+      "required": true
     },
-    "title": {
-      "type": "string"
+    "en_title": {
+      "type": "string",
+      "required": true
     },
-    "description": {
-      "type": "text"
+    "en_description": {
+      "type": "text",
+      "required": true
     },
     "linkedin": {
       "type": "string"
@@ -29,12 +32,22 @@
         "developer",
         "operation",
         "advisor"
-      ]
+      ],
+      "required": true
     },
     "image": {
       "model": "file",
       "via": "related",
       "plugin": "upload"
+    },
+    "zh_name": {
+      "type": "string"
+    },
+    "zh_title": {
+      "type": "string"
+    },
+    "zh_description": {
+      "type": "text"
     }
   }
 }

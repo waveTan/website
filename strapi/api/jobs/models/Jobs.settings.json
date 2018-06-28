@@ -11,23 +11,28 @@
     "comment": ""
   },
   "attributes": {
-    "serialNumber": {
-      "type": "string"
-    },
     "feature": {
       "type": "boolean"
     },
     "active": {
       "type": "boolean"
     },
-    "title": {
-      "type": "string"
+    "en_title": {
+      "type": "string",
+      "required": true
     },
-    "description": {
-      "type": "text"
+    "en_description": {
+      "type": "text",
+      "required": true
     },
     "contactEmailAddress": {
       "type": "email"
+    },
+    "zh_title": {
+      "type": "string"
+    },
+    "zh_description": {
+      "type": "text"
     }
   }
 }

@@ -1,71 +1,89 @@
 {
   "partners": {
     "attributes": {
-      "Serial Number": {
-        "appearance": ""
-      },
-      "Type": {
-        "appearance": ""
-      },
-      "Link": {
-        "appearance": ""
-      }
-    }
-  },
-  "dApps": {
-    "attributes": {
-      "title": {
-        "appearance": ""
-      },
-      "description": {
+      "type": {
         "appearance": ""
       },
       "link": {
         "appearance": ""
-      },
+      }
+    }
+  },
+  "dapps": {
+    "attributes": {
       "active": {
         "appearance": ""
+      },
+      "en_title": {
+        "appearance": ""
+      },
+      "en_description": {
+        "appearance": "WYSIWYG"
+      },
+      "link": {
+        "appearance": ""
+      },
+      "zh_title": {
+        "appearance": ""
+      },
+      "zh_description": {
+        "appearance": "WYSIWYG"
       }
     }
   },
   "team": {
     "attributes": {
-      "name": {
+			"en_name": {
+				"appearance": ""
+			},
+			"en_title": {
+				"appearance": ""
+			},
+      "en_description": {
+        "appearance": "WYSIWYG"
+      },
+			"linkedin": {
+				"appearance": ""
+			},
+			"category": {
+				"appearance": ""
+			},
+      "zh_name": {
         "appearance": ""
       },
-      "title": {
+      "zh_title": {
         "appearance": ""
       },
-      "description": {
-        "appearance": ""
-      },
-      "linkedin": {
-        "appearance": ""
-      },
-      "category": {
-        "appearance": ""
+      "zh_description": {
+        "appearance": "WYSIWYG"
       }
     }
   },
   "jobs": {
     "attributes": {
-      "serialNumber": {
-        "appearance": ""
-      },
+			"active": {
+				"appearance": ""
+			},
       "feature": {
         "appearance": ""
       },
-      "active": {
-        "appearance": ""
-      },
-      "title": {
-        "appearance": ""
-      },
+			"en_title": {
+				"appearance": ""
+			},
+			"en_description": {
+				"appearance": "WYSIWYG"
+			},
       "description": {
         "appearance": ""
       },
       "contactEmailAddress": {
         "appearance": ""
+      },
+      "zh_title": {
+        "appearance": ""
+      },
+      "zh_description": {
+        "appearance": "WYSIWYG"
       }
     }
   },

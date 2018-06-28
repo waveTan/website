@@ -11,11 +11,16 @@
     "comment": ""
   },
   "attributes": {
-    "title": {
-      "type": "string"
+    "active": {
+      "type": "boolean"
     },
-    "description": {
-      "type": "text"
+    "en_title": {
+      "type": "string",
+      "required": true
+    },
+    "en_description": {
+      "type": "text",
+      "required": true
     },
     "link": {
       "type": "string"
@@ -25,8 +30,11 @@
       "via": "related",
       "plugin": "upload"
     },
-    "active": {
-      "type": "boolean"
+    "zh_title": {
+      "type": "string"
+    },
+    "zh_description": {
+      "type": "text"
     }
   }
 }

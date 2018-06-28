@@ -13,12 +13,13 @@
 			<div class="buttons">
 				<Button
 					:shadow="false"
+					routeLink="team"
 					colour="white"
 					textClass="blue"
 				>
 					<I18N id="footer.social.viewTeam" />
 				</Button>
-				<Button colour="transparent"><I18N id="footer.social.joinUs" /></Button>
+				<Button colour="transparent" routeLink="jobs"><I18N id="footer.social.joinUs" /></Button>
 			</div>
 			<div class="links">
 				<a href="#"><img src="/static/images/icons/slack.png" alt="Slack"></a>
@@ -34,7 +35,8 @@
 			<hr class="top">
 			<h4>
 				<I18N id="footer.contact.title" />
-				<Button class="contactUs"><I18N id="footer.contact.button" /></Button>
+				<!--<Button class="contactUs" :onClick="goTo" :onClickVars="['contact']"><I18N id="footer.contact.button" /></Button>-->
+				<Button class="contactUs" routeLink="contact"><I18N id="footer.contact.button" /></Button>
 			</h4>
 			<hr class="bottom">
 			<v-container grid-list-md text-xs-center>

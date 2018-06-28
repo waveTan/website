@@ -7,7 +7,7 @@
 						<h4>{{ job.title }}</h4>
 						<span class="readMore"><I18N id="page.jobs.readMore" /></span>
 					</template>
-					<div v-html="job.description" />
+					<div v-html="compiledMarkdown(job.description)" />
 					<div slot="footer" class="footer">
 						<I18N id="page.jobs.sendResume" />: <a class="email green" :href="`mailto:${job.contactEmailAddress}`">{{ job.contactEmailAddress }}</a>
 					</div>
@@ -18,6 +18,7 @@
 </template>
 
 <script>
+	import marked from 'marked';
 	import Panels from '@/components/vuetify/ExpansionPanels';
 	import Panel from '@/components/vuetify/ExpansionPanel';
 
@@ -35,6 +36,12 @@
 				}
 
 				return this.$store.getters['genericEndPoints/getItems']('jobs');
+			}
+		},
+		methods: {
+			compiledMarkdown(markdown)
+			{
+				return marked(markdown, { sanitize: true })
 			}
 		}
 	}

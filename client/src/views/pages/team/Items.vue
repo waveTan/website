@@ -36,7 +36,7 @@
 					<div>
 						<h2>{{ dialogItem.name }}</h2>
 						<p class="jobTitle">{{ dialogItem.title }}</p>
-						<div v-html="dialogItem.description" />
+						<div v-html="compiledMarkdown" />
 					</div>
 				</v-flex>
 			</v-layout>
@@ -45,6 +45,7 @@
 </template>
 
 <script>
+	import marked from 'marked';
 	import Dialog from '@/components/vuetify/Dialog';
 
 	export default {
@@ -76,6 +77,10 @@
 			dialogItem()
 			{
 				return this.items[this.dialogItemInt];
+			},
+			compiledMarkdown()
+			{
+				return marked(this.dialogItem.description, { sanitize: true })
 			}
 		},
 		methods: {

@@ -19,7 +19,7 @@ const load = async (req, res) =>
 			WHEN 0 != ? THEN d.id < ?
 			ELSE 1=1
 		END
-		ORDER BY d.id DESC
+		ORDER BY d.serialNumber DESC, d.id DESC
 		LIMIT ?
 		`, [offsetId, offsetId, resultsLimit]);
 

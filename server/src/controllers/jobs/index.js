@@ -9,7 +9,7 @@ const getActive = async (req, res) =>
 		SELECT j.title, j.description, j.contactEmailAddress
 		FROM jobs AS j
 		WHERE j.active = 1
-		ORDER BY j.feature ASC, j.id ASC
+		ORDER BY j.feature ASC, j.serialNumber DESC, j.id ASC
 	`);
 
 	res.status(200).json(rows);

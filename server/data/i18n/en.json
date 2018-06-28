@@ -2,13 +2,9 @@
   "welcome": "Welcome, world",
   "goodbye": "Goodbye",
   "greeting": "Hello {name}",
-  "languages": {
-	"en": "English",
-	"fr": "French"
-  },
   "i18n": {
     "en": "English",
-    "fr": "French"
+    "zh": "Chinese"
   },
   "pageNotFound": {
 	"title": "Page not found",

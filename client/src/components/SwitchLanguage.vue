@@ -3,7 +3,7 @@
 		:useButton="false"
 		:items="[
 			{ title: 'i18n.en', click: changeLocale, locale: 'en' },
-			{ title: 'i18n.fr', click: changeLocale, locale: 'fr' }
+			{ title: 'i18n.zh', click: changeLocale, locale: 'zh' }
 		]"
 	>
 		<FontAwesomeIcon :icon="['fas', 'globe']" />

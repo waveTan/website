@@ -11,6 +11,10 @@
     "comment": ""
   },
   "attributes": {
+		"serialNumber": {
+			"unique": true,
+			"type": "integer"
+		},
     "type": {
       "type": "enumeration",
       "enum": [

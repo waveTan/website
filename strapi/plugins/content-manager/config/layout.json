@@ -1,6 +1,9 @@
 {
   "partners": {
     "attributes": {
+			"serialNumber": {
+				"appearance": ""
+			},
       "type": {
         "appearance": ""
       },
@@ -14,6 +17,9 @@
       "active": {
         "appearance": ""
       },
+			"serialNumber": {
+				"appearance": ""
+			},
       "en_title": {
         "appearance": ""
       },
@@ -33,21 +39,24 @@
   },
   "team": {
     "attributes": {
-			"en_name": {
+			"serialNumber": {
 				"appearance": ""
 			},
-			"en_title": {
-				"appearance": ""
-			},
+      "en_name": {
+        "appearance": ""
+      },
+      "en_title": {
+        "appearance": ""
+      },
       "en_description": {
         "appearance": "WYSIWYG"
       },
-			"linkedin": {
-				"appearance": ""
-			},
-			"category": {
-				"appearance": ""
-			},
+      "linkedin": {
+        "appearance": ""
+      },
+      "category": {
+        "appearance": ""
+      },
       "zh_name": {
         "appearance": ""
       },
@@ -61,18 +70,21 @@
   },
   "jobs": {
     "attributes": {
-			"active": {
-				"appearance": ""
-			},
+      "active": {
+        "appearance": ""
+      },
       "feature": {
         "appearance": ""
       },
-			"en_title": {
+			"serialNumber": {
 				"appearance": ""
 			},
-			"en_description": {
-				"appearance": "WYSIWYG"
-			},
+      "en_title": {
+        "appearance": ""
+      },
+      "en_description": {
+        "appearance": "WYSIWYG"
+      },
       "description": {
         "appearance": ""
       },

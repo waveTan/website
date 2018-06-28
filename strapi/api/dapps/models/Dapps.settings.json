@@ -14,6 +14,10 @@
     "active": {
       "type": "boolean"
     },
+		"serialNumber": {
+			"unique": true,
+			"type": "integer"
+		},
     "en_title": {
       "type": "string",
       "required": true

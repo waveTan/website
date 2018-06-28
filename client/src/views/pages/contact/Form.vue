@@ -32,6 +32,7 @@
 </template>
 
 <script>
+	import { post } from '@/utils/api';
 	import Button from '@/components/vuetify/Button';
 
 	export default {
@@ -60,14 +61,20 @@
 			}
 		},
 		methods: {
-			submit()
+			async submit()
 			{
 				if(!this.valid) return;
 
-				this.success = true;
-				console.log(this.name);
-				console.log(this.email);
-				console.log(this.message);
+				const { data } = await post('contact', {
+					name: this.name,
+					email: this.email,
+					message: this.message
+				});
+
+				if(data.success)
+				{
+					this.success = true;
+				}
 			}
 		}
 	}

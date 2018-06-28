@@ -6,6 +6,7 @@ const partners = require('@/routes/api/v1/partners');
 const dApps = require('@/routes/api/v1/dApps');
 const team = require('@/routes/api/v1/team');
 const jobs = require('@/routes/api/v1/jobs');
+const contact = require('@/routes/api/v1/contact');
 
 const router = express.Router();
 
@@ -15,5 +16,6 @@ router.use('/partners', partners);
 router.use('/dApps', dApps);
 router.use('/team', team);
 router.use('/jobs', jobs);
+router.use('/contact', contact);
 
 module.exports = router;

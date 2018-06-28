@@ -19,7 +19,7 @@ const load = async (req, res) =>
 			WHEN 0 != ? THEN d.id < ?
 			ELSE 1=1
 		END
-		ORDER BY d.id desc
+		ORDER BY d.id DESC
 		LIMIT ?
 		`, [offsetId, offsetId, resultsLimit]);
 
@@ -51,7 +51,7 @@ const search = async (req, res) =>
 			ELSE 1=1
 		END
 		AND MATCH (d.title, d.description) AGAINST (? IN BOOLEAN MODE)
-		ORDER BY d.id desc
+		ORDER BY d.id DESC
 		LIMIT ?
 		`, [offsetId, offsetId, searchQuery, resultsLimit]);
 

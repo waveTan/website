@@ -10,7 +10,7 @@ const getEverything = async (req, res) =>
 		FROM partners AS p
 		LEFT JOIN upload_file_morph AS m ON m.related_type = "partners" AND m.related_id = p.id
 		LEFT JOIN upload_file AS u ON m.upload_file_id = u.id
-		ORDER BY p.id desc
+		ORDER BY p.id DESC
 	`);
 
 	res.status(200).json(rows);

@@ -23,22 +23,27 @@
 			Community,
 			Developers
 		},
-		async mounted()
-		{
-			await this.$store.dispatch('genericEndPoints/loadItems', 'team');
-		},
 		data()
 		{
 			return {
-				team: this.$store.getters['genericEndPoints/getItems']('team'),
+				ranDispatch: false
 			};
 		},
 		methods: {
 			getItems(type)
 			{
-				if(!this.team) return [];
+				if(!this.$store.getters['genericEndPoints/getItems']('team') && !this.ranDispatch)
+				{
+					this.ranDispatch = true;
+					this.$store.dispatch('genericEndPoints/loadItems', 'team');
+				}
 
-				return this.team.filter((item) => item.category.toLowerCase() === type);
+				if(!this.$store.getters['genericEndPoints/getItems']('team'))
+				{
+					return [];
+				}
+
+				return this.$store.getters['genericEndPoints/getItems']('team').filter((item) => item.category.toLowerCase() === type);
 			}
 		}
 	};

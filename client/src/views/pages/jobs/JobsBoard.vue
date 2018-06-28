@@ -26,15 +26,16 @@
 			Panels,
 			Panel
 		},
-		async mounted()
-		{
-			await this.$store.dispatch('genericEndPoints/loadItems', 'jobs');
-		},
-		data()
-		{
-			return {
-				jobs: this.$store.getters['genericEndPoints/getItems']('jobs'),
-			};
+		computed: {
+			jobs()
+			{
+				if(!this.$store.getters['genericEndPoints/getItems']('jobs'))
+				{
+					this.$store.dispatch('genericEndPoints/loadItems', 'jobs');
+				}
+
+				return this.$store.getters['genericEndPoints/getItems']('jobs');
+			}
 		}
 	}
 </script>

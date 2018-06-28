@@ -46,5 +46,27 @@
         "appearance": ""
       }
     }
+  },
+  "jobs": {
+    "attributes": {
+      "serialNumber": {
+        "appearance": ""
+      },
+      "feature": {
+        "appearance": ""
+      },
+      "active": {
+        "appearance": ""
+      },
+      "title": {
+        "appearance": ""
+      },
+      "description": {
+        "appearance": ""
+      },
+      "contactEmailAddress": {
+        "appearance": ""
+      }
+    }
   }
 }

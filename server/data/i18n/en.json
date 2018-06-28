@@ -307,6 +307,17 @@
 			"community": "Community Operation",
 			"advisors": "Advisors",
 			"learnMore": "Learn More"
+		},
+		"join": {
+			"pageTitle": "Job Applications",
+			"header": {
+				"title": "Join NULS Community",
+				"meta": "We are now recruiting committed and passionate individuals to contribute to NULS open-source community. Join us now! Together we can learn, grow and share, building something amazing in the process."
+			},
+			"communityRoles": "Community Roles",
+			"pleaseUpload": "Please upload your resume with contact information, we will contact you if appropriate.",
+			"readMore": "Read more",
+			"sendResume": "Send your resume to"
 		}
   },
   "dates": {

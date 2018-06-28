@@ -1,6 +1,6 @@
 <template>
-	<v-expansion-panel>
-		<v-expansion-panel-content v-for="(item,i) in 5" :key="i">
+	<div class="main">
+		<v-expansion-panel-content>
 			<div slot="header"><slot name="header" /></div>
 			<v-card>
 				<v-card-text>
@@ -13,7 +13,7 @@
 				</v-card-text>
 			</v-card>
 		</v-expansion-panel-content>
-	</v-expansion-panel>
+	</div>
 </template>
 
 <script>
@@ -24,5 +24,9 @@
 <style scoped>
 	.footer {
 		opacity: 0.6;
+	}
+
+	.main {
+		width: 100%;
 	}
 </style>

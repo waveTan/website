@@ -46,10 +46,15 @@ const mutations = {
 const actions = {
 	usersLocalStorage({ dispatch })
 	{
+		dispatch('appCallLoading', 'i18n');
+
 		if(localStorage.getItem('locale'))
 		{
-			dispatch('appCallLoading', 'i18n');
 			dispatch('i18n/changeLocale', localStorage.getItem('locale'), { root: true });
+		}
+		else
+		{
+			dispatch('i18n/load', null, { root: true });
 		}
 	},
 	load({ dispatch })
@@ -63,9 +68,6 @@ const actions = {
 		// {
 		// 	return;
 		// }
-
-		dispatch('appCallLoading', 'i18n');
-		dispatch('i18n/load', null, { root: true });
 	},
 	startLoading({ commit })
 	{

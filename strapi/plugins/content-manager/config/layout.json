@@ -68,5 +68,21 @@
         "appearance": ""
       }
     }
+  },
+  "contact": {
+    "attributes": {
+      "name": {
+        "appearance": ""
+      },
+      "email": {
+        "appearance": ""
+      },
+      "message": {
+        "appearance": ""
+      },
+      "resolved": {
+        "appearance": ""
+      }
+    }
   }
 }

@@ -320,6 +320,7 @@
 			"sendResume": "Send your resume to"
 		},
 		"contact": {
+			"pageTitle": "Contact",
 			"header": {
 				"title": "Contact us"
 			},

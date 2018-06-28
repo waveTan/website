@@ -2,28 +2,19 @@
 	<div>
 		<HeaderMeta title="page.join.pageTitle" />
 		<HeaderLayout :whiteBackground="true" />
-		<div class="section grey">
-			<div class="container">
-				<h1><I18N id="page.join.header.title" /></h1>
-				<p class="centered"><I18N id="page.join.header.meta" /></p>
-			</div>
-		</div>
-		<div class="section container">
-			<p>Job offer board here...</p>
-		</div>
+		<Header />
+		<JobsBoard />
 	</div>
 </template>
 
-<style scoped>
-	h1 {
-		color: #0a2140;
-	}
+<script>
+	import Header from '@/views/pages/join/Header';
+	import JobsBoard from '@/views/pages/join/JobsBoard';
 
-	.section.grey {
-		margin-top: -70px;
+	export default {
+		components: {
+			Header,
+			JobsBoard
+		}
 	}
-
-	.section.grey .centered {
-		padding: 0;
-	}
-</style>
+</script>

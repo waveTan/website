@@ -7,6 +7,7 @@ const dApps = require('@/routes/api/v1/dApps');
 const team = require('@/routes/api/v1/team');
 const jobs = require('@/routes/api/v1/jobs');
 const contact = require('@/routes/api/v1/contact');
+const news = require('@/routes/api/v1/news');
 
 const router = express.Router();
 
@@ -17,5 +18,6 @@ router.use('/dApps', dApps);
 router.use('/team', team);
 router.use('/jobs', jobs);
 router.use('/contact', contact);
+router.use('/news', news);
 
 module.exports = router;

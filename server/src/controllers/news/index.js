@@ -17,11 +17,10 @@ const load = async (req, res) =>
 			d.en_description,
 			d.zh_title,
 			d.zh_description,
-			d.link,
 			d.active,
 			u.url AS image
-		FROM dapps AS d
-		LEFT JOIN upload_file_morph AS m ON m.related_type = "dapps" AND m.related_id = d.id
+		FROM news AS d
+		LEFT JOIN upload_file_morph AS m ON m.related_type = "news" AND m.related_id = d.id
 		LEFT JOIN upload_file AS u ON m.upload_file_id = u.id
 		WHERE d.active = 1
 		AND CASE
@@ -39,7 +38,7 @@ const load = async (req, res) =>
 
 	if(offsetId === 0) // This means it's the initial load so get additional data such as total number of applications
 	{
-		extra.count = await db.connection.execute('SELECT COUNT(id) AS count FROM dapps');
+		extra.count = await db.connection.execute('SELECT COUNT(id) AS count FROM news');
 		extra.count = extra.count[0][0].count;
 	}
 
@@ -61,13 +60,12 @@ const search = async (req, res) =>
 			d.en_description,
 			d.zh_title,
 			d.zh_description,
-			d.link,
 			d.active,
 			u.url AS image,
 			MATCH (d.en_title, d.zh_title) AGAINST (? IN BOOLEAN MODE) AS title_relevance,
 			MATCH (d.en_title, d.en_description, d.zh_title, d.zh_description) AGAINST (? IN BOOLEAN MODE) AS relevance
-		FROM dapps AS d
-		LEFT JOIN upload_file_morph AS m ON m.related_type = "dapps" AND m.related_id = d.id
+		FROM news AS d
+		LEFT JOIN upload_file_morph AS m ON m.related_type = "news" AND m.related_id = d.id
 		LEFT JOIN upload_file AS u ON m.upload_file_id = u.id
 		WHERE d.active = 1
 		CASE
@@ -82,7 +80,7 @@ const search = async (req, res) =>
 	if(offsetId === 0) // This means it's the initial load so get additional data such as total number of applications
 	{
 		extra.count = await db.connection.execute(`
-			SELECT COUNT(d.id) AS count FROM dapps AS d
+			SELECT COUNT(d.id) AS count FROM news AS d
 			WHERE MATCH (d.en_title, d.en_description, d.zh_title, d.zh_description) AGAINST (? IN BOOLEAN MODE)
 			`, [searchQuery]);
 		extra.count = extra.count[0][0].count;
@@ -106,11 +104,10 @@ const item = async (req, res) =>
 			d.en_description,
 			d.zh_title,
 			d.zh_description,
-			d.link,
 			d.active,
 			u.url AS image
-		FROM dapps AS d
-		LEFT JOIN upload_file_morph AS m ON m.related_type = "dapps" AND m.related_id = d.id
+		FROM news AS d
+		LEFT JOIN upload_file_morph AS m ON m.related_type = "news" AND m.related_id = d.id
 		LEFT JOIN upload_file AS u ON m.upload_file_id = u.id
 		WHERE d.id = ?
 		LIMIT 1

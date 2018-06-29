@@ -1,13 +1,9 @@
 <template>
 	<div>
 		<HeaderMeta title="page.announcements.pageTitle" />
-		<ItemsPro itemType="announcements">
+		<ItemsPro itemType="announcements" sm12>
 			<template slot-scope="{ item, imageDirectory }">
 				<a :href="item.link" target="_blank">
-					<v-card-media
-							:src="`${imageDirectory}${item.image}`"
-							height="200px"
-					/>
 					<v-card-title primary-title>
 						<div>
 							<h4 class="headline mb-0 center">{{ item.title }}</h4>

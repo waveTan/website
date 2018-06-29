@@ -1,5 +1,5 @@
 <template>
-	<ItemsPro itemType="dApps">
+	<ItemsPro itemType="dApps" sm6 md3>
 		<template slot-scope="{ item, imageDirectory }">
 			<a :href="item.link" target="_blank">
 				<v-card-media

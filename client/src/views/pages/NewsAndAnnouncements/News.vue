@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<HeaderMeta title="page.news.pageTitle" />
-		<ItemsPro itemType="news">
+		<ItemsPro itemType="news" sm12>
 			<template slot-scope="{ item, imageDirectory }">
 				<a :href="item.link" target="_blank">
 					<v-card-media

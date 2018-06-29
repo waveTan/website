@@ -84,7 +84,7 @@ const actions = {
 
 				return data;
 			}
-			else if(((page - 1) * state.itemsPerPage) < state.totalItems[type] && state.items[type][rootGetters['i18n/locale']].length < state.totalItems[type])
+			else if(((page - 1) * state.itemsPerPage) >= state.items[type][rootGetters['i18n/locale']].length && state.items[type][rootGetters['i18n/locale']].length < state.totalItems[type])
 			{
 				commit('TOGGLE_LOADING');
 

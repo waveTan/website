@@ -1,6 +1,6 @@
 <template>
 	<div data-app>
-		<v-progress-linear v-if="loadingStack > 0" :indeterminate="true" />
+		<v-progress-linear v-if="loadingStack > 0" :indeterminate="true" height="3" />
 		<div v-if="Object.keys(appLoaded).length !== 0">
 			<v-content>
 				<v-container fill-height>
@@ -22,10 +22,7 @@
 		</div>
 		<div v-else>
 			<HeaderMeta />
-			<router-view v-if="!pageLoading" />
-			<div v-else class="center">
-				<v-progress-circular :size="50" indeterminate color="primary" />
-			</div>
+			<router-view />
 			<FooterLayout />
 		</div>
 	</div>
@@ -54,11 +51,11 @@
 				if(this.loadingStack === 0) return 100;
 
 				return ((this.loadingStack - Object.keys(this.appLoaded).length) * 100) / Object.keys(this.appLoaded).length;
-			},
-			pageLoading()
-			{
-				return this.$store.getters['app/pageLoading'];
 			}
+			// pageLoading()
+			// {
+			// 	return this.$store.getters['app/pageLoading'];
+			// }
 		}
 	};
 </script>
@@ -348,5 +345,14 @@
 
 	.card__text ul {
 		padding-left: 15px;
+	}
+
+	.progress-linear {
+		position: absolute;
+		margin: 0;
+	}
+
+	.progress-linear .progress-linear__bar__indeterminate {
+		background: #56c100;
 	}
 </style>

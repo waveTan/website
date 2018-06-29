@@ -77,7 +77,7 @@ store.watch(
 		if(!store.state.i18n.updating) // If we've finished getting the language (ie we have it in memory)
 		{
 			// Updates frontend language being displayed
-			app.$i18n.locale = null; // First we turn it off so the damn thing actually detects changes by Admin -.-
+			// app.$i18n.locale = null; // First we turn it off so the damn thing actually detects changes by Admin -.-
 			app.$i18n.setLocaleMessage(store.state.i18n.locale, store.state.i18n.languages[store.state.i18n.locale]);
 			app.$i18n.locale = store.state.i18n.locale;
 		}

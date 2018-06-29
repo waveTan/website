@@ -57,6 +57,11 @@ const routeConfig = [
 		component: NewsAndAnnouncements
 	},
 	{
+		name: 'announcements',
+		path: '/announcements',
+		component: NewsAndAnnouncements
+	},
+	{
 		name: 'legal.terms',
 		path: '/legal/terms',
 		component: LegalTerms

@@ -14,23 +14,33 @@ const state = {
 };
 
 const mutations = {
-	SET_APPS(state, { locale, data })
+	SET_APPS(state, { type, locale, data })
 	{
-		if(!state.items[locale])
+		if(!state.items[type])
 		{
-			state.items[locale] = [];
+			state.items[type] = {};
 		}
 
-		state.items[locale].push(...data);
+		if(!state.items[type][locale])
+		{
+			state.items[type][locale] = [];
+		}
+
+		state.items[type][locale].push(...data);
 	},
-	SET_APP(state, { locale, data })
+	SET_APP(state, { type, locale, data })
 	{
-		if(!state.fullItems[locale])
+		if(!state.fullItems[type])
 		{
-			state.fullItems[locale] = [];
+			state.fullItems[type] = {};
 		}
 
-		state.fullItems[locale][data.id] = data;
+		if(!state.fullItems[type][locale])
+		{
+			state.fullItems[type][locale] = [];
+		}
+
+		state.fullItems[type][locale][data.id] = data;
 	},
 	SET_TOTAL_APPS(state, count)
 	{
@@ -56,31 +66,31 @@ const mutations = {
 };
 
 const actions = {
-	async loadItems({ state, commit, getters, rootGetters }, page)
+	async loadItems({ state, commit, getters, rootGetters }, { type, page })
 	{
-		if(!state.items[rootGetters['i18n/locale']] || state.items[rootGetters['i18n/locale']].length === 0 || page !== 1)
+		if(!state.items[type] || !state.items[type][rootGetters['i18n/locale']] || state.items[type][rootGetters['i18n/locale']].length === 0 || page !== 1)
 		{
 			let data = { };
 
-			if(!state.items[rootGetters['i18n/locale']] || state.items[rootGetters['i18n/locale']].length === 0)
+			if(!state.items[type] || !state.items[type][rootGetters['i18n/locale']] || state.items[type][rootGetters['i18n/locale']].length === 0)
 			{
 				commit('TOGGLE_LOADING');
 
 				({ data } = await get('dApps/'));
 
 				commit('SET_TOTAL_APPS', data.count);
-				commit('SET_APPS', { locale: rootGetters['i18n/locale'], data: data.rows });
+				commit('SET_APPS', { type, locale: rootGetters['i18n/locale'], data: data.rows });
 				commit('TOGGLE_LOADING');
 
 				return data;
 			}
-			else if(((page - 1) * state.itemsPerPage) < state.totalItems && state.items[rootGetters['i18n/locale']].length < state.totalItems)
+			else if(((page - 1) * state.itemsPerPage) < state.totalItems && state.items[type][rootGetters['i18n/locale']].length < state.totalItems)
 			{
 				commit('TOGGLE_LOADING');
 
-				({ data } = await get(`dApps/${state.items[rootGetters['i18n/locale']][state.items[rootGetters['i18n/locale']].length - 1].id}`));
+				({ data } = await get(`dApps/${state.items[type][rootGetters['i18n/locale']][state.items[type][rootGetters['i18n/locale']].length - 1].id}`));
 
-				commit('SET_APPS', { locale: rootGetters['i18n/locale'], data: data.rows });
+				commit('SET_APPS', { type, locale: rootGetters['i18n/locale'], data: data.rows });
 				commit('TOGGLE_LOADING');
 
 				return data;
@@ -97,7 +107,7 @@ const actions = {
 
 			const { data } = await get(`dApps/item/${id}`);
 
-			commit('SET_APPS', { locale: rootGetters['i18n/locale'], data });
+			commit('SET_APP', { type: state.type, locale: rootGetters['i18n/locale'], data });
 			commit('TOGGLE_LOADING');
 		}
 
@@ -141,11 +151,11 @@ const actions = {
 };
 
 const getters = {
-	getItems: (state, getters, rootState, rootGetters) => (page) =>
+	getItems: (state, getters, rootState, rootGetters) => (type, page) =>
 	{
-		if(!state.items[rootGetters['i18n/locale']]) return null;
+		if(!state.items[type] || !state.items[type][rootGetters['i18n/locale']]) return null;
 
-		return state.items[rootGetters['i18n/locale']].slice((page - 1) * state.itemsPerPage, ((page - 1) * state.itemsPerPage) + state.itemsPerPage);
+		return state.items[type][rootGetters['i18n/locale']].slice((page - 1) * state.itemsPerPage, ((page - 1) * state.itemsPerPage) + state.itemsPerPage);
 	},
 	getSearchItems: (state, getters, rootState, rootGetters) => (page) =>
 	{

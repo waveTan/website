@@ -72,12 +72,12 @@
 			{
 				if(this.searchQuery === '')
 				{
-					if(!this.$store.getters['dApps/getItems'](this.page))
+					if(!this.$store.getters['dApps/getItems']('dApps', this.page))
 					{
 						this.loadItems();
 					}
 
-					return this.$store.getters['dApps/getItems'](this.page);
+					return this.$store.getters['dApps/getItems']('dApps', this.page);
 				}
 
 				if(!this.$store.getters['dApps/getSearchItems'](this.page))
@@ -93,7 +93,7 @@
 			{
 				if(this.searchQuery !== '') return;
 
-				const data = await this.$store.dispatch('dApps/loadItems', this.page);
+				const data = await this.$store.dispatch('dApps/loadItems', { type: 'dApps', page: this.page });
 
 				this.setItemsListData(data);
 			},
@@ -133,7 +133,7 @@
 				if(data.count)
 				{
 					this.totalItems = data.count;
-					this.totalPages = Math.ceil(this.totalItems / this.$store.getters['dApps/appsPerPage']);
+					this.totalPages = Math.ceil(this.totalItems / this.$store.getters['dApps/itemsPerPage']);
 				}
 
 				this.apps = data.rows;

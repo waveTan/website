@@ -30,16 +30,19 @@ _TODO - Write tests_
 To run each script you will first need to set up the environment variables for each script project. For the backend and frontend areas
 there are files named `.env.example` to demonstrate what your `.env` file should contain.
 
+#### MySQL
+When running Strapi for the first time it will create all the required tables within your configured database.
+
 ##### Backend
 - `/server/.env`
 
 ##### Frontend
+- The database user must have `data` access to your database
 - `/client/.env`
 
 ##### Admin Panel
-- `/strapi/config/environments/development/database.json`
-- `/strapi/config/environments/producation/database.json`
-- `/strapi/config/environments/staging/database.json` 
+- The database user must have `data` and `structure` access to your database (although could be dropped to just `data` after initial set up)
+- `/strapi/.env`
 
 #### Running
 **Backend Server**
@@ -60,3 +63,4 @@ $ cd strapi
 $ npm i
 $ npm run start
 ```
+

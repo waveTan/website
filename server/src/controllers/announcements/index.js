@@ -17,7 +17,7 @@ const load = async (req, res) =>
 			d.en_description,
 			d.zh_title,
 			d.zh_description,
-			d.active
+			d.created_at
 		FROM announcements AS d
 		WHERE d.active = 1
 		AND CASE
@@ -57,12 +57,12 @@ const search = async (req, res) =>
 			d.en_description,
 			d.zh_title,
 			d.zh_description,
-			d.active,
+			d.created_at,
 			MATCH (d.en_title, d.zh_title) AGAINST (? IN BOOLEAN MODE) AS title_relevance,
 			MATCH (d.en_title, d.en_description, d.zh_title, d.zh_description) AGAINST (? IN BOOLEAN MODE) AS relevance
 		FROM announcements AS d
 		WHERE d.active = 1
-		CASE
+		AND CASE
 			WHEN ? != 0 THEN d.id < ?
 			ELSE 1=1
 		END
@@ -98,7 +98,7 @@ const item = async (req, res) =>
 			d.en_description,
 			d.zh_title,
 			d.zh_description,
-			d.active
+			d.created_at
 		FROM announcements AS d
 		WHERE d.id = ?
 		LIMIT 1

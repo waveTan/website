@@ -70,7 +70,7 @@ const search = async (req, res) =>
 		LEFT JOIN upload_file_morph AS m ON m.related_type = "dapps" AND m.related_id = d.id
 		LEFT JOIN upload_file AS u ON m.upload_file_id = u.id
 		WHERE d.active = 1
-		CASE
+		AND CASE
 			WHEN ? != 0 THEN d.id < ?
 			ELSE 1=1
 		END

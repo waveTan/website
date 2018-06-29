@@ -343,6 +343,11 @@
 					"announcements": "Announcements"
 				}
 			}
+		},
+		"documents": {
+			"pageTitle": "Documents",
+			"search": "Search for documents",
+			"download": "Download this document"
 		}
   },
   "dates": {

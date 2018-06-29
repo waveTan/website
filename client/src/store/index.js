@@ -4,14 +4,14 @@ import Vuex, { Store } from 'vuex';
 // import { version } from './../../package.json';
 import app from '@/store/app';
 import i18n from '@/store/i18n';
-import genericEndPoints from '@/store/genericEndPoints';
-import dApps from '@/store/dApps';
+import items from '@/store/items';
+import itemsPro from '@/store/itemsPro';
 
 const modules = {
 	app,
 	i18n,
-	genericEndPoints,
-	dApps
+	items,
+	itemsPro
 };
 
 Vue.use(Vuex);

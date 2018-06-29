@@ -38,12 +38,12 @@
 		computed: {
 			partnerships()
 			{
-				if(!this.$store.getters['genericEndPoints/getItems']('partners'))
+				if(!this.$store.getters['items/getItems']('partners'))
 				{
-					this.$store.dispatch('genericEndPoints/loadItems', 'partners');
+					this.$store.dispatch('items/loadItems', 'partners');
 				}
 
-				return this.$store.getters['genericEndPoints/getItems']('partners');
+				return this.$store.getters['items/getItems']('partners');
 			},
 			pageLoading()
 			{

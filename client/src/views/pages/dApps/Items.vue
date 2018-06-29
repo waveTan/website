@@ -60,32 +60,32 @@
 				apps: [],
 				totalItems: 1,
 				totalPages: 1,
-				imageDirectory: this.$store.getters['genericEndPoints/strapiUrl']
+				imageDirectory: this.$store.getters['items/strapiUrl']
 			};
 		},
 		computed: {
 			loading()
 			{
-				return this.$store.getters['dApps/getLoading'];
+				return this.$store.getters['itemsPro/getLoading'];
 			},
 			getItems()
 			{
 				if(this.searchQuery === '')
 				{
-					if(!this.$store.getters['dApps/getItems']('dApps', this.page))
+					if(!this.$store.getters['itemsPro/getItems']('dApps', this.page))
 					{
 						this.loadItems();
 					}
 
-					return this.$store.getters['dApps/getItems']('dApps', this.page);
+					return this.$store.getters['itemsPro/getItems']('dApps', this.page);
 				}
 
-				if(!this.$store.getters['dApps/getSearchItems'](this.page))
+				if(!this.$store.getters['itemsPro/getSearchItems'](this.page))
 				{
 					this.searchItems();
 				}
 
-				return this.$store.getters['dApps/getSearchItems'](this.page);
+				return this.$store.getters['itemsPro/getSearchItems'](this.page);
 			}
 		},
 		methods: {
@@ -93,13 +93,13 @@
 			{
 				if(this.searchQuery !== '') return;
 
-				const data = await this.$store.dispatch('dApps/loadItems', { type: 'dApps', page: this.page });
+				const data = await this.$store.dispatch('itemsPro/loadItems', { type: 'dApps', page: this.page });
 
 				this.setItemsListData(data);
 			},
 			async searchItems()
 			{
-				const data = await this.$store.dispatch('dApps/search', { searchQuery: this.searchQuery, page: this.page });
+				const data = await this.$store.dispatch('itemsPro/search', { searchQuery: this.searchQuery, page: this.page });
 
 				this.setItemsListData(data);
 			},
@@ -133,7 +133,7 @@
 				if(data.count)
 				{
 					this.totalItems = data.count;
-					this.totalPages = Math.ceil(this.totalItems / this.$store.getters['dApps/itemsPerPage']);
+					this.totalPages = Math.ceil(this.totalItems / this.$store.getters['itemsPro/itemsPerPage']);
 				}
 
 				this.apps = data.rows;

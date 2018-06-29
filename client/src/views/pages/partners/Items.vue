@@ -31,7 +31,7 @@
 		data()
 		{
 			return {
-				imageDirectory: this.$store.getters['genericEndPoints/strapiUrl']
+				imageDirectory: this.$store.getters['items/strapiUrl']
 			};
 		}
 	};

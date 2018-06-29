@@ -31,12 +31,12 @@
 		computed: {
 			jobs()
 			{
-				if(!this.$store.getters['genericEndPoints/getItems']('jobs'))
+				if(!this.$store.getters['items/getItems']('jobs'))
 				{
-					this.$store.dispatch('genericEndPoints/loadItems', 'jobs');
+					this.$store.dispatch('items/loadItems', 'jobs');
 				}
 
-				return this.$store.getters['genericEndPoints/getItems']('jobs');
+				return this.$store.getters['items/getItems']('jobs');
 			},
 			pageLoading()
 			{

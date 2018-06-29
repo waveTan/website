@@ -39,17 +39,17 @@
 		methods: {
 			getItems(type)
 			{
-				if(!this.$store.getters['genericEndPoints/getItems']('team'))
+				if(!this.$store.getters['items/getItems']('team'))
 				{
-					this.$store.dispatch('genericEndPoints/loadItems', 'team');
+					this.$store.dispatch('items/loadItems', 'team');
 				}
 
-				if(!this.$store.getters['genericEndPoints/getItems']('team'))
+				if(!this.$store.getters['items/getItems']('team'))
 				{
 					return [];
 				}
 
-				return this.$store.getters['genericEndPoints/getItems']('team').filter((item) => item.category.toLowerCase() === type);
+				return this.$store.getters['items/getItems']('team').filter((item) => item.category.toLowerCase() === type);
 			}
 		}
 	};

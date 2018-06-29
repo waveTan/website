@@ -62,8 +62,6 @@ const actions = {
 
 			commit('SET_ITEMS', { locale: rootGetters['i18n/locale'], path, data });
 		}
-
-		return state.items[rootGetters['i18n/locale']][path];
 	},
 	async loadItem({ dispatch, state, commit, rootGetters }, { path, id })
 	{
@@ -78,8 +76,6 @@ const actions = {
 
 			commit('SET_ITEM', { locale: rootGetters['i18n/locale'], path, data });
 		}
-
-		return state.itemrootGetters['i18n/locale'][path][id];
 	}
 };
 

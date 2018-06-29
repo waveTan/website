@@ -59,7 +59,10 @@ const routeConfig = [
 	{
 		name: 'announcements',
 		path: '/announcements',
-		component: NewsAndAnnouncements
+		component: NewsAndAnnouncements,
+		props: {
+			category: 'announcements'
+		}
 	},
 	{
 		name: 'legal.terms',

@@ -80,10 +80,8 @@
 					return this.$store.getters['dApps/getApps'](this.page);
 				}
 
-				console.log(1);
 				if(!this.$store.getters['dApps/getSearchApps'](this.page))
 				{
-					console.log(2);
 					this.searchApps();
 				}
 

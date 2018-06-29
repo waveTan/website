@@ -1,11 +1,11 @@
 <template>
 	<div class="section grey">
 		<div class="container">
-			<h1 v-if="category === 'news'"><I18N id="page.newsAndAnnouncements.header.news" /></h1>
-			<h1 v-else><I18N id="page.newsAndAnnouncements.header.announcements" /></h1>
+			<h1 v-if="category === 'news'"><I18N id="page.news.header.title" /></h1>
+			<h1 v-else><I18N id="page.announcements.header.title" /></h1>
 			<ul class="centered">
-				<li :class="{ active: category === 'news' }"><router-link :to="{ name: 'news' }">News</router-link></li>
-				<li :class="{ active: category === 'announcements' }"><router-link :to="{ name: 'announcements' }">Announcements</router-link></li>
+				<li :class="{ active: category === 'news' }"><router-link :to="{ name: 'news' }"><I18N id="page.newsAndAnnouncements.header.tabs.news" /></router-link></li>
+				<li :class="{ active: category === 'announcements' }"><router-link :to="{ name: 'announcements' }"><I18N id="page.newsAndAnnouncements.header.tabs.announcements" /></router-link></li>
 			</ul>
 		</div>
 	</div>

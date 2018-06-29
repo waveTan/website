@@ -11,7 +11,7 @@
 			<v-progress-circular :size="50" indeterminate color="primary" />
 		</div>
 		<div v-else>
-			<v-container grid-list-md text-xs-center :class="`{$itemType}Items`">
+			<v-container grid-list-md text-xs-center :class="`${itemType}Items`">
 				<v-layout row wrap>
 					<v-flex v-for="(item, i) in getItems" :key="i" :sm12="sm12" :sm6="sm6" :md3="md3">
 						<v-card flat tile>

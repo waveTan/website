@@ -4,7 +4,6 @@ export default {
 	data()
 	{
 		return {
-			itemType: 'REPLACE_ME',
 			searchQuery: '',
 			page: 1,
 			items: [],

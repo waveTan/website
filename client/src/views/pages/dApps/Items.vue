@@ -55,6 +55,7 @@
 		data()
 		{
 			return {
+				itemType: 'dApps',
 				searchQuery: '',
 				page: 1,
 				items: [],
@@ -72,12 +73,12 @@
 			{
 				if(this.searchQuery === '')
 				{
-					if(!this.$store.getters['itemsPro/getItems']('dApps', this.page))
+					if(!this.$store.getters['itemsPro/getItems'](this.itemType, this.page))
 					{
 						this.loadItems();
 					}
 
-					const data = this.$store.getters['itemsPro/getItems']('dApps', this.page);
+					const data = this.$store.getters['itemsPro/getItems'](this.itemType, this.page);
 
 					this.setItemsListData(data);
 
@@ -97,7 +98,7 @@
 			{
 				if(this.searchQuery !== '') return;
 
-				const data = await this.$store.dispatch('itemsPro/loadItems', { type: 'dApps', page: this.page });
+				const data = await this.$store.dispatch('itemsPro/loadItems', { type: this.itemType, page: this.page });
 
 				this.setItemsListData(data);
 			},

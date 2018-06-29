@@ -30,12 +30,6 @@
 			Community,
 			Developers
 		},
-		data()
-		{
-			return {
-				ranDispatch: false
-			};
-		},
 		computed: {
 			pageLoading()
 			{
@@ -45,9 +39,8 @@
 		methods: {
 			getItems(type)
 			{
-				if(!this.$store.getters['genericEndPoints/getItems']('team') && !this.ranDispatch)
+				if(!this.$store.getters['genericEndPoints/getItems']('team'))
 				{
-					this.ranDispatch = true;
 					this.$store.dispatch('genericEndPoints/loadItems', 'team');
 				}
 

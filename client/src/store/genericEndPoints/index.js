@@ -2,7 +2,8 @@ import { get } from '@/utils/api';
 
 const state = {
 	items: {},
-	item: {}
+	item: {},
+	sentRequests: {}
 };
 
 const mutations = {
@@ -35,14 +36,24 @@ const mutations = {
 		}
 
 		state.item[locale][path][data.id] = data;
+	},
+	UPDATE_SENT_REQUESTS(state, { locale, path })
+	{
+		if(!state.sentRequests[locale])
+		{
+			state.sentRequests[locale] = {};
+		}
+
+		state.sentRequests[locale][path] = true;
 	}
 };
 
 const actions = {
 	async loadItems({ dispatch, state, commit, rootGetters }, path)
 	{
-		if(!state.items[rootGetters['i18n/locale']] || !state.items[rootGetters['i18n/locale']][path])
+		if(!state.sentRequests[rootGetters['i18n/locale']] || !state.sentRequests[rootGetters['i18n/locale']][path])
 		{
+			commit('UPDATE_SENT_REQUESTS', { locale: rootGetters['i18n/locale'], path });
 			dispatch('app/pageLoading', true, { root: true });
 
 			const { data } = await get(path);
@@ -56,8 +67,9 @@ const actions = {
 	},
 	async loadItem({ dispatch, state, commit, rootGetters }, { path, id })
 	{
-		if(!state.items[rootGetters['i18n/locale']] || !state.itemrootGetters['i18n/locale'][path] || !state.itemrootGetters['i18n/locale'][path][id])
+		if(!state.sentRequests[rootGetters['i18n/locale']] || !state.sentRequests[rootGetters['i18n/locale']][path] || !state.sentRequests[rootGetters['i18n/locale']][path][id])
 		{
+			commit('UPDATE_SENT_REQUESTS', { locale: rootGetters['i18n/locale'], path });
 			dispatch('app/pageLoading', true, { root: true });
 
 			const { data } = await get(path);

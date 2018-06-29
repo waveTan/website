@@ -5,7 +5,7 @@ const state = {
 	loading: false,
 	items: {},
 	fullItems: {},
-	totalItems: 0,
+	totalItems: [],
 	itemsPerPage: 2, // This should be changed on the backend too -> `\server\src\controllers\dApps\index.js::resultsLimit`
 	searchResults: [],
 	searchResultsLanguage: '',
@@ -42,9 +42,9 @@ const mutations = {
 
 		state.fullItems[type][locale][data.id] = data;
 	},
-	SET_TOTAL_APPS(state, count)
+	SET_TOTAL_APPS(state, { type, count })
 	{
-		state.totalItems = count;
+		state.totalItems[type] = count;
 	},
 	TOGGLE_LOADING(state)
 	{
@@ -78,13 +78,13 @@ const actions = {
 
 				({ data } = await get('dApps/'));
 
-				commit('SET_TOTAL_APPS', data.count);
+				commit('SET_TOTAL_APPS', { type, count: data.count });
 				commit('SET_APPS', { type, locale: rootGetters['i18n/locale'], data: data.rows });
 				commit('TOGGLE_LOADING');
 
 				return data;
 			}
-			else if(((page - 1) * state.itemsPerPage) < state.totalItems && state.items[type][rootGetters['i18n/locale']].length < state.totalItems)
+			else if(((page - 1) * state.itemsPerPage) < state.totalItems[type] && state.items[type][rootGetters['i18n/locale']].length < state.totalItems[type])
 			{
 				commit('TOGGLE_LOADING');
 
@@ -97,7 +97,7 @@ const actions = {
 			}
 		}
 
-		return { count: state.totalItems, rows: getters.getItems(page) };
+		return { count: state.totalItems[type], rows: getters.getItems(type, page) };
 	},
 	async loadItem({ state, commit, rootGetters }, id)
 	{
@@ -155,7 +155,10 @@ const getters = {
 	{
 		if(!state.items[type] || !state.items[type][rootGetters['i18n/locale']]) return null;
 
-		return state.items[type][rootGetters['i18n/locale']].slice((page - 1) * state.itemsPerPage, ((page - 1) * state.itemsPerPage) + state.itemsPerPage);
+		return {
+			count: state.totalItems[type],
+			rows: state.items[type][rootGetters['i18n/locale']].slice((page - 1) * state.itemsPerPage, ((page - 1) * state.itemsPerPage) + state.itemsPerPage)
+		};
 	},
 	getSearchItems: (state, getters, rootState, rootGetters) => (page) =>
 	{
@@ -165,7 +168,7 @@ const getters = {
 	},
 	getItem: (state) => (id) => state.fullItems[id],
 	getLoading: (state) => state.loading,
-	getTotalItems: (state) => state.totalItems,
+	getTotalItems: (state) => (type) => state.totalItems[type],
 	itemsPerPage: (state) => state.itemsPerPage
 };
 

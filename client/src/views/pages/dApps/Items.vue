@@ -57,7 +57,7 @@
 			return {
 				searchQuery: '',
 				page: 1,
-				apps: [],
+				items: [],
 				totalItems: 1,
 				totalPages: 1,
 				imageDirectory: this.$store.getters['items/strapiUrl']
@@ -77,7 +77,11 @@
 						this.loadItems();
 					}
 
-					return this.$store.getters['itemsPro/getItems']('dApps', this.page);
+					const data = this.$store.getters['itemsPro/getItems']('dApps', this.page);
+
+					this.setItemsListData(data);
+
+					return this.items;
 				}
 
 				if(!this.$store.getters['itemsPro/getSearchItems'](this.page))
@@ -136,7 +140,7 @@
 					this.totalPages = Math.ceil(this.totalItems / this.$store.getters['itemsPro/itemsPerPage']);
 				}
 
-				this.apps = data.rows;
+				this.items = data.rows;
 			}
 		}
 	}

@@ -1,7 +1,7 @@
 const Database = require('@/models/Database');
 const I18N = require('@/models/I18N');
 
-const resultsLimit = 12; // This should be changed on the frontend too -> `\client\src\store\dApps\index.js::appsPerPage`
+const resultsLimit = 2; // This should be changed on the frontend too -> `\client\src\store\dApps\index.js::appsPerPage`
 
 const load = async (req, res) =>
 {
@@ -23,18 +23,17 @@ const load = async (req, res) =>
 		FROM dapps AS d
 		LEFT JOIN upload_file_morph AS m ON m.related_type = "dapps" AND m.related_id = d.id
 		LEFT JOIN upload_file AS u ON m.upload_file_id = u.id
-		WHERE
-		CASE
-			WHEN 0 != ? THEN d.id < ?
-			ELSE 1=1
-		END
-		ORDER BY
-		CASE
-			WHEN 0 != ? THEN d.id
-			ELSE d.serialNumber
-		END DESC, d.id DESC
+		WHERE d.active =1
+		AND CASE
+				WHEN ? != 0 THEN d.id < ?
+				ELSE 1=1
+			END
+		ORDER BY d.id DESC
+		# CASE
+		#	 WHEN ? = 0 THEN d.serialNumber
+		# END DESC, d.id DESC
 		LIMIT ?
-		`, [offsetId, offsetId, offsetId, resultsLimit]);
+		`, [offsetId, offsetId, resultsLimit]);
 
 	I18N.transformQueryResults(rows, req.get('i18n'));
 
@@ -72,7 +71,7 @@ const search = async (req, res) =>
 		LEFT JOIN upload_file AS u ON m.upload_file_id = u.id
 		WHERE
 		CASE
-			WHEN 0 != ? THEN d.id < ?
+			WHEN ? != 0 THEN d.id < ?
 			ELSE 1=1
 		END
 		AND MATCH (d.en_title, d.en_description, d.zh_title, d.zh_description) AGAINST (? IN BOOLEAN MODE)

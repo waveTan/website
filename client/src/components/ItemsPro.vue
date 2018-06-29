@@ -13,7 +13,7 @@
 		<div v-else>
 			<v-container grid-list-md text-xs-center :class="`{$itemType}Items`">
 				<v-layout row wrap>
-					<v-flex v-for="(item, i) in getItems" :key="i" sm6 md3>
+					<v-flex v-for="(item, i) in getItems" :key="i" :sm12="sm12" :sm6="sm6" :md3="md3">
 						<v-card flat tile>
 							<slot :item="item" :imageDirectory="imageDirectory" />
 						</v-card>
@@ -40,6 +40,18 @@
 			itemType: {
 				type: String,
 				required: true
+			},
+			sm12: {
+				type: Boolean,
+				default: false
+			},
+			sm6: {
+				type: Boolean,
+				default: false
+			},
+			md3: {
+				type: Boolean,
+				default: false
 			}
 		},
 		mixins: [ItemsPro],

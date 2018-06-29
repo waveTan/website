@@ -1,39 +1,40 @@
 import { get, post } from '@/utils/api';
 
 const state = {
+	type: 'dApps',
 	loading: false,
-	apps: {},
-	fullApps: {},
-	totalApps: 0,
-	appsPerPage: 2, // This should be changed on the backend too -> `\server\src\controllers\dApps\index.js::resultsLimit`
+	items: {},
+	fullItems: {},
+	totalItems: 0,
+	itemsPerPage: 2, // This should be changed on the backend too -> `\server\src\controllers\dApps\index.js::resultsLimit`
 	searchResults: [],
 	searchResultsLanguage: '',
 	searchQuery: '',
-	searchTotalApps: 0
+	searchTotalItems: 0
 };
 
 const mutations = {
 	SET_APPS(state, { locale, data })
 	{
-		if(!state.apps[locale])
+		if(!state.items[locale])
 		{
-			state.apps[locale] = [];
+			state.items[locale] = [];
 		}
 
-		state.apps[locale].push(...data);
+		state.items[locale].push(...data);
 	},
 	SET_APP(state, { locale, data })
 	{
-		if(!state.fullApps[locale])
+		if(!state.fullItems[locale])
 		{
-			state.fullApps[locale] = [];
+			state.fullItems[locale] = [];
 		}
 
-		state.fullApps[locale][data.id] = data;
+		state.fullItems[locale][data.id] = data;
 	},
 	SET_TOTAL_APPS(state, count)
 	{
-		state.totalApps = count;
+		state.totalItems = count;
 	},
 	TOGGLE_LOADING(state)
 	{
@@ -41,7 +42,7 @@ const mutations = {
 	},
 	SET_SEARCH_TOTAL_APPS(state, count)
 	{
-		state.searchTotalApps = count;
+		state.searchTotalItems = count;
 	},
 	SET_SEARCH_RESULTS(state, { locale, data })
 	{
@@ -55,13 +56,13 @@ const mutations = {
 };
 
 const actions = {
-	async loadApps({ state, commit, getters, rootGetters }, page)
+	async loadItems({ state, commit, getters, rootGetters }, page)
 	{
-		if(!state.apps[rootGetters['i18n/locale']] || state.apps[rootGetters['i18n/locale']].length === 0 || page !== 1)
+		if(!state.items[rootGetters['i18n/locale']] || state.items[rootGetters['i18n/locale']].length === 0 || page !== 1)
 		{
 			let data = { };
 
-			if(!state.apps[rootGetters['i18n/locale']] || state.apps[rootGetters['i18n/locale']].length === 0)
+			if(!state.items[rootGetters['i18n/locale']] || state.items[rootGetters['i18n/locale']].length === 0)
 			{
 				commit('TOGGLE_LOADING');
 
@@ -73,11 +74,11 @@ const actions = {
 
 				return data;
 			}
-			else if(((page - 1) * state.appsPerPage) < state.totalApps && state.apps[rootGetters['i18n/locale']].length < state.totalApps)
+			else if(((page - 1) * state.itemsPerPage) < state.totalItems && state.items[rootGetters['i18n/locale']].length < state.totalItems)
 			{
 				commit('TOGGLE_LOADING');
 
-				({ data } = await get(`dApps/${state.apps[rootGetters['i18n/locale']][state.apps[rootGetters['i18n/locale']].length - 1].id}`));
+				({ data } = await get(`dApps/${state.items[rootGetters['i18n/locale']][state.items[rootGetters['i18n/locale']].length - 1].id}`));
 
 				commit('SET_APPS', { locale: rootGetters['i18n/locale'], data: data.rows });
 				commit('TOGGLE_LOADING');
@@ -86,11 +87,11 @@ const actions = {
 			}
 		}
 
-		return { count: state.totalApps, rows: getters.getApps(page) };
+		return { count: state.totalItems, rows: getters.getItems(page) };
 	},
-	async loadApp({ state, commit, rootGetters }, id)
+	async loadItem({ state, commit, rootGetters }, id)
 	{
-		if(!state.fullApps[rootGetters['i18n/locale']] || !state.fullApps[rootGetters['i18n/locale']][id])
+		if(!state.fullItems[rootGetters['i18n/locale']] || !state.fullItems[rootGetters['i18n/locale']][id])
 		{
 			commit('TOGGLE_LOADING');
 
@@ -100,7 +101,7 @@ const actions = {
 			commit('TOGGLE_LOADING');
 		}
 
-		return state.fullApps[id];
+		return state.fullItems[id];
 	},
 	async search({ state, commit, getters, rootGetters }, { searchQuery, page })
 	{
@@ -121,7 +122,7 @@ const actions = {
 
 				return data;
 			}
-			else if(((page - 1) * state.appsPerPage) < state.searchTotalApps && state.searchResults.length < state.searchTotalApps)
+			else if(((page - 1) * state.itemsPerPage) < state.searchTotalItems && state.searchResults.length < state.searchTotalItems)
 			{
 				commit('TOGGLE_LOADING');
 
@@ -135,27 +136,27 @@ const actions = {
 			}
 		}
 
-		return { count: state.searchTotalApps, rows: getters.getSearchApps(page) };
+		return { count: state.searchTotalItems, rows: getters.getSearchItems(page) };
 	}
 };
 
 const getters = {
-	getApps: (state, getters, rootState, rootGetters) => (page) =>
+	getItems: (state, getters, rootState, rootGetters) => (page) =>
 	{
-		if(!state.apps[rootGetters['i18n/locale']]) return null;
+		if(!state.items[rootGetters['i18n/locale']]) return null;
 
-		return state.apps[rootGetters['i18n/locale']].slice((page - 1) * state.appsPerPage, ((page - 1) * state.appsPerPage) + state.appsPerPage);
+		return state.items[rootGetters['i18n/locale']].slice((page - 1) * state.itemsPerPage, ((page - 1) * state.itemsPerPage) + state.itemsPerPage);
 	},
-	getSearchApps: (state, getters, rootState, rootGetters) => (page) =>
+	getSearchItems: (state, getters, rootState, rootGetters) => (page) =>
 	{
 		if(state.searchResultsLanguage !== rootGetters['i18n/locale']) return null;
 
-		return state.searchResults.slice((page - 1) * state.appsPerPage, ((page - 1) * state.appsPerPage) + state.appsPerPage);
+		return state.searchResults.slice((page - 1) * state.itemsPerPage, ((page - 1) * state.itemsPerPage) + state.itemsPerPage);
 	},
-	getApp: (state) => (id) => state.fullApps[id],
+	getItem: (state) => (id) => state.fullItems[id],
 	getLoading: (state) => state.loading,
-	getTotalApps: (state) => state.totalApps,
-	appsPerPage: (state) => state.appsPerPage
+	getTotalItems: (state) => state.totalItems,
+	itemsPerPage: (state) => state.itemsPerPage
 };
 
 export default {

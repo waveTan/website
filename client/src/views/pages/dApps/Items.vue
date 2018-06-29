@@ -13,7 +13,7 @@
 		<div v-else>
 			<v-container grid-list-md text-xs-center class="dAppItems">
 				<v-layout row wrap>
-					<v-flex v-for="(app, i) in getApps" :key="i" sm6 md3>
+					<v-flex v-for="(app, i) in getItems" :key="i" sm6 md3>
 						<v-card flat tile>
 							<a :href="app.link" target="_blank">
 								<v-card-media
@@ -58,7 +58,7 @@
 				searchQuery: '',
 				page: 1,
 				apps: [],
-				totalApps: 1,
+				totalItems: 1,
 				totalPages: 1,
 				imageDirectory: this.$store.getters['genericEndPoints/strapiUrl']
 			};
@@ -68,72 +68,72 @@
 			{
 				return this.$store.getters['dApps/getLoading'];
 			},
-			getApps()
+			getItems()
 			{
 				if(this.searchQuery === '')
 				{
-					if(!this.$store.getters['dApps/getApps'](this.page))
+					if(!this.$store.getters['dApps/getItems'](this.page))
 					{
-						this.loadApps();
+						this.loadItems();
 					}
 
-					return this.$store.getters['dApps/getApps'](this.page);
+					return this.$store.getters['dApps/getItems'](this.page);
 				}
 
-				if(!this.$store.getters['dApps/getSearchApps'](this.page))
+				if(!this.$store.getters['dApps/getSearchItems'](this.page))
 				{
-					this.searchApps();
+					this.searchItems();
 				}
 
-				return this.$store.getters['dApps/getSearchApps'](this.page);
+				return this.$store.getters['dApps/getSearchItems'](this.page);
 			}
 		},
 		methods: {
-			async loadApps()
+			async loadItems()
 			{
 				if(this.searchQuery !== '') return;
 
-				const data = await this.$store.dispatch('dApps/loadApps', this.page);
+				const data = await this.$store.dispatch('dApps/loadItems', this.page);
 
-				this.setAppsListData(data);
+				this.setItemsListData(data);
 			},
-			async searchApps()
+			async searchItems()
 			{
 				const data = await this.$store.dispatch('dApps/search', { searchQuery: this.searchQuery, page: this.page });
 
-				this.setAppsListData(data);
+				this.setItemsListData(data);
 			},
 			inputUpdated: debounce(async function run()
 			{
 				this.page = 1;
-				this.totalApps = 1;
+				this.totalItems = 1;
 				this.totalPages = 1;
 
 				if(this.searchQuery === '')
 				{
-					this.loadApps();
+					this.loadItems();
 					return;
 				}
 
-				this.searchApps();
+				this.searchItems();
 			}, 500),
 			pageUpdated()
 			{
 				if(this.searchQuery === '')
 				{
-					this.loadApps();
+					this.loadItems();
 				}
 				else
 				{
-					this.searchApps();
+					this.searchItems();
 				}
 			},
-			setAppsListData(data)
+			setItemsListData(data)
 			{
 				if(data.count)
 				{
-					this.totalApps = data.count;
-					this.totalPages = Math.ceil(this.totalApps / this.$store.getters['dApps/appsPerPage']);
+					this.totalItems = data.count;
+					this.totalPages = Math.ceil(this.totalItems / this.$store.getters['dApps/appsPerPage']);
 				}
 
 				this.apps = data.rows;

@@ -10,6 +10,7 @@ import DApps from '@/views/pages/DApps';
 import Team from '@/views/pages/Team';
 import Jobs from '@/views/pages/Jobs';
 import Contact from '@/views/pages/Contact';
+import NewsAndAnnouncements from '@/views/pages/NewsAndAnnouncements';
 
 Vue.use(Router);
 
@@ -49,6 +50,11 @@ const routeConfig = [
 		name: 'contact',
 		path: '/contact',
 		component: Contact
+	},
+	{
+		name: 'news',
+		path: '/news',
+		component: NewsAndAnnouncements
 	},
 	{
 		name: 'legal.terms',

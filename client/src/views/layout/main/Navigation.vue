@@ -20,7 +20,7 @@
 										{ title: 'header.navigation.team', link: 'team' },
 										{ title: 'header.navigation.partners', link: 'partners' },
 										{ title: 'header.navigation.joinUs', link: 'jobs' },
-										{ title: 'header.navigation.news', link: 'home' }
+										{ title: 'header.navigation.news', link: 'news' }
 									]"
 									title="header.navigation.about"
 									:arrow="whiteBackground ? '-black' : ''"
@@ -48,7 +48,7 @@
 										{ title: 'header.navigation.team', link: 'team' },
 										{ title: 'header.navigation.partners', link: 'partners' },
 										{ title: 'header.navigation.joinUs', link: 'jobs' },
-										{ title: 'header.navigation.news', link: 'home' },
+										{ title: 'header.navigation.news', link: 'news' },
 										{ title: 'header.navigation.forum', link: 'home' }
 									]"
 									title="header.navigation.more"
@@ -79,7 +79,7 @@
 											{ title: 'header.navigation.team', link: 'team' },
 											{ title: 'header.navigation.partners', link: 'partners' },
 											{ title: 'header.navigation.joinUs', link: 'jobs' },
-											{ title: 'header.navigation.news', link: 'home' }
+											{ title: 'header.navigation.news', link: 'news' }
 										]"
 										title="header.navigation.about"
 									/>

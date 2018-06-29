@@ -13,7 +13,7 @@
 		<div v-else>
 			<v-container grid-list-md text-xs-center class="dAppItems">
 				<v-layout row wrap>
-					<v-flex v-for="(app, i) in apps" :key="i" sm6 md3>
+					<v-flex v-for="(app, i) in getApps" :key="i" sm6 md3>
 						<v-card flat tile>
 							<a :href="app.link" target="_blank">
 								<v-card-media
@@ -52,18 +52,14 @@
 	import debounce from 'lodash/debounce';
 
 	export default {
-		mounted()
-		{
-			this.loadApps();
-		},
 		data()
 		{
 			return {
 				searchQuery: '',
 				page: 1,
 				apps: [],
-				totalApps: 0,
-				totalPages: 0,
+				totalApps: 1,
+				totalPages: 1,
 				imageDirectory: this.$store.getters['genericEndPoints/strapiUrl']
 			};
 		},
@@ -71,6 +67,27 @@
 			loading()
 			{
 				return this.$store.getters['dApps/getLoading'];
+			},
+			getApps()
+			{
+				if(this.searchQuery === '')
+				{
+					if(!this.$store.getters['dApps/getApps'](this.page))
+					{
+						this.loadApps();
+					}
+
+					return this.$store.getters['dApps/getApps'](this.page);
+				}
+
+				console.log(1);
+				if(!this.$store.getters['dApps/getSearchApps'](this.page))
+				{
+					console.log(2);
+					this.searchApps();
+				}
+
+				return this.$store.getters['dApps/getSearchApps'](this.page);
 			}
 		},
 		methods: {
@@ -91,6 +108,8 @@
 			inputUpdated: debounce(async function run()
 			{
 				this.page = 1;
+				this.totalApps = 1;
+				this.totalPages = 1;
 
 				if(this.searchQuery === '')
 				{

@@ -331,17 +331,29 @@
 			}
 		},
 		"newsAndAnnouncements": {
-			"pageTitle": {
-				"news": "News",
-				"announcements": "Announcements"
-			},
 			"header": {
-				"news": "Latest News",
-				"announcements": "Latest Announcements",
 				"tabs": {
 					"news": "News",
 					"announcements": "Announcements"
 				}
+			}
+		},
+		"news": {
+			"pageTitle": "News",
+			"header": {
+				"title": "Latest News"
+			},
+			"items": {
+				"search": "Search for News"
+			}
+		},
+		"announcements": {
+			"pageTitle": "Announcements",
+			"header": {
+				"title": "Latest Announcements"
+			},
+			"items": {
+				"search": "Search for Announcements"
 			}
 		},
 		"documents": {

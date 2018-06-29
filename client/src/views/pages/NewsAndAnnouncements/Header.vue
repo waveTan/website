@@ -47,6 +47,7 @@
 		letter-spacing: 1px;
 		line-height: 76.8px;
 		cursor: pointer;
+		margin: 0 15px;
 	}
 
 	a {

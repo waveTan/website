@@ -20,45 +20,43 @@ const mutations = {
 		state.updating = true;
 		state.locale = locale;
 	},
-	SET_LANGUAGE(state, i18n)
+	SET_LANGUAGE(state, { locale, data })
 	{
-		Vue.set(state.languages, state.locale, i18n);
+		Vue.set(state.languages, locale, data);
 	}
 };
 
 const actions = {
-	load({ dispatch, state, commit })
+	async load({ dispatch, state, commit }, locale = null)
 	{
-		if(state.languages[state.locale])
+		locale = locale || state.locale;
+
+		if(state.languages[locale])
 		{
 			dispatch('app/appCallLoaded', 'i18n', { root: true });
-			return commit('UPDATE_LANGUAGE');
+			dispatch('updateLocale', locale);
+
+			return;
 		}
 
-		return get(`i18n/${state.locale}/`)
-			.then((res) =>
-			{
-				return res.data;
-			})
-			.then((data) =>
-			{
-				commit('SET_LANGUAGE', data);
-				commit('UPDATE_LANGUAGE');
-			})
-			.then(() =>
-			{
-				dispatch('app/appCallLoaded', 'i18n', { root: true });
-			});
+		const { data } = await get(`i18n/${locale}/`);
+
+		commit('SET_LANGUAGE', { locale, data });
+		dispatch('updateLocale', locale);
+		dispatch('app/appCallLoaded', 'i18n', { root: true });
 	},
-	changeLocale({ commit, dispatch }, locale)
+	changeLocale({ dispatch }, locale)
+	{
+		dispatch('load', locale);
+	},
+	saveUsersLocaleState({ commit }, locale)
 	{
 		localStorage.setItem('locale', locale);
 		commit('CHANGE_LOCALE', locale);
-		dispatch('load');
 	},
-	updateLocale({ commit, state })
+	updateLocale({ commit, dispatch }, locale)
 	{
-		commit('CHANGE_LOCALE', state.locale);
+		dispatch('saveUsersLocaleState', locale);
 		commit('UPDATE_LANGUAGE');
 	}
 };

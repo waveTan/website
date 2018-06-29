@@ -7,11 +7,11 @@
     "zh": "Chinese"
   },
   "pageNotFound": {
-	"title": "Page not found",
-	"header": "Oops... This is awkward!",
-	"subHeader": "404: Page not found",
-	"content": "It seems we're trying to take down the banks with blockchain technology but we can't even find the right page for you.",
-	"goHome": "Go back home"
+		"title": "Page not found",
+		"header": "Oops... This is awkward!",
+		"subHeader": "404: Page not found",
+		"content": "It seems we're trying to take down the banks with blockchain technology but we can't even find the right page for you.",
+		"goHome": "Go back home"
   },
   "header": {
     "websiteTitle": "NULS",
@@ -328,6 +328,20 @@
 				"message": "Your Message",
 				"submit": "Submit",
 				"success": "Thank you for reaching out, we'll get back to you as soon as possible."
+			}
+		},
+		"newsAndAnnouncements": {
+			"pageTitle": {
+				"news": "News",
+				"announcements": "Announcements"
+			},
+			"header": {
+				"news": "Latest News",
+				"announcements": "Latest Announcements",
+				"tabs": {
+					"news": "News",
+					"announcements": "Announcements"
+				}
 			}
 		}
   },

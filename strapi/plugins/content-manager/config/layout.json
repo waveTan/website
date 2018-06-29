@@ -1,9 +1,9 @@
 {
   "partners": {
     "attributes": {
-			"serialNumber": {
-				"appearance": ""
-			},
+      "serialNumber": {
+        "appearance": ""
+      },
       "type": {
         "appearance": ""
       },
@@ -17,9 +17,9 @@
       "active": {
         "appearance": ""
       },
-			"serialNumber": {
-				"appearance": ""
-			},
+      "serialNumber": {
+        "appearance": ""
+      },
       "en_title": {
         "appearance": ""
       },
@@ -39,9 +39,9 @@
   },
   "team": {
     "attributes": {
-			"serialNumber": {
-				"appearance": ""
-			},
+      "serialNumber": {
+        "appearance": ""
+      },
       "en_name": {
         "appearance": ""
       },
@@ -76,9 +76,9 @@
       "feature": {
         "appearance": ""
       },
-			"serialNumber": {
-				"appearance": ""
-			},
+      "serialNumber": {
+        "appearance": ""
+      },
       "en_title": {
         "appearance": ""
       },
@@ -112,6 +112,56 @@
       },
       "resolved": {
         "appearance": ""
+      }
+    }
+  },
+  "news": {
+    "attributes": {
+      "serialNumber": {
+        "appearance": ""
+      },
+      "featured": {
+        "appearance": ""
+      },
+      "active": {
+        "appearance": ""
+      },
+      "en_title": {
+        "appearance": ""
+      },
+      "en_description": {
+        "appearance": "WYSIWYG"
+      },
+      "zh_title": {
+        "appearance": ""
+      },
+      "zh_description": {
+        "appearance": "WYSIWYG"
+      }
+    }
+  },
+  "announcements": {
+    "attributes": {
+      "serialNumber": {
+        "appearance": ""
+      },
+      "featured": {
+        "appearance": ""
+      },
+      "active": {
+        "appearance": ""
+      },
+      "en_title": {
+        "appearance": ""
+      },
+      "en_description": {
+        "appearance": "WYSIWYG"
+      },
+      "zh_title": {
+        "appearance": ""
+      },
+      "zh_description": {
+        "appearance": "WYSIWYG"
       }
     }
   }

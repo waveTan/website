@@ -4,9 +4,16 @@
 		<HeaderLayout>
 			<Header />
 		</HeaderLayout>
-		<CooperationProjects :items="getItems('cooperation projects')" />
-		<CooperationMedia :items="getItems('cooperation media')" />
-		<Platforms :items="getItems('platform')" />
+		<div v-if="pageLoading" class="section container">
+			<div class="centered">
+				<v-progress-circular class="centered" :size="50" indeterminate color="primary" />
+			</div>
+		</div>
+		<div v-else>
+			<CooperationProjects :items="getItems('cooperation projects')" />
+			<CooperationMedia :items="getItems('cooperation media')" />
+			<Platforms :items="getItems('platform')" />
+		</div>
 		<BecomeAPartner />
 	</div>
 </template>
@@ -28,15 +35,20 @@
 			Platforms,
 			BecomeAPartner
 		},
-		async mounted()
-		{
-			await this.$store.dispatch('genericEndPoints/loadItems', 'partners');
-		},
-		data()
-		{
-			return {
-				partnerships: this.$store.getters['genericEndPoints/getItems']('partners'),
-			};
+		computed: {
+			partnerships()
+			{
+				if(!this.$store.getters['genericEndPoints/getItems']('partners'))
+				{
+					this.$store.dispatch('genericEndPoints/loadItems', 'partners');
+				}
+
+				return this.$store.getters['genericEndPoints/getItems']('partners');
+			},
+			pageLoading()
+			{
+				return this.$store.getters['app/pageLoading'];
+			}
 		},
 		methods: {
 			getItems(type)

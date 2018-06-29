@@ -1,7 +1,8 @@
 <template>
 	<div class="section container">
 		<div class="centered">
-			<Panels>
+			<v-progress-circular v-if="pageLoading" :size="50" indeterminate color="primary" />
+			<Panels v-else>
 				<Panel v-for="(job, i) in jobs" :key="i">
 					<template slot="header">
 						<h4>{{ job.title }}</h4>
@@ -36,6 +37,10 @@
 				}
 
 				return this.$store.getters['genericEndPoints/getItems']('jobs');
+			},
+			pageLoading()
+			{
+				return this.$store.getters['app/pageLoading'];
 			}
 		},
 		methods: {

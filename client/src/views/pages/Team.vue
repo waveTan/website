@@ -4,9 +4,16 @@
 			<Header />
 		</HeaderLayout>
 		<HeaderMeta title="page.team.pageTitle" />
-		<Developers :items="getItems('developer')" />
-		<Community :items="getItems('operation')" />
-		<Advisors :items="getItems('advisor')" />
+		<div v-if="pageLoading" class="section container">
+			<div class="centered">
+				<v-progress-circular class="centered" :size="50" indeterminate color="primary" />
+			</div>
+		</div>
+		<div v-else>
+			<Developers :items="getItems('developer')" />
+			<Community :items="getItems('operation')" />
+			<Advisors :items="getItems('advisor')" />
+		</div>
 	</div>
 </template>
 
@@ -28,6 +35,12 @@
 			return {
 				ranDispatch: false
 			};
+		},
+		computed: {
+			pageLoading()
+			{
+				return this.$store.getters['app/pageLoading'];
+			}
 		},
 		methods: {
 			getItems(type)

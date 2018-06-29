@@ -1,14 +1,23 @@
 <template>
 	<div>
-		<HeaderLayout />
-		<router-link :to="{ name: 'news' }">News</router-link>
-		<router-link :to="{ name: 'announcements' }">Announcements</router-link>
-		Foo bar - We are looking at [{{ category }}]
+		<HeaderLayout :whiteBackground="true" />
+		<Header :category="category" />
+		<News v-if="category === 'news'" />
+		<Announcements v-else />
 	</div>
 </template>
 
 <script>
+	import Header from '@/views/pages/NewsAndAnnouncements/Header';
+	import News from '@/views/pages/NewsAndAnnouncements/News';
+	import Announcements from '@/views/pages/NewsAndAnnouncements/Announcements';
+
 	export default {
+		components: {
+			Header,
+			News,
+			Announcements
+		},
 		props: {
 			category: {
 				type: String,

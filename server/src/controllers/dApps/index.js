@@ -28,9 +28,13 @@ const load = async (req, res) =>
 			WHEN 0 != ? THEN d.id < ?
 			ELSE 1=1
 		END
-		ORDER BY d.serialNumber DESC, d.id DESC
+		ORDER BY
+		CASE
+			WHEN 0 != ? THEN d.id
+			ELSE d.serialNumber
+		END DESC, d.id DESC
 		LIMIT ?
-		`, [offsetId, offsetId, resultsLimit]);
+		`, [offsetId, offsetId, offsetId, resultsLimit]);
 
 	I18N.transformQueryResults(rows, req.get('i18n'));
 

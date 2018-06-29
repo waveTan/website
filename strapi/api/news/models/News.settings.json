@@ -1,0 +1,44 @@
+{
+  "connection": "default",
+  "collectionName": "news",
+  "info": {
+    "name": "news",
+    "description": "News relating to NULS and related areas."
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "serialNumber": {
+      "unique": true,
+      "type": "integer"
+    },
+    "featured": {
+      "type": "boolean"
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "en_title": {
+      "type": "string",
+      "required": true
+    },
+    "en_description": {
+      "type": "text",
+      "required": true
+    },
+    "zh_title": {
+      "type": "string"
+    },
+    "zh_description": {
+      "type": "text"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    }
+  }
+}

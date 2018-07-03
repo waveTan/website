@@ -22,8 +22,8 @@
 	import Items from '@/views/pages/partners/Items';
 	import Header from '@/views/pages/partners/Header';
 	import CooperationProjects from '@/views/pages/partners/CooperationProjects';
-	import CooperationMedia from '@/views/pages/partners/cooperationMedia';
-	import Platforms from '@/views/pages/partners/platforms';
+	import CooperationMedia from '@/views/pages/partners/CooperationMedia';
+	import Platforms from '@/views/pages/partners/Platforms';
 	import BecomeAPartner from '@/views/pages/partners/BecomeAPartner';
 
 	export default {

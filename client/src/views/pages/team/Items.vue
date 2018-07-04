@@ -6,8 +6,8 @@
 					<v-card flat tile @click="open(i)">
 						<div @click="open(i)">
 							<v-card-media
-									:src="`${imageDirectory}${item.image}`"
-									height="340px"
+								:src="`${imageDirectory}${item.image}`"
+								height="340px"
 							/>
 							<v-card-title primary-title>
 								<div>

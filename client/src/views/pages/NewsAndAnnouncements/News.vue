@@ -13,10 +13,10 @@
 						</v-flex>
 						<v-flex xs5 class="image">
 							<v-card-media
-									:src="`${imageDirectory}${item.image}`"
-									height="200px"
-									contain
-							></v-card-media>
+								:src="`${imageDirectory}${item.image}`"
+								height="200px"
+								contain
+							/>
 						</v-flex>
 					</v-layout>
 				</v-container>

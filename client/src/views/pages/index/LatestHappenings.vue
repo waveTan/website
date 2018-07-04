@@ -7,7 +7,7 @@
 			<swiper :options="swiperOption">
 				<swiper-slide>
 					<v-card>
-						<v-card-media src="@/assets/images/test-news-img.jpg" height="180px" />
+						<v-card-media :src="require('@/assets/images/test-news-img.jpg')" height="180px" />
 						<v-card-title primary-title>
 							<h5>NULS now trading on BITFINEX</h5>
 						</v-card-title>
@@ -15,7 +15,7 @@
 				</swiper-slide>
 				<swiper-slide>
 					<v-card>
-						<v-card-media src="@/assets/images/test-news-img.jpg" height="180px" />
+						<v-card-media :src="require('@/assets/images/test-news-img.jpg')" height="180px" />
 						<v-card-title primary-title>
 							<h5>NULS and Devery sign a strategic partnership in February 2018</h5>
 						</v-card-title>
@@ -23,7 +23,7 @@
 				</swiper-slide>
 				<swiper-slide>
 					<v-card>
-						<v-card-media src="@/assets/images/test-news-img.jpg" height="180px" />
+						<v-card-media :src="require('@/assets/images/test-news-img.jpg')" height="180px" />
 						<v-card-title primary-title>
 							<h5>NULS Yellowpaper Released</h5>
 						</v-card-title>
@@ -31,7 +31,7 @@
 				</swiper-slide>
 				<swiper-slide>
 					<v-card>
-						<v-card-media src="@/assets/images/test-news-img.jpg" height="180px" />
+						<v-card-media :src="require('@/assets/images/test-news-img.jpg')" height="180px" />
 						<v-card-title primary-title>
 							<h5>NULS Whitepaper Released</h5>
 						</v-card-title>
@@ -39,7 +39,7 @@
 				</swiper-slide>
 				<swiper-slide>
 					<v-card>
-						<v-card-media src="@/assets/images/test-news-img.jpg" height="180px" />
+						<v-card-media :src="require('@/assets/images/test-news-img.jpg')" height="180px" />
 						<v-card-title primary-title>
 							<h5>NULS and bitshares signed a strategic agreement</h5>
 						</v-card-title>
@@ -47,7 +47,7 @@
 				</swiper-slide>
 				<swiper-slide>
 					<v-card>
-						<v-card-media src="@/assets/images/test-news-img.jpg" height="180px" />
+						<v-card-media :src="require('@/assets/images/test-news-img.jpg')" height="180px" />
 						<v-card-title primary-title>
 							<h5>NULS progress report</h5>
 						</v-card-title>
@@ -55,7 +55,7 @@
 				</swiper-slide>
 				<swiper-slide>
 					<v-card>
-						<v-card-media src="@/assets/images/test-news-img.jpg" height="180px" />
+						<v-card-media :src="require('@/assets/images/test-news-img.jpg')" height="180px" />
 						<v-card-title primary-title>
 							<h5>NULS Community Manager Opening</h5>
 						</v-card-title>
@@ -63,7 +63,7 @@
 				</swiper-slide>
 				<swiper-slide>
 					<v-card>
-						<v-card-media src="@/assets/images/test-news-img.jpg" height="180px" />
+						<v-card-media :src="require('@/assets/images/test-news-img.jpg')" height="180px" />
 						<v-card-title primary-title>
 							<h5>NULS Whitepaper Released</h5>
 						</v-card-title>
@@ -71,7 +71,7 @@
 				</swiper-slide>
 				<swiper-slide>
 					<v-card>
-						<v-card-media src="@/assets/images/test-news-img.jpg" height="180px" />
+						<v-card-media :src="require('@/assets/images/test-news-img.jpg')" height="180px" />
 						<v-card-title primary-title>
 							<h5>NULS Test-Net Upgrade: Version VO.9.10</h5>
 						</v-card-title>
@@ -79,7 +79,7 @@
 				</swiper-slide>
 				<swiper-slide>
 					<v-card>
-						<v-card-media src="@/assets/images/test-news-img.jpg" height="180px" />
+						<v-card-media :src="require('@/assets/images/test-news-img.jpg')" height="180px" />
 						<v-card-title primary-title>
 							<h5>NULS Token Swap Procedure</h5>
 						</v-card-title>
@@ -87,7 +87,7 @@
 				</swiper-slide>
 				<swiper-slide>
 					<v-card>
-						<v-card-media src="@/assets/images/test-news-img.jpg" height="180px" />
+						<v-card-media :src="require('@/assets/images/test-news-img.jpg')" height="180px" />
 						<v-card-title primary-title>
 							<h5>NULS Strike A Deal With MC Payment</h5>
 						</v-card-title>
@@ -95,7 +95,7 @@
 				</swiper-slide>
 				<swiper-slide>
 					<v-card>
-						<v-card-media src="@/assets/images/test-news-img.jpg" height="180px" />
+						<v-card-media :src="require('@/assets/images/test-news-img.jpg')" height="180px" />
 						<v-card-title primary-title>
 							<h5>A Community in Consensus, Collaboration & Competition</h5>
 						</v-card-title>

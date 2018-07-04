@@ -1,10 +1,14 @@
 <template>
-	<ItemsPro itemType="dApps" sm6 md3>
+	<ItemsPro
+		itemType="dApps"
+		sm6
+		md3
+	>
 		<template slot-scope="{ item, imageDirectory }">
 			<a :href="item.link" target="_blank">
 				<v-card-media
-						:src="`${imageDirectory}${item.image}`"
-						height="150px"
+					:src="`${imageDirectory}${item.image}`"
+					height="150px"
 				/>
 				<v-card-title primary-title>
 					<div>

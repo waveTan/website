@@ -195,7 +195,7 @@
 	}
 
 	.section.blue {
-		background: url('/static/images/wallet-section-bg.jpg') no-repeat center, linear-gradient(to right, #08265e 40%, #021234 60%);
+		background: url('~@/assets/images/wallet-section-bg.jpg') no-repeat center, linear-gradient(to right, #08265e 40%, #021234 60%);
 	}
 
 	@media screen and (max-width: 800px) {

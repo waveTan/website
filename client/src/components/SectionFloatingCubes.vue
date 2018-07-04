@@ -2,12 +2,12 @@
 	<div class="container">
 		<img
 			class="cube"
-			src="/static/images/animations/cube.svg"
+			src="@/assets/images/animations/cube.svg"
 			width="350px"
 		>
 		<img
 			class="cubes"
-			src="/static/images/animations/cubes.svg"
+			src="@/assets/images/animations/cubes.svg"
 			width="350px"
 		>
 	</div>

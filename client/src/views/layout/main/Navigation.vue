@@ -160,7 +160,7 @@
 	}
 
 	.logo {
-		background: url('/static/images/nuls-logo-white.png') no-repeat;
+		background: url('~@/assets/images/nuls-logo-white.png') no-repeat;
 		float: left;
 		width: 135px;
 		height: 53px;
@@ -248,7 +248,7 @@
 
 	.hamburger {
 		float: right;
-		background: url('/static/images/icons/hamburger.png') no-repeat center;
+		background: url('~@/assets/images/icons/hamburger.png') no-repeat center;
 		width: 27px;
 		height: 16px;
 		padding: 37px;
@@ -256,7 +256,7 @@
 
 	.close {
 		float: right;
-		background: url('/static/images/icons/close.png') no-repeat center;
+		background: url('~@/assets/images/icons/close.png') no-repeat center;
 		width: 21px;
 		height: 22px;
 		padding: 37px;

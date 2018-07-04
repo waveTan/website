@@ -13,7 +13,7 @@
 			>
 				{{ $t(title) }}
 				<img
-					:src="`/static/images/icons/arrow-down${arrow}.png`"
+					:src="`@/assets/images/icons/arrow-down${arrow}.png`"
 					alt=""
 					class="arrow"
 				>
@@ -21,7 +21,7 @@
 			<div v-else-if="title">
 				{{ $t(title) }}
 				<img
-					:src="`/static/images/icons/arrow-down${arrow}.png`"
+					:src="`@/assets/images/icons/arrow-down${arrow}.png`"
 					alt=""
 					class="arrow"
 				>

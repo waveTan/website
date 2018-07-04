@@ -22,13 +22,13 @@
 				<Button colour="transparent" routeLink="jobs"><I18N id="footer.social.joinUs" /></Button>
 			</div>
 			<div class="links">
-				<a href="#"><img src="/static/images/icons/slack.png" alt="Slack"></a>
-				<a href="#"><img src="/static/images/icons/gitter.png" alt="Gitter"></a>
-				<a href="#"><img src="/static/images/icons/steemit.png" alt="Steemit"></a>
-				<a href="#"><img src="/static/images/icons/discord.png" alt="Discord"></a>
-				<a href="#"><img src="/static/images/icons/reddit.png" alt="Reddit"></a>
-				<a href="#"><img src="/static/images/icons/github.png" alt="Github"></a>
-				<a href="#"><img src="/static/images/icons/telegram.png" alt="Telegram"></a>
+				<a href="#"><img src="@/assets/images/icons/slack.png" alt="Slack"></a>
+				<a href="#"><img src="@/assets/images/icons/gitter.png" alt="Gitter"></a>
+				<a href="#"><img src="@/assets/images/icons/steemit.png" alt="Steemit"></a>
+				<a href="#"><img src="@/assets/images/icons/discord.png" alt="Discord"></a>
+				<a href="#"><img src="@/assets/images/icons/reddit.png" alt="Reddit"></a>
+				<a href="#"><img src="@/assets/images/icons/github.png" alt="Github"></a>
+				<a href="#"><img src="@/assets/images/icons/telegram.png" alt="Telegram"></a>
 			</div>
 		</div>
 		<div class="container">
@@ -143,7 +143,7 @@
 	}
 
 	.footer {
-		background: url('/static/images/footer.png') bottom repeat-x, linear-gradient(-1deg, #04265f 0%, #021131 97%);
+		background: url('~@/assets/images/footer.png') bottom repeat-x, linear-gradient(-1deg, #04265f 0%, #021131 97%);
 		color: #fff;
 		letter-spacing: 0;
 		line-height: 23px;
@@ -244,7 +244,7 @@
 	}
 
 	.logo {
-		background: url('/static/images/nuls-footer-logo.png') no-repeat center;
+		background: url('~@/assets/images/nuls-footer-logo.png') no-repeat center;
 		width: 100%;
 		height: 75px;
 	}

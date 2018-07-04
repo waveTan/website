@@ -6,7 +6,7 @@
 					<slot name="header" />
 				</div>
 				<div class="close" @click="toggleOpen">
-					<img src="/static/images/icons/close-icon.png" alt="X" />
+					<img src="@/assets/images/icons/close-icon.png" alt="X" />
 				</div>
 			</v-card-title>
 			<v-card-text>

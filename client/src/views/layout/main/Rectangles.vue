@@ -79,7 +79,7 @@
 	}
 
 	.rectangle.grid {
-		background: url('/static/images/header-grid.png') repeat;
+		background: url('~@/assets/images/header-grid.png') repeat;
 	}
 
 	.rectangle.one {

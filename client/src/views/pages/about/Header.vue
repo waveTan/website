@@ -2,17 +2,17 @@
 	<div class="header">
 		<h1><I18N id="page.about.header.title" /></h1>
 		<div class="iconContainer">
-			<img src="/static/images/icons/arrow-down-green.png" alt="Play" >
+			<img src="@/assets/images/icons/arrow-down-green.png" alt="Play" >
 		</div>
 		<div class="container">
 			<img
 				class="slabs"
-				src="/static/images/animations/slabs.svg"
+				src="@/assets/images/animations/slabs.svg"
 				width="300px"
 			>
 			<img
 				class="cubes"
-				src="/static/images/animations/cubes-sync.svg"
+				src="@/assets/images/animations/cubes-sync.svg"
 				width="350px"
 			>
 		</div>

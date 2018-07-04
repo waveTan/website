@@ -3,18 +3,18 @@
 		<h1><I18N id="page.index.header.title" /></h1>
 		<div class="iconContainer">
 			<button class="play-button">
-				<img src="/static/images/icons/arrow-right-green.png" alt="Play" >
+				<img src="@/assets/images/icons/arrow-right-green.png" alt="Play" >
 			</button>
 		</div>
 		<div class="container">
 			<img
 				class="slabs"
-				src="/static/images/animations/slabs.svg"
+				src="@/assets/images/animations/slabs.svg"
 				width="300px"
 			>
 			<img
 				class="cubes"
-				src="/static/images/animations/cubes-sync.svg"
+				src="@/assets/images/animations/cubes-sync.svg"
 				width="350px"
 			>
 		</div>

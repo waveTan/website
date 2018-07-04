@@ -8,7 +8,7 @@
 		<slot />
 		<img
 			v-if="icon"
-			:src="`/static/images/icons/${icon}.png`"
+			:src="`@/assets/images/icons/${icon}.png`"
 			alt=""
 			class="arrow"
 		>

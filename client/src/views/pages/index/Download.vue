@@ -3,19 +3,19 @@
 		<div class="container images">
 			<img
 				class="top"
-				src="/static/images/animations/download-cube-small.svg"
+				src="@/assets/images/animations/download-cube-small.svg"
 				width="110px"
 			>
 			<div class="ipad" />
 			<div class="iphone" />
 			<img
 				class="bottom"
-				src="/static/images/animations/download-cube-large.svg"
+				src="@/assets/images/animations/download-cube-large.svg"
 				width="110px"
 			>
 			<img
 				class="middle"
-				src="/static/images/animations/download-cube-medium.svg"
+				src="@/assets/images/animations/download-cube-medium.svg"
 				width="110px"
 			>
 		</div>
@@ -74,7 +74,7 @@
 	}
 
 	.ipad {
-		background: url('/static/images/iPad.png') no-repeat;
+		background: url('~@/assets/images/iPad.png') no-repeat;
 		position: absolute;
 		/*left: 410px; !* 450 *!*/
 		top: 160px;
@@ -83,7 +83,7 @@
 	}
 
 	.iphone {
-		background: url('/static/images/iPhone.png') no-repeat;
+		background: url('~@/assets/images/iPhone.png') no-repeat;
 		position: absolute;
 		left: 440px; /* 880 */
 		top: 235px;
@@ -123,14 +123,14 @@
 	}
 
 	.mobile.images .ipad {
-		background-image: url('/static/images/iPad-small.png');
+		background-image: url('~@/assets/images/iPad-small.png');
 		width: 703px;
 		height: 330px;
 		top: 110px;
 	}
 
 	.mobile.images .iphone {
-		background-image: url('/static/images/iPhone-small.png');
+		background-image: url('~@/assets/images/iPhone-small.png');
 		width: 244px;
 		height: 320px;
 		top: 143px;

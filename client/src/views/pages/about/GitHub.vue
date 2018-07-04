@@ -12,7 +12,7 @@
 
 <style scoped>
 	.container {
-		background: url('/static/images/github-background.png') no-repeat center;
+		background: url('~@/assets/images/github-background.png') no-repeat center;
 		min-height: 570px;
 	}
 </style>

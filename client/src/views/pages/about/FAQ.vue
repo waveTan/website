@@ -5,49 +5,49 @@
 			<li>
 				<router-link :to="{ name: 'home' }">
 					<I18N id="page.about.faq.faq" />
-					<img src="/static/images/icons/arrow-right.png" alt="">
+					<img src="@/assets/images/icons/arrow-right.png" alt="">
 				</router-link>
 			</li>
 			<li>
 				<router-link :to="{ name: 'home' }">
 					<I18N id="page.about.faq.whitepaper" />
-					<img src="/static/images/icons/arrow-right.png" alt="">
+					<img src="@/assets/images/icons/arrow-right.png" alt="">
 				</router-link>
 			</li>
 			<li>
 				<router-link :to="{ name: 'home' }">
 					<I18N id="page.about.faq.yellowpaper" />
-					<img src="/static/images/icons/arrow-right.png" alt="">
+					<img src="@/assets/images/icons/arrow-right.png" alt="">
 				</router-link>
 			</li>
 			<li>
 				<router-link :to="{ name: 'home' }">
 					<I18N id="page.about.faq.poc" />
-					<img src="/static/images/icons/arrow-right.png" alt="">
+					<img src="@/assets/images/icons/arrow-right.png" alt="">
 				</router-link>
 			</li>
 			<li>
 				<router-link :to="{ name: 'home' }">
 					<I18N id="page.about.faq.modularization" />
-					<img src="/static/images/icons/arrow-right.png" alt="">
+					<img src="@/assets/images/icons/arrow-right.png" alt="">
 				</router-link>
 			</li>
 			<li>
 				<router-link :to="{ name: 'home' }">
 					<I18N id="page.about.faq.multiChainMechanism" />
-					<img src="/static/images/icons/arrow-right.png" alt="">
+					<img src="@/assets/images/icons/arrow-right.png" alt="">
 				</router-link>
 			</li>
 			<li>
 				<router-link :to="{ name: 'home' }">
 					<I18N id="page.about.faq.dAppDevelopment" />
-					<img src="/static/images/icons/arrow-right.png" alt="">
+					<img src="@/assets/images/icons/arrow-right.png" alt="">
 				</router-link>
 			</li>
 			<li>
 				<router-link :to="{ name: 'home' }">
 					<I18N id="page.about.faq.bounty" />
-					<img src="/static/images/icons/arrow-right.png" alt="">
+					<img src="@/assets/images/icons/arrow-right.png" alt="">
 				</router-link>
 			</li>
 		</ul>

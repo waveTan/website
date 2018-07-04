@@ -9,7 +9,7 @@
 					<p><I18N id="page.index.architecture.logicLayer.p2" /></p>
 					<div :class="{ active: isActive('logicLayer') }" class="mobile graph">
 						<img
-							src="/static/images/logic-layer.jpg"
+							src="@/assets/images/logic-layer.jpg"
 							alt=""
 							width="100%"
 						>
@@ -21,7 +21,7 @@
 					<p><I18N id="page.index.architecture.moduleLayer.p2" /></p>
 					<div :class="{ active: isActive('moduleLayer') }" class="mobile graph">
 						<img
-							src="/static/images/module-layer.jpg"
+							src="@/assets/images/module-layer.jpg"
 							alt=""
 							width="100%"
 						>
@@ -33,7 +33,7 @@
 					<p><I18N id="page.index.architecture.chainLayer.p2" /></p>
 					<div :class="{ active: isActive('chainLayer') }" class="mobile graph">
 						<img
-							src="/static/images/chain-layer.jpg"
+							src="@/assets/images/chain-layer.jpg"
 							alt=""
 							width="100%"
 						>
@@ -45,7 +45,7 @@
 					<p><I18N id="page.index.architecture.crossChain.p2" /></p>
 					<div :class="{ active: isActive('crossChain') }" class="mobile graph">
 						<img
-							src="/static/images/cross-chain.jpg"
+							src="@/assets/images/cross-chain.jpg"
 							alt=""
 							width="100%"
 						>
@@ -56,25 +56,25 @@
 				<div class="images">
 					<img
 						ref="img-logicLayer"
-						src="/static/images/logic-layer.jpg"
+						src="@/assets/images/logic-layer.jpg"
 						alt=""
 						width="100%"
 					>
 					<img
 						ref="img-moduleLayer"
-						src="/static/images/module-layer.jpg"
+						src="@/assets/images/module-layer.jpg"
 						alt=""
 						width="100%"
 					>
 					<img
 						ref="img-chainLayer"
-						src="/static/images/chain-layer.jpg"
+						src="@/assets/images/chain-layer.jpg"
 						alt=""
 						width="100%"
 					>
 					<img
 						ref="img-crossChain"
-						src="/static/images/cross-chain.jpg"
+						src="@/assets/images/cross-chain.jpg"
 						alt=""
 						width="100%"
 					>
@@ -152,7 +152,7 @@
 		/*width: 675px;*/
 		height: 607px;
 		width: 50%;
-		background: url('/static/images/architecture-background.png') 50% 0;
+		background: url('~@/assets/images/architecture-background.png') 50% 0;
 	}
 
 	.images {

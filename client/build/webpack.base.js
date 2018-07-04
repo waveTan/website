@@ -32,11 +32,11 @@ module.exports = {
 		hints: process.env.NODE_ENV === 'production' ? 'warning' : false
 	},
 	resolve: {
-		extensions: ['.js', '.vue', '.css', '.json'],
+		extensions: ['*', '.js', '.vue', '.css', '.json'],
 		alias: {
+			vue$: 'vue/dist/vue.esm.js',
 			'@': path.join(__dirname, '../src'),
-			__testConfig: path.join(__dirname, '../testConfig'),
-			assets: path.join(__dirname, '../static')
+			__testConfig: path.join(__dirname, '../testConfig')
 		},
 		modules: [
 			_.cwd('node_modules'),
@@ -49,24 +49,23 @@ module.exports = {
 		rules: [
 			{
 				test: /\.vue$/,
-				loaders: ['vue-loader']
+				loader: 'vue-loader'
 			},
 			{
 				test: /\.js$/,
-				loaders: ['babel-loader'],
+				loader: 'babel-loader',
 				exclude: [/node_modules/]
 			},
 			{
 				test: /\.es6$/,
-				loaders: ['babel-loader']
+				loader: 'babel-loader'
 			},
 			{
-				test: /\.(ico|jpg|png|gif|eot|otf|webp|ttf|woff|woff2)(\?.*)?$/,
-				loader: 'url-loader'
-			},
-			{
-				test: /\.svg$/,
-				loader: 'raw-loader'
+				test: /\.(png|jpg|gif|svg)$/,
+				loader: 'file-loader',
+				options: {
+					name: '[name].[ext]?[hash]'
+				}
 			}
 		]
 	},

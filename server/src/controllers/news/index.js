@@ -94,7 +94,7 @@ const search = async (req, res) =>
 const item = async (req, res) =>
 {
 	const db = new Database();
-	const { item } = req.params;
+	const { id } = req.params;
 	await db.init();
 
 	const [rows] = await db.connection.execute(`
@@ -104,18 +104,19 @@ const item = async (req, res) =>
 			d.en_description,
 			d.zh_title,
 			d.zh_description,
-			d.active,
+			d.created_at,
 			u.url AS image
 		FROM news AS d
 		LEFT JOIN upload_file_morph AS m ON m.related_type = "news" AND m.related_id = d.id
 		LEFT JOIN upload_file AS u ON m.upload_file_id = u.id
 		WHERE d.id = ?
+		AND d.active = 1
 		LIMIT 1
-		`, [item]);
+		`, [id]);
 
 	I18N.transformQueryResults(rows, req.get('i18n'));
 
-	res.status(200).json(rows);
+	res.status(200).json(rows[0]);
 };
 
 module.exports = {

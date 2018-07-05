@@ -1,11 +1,11 @@
 <template>
 	<div class="header">
 		<h1><I18N id="page.index.header.title" /></h1>
-		<div class="iconContainer">
-			<button class="play-button">
-				<img src="@/assets/images/icons/arrow-right-green.png" alt="Play" >
-			</button>
-		</div>
+		<!--<div class="iconContainer">-->
+			<!--<button class="play-button">-->
+				<!--<img src="@/assets/images/icons/arrow-right-green.png" alt="Play" >-->
+			<!--</button>-->
+		<!--</div>-->
 		<div class="container">
 			<img
 				class="slabs"
@@ -35,7 +35,7 @@
 	}
 
 	.container {
-		margin-top: 100px;
+		margin-top: 70px;
 	}
 
 	img.slabs {

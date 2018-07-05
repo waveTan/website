@@ -23,7 +23,7 @@
     "knex": "latest",
     "lodash": "4.x.x",
     "mysql": "2.15.0",
-    "strapi": "3.0.0-alpha.12.5",
+    "strapi": "3.0.0-alpha.12.6",
     "strapi-bookshelf": "3.0.0-alpha.12.5",
     "strapi-knex": "3.0.0-alpha.12.5"
   },

@@ -107,7 +107,7 @@ const actions = {
 
 			const { data } = await get(`${type}/item/${id}`);
 
-			commit('SET_APP', { type: state.type, locale: rootGetters['i18n/locale'], data });
+			commit('SET_APP', { type, locale: rootGetters['i18n/locale'], data });
 			commit('TOGGLE_LOADING');
 		}
 
@@ -166,7 +166,12 @@ const getters = {
 
 		return state.searchResults.slice((page - 1) * state.itemsPerPage, ((page - 1) * state.itemsPerPage) + state.itemsPerPage);
 	},
-	getItem: (state, getters, rootState, rootGetters) => (type, id) => state.fullItems[type][rootGetters['i18n/locale']][id],
+	getItem: (state, getters, rootState, rootGetters) => (type, id) =>
+	{
+		if(!state.fullItems[type] || !state.fullItems[type][rootGetters['i18n/locale']]) return null;
+
+		return state.fullItems[type][rootGetters['i18n/locale']][id];
+	},
 	getLoading: (state) => state.loading,
 	getTotalItems: (state) => (type) => state.totalItems[type],
 	itemsPerPage: (state) => state.itemsPerPage

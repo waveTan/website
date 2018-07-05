@@ -70,17 +70,19 @@ const routeConfig = [
 	},
 	{
 		name: 'newsItem',
-		path: '/news/:id',
+		path: '/news/:id/:title',
 		component: NewsAndAnnouncementsItem,
 		props: {
+			routerName: 'newsItem',
 			category: 'news'
 		}
 	},
 	{
 		name: 'announcementItem',
-		path: '/announcements/:id',
+		path: '/announcements/:id/:title',
 		component: NewsAndAnnouncementsItem,
 		props: {
+			routerName: 'announcementItem',
 			category: 'announcements'
 		}
 	},

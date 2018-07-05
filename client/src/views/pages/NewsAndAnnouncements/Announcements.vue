@@ -3,7 +3,7 @@
 		<HeaderMeta title="page.announcements.pageTitle" />
 		<ItemsPro itemType="announcements" sm12>
 			<template slot-scope="{ item, imageDirectory }">
-				<router-link :to="{ name: 'announcementItem', params: { id: item.id } }">
+				<router-link :to="{ name: 'announcementItem', params: { id: item.id, title: item.title } }">
 					<v-card-title primary-title>
 						<h3>{{ item.title }}</h3>
 						<p class="date">{{ createdDate(item.created_at) }}</p>

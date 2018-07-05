@@ -3,7 +3,7 @@
 		<HeaderMeta title="page.news.pageTitle" />
 		<ItemsPro itemType="news" sm12>
 			<template slot-scope="{ item, imageDirectory }">
-				<router-link :to="{ name: 'newsItem', params: { id: item.id } }">
+				<router-link :to="{ name: 'newsItem', params: { id: item.id, title: item.title } }">
 					<v-container fluid>
 						<v-layout row>
 							<v-flex xs7>

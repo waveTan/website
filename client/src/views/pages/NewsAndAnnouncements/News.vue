@@ -3,23 +3,25 @@
 		<HeaderMeta title="page.news.pageTitle" />
 		<ItemsPro itemType="news" sm12>
 			<template slot-scope="{ item, imageDirectory }">
-				<v-container fluid>
-					<v-layout row>
-						<v-flex xs7>
-							<div class="details">
-								<h2>{{ item.title }}</h2>
-								<p>{{ item.description }}</p>
-							</div>
-						</v-flex>
-						<v-flex xs5 class="image">
-							<v-card-media
-								:src="`${imageDirectory}${item.image}`"
-								height="200px"
-								contain
-							/>
-						</v-flex>
-					</v-layout>
-				</v-container>
+				<router-link :to="{ name: 'newsItem', params: { id: item.id } }">
+					<v-container fluid>
+						<v-layout row>
+							<v-flex xs7>
+								<div class="details">
+									<h2>{{ item.title }}</h2>
+									<p>{{ item.description }}</p>
+								</div>
+							</v-flex>
+							<v-flex xs5 class="image">
+								<v-card-media
+									:src="`${imageDirectory}${item.image}`"
+									height="200px"
+									contain
+								/>
+							</v-flex>
+						</v-layout>
+					</v-container>
+				</router-link>
 			</template>
 		</ItemsPro>
 	</div>
@@ -32,7 +34,7 @@
 		components: {
 			ItemsPro
 		}
-	}
+	};
 </script>
 
 <style>

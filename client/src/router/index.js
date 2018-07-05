@@ -11,6 +11,7 @@ import Team from '@/views/pages/Team';
 import Jobs from '@/views/pages/Jobs';
 import Contact from '@/views/pages/Contact';
 import NewsAndAnnouncements from '@/views/pages/NewsAndAnnouncements';
+import NewsAndAnnouncementsItem from '@/views/pages/NewsAndAnnouncements/Item';
 
 Vue.use(Router);
 
@@ -54,12 +55,31 @@ const routeConfig = [
 	{
 		name: 'news',
 		path: '/news',
-		component: NewsAndAnnouncements
+		component: NewsAndAnnouncements,
+		props: {
+			category: 'news'
+		}
 	},
 	{
 		name: 'announcements',
 		path: '/announcements',
 		component: NewsAndAnnouncements,
+		props: {
+			category: 'announcements'
+		}
+	},
+	{
+		name: 'newsItem',
+		path: '/news/:id',
+		component: NewsAndAnnouncementsItem,
+		props: {
+			category: 'news'
+		}
+	},
+	{
+		name: 'announcementItem',
+		path: '/announcements/:id',
+		component: NewsAndAnnouncementsItem,
 		props: {
 			category: 'announcements'
 		}

@@ -3,12 +3,12 @@
 		<HeaderMeta title="page.announcements.pageTitle" />
 		<ItemsPro itemType="announcements" sm12>
 			<template slot-scope="{ item, imageDirectory }">
-				<a :href="item.link" target="_blank">
+				<router-link :to="{ name: 'announcementItem', params: { id: item.id } }">
 					<v-card-title primary-title>
 						<h3>{{ item.title }}</h3>
 						<p class="date">{{ createdDate(item.created_at) }}</p>
 					</v-card-title>
-				</a>
+				</router-link>
 			</template>
 		</ItemsPro>
 	</div>
@@ -28,7 +28,7 @@
 				return moment(date).format('YYYY-MM-DD');
 			}
 		}
-	}
+	};
 </script>
 
 <style>

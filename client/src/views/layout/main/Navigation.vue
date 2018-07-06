@@ -7,7 +7,7 @@
 				<div class="navigation">
 					<ul>
 						<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.home" /></router-link></li>
-						<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.wallet" /></router-link></li>
+						<li><router-link :to="{ name: 'wallet' }"><I18N id="header.navigation.wallet" /></router-link></li>
 						<li><router-link :to="{ name: 'dApps' }"><I18N id="header.navigation.dApps" /></router-link></li>
 						<li><router-link :to="{ name: 'documents' }"><I18N id="header.navigation.documents" /></router-link></li>
 						<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.blockchainExplorer" /></router-link></li>
@@ -35,7 +35,7 @@
 				<div class="navigation">
 					<ul>
 						<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.home" /></router-link></li>
-						<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.wallet" /></router-link></li>
+						<li><router-link :to="{ name: 'wallet' }"><I18N id="header.navigation.wallet" /></router-link></li>
 						<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.blockchainExplorer" /></router-link></li>
 						<li>
 							<router-link :to="{ name: 'home' }">
@@ -65,7 +65,7 @@
 					<div>
 						<ul>
 							<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.home" /></router-link></li>
-							<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.wallet" /></router-link></li>
+							<li><router-link :to="{ name: 'wallet' }"><I18N id="header.navigation.wallet" /></router-link></li>
 							<li><router-link :to="{ name: 'dApps' }"><I18N id="header.navigation.dApps" /></router-link></li>
 							<li><router-link :to="{ name: 'documents' }"><I18N id="header.navigation.documents" /></router-link></li>
 							<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.blockchainExplorer" /></router-link></li>

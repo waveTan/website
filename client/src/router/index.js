@@ -14,6 +14,7 @@ import Contact from '@/views/pages/Contact';
 import NewsAndAnnouncements from '@/views/pages/NewsAndAnnouncements';
 import NewsAndAnnouncementsItem from '@/views/pages/NewsAndAnnouncements/Item';
 import Documents from '@/views/pages/Documents';
+import Wallet from '@/views/pages/Wallet';
 
 Vue.use(Router);
 
@@ -97,6 +98,11 @@ const routeConfig = [
 		name: 'documents',
 		path: '/documents',
 		component: Documents
+	},
+	{
+		name: 'wallet',
+		path: '/wallet',
+		component: Wallet
 	},
 	{
 		name: 'legal.terms',

@@ -1,9 +1,7 @@
 <template>
 	<div class="page">
 		<HeaderMeta title="page.index.pageTitle" />
-		<HeaderLayout whiteBackground>
-			<Header />
-		</HeaderLayout>
+		<HeaderLayout whiteBackground />
 		<div class="section">
 			<Download :padding="false" />
 		</div>

@@ -20,23 +20,23 @@
       "serialNumber": {
         "appearance": ""
       },
+      "link": {
+        "appearance": ""
+      },
       "en_title": {
         "appearance": ""
       },
       "en_description": {
         "appearance": ""
       },
-      "link": {
-        "appearance": ""
+      "en_content": {
+        "appearance": "WYSIWYG"
       },
       "zh_title": {
         "appearance": ""
       },
       "zh_description": {
         "appearance": ""
-      },
-      "en_content": {
-        "appearance": "WYSIWYG"
       },
       "zh_content": {
         "appearance": "WYSIWYG"
@@ -148,13 +148,13 @@
         "appearance": ""
       },
       "en_description": {
-        "appearance": "WYSIWYG"
+        "appearance": ""
       },
       "zh_title": {
         "appearance": ""
       },
       "zh_description": {
-        "appearance": "WYSIWYG"
+        "appearance": ""
       },
       "en_content": {
         "appearance": "WYSIWYG"

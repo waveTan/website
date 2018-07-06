@@ -15,6 +15,23 @@
       "unique": true,
       "type": "integer"
     },
+		"category": {
+			"type": "enumeration",
+			"enum": [
+				"developer",
+				"operation",
+				"advisor"
+			],
+			"required": true
+		},
+		"linkedin": {
+			"type": "string"
+		},
+		"image": {
+			"model": "file",
+			"via": "related",
+			"plugin": "upload"
+		},
     "en_name": {
       "type": "string",
       "required": true
@@ -26,23 +43,6 @@
     "en_content": {
       "type": "text",
       "required": true
-    },
-    "linkedin": {
-      "type": "string"
-    },
-    "category": {
-      "type": "enumeration",
-      "enum": [
-        "developer",
-        "operation",
-        "advisor"
-      ],
-      "required": true
-    },
-    "image": {
-      "model": "file",
-      "via": "related",
-      "plugin": "upload"
     },
     "zh_name": {
       "type": "string"

@@ -13,6 +13,7 @@ import Jobs from '@/views/pages/Jobs';
 import Contact from '@/views/pages/Contact';
 import NewsAndAnnouncements from '@/views/pages/NewsAndAnnouncements';
 import NewsAndAnnouncementsItem from '@/views/pages/NewsAndAnnouncements/Item';
+import Documents from '@/views/pages/Documents';
 
 Vue.use(Router);
 
@@ -93,6 +94,11 @@ const routeConfig = [
 		}
 	},
 	{
+		name: 'documents',
+		path: '/documents',
+		component: Documents
+	},
+	{
 		name: 'legal.terms',
 		path: '/legal/terms',
 		component: LegalTerms
@@ -110,14 +116,8 @@ const routeConfig = [
 
 const router = new Router({
 	mode: 'history',
+	scrollBehavior: () => ({ x: 0, y: 0 }),
 	routes: routeConfig
-});
-
-router.beforeEach(async (to, from, next) =>
-{
-	// document.title = to.meta.title(to);
-	window.scrollTo(0, 0);
-	next();
 });
 
 export default router;

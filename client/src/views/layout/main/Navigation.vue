@@ -9,7 +9,7 @@
 						<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.home" /></router-link></li>
 						<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.wallet" /></router-link></li>
 						<li><router-link :to="{ name: 'dApps' }"><I18N id="header.navigation.dApps" /></router-link></li>
-						<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.documents" /></router-link></li>
+						<li><router-link :to="{ name: 'documents' }"><I18N id="header.navigation.documents" /></router-link></li>
 						<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.blockchainExplorer" /></router-link></li>
 						<li>
 							<router-link :to="{ name: 'home' }">
@@ -43,7 +43,7 @@
 									:useButton="false"
 									:items="[
 										{ title: 'header.navigation.dApps', link: 'dApps' },
-										{ title: 'header.navigation.documents', link: 'home' },
+										{ title: 'header.navigation.documents', link: 'documents' },
 										{ title: 'header.navigation.whatIsNuls', link: 'about' },
 										{ title: 'header.navigation.team', link: 'team' },
 										{ title: 'header.navigation.partners', link: 'partners' },
@@ -67,7 +67,7 @@
 							<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.home" /></router-link></li>
 							<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.wallet" /></router-link></li>
 							<li><router-link :to="{ name: 'dApps' }"><I18N id="header.navigation.dApps" /></router-link></li>
-							<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.documents" /></router-link></li>
+							<li><router-link :to="{ name: 'documents' }"><I18N id="header.navigation.documents" /></router-link></li>
 							<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.blockchainExplorer" /></router-link></li>
 							<li>
 								<router-link :to="{ name: 'home' }">

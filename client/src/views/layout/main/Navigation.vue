@@ -166,6 +166,10 @@
 		margin-top: 10px;
 	}
 
+	.whiteBackground .logo {
+		background-image: url('~@/assets/images/nuls-logo-black.png');
+	}
+
 	a {
 		border: none;
 	}

@@ -194,5 +194,31 @@
         "appearance": "WYSIWYG"
       }
     }
+  },
+  "documentCategories": {
+    "attributes": {
+      "en_title": {
+        "appearance": ""
+      },
+      "zh_title": {
+        "appearance": ""
+      }
+    }
+  },
+  "documents": {
+    "attributes": {
+      "en_title": {
+        "appearance": ""
+      },
+      "zh_title": {
+        "appearance": ""
+      },
+      "zh_content": {
+        "appearance": "WYSIWYG"
+      },
+      "en_content": {
+        "appearance": "WYSIWYG"
+      }
+    }
   }
 }

@@ -118,7 +118,7 @@ const item = async (req, res) =>
 		FROM dapps AS d
 		LEFT JOIN upload_file_morph AS m ON m.related_type = "dapps" AND m.related_id = d.id
 		LEFT JOIN upload_file AS u ON m.upload_file_id = u.id
-		WHERE d.id = ?
+		WHERE d.id = ? AND d.active = 1
 		LIMIT 1
 		`, [item]);
 

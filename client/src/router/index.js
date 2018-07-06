@@ -7,6 +7,7 @@ import Index from '@/views/pages/Index';
 import About from '@/views/pages/About';
 import Partners from '@/views/pages/Partners';
 import DApps from '@/views/pages/DApps';
+import DAppItem from '@/views/pages/dApps/Item';
 import Team from '@/views/pages/Team';
 import Jobs from '@/views/pages/Jobs';
 import Contact from '@/views/pages/Contact';
@@ -36,6 +37,11 @@ const routeConfig = [
 		name: 'dApps',
 		path: '/dApps',
 		component: DApps
+	},
+	{
+		name: 'dAppItem',
+		path: '/dApps/:id/:title',
+		component: DAppItem
 	},
 	{
 		name: 'team',

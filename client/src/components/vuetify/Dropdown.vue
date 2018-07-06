@@ -13,7 +13,7 @@
 			>
 				{{ $t(title) }}
 				<img
-					:src="`@/assets/images/icons/arrow-down${arrow}.png`"
+					:src="imagePath"
 					alt=""
 					class="arrow"
 				>
@@ -21,7 +21,7 @@
 			<div v-else-if="title">
 				{{ $t(title) }}
 				<img
-					:src="`@/assets/images/icons/arrow-down${arrow}.png`"
+					:src="imagePath"
 					alt=""
 					class="arrow"
 				>
@@ -69,6 +69,12 @@
 			arrow: {
 				type: String,
 				default: ''
+			}
+		},
+		computed: {
+			imagePath()
+			{
+				return require(`@/assets/images/icons/arrow-down${this.arrow}.png`)
 			}
 		}
 	};

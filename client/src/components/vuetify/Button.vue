@@ -8,7 +8,7 @@
 		<slot />
 		<img
 			v-if="icon"
-			:src="`@/assets/images/icons/${icon}.png`"
+			:src="imagePath"
 			alt=""
 			class="arrow"
 		>
@@ -54,6 +54,12 @@
 			border: {
 				type: Boolean,
 				default: true
+			}
+		},
+		computed: {
+			imagePath()
+			{
+				return require(`@/assets/images/icons/${this.icon}.png`)
 			}
 		},
 		methods: {

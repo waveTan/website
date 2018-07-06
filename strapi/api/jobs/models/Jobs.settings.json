@@ -17,15 +17,15 @@
     "active": {
       "type": "boolean"
     },
-		"serialNumber": {
-			"unique": true,
-			"type": "integer"
-		},
+    "serialNumber": {
+      "unique": true,
+      "type": "integer"
+    },
     "en_title": {
       "type": "string",
       "required": true
     },
-    "en_description": {
+    "en_content": {
       "type": "text",
       "required": true
     },
@@ -35,7 +35,7 @@
     "zh_title": {
       "type": "string"
     },
-    "zh_description": {
+    "zh_content": {
       "type": "text"
     }
   }

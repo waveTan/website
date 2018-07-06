@@ -114,8 +114,28 @@ const item = async (req, res) =>
 	res.status(200).json(rows[0]);
 };
 
+const categories = async (req, res) =>
+{
+	const db = new Database();
+	await db.init();
+
+	const [rows] = await db.connection.execute(`
+		SELECT
+			d.id,
+			d.en_title,
+			d.zh_title,
+			d.parentCategory
+		FROM documentcategories AS d
+		`);
+
+	I18N.transformQueryResults(rows, req.get('i18n'));
+
+	res.status(200).json(rows);
+};
+
 module.exports = {
 	load,
+	categories,
 	search,
 	item
 };

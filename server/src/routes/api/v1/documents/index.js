@@ -4,6 +4,7 @@ const documents = require('@/controllers/documents');
 const router = express.Router();
 
 router.get('/', documents.load);
+router.get('/categories', documents.categories);
 router.post('/search/', documents.search);
 router.post('/search/:offsetId', documents.search);
 router.get('/item/:id', documents.item);

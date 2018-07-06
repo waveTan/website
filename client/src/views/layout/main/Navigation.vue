@@ -1,7 +1,7 @@
 <template>
 	<div :class="{ whiteBackground: whiteBackground }" class="containerParent">
 		<div class="container">
-			<SwitchLanguage />
+			<!--<SwitchLanguage />-->
 			<div class="logo" />
 			<div class="desktop">
 				<div class="navigation">
@@ -27,7 +27,7 @@
 								/>
 							</router-link>
 						</li>
-						<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.forum" /></router-link></li>
+						<!--<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.forum" /></router-link></li>-->
 					</ul>
 				</div>
 			</div>
@@ -48,8 +48,7 @@
 										{ title: 'header.navigation.team', link: 'team' },
 										{ title: 'header.navigation.partners', link: 'partners' },
 										{ title: 'header.navigation.joinUs', link: 'jobs' },
-										{ title: 'header.navigation.news', link: 'news' },
-										{ title: 'header.navigation.forum', link: 'home' }
+										{ title: 'header.navigation.news', link: 'news' }
 									]"
 									title="header.navigation.more"
 								/>
@@ -85,7 +84,7 @@
 									/>
 								</router-link>
 							</li>
-							<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.forum" /></router-link></li>
+							<!--<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.forum" /></router-link></li>-->
 						</ul>
 					</div>
 				</div>

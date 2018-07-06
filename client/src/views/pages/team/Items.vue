@@ -33,7 +33,7 @@
 					/>
 				</v-flex>
 				<v-flex lg7 md12>
-					<div>
+					<div class="dialogContent">
 						<h2>{{ dialogItem.name }}</h2>
 						<p class="jobTitle">{{ dialogItem.title }}</p>
 						<div v-html="compiledMarkdown" />
@@ -133,5 +133,9 @@
 		color: #445569;
 		letter-spacing: 0;
 		line-height: 29.12px;
+	}
+
+	.teamMember .dialogContent {
+		padding: 0 20px;
 	}
 </style>

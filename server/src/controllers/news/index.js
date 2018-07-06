@@ -14,9 +14,9 @@ const load = async (req, res) =>
 		SELECT
 			d.id,
 			d.en_title,
-			d.en_description,
+			d.en_content,
 			d.zh_title,
-			d.zh_description,
+			d.zh_content,
 			d.active,
 			u.url AS image
 		FROM news AS d
@@ -58,12 +58,14 @@ const search = async (req, res) =>
 			d.id,
 			d.en_title,
 			d.en_description,
+			d.en_content,
 			d.zh_title,
 			d.zh_description,
+			d.zh_content,
 			d.active,
 			u.url AS image,
 			MATCH (d.en_title, d.zh_title) AGAINST (? IN BOOLEAN MODE) AS title_relevance,
-			MATCH (d.en_title, d.en_description, d.zh_title, d.zh_description) AGAINST (? IN BOOLEAN MODE) AS relevance
+			MATCH (d.en_title, d.en_description, d.en_content, d.zh_title, d.zh_description, d.zh_content) AGAINST (? IN BOOLEAN MODE) AS relevance
 		FROM news AS d
 		LEFT JOIN upload_file_morph AS m ON m.related_type = "news" AND m.related_id = d.id
 		LEFT JOIN upload_file AS u ON m.upload_file_id = u.id
@@ -72,7 +74,7 @@ const search = async (req, res) =>
 			WHEN ? != 0 THEN d.id < ?
 			ELSE 1=1
 		END
-		AND MATCH (d.en_title, d.en_description, d.zh_title, d.zh_description) AGAINST (? IN BOOLEAN MODE)
+		AND MATCH (d.en_title, d.en_description, d.en_content, d.zh_title, d.zh_description, d.zh_content) AGAINST (? IN BOOLEAN MODE)
 		ORDER BY title_relevance DESC, relevance DESC
 		LIMIT ?
 		`, [searchQuery, searchQuery, offsetId, offsetId, searchQuery, resultsLimit]);
@@ -81,7 +83,7 @@ const search = async (req, res) =>
 	{
 		extra.count = await db.connection.execute(`
 			SELECT COUNT(d.id) AS count FROM news AS d
-			WHERE MATCH (d.en_title, d.en_description, d.zh_title, d.zh_description) AGAINST (? IN BOOLEAN MODE)
+			WHERE MATCH (d.en_title, d.en_description, d.en_content, d.zh_title, d.zh_description, d.zh_content) AGAINST (? IN BOOLEAN MODE)
 			`, [searchQuery]);
 		extra.count = extra.count[0][0].count;
 	}
@@ -102,8 +104,10 @@ const item = async (req, res) =>
 			d.id,
 			d.en_title,
 			d.en_description,
+			d.en_content,
 			d.zh_title,
 			d.zh_description,
+			d.zh_content,
 			d.created_at,
 			u.url AS image
 		FROM news AS d

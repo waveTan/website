@@ -14,9 +14,9 @@ const load = async (req, res) =>
 		SELECT
 			d.id,
 			d.en_title,
-			d.en_description,
+			d.en_content,
 			d.zh_title,
-			d.zh_description,
+			d.zh_content,
 			d.created_at
 		FROM announcements AS d
 		WHERE d.active = 1
@@ -54,19 +54,19 @@ const search = async (req, res) =>
 		SELECT
 			d.id,
 			d.en_title,
-			d.en_description,
+			d.en_content,
 			d.zh_title,
-			d.zh_description,
+			d.zh_content,
 			d.created_at,
 			MATCH (d.en_title, d.zh_title) AGAINST (? IN BOOLEAN MODE) AS title_relevance,
-			MATCH (d.en_title, d.en_description, d.zh_title, d.zh_description) AGAINST (? IN BOOLEAN MODE) AS relevance
+			MATCH (d.en_title, d.en_content, d.zh_title, d.zh_content) AGAINST (? IN BOOLEAN MODE) AS relevance
 		FROM announcements AS d
 		WHERE d.active = 1
 		AND CASE
 			WHEN ? != 0 THEN d.id < ?
 			ELSE 1=1
 		END
-		AND MATCH (d.en_title, d.en_description, d.zh_title, d.zh_description) AGAINST (? IN BOOLEAN MODE)
+		AND MATCH (d.en_title, d.en_content, d.zh_title, d.zh_content) AGAINST (? IN BOOLEAN MODE)
 		ORDER BY title_relevance DESC, relevance DESC
 		LIMIT ?
 		`, [searchQuery, searchQuery, offsetId, offsetId, searchQuery, resultsLimit]);
@@ -75,7 +75,7 @@ const search = async (req, res) =>
 	{
 		extra.count = await db.connection.execute(`
 			SELECT COUNT(d.id) AS count FROM announcements AS d
-			WHERE MATCH (d.en_title, d.en_description, d.zh_title, d.zh_description) AGAINST (? IN BOOLEAN MODE)
+			WHERE MATCH (d.en_title, d.en_content, d.zh_title, d.zh_content) AGAINST (? IN BOOLEAN MODE)
 			`, [searchQuery]);
 		extra.count = extra.count[0][0].count;
 	}
@@ -95,9 +95,9 @@ const item = async (req, res) =>
 		SELECT
 			d.id,
 			d.en_title,
-			d.en_description,
+			d.en_content,
 			d.zh_title,
-			d.zh_description,
+			d.zh_content,
 			d.created_at
 		FROM announcements AS d
 		WHERE d.id = ?

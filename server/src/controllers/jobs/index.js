@@ -9,10 +9,10 @@ const getActive = async (req, res) =>
 	const [rows] = await db.connection.execute(`
 		SELECT
 		    j.en_title,
-			j.en_description,
+			j.en_content,
 			j.contactEmailAddress,
 			j.zh_title,
-			j.zh_description
+			j.zh_content
 		FROM jobs AS j
 		WHERE j.active = 1
 		ORDER BY j.feature ASC, j.serialNumber DESC, j.id ASC

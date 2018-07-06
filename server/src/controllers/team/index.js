@@ -10,10 +10,10 @@ const getEverything = async (req, res) =>
 		SELECT
 			t.en_name,
 			t.en_title,
-			t.en_description,
+			t.en_content,
 			t.zh_name,
 			t.zh_title,
-			t.zh_description,
+			t.zh_content,
 			t.linkedIn,
 			t.category,
 			u.url AS image

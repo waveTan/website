@@ -1,5 +1,5 @@
 <template>
-	<div class="main">
+	<div :class="{ main: padding, removeTopMargin: !padding }">
 		<div class="container images">
 			<img
 				class="top"
@@ -63,6 +63,12 @@
 		components: {
 			Dropdown,
 			Button
+		},
+		props: {
+			padding: {
+				type: Boolean,
+				default: true
+			}
 		}
 	};
 </script>
@@ -70,7 +76,6 @@
 <style scoped>
 	h3 {
 		color: #fff;
-		margin-top: 190px;
 	}
 
 	.ipad {
@@ -98,9 +103,14 @@
 		top: 30px;
 	}
 
+	.removeTopMargin {
+		margin-top: -156px;
+		margin-bottom: 310px;
+	}
+
 	.container.information {
 		position: relative;
-		top: -800px;
+		top: -610px;
 		z-index: 2;
 	}
 

@@ -100,7 +100,7 @@ const search = async (req, res) =>
 const item = async (req, res) =>
 {
 	const db = new Database();
-	const { item } = req.params;
+	const { id } = req.params;
 	await db.init();
 
 	const [rows] = await db.connection.execute(`
@@ -120,11 +120,11 @@ const item = async (req, res) =>
 		LEFT JOIN upload_file AS u ON m.upload_file_id = u.id
 		WHERE d.id = ? AND d.active = 1
 		LIMIT 1
-		`, [item]);
+		`, [id]);
 
 	I18N.transformQueryResults(rows, req.get('i18n'));
 
-	res.status(200).json(rows);
+	res.status(200).json(rows[0]);
 };
 
 module.exports = {

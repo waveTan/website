@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<HeaderLayout :whiteBackground="true" />
+		<HeaderLayout whiteBackground />
 		<Header :category="category" />
 		<News v-if="category === 'news'" />
 		<Announcements v-else />

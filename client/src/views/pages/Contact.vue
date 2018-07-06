@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<HeaderMeta title="page.contact.pageTitle" />
-		<HeaderLayout :whiteBackground="true" />
+		<HeaderLayout whiteBackground />
 		<Header />
 		<HereToHelp />
 		<Form />

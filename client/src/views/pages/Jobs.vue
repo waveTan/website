@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<HeaderMeta title="page.jobs.pageTitle" />
-		<HeaderLayout :whiteBackground="true" />
+		<HeaderLayout whiteBackground />
 		<Header />
 		<JobsBoard />
 	</div>

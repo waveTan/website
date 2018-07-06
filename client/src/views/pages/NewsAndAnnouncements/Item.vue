@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<HeaderLayout :whiteBackground="true" />
+		<HeaderLayout whiteBackground />
 		<Header :category="category" :title="title " />
 		<div v-if="loading || !item" class="center">
 			<v-progress-circular

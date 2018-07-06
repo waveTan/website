@@ -11,6 +11,9 @@
     "comment": ""
   },
   "attributes": {
+    "active": {
+      "type": "boolean"
+    },
     "documentcategories": {
       "model": "documentcategories"
     },
@@ -23,10 +26,10 @@
       "type": "string",
       "required": true
     },
-		"en_content": {
-			"type": "text",
-			"required": true
-		},
+    "en_content": {
+      "type": "text",
+      "required": true
+    },
     "zh_title": {
       "type": "string"
     },

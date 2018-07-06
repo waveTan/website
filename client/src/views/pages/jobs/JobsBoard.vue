@@ -8,7 +8,7 @@
 						<h4>{{ job.title }}</h4>
 						<span class="readMore"><I18N id="page.jobs.readMore" /></span>
 					</template>
-					<div v-html="compiledMarkdown(job.description)" />
+					<div v-html="compiledMarkdown(job.content)" />
 					<div slot="footer" class="footer">
 						<I18N id="page.jobs.sendResume" />: <a class="email green" :href="`mailto:${job.contactEmailAddress}`">{{ job.contactEmailAddress }}</a>
 					</div>

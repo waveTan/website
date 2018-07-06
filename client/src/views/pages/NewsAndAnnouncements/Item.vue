@@ -70,7 +70,7 @@
 			},
 			compiledMarkdown()
 			{
-				return marked(this.item.description, { sanitize: true })
+				return marked(this.item.content, { sanitize: true })
 			}
 		}
 	};

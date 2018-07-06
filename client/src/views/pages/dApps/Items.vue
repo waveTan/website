@@ -5,7 +5,7 @@
 		md3
 	>
 		<template slot-scope="{ item, imageDirectory }">
-			<a :href="item.link" target="_blank">
+			<router-link :to="{ name: 'dAppItem', params: { id: item.id, title: item.title } }">
 				<v-card-media
 					:src="`${imageDirectory}${item.image}`"
 					height="150px"
@@ -21,7 +21,7 @@
 						</p>
 					</div>
 				</v-card-title>
-			</a>
+			</router-link>
 		</template>
 	</ItemsPro>
 </template>

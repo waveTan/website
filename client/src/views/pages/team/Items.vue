@@ -80,7 +80,7 @@
 			},
 			compiledMarkdown()
 			{
-				return marked(this.dialogItem.description, { sanitize: true })
+				return marked(this.dialogItem.content, { sanitize: true })
 			}
 		},
 		methods: {

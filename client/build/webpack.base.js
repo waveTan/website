@@ -82,13 +82,13 @@ module.exports = {
 			filename: _.outputIndexPath
 		}),
 		new webpack.LoaderOptionsPlugin(_.loadersOptions()),
-		new CopyWebpackPlugin([
-			{
-				from: _.cwd('./static'),
-				// to the roor of dist path
-				to: './'
-			}
-		]),
+		// new CopyWebpackPlugin([
+		// 	{
+		// 		from: _.cwd('./static'),
+		// 		// to the roor of dist path
+		// 		to: './'
+		// 	}
+		// ]),
 		// new PreloadWebpackPlugin(),
 		// new webpack.DefinePlugin({
 		// 	URL: JSON.stringify(env.URL) || 'http://localhost:4000/',

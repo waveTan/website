@@ -233,7 +233,8 @@
         }
       },
       "latestHappenings": {
-        "title": "Latest Happenings"
+        "title": "Latest Happenings",
+        "more": "More..."
       }
     },
 		"about": {

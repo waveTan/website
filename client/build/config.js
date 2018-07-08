@@ -12,7 +12,7 @@ module.exports = {
 	// otherwise only set to absolute path when you're using history mode
 	publicPath: './',
 	electron: false,
-	assetsSubDirectory: 'static',
+	assetsSubDirectory: 'src/assets',
 	assetsPublicPath: '/',
 	useEslint: true,
 	showEslintErrorsInOverlay: true

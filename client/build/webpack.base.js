@@ -34,7 +34,7 @@ module.exports = {
 		extensions: ['*', '.js', '.vue', '.css', '.json'],
 		alias: {
 			vue$: 'vue/dist/vue.esm.js',
-			[process.env.test]: path.join(__dirname, '../src'),
+			'@': path.join(__dirname, '../src'),
 			__testConfig: path.join(__dirname, '../testConfig')
 		},
 		modules: [

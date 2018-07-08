@@ -1,3 +1,4 @@
+import Vue from 'vue';
 import { get, post } from '@/utils/api';
 
 const state = {
@@ -18,12 +19,12 @@ const mutations = {
 	{
 		if(!state.items[type])
 		{
-			state.items[type] = {};
+			Vue.set(state.items, type, {});
 		}
 
 		if(!state.items[type][locale])
 		{
-			state.items[type][locale] = [];
+			Vue.set(state.items[type], locale, []);
 		}
 
 		state.items[type][locale].push(...data);
@@ -32,19 +33,19 @@ const mutations = {
 	{
 		if(!state.fullItems[type])
 		{
-			state.fullItems[type] = {};
+			Vue.set(state.fullItems, type, {});
 		}
 
 		if(!state.fullItems[type][locale])
 		{
-			state.fullItems[type][locale] = [];
+			Vue.set(state.fullItems[type], locale, []);
 		}
 
 		state.fullItems[type][locale][data.id] = data;
 	},
 	SET_TOTAL_APPS(state, { type, count })
 	{
-		state.totalItems[type] = count;
+		Vue.set(state.totalItems, type, count);
 	},
 	TOGGLE_LOADING(state)
 	{
@@ -57,7 +58,7 @@ const mutations = {
 	SET_SEARCH_RESULTS(state, { locale, data })
 	{
 		state.searchResultsLanguage = locale;
-		state.searchResults = data;
+		Vue.set(state, 'searchResults', data);
 	},
 	SET_SEARCH_QUERY(state, query)
 	{

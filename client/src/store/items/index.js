@@ -1,3 +1,4 @@
+import Vue from 'vue';
 import { get } from '@/utils/api';
 
 const state = {
@@ -11,7 +12,7 @@ const mutations = {
 	{
 		if(!state.items[locale])
 		{
-			state.items[locale] = {};
+			Vue.set(state.items, locale, {});
 		}
 
 		if(state.items[locale][path])
@@ -20,7 +21,7 @@ const mutations = {
 		}
 		else
 		{
-			state.items[locale][path] = data;
+			Vue.set(state.items[locale], path, data);
 		}
 	},
 	SET_ITEM(state, { locale, path, data })

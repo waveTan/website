@@ -364,6 +364,10 @@
 		},
     "faq": {
       "pageTitle": "FAQ",
+      "header": {
+        "title": "FAQ",
+        "meta": "Frequently Asked Questions"
+      },
       "comingSoon": "Coming soon..."
     }
   },

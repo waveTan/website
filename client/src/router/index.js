@@ -13,6 +13,7 @@ import Jobs from '@/views/pages/Jobs';
 import Contact from '@/views/pages/Contact';
 import NewsAndAnnouncements from '@/views/pages/NewsAndAnnouncements';
 import NewsAndAnnouncementsItem from '@/views/pages/NewsAndAnnouncements/Item';
+import FAQ from '@/views/pages/FAQ';
 
 Vue.use(Router);
 
@@ -91,6 +92,11 @@ const routeConfig = [
 			routerName: 'announcementItem',
 			category: 'announcements'
 		}
+	},
+	{
+		name: 'faq',
+		path: '/faq',
+		component: FAQ
 	},
 	{
 		name: 'legal.terms',

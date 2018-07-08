@@ -1,12 +1,19 @@
 <template>
-	$END$
+	<div>
+		<HeaderMeta title="page.jobs.pageTitle" />
+		<HeaderLayout>
+			<div class="header">
+				<div class="container">
+					<h1><I18N id="page.faq.header.title" /></h1>
+					<p class="centered"><I18N id="page.faq.header.meta" /></p>
+				</div>
+			</div>
+		</HeaderLayout>
+		<div class="container">
+			<p class="centered"><I18N id="page.faq.comingSoon" /></p>
+		</div>
+	</div>
 </template>
-
-<script>
-	export default {
-		name: 'f-a-q'
-	};
-</script>
 
 <style scoped>
 

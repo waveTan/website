@@ -14,6 +14,7 @@ import Contact from '@/views/pages/Contact';
 import NewsAndAnnouncements from '@/views/pages/NewsAndAnnouncements';
 import NewsAndAnnouncementsItem from '@/views/pages/NewsAndAnnouncements/Item';
 import FAQ from '@/views/pages/FAQ';
+import Papers from '@/views/pages/Papers';
 
 Vue.use(Router);
 
@@ -97,6 +98,11 @@ const routeConfig = [
 		name: 'faq',
 		path: '/faq',
 		component: FAQ
+	},
+	{
+		name: 'papers',
+		path: '/papers',
+		component: Papers
 	},
 	{
 		name: 'legal.terms',

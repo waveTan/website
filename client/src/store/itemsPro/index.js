@@ -6,7 +6,7 @@ const state = {
 	items: {},
 	fullItems: {},
 	totalItems: [],
-	itemsPerPage: 2, // This should be changed on the backend too -> `\server\src\controllers\dApps\index.js::resultsLimit`
+	itemsPerPage: 8, // This should be changed on the backend too -> `\server\src\controllers\dApps\index.js::resultsLimit`
 	searchResults: [],
 	searchResultsLanguage: '',
 	searchQuery: '',

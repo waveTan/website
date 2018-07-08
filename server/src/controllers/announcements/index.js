@@ -1,7 +1,7 @@
 const Database = require('@/models/Database');
 const I18N = require('@/models/I18N');
 
-const resultsLimit = 2; // This should be changed on the frontend too -> `\client\src\store\dApps\index.js::appsPerPage`
+const resultsLimit = 8; // This should be changed on the frontend too -> `\client\src\store\dApps\index.js::appsPerPage`
 
 const load = async (req, res) =>
 {

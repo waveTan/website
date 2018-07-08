@@ -3,103 +3,32 @@
 		<div class="container">
 			<h3><I18N id="page.index.latestHappenings.title" /></h3>
 		</div>
-		<div class="container">
+		<div v-if="pageLoading" class="section container">
+			<div class="centered">
+				<v-progress-circular class="centered" :size="50" indeterminate color="primary" />
+			</div>
+		</div>
+		<div v-else class="container">
 			<swiper :options="swiperOption">
-				<swiper-slide>
-					<v-card>
-						<v-card-media :src="require('@/assets/images/test-news-img.jpg')" height="180px" />
-						<v-card-title primary-title>
-							<h5>NULS mainnet will launch soon</h5>
-						</v-card-title>
-					</v-card>
+				<swiper-slide v-for="(item, i) in getItems" :key="i">
+					<router-link :to="{ name: 'newsItem', params: { id: item.id, title: item.title } }">
+						<v-card>
+							<v-card-media :src="`${imageDirectory}${item.image}`" height="180px" />
+							<v-card-title primary-title>
+								<h5>{{ item.title }}</h5>
+							</v-card-title>
+						</v-card>
+					</router-link>
 				</swiper-slide>
 				<swiper-slide>
-					<v-card>
-						<v-card-media :src="require('@/assets/images/test-news-img.jpg')" height="180px" />
-						<v-card-title primary-title>
-							<h5>NULS and Devery sign a strategic partnership in February 2018</h5>
-						</v-card-title>
-					</v-card>
-				</swiper-slide>
-				<swiper-slide>
-					<v-card>
-						<v-card-media :src="require('@/assets/images/test-news-img.jpg')" height="180px" />
-						<v-card-title primary-title>
-							<h5>NULS Yellowpaper Released</h5>
-						</v-card-title>
-					</v-card>
-				</swiper-slide>
-				<swiper-slide>
-					<v-card>
-						<v-card-media :src="require('@/assets/images/test-news-img.jpg')" height="180px" />
-						<v-card-title primary-title>
-							<h5>NULS Whitepaper Released</h5>
-						</v-card-title>
-					</v-card>
-				</swiper-slide>
-				<swiper-slide>
-					<v-card>
-						<v-card-media :src="require('@/assets/images/test-news-img.jpg')" height="180px" />
-						<v-card-title primary-title>
-							<h5>NULS and bitshares signed a strategic agreement</h5>
-						</v-card-title>
-					</v-card>
-				</swiper-slide>
-				<swiper-slide>
-					<v-card>
-						<v-card-media :src="require('@/assets/images/test-news-img.jpg')" height="180px" />
-						<v-card-title primary-title>
-							<h5>NULS progress report</h5>
-						</v-card-title>
-					</v-card>
-				</swiper-slide>
-				<swiper-slide>
-					<v-card>
-						<v-card-media :src="require('@/assets/images/test-news-img.jpg')" height="180px" />
-						<v-card-title primary-title>
-							<h5>NULS Community Manager Opening</h5>
-						</v-card-title>
-					</v-card>
-				</swiper-slide>
-				<swiper-slide>
-					<v-card>
-						<v-card-media :src="require('@/assets/images/test-news-img.jpg')" height="180px" />
-						<v-card-title primary-title>
-							<h5>NULS Whitepaper Released</h5>
-						</v-card-title>
-					</v-card>
-				</swiper-slide>
-				<swiper-slide>
-					<v-card>
-						<v-card-media :src="require('@/assets/images/test-news-img.jpg')" height="180px" />
-						<v-card-title primary-title>
-							<h5>NULS Test-Net Upgrade: Version VO.9.10</h5>
-						</v-card-title>
-					</v-card>
-				</swiper-slide>
-				<swiper-slide>
-					<v-card>
-						<v-card-media :src="require('@/assets/images/test-news-img.jpg')" height="180px" />
-						<v-card-title primary-title>
-							<h5>NULS Token Swap Procedure</h5>
-						</v-card-title>
-					</v-card>
-				</swiper-slide>
-				<swiper-slide>
-					<v-card>
-						<v-card-media :src="require('@/assets/images/test-news-img.jpg')" height="180px" />
-						<v-card-title primary-title>
-							<h5>NULS Strike A Deal With MC Payment</h5>
-						</v-card-title>
-					</v-card>
-				</swiper-slide>
-				<swiper-slide>
-					<v-card>
-						<v-card-media :src="require('@/assets/images/test-news-img.jpg')" height="180px" />
-						<v-card-title primary-title>
-							<h5>A Community in Consensus, Collaboration & Competition</h5>
-						</v-card-title>
-					</v-card>
+					<router-link :to="{ name: 'news' }">
+						<v-card>
+							<v-card-media class="more" height="180px" />
+							<v-card-title primary-title>
+								<h5><I18N id="page.index.latestHappenings.more" /></h5>
+							</v-card-title>
+						</v-card>
+					</router-link>
 				</swiper-slide>
 				<div slot="pagination" class="swiper-pagination" />
 			</swiper>
@@ -120,8 +49,29 @@
 		data()
 		{
 			return {
-				swiperOption: swiperOption()
+				swiperOption: swiperOption(),
+				imageDirectory: this.$store.getters['items/strapiUrl']
 			};
+		},
+		computed: {
+			pageLoading()
+			{
+				return this.$store.getters['app/pageLoading'];
+			},
+			getItems()
+			{
+				if(!this.$store.getters['items/getItems']('news/latest'))
+				{
+					this.$store.dispatch('items/loadItems', 'news/latest');
+				}
+
+				if(!this.$store.getters['items/getItems']('news/latest'))
+				{
+					return [];
+				}
+
+				return this.$store.getters['items/getItems']('news/latest');
+			}
 		}
 	};
 </script>
@@ -145,5 +95,9 @@
 
 	.card {
 		border-radius: 8px;
+	}
+
+	.more {
+		background: url('~@/assets/images/news.jpg');
 	}
 </style>

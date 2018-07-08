@@ -12,20 +12,18 @@
 						<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.documents" /></router-link></li>
 						<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.blockchainExplorer" /></router-link></li>
 						<li>
-							<router-link :to="{ name: 'home' }">
-								<Dropdown
-									:useButton="false"
-									:items="[
-										{ title: 'header.navigation.whatIsNuls', link: 'about' },
-										{ title: 'header.navigation.team', link: 'team' },
-										{ title: 'header.navigation.partners', link: 'partners' },
-										{ title: 'header.navigation.joinUs', link: 'jobs' },
-										{ title: 'header.navigation.news', link: 'news' }
-									]"
-									title="header.navigation.about"
-									:arrow="whiteBackground ? '-black' : ''"
-								/>
-							</router-link>
+							<Dropdown
+								:useButton="false"
+								:items="[
+									{ title: 'header.navigation.whatIsNuls', link: 'about' },
+									{ title: 'header.navigation.team', link: 'team' },
+									{ title: 'header.navigation.partners', link: 'partners' },
+									{ title: 'header.navigation.joinUs', link: 'jobs' },
+									{ title: 'header.navigation.news', link: 'news' }
+								]"
+								title="header.navigation.about"
+								:arrow="whiteBackground ? '-black' : ''"
+							/>
 						</li>
 						<!--<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.forum" /></router-link></li>-->
 					</ul>
@@ -38,21 +36,19 @@
 						<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.wallet" /></router-link></li>
 						<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.blockchainExplorer" /></router-link></li>
 						<li>
-							<router-link :to="{ name: 'home' }">
-								<Dropdown
-									:useButton="false"
-									:items="[
-										{ title: 'header.navigation.dApps', link: 'dApps' },
-										{ title: 'header.navigation.documents', link: 'home' },
-										{ title: 'header.navigation.whatIsNuls', link: 'about' },
-										{ title: 'header.navigation.team', link: 'team' },
-										{ title: 'header.navigation.partners', link: 'partners' },
-										{ title: 'header.navigation.joinUs', link: 'jobs' },
-										{ title: 'header.navigation.news', link: 'news' }
-									]"
-									title="header.navigation.more"
-								/>
-							</router-link>
+							<Dropdown
+								:useButton="false"
+								:items="[
+									{ title: 'header.navigation.dApps', link: 'dApps' },
+									{ title: 'header.navigation.documents', link: 'home' },
+									{ title: 'header.navigation.whatIsNuls', link: 'about' },
+									{ title: 'header.navigation.team', link: 'team' },
+									{ title: 'header.navigation.partners', link: 'partners' },
+									{ title: 'header.navigation.joinUs', link: 'jobs' },
+									{ title: 'header.navigation.news', link: 'news' }
+								]"
+								title="header.navigation.more"
+							/>
 						</li>
 					</ul>
 				</div>
@@ -70,19 +66,17 @@
 							<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.documents" /></router-link></li>
 							<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.blockchainExplorer" /></router-link></li>
 							<li>
-								<router-link :to="{ name: 'home' }">
-									<Dropdown
-										:useButton="false"
-										:items="[
-											{ title: 'header.navigation.whatIsNuls', link: 'about' },
-											{ title: 'header.navigation.team', link: 'team' },
-											{ title: 'header.navigation.partners', link: 'partners' },
-											{ title: 'header.navigation.joinUs', link: 'jobs' },
-											{ title: 'header.navigation.news', link: 'news' }
-										]"
-										title="header.navigation.about"
-									/>
-								</router-link>
+								<Dropdown
+									:useButton="false"
+									:items="[
+										{ title: 'header.navigation.whatIsNuls', link: 'about' },
+										{ title: 'header.navigation.team', link: 'team' },
+										{ title: 'header.navigation.partners', link: 'partners' },
+										{ title: 'header.navigation.joinUs', link: 'jobs' },
+										{ title: 'header.navigation.news', link: 'news' }
+									]"
+									title="header.navigation.about"
+								/>
 							</li>
 							<!--<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.forum" /></router-link></li>-->
 						</ul>

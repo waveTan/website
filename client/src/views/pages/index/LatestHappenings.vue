@@ -9,7 +9,7 @@
 					<v-card>
 						<v-card-media :src="require('@/assets/images/test-news-img.jpg')" height="180px" />
 						<v-card-title primary-title>
-							<h5>NULS now trading on BITFINEX</h5>
+							<h5>NULS mainnet will launch soon</h5>
 						</v-card-title>
 					</v-card>
 				</swiper-slide>

@@ -10,6 +10,7 @@
 		<Architecture />
 		<Download />
 		<Roadmap />
+		<Papers />
 		<LatestHappenings />
 	</div>
 </template>
@@ -23,6 +24,7 @@
 	import Roadmap from '@/views/pages/index/Roadmap';
 	import SectionFloatingCubes from '@/components/SectionFloatingCubes';
 	import LatestHappenings from '@/views/pages/index/LatestHappenings';
+	import Papers from '@/views/pages/index/Papers';
 
 	export default {
 		components: {
@@ -33,7 +35,8 @@
 			Download,
 			Roadmap,
 			SectionFloatingCubes,
-			LatestHappenings
+			LatestHappenings,
+			Papers
 		}
 	};
 </script>

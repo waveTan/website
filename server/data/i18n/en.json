@@ -160,6 +160,9 @@
           "web": "Web wallet"
         }
       },
+      "papers": {
+        "title": "Whitepaper and Yellowpaper"
+      },
       "roadmap": {
         "title": "Roadmap",
         "ice": {

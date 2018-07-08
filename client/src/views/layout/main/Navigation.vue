@@ -2,7 +2,7 @@
 	<div :class="{ whiteBackground: whiteBackground }" class="containerParent">
 		<div class="container">
 			<!--<SwitchLanguage />-->
-			<div class="logo" />
+			<router-link :to="{ name: 'home' }"><div class="logo" /></router-link>
 			<div class="desktop">
 				<div class="navigation">
 					<ul>

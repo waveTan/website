@@ -369,6 +369,25 @@
         "meta": "Frequently Asked Questions"
       },
       "comingSoon": "Coming soon..."
+    },
+    "papers": {
+      "paperTitle": "Whitepaper and Yellowpaper",
+      "header": {
+        "title": "NULS Reports",
+        "meta": "Whitepaper and yellowpaper"
+      },
+      "whitepaper": {
+        "info": "The NULS whitepaper is a authoritative report that addresses what NULS goal is and how it plans to achieve it.",
+        "download": "Download",
+        "language": {
+          "en": "English",
+          "zh": "Chinese"
+        }
+      },
+      "yellowpaper": {
+        "info": "The NULS yellowpaper technical detailed version to that of the whitepaper which drills down into the underlying aspects of NULS.",
+        "download": "Download"
+      }
     }
   },
   "dates": {

@@ -361,7 +361,11 @@
 			"pageTitle": "Documents",
 			"search": "Search for documents",
 			"download": "Download this document"
-		}
+		},
+    "faq": {
+      "pageTitle": "FAQ",
+      "comingSoon": "Coming soon..."
+    }
   },
   "dates": {
 	"months": {

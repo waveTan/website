@@ -22,13 +22,13 @@
 				<Button colour="transparent" routeLink="jobs"><I18N id="footer.social.joinUs" /></Button>
 			</div>
 			<div class="links">
-				<a href="#"><img src="@/assets/images/icons/slack.png" alt="Slack"></a>
-				<a href="#"><img src="@/assets/images/icons/gitter.png" alt="Gitter"></a>
-				<a href="#"><img src="@/assets/images/icons/steemit.png" alt="Steemit"></a>
-				<a href="#"><img src="@/assets/images/icons/discord.png" alt="Discord"></a>
-				<a href="#"><img src="@/assets/images/icons/reddit.png" alt="Reddit"></a>
-				<a href="#"><img src="@/assets/images/icons/github.png" alt="Github"></a>
-				<a href="#"><img src="@/assets/images/icons/telegram.png" alt="Telegram"></a>
+				<a href="https://join.slack.com/t/nuls/shared_invite/enQtMjQ4MTM4ODAyNTI4LWJjNGMwYTE0YjRlYmFlZGUwM2JhOGE4MDIwZmE4MzA2MDg1YzUyMmVkN2RhZjkyNWMzZjY5ZDU5ZmViMjZjNGQ"><img src="@/assets/images/icons/slack.png" alt="Slack"></a>
+				<a href="https://gitter.im/nuls_io"><img src="@/assets/images/icons/gitter.png" alt="Gitter"></a>
+				<a href="https://steemit.com/@nuls"><img src="@/assets/images/icons/steemit.png" alt="Steemit"></a>
+				<a href="https://discord.gg/cUeafst"><img src="@/assets/images/icons/discord.png" alt="Discord"></a>
+				<a href="https://www.reddit.com/r/nulsservice/"><img src="@/assets/images/icons/reddit.png" alt="Reddit"></a>
+				<a href="https://github.com/nuls-io/"><img src="@/assets/images/icons/github.png" alt="Github"></a>
+				<a href="https://t.me/Nulsio"><img src="@/assets/images/icons/telegram.png" alt="Telegram"></a>
 			</div>
 		</div>
 		<div class="container">
@@ -67,10 +67,10 @@
 								<div>
 									<h5><I18N id="footer.links.about.title" /></h5>
 									<ul>
-										<li><I18N id="footer.links.about.nuls" /></li>
-										<li><I18N id="footer.links.about.team" /></li>
-										<li><I18N id="footer.links.about.partners" /></li>
-										<li><I18N id="footer.links.about.news" /></li>
+										<li><router-link :to="{ name: 'about' }"><I18N id="footer.links.about.nuls" /></router-link></li>
+										<li><router-link :to="{ name: 'team' }"><I18N id="footer.links.about.team" /></router-link></li>
+										<li><router-link :to="{ name: 'partners' }"><I18N id="footer.links.about.partners" /></router-link></li>
+										<li><router-link :to="{ name: 'news' }"><I18N id="footer.links.about.news" /></router-link></li>
 									</ul>
 								</div>
 							</v-flex>
@@ -82,10 +82,10 @@
 								<div>
 									<h5><I18N id="footer.links.downloads.title" /></h5>
 									<ul>
-										<li><I18N id="footer.links.downloads.whitepaper" /></li>
-										<li><I18N id="footer.links.downloads.yellowpaper" /></li>
-										<li><I18N id="footer.links.downloads.wallet" /></li>
-										<li><I18N id="footer.links.downloads.dApps" /></li>
+										<li><router-link :to="{ name: 'papers' }"><I18N id="footer.links.downloads.whitepaper" /></router-link></li>
+										<li><router-link :to="{ name: 'papers' }"><I18N id="footer.links.downloads.yellowpaper" /></router-link></li>
+										<li><router-link :to="{ name: 'wallet' }"><I18N id="footer.links.downloads.wallet" /></router-link></li>
+										<li><router-link :to="{ name: 'dApps' }"><I18N id="footer.links.downloads.dApps" /></router-link></li>
 									</ul>
 								</div>
 							</v-flex>
@@ -97,9 +97,9 @@
 								<div>
 									<h5><I18N id="footer.links.social.title" /></h5>
 									<ul>
-										<li><I18N id="footer.links.social.twitter" /></li>
-										<li><I18N id="footer.links.social.facebook" /></li>
-										<li><I18N id="footer.links.social.medium" /></li>
+										<li><a href="https://twitter.com/nulsservice"><I18N id="footer.links.social.twitter" /></a></li>
+										<li><a href="https://www.facebook.com/nulscommunity"><I18N id="footer.links.social.facebook" /></a></li>
+										<li><a href="https://medium.com/@nuls"><I18N id="footer.links.social.medium" /></a></li>
 										<li><I18N id="footer.links.social.youtube" /></li>
 										<li><I18N id="footer.links.social.weChat" /></li>
 										<li><I18N id="footer.links.social.weibo" /></li>
@@ -114,8 +114,8 @@
 								<div>
 									<h5><I18N id="footer.links.support.title" /></h5>
 									<ul>
-										<li><I18N id="footer.links.support.faq" /></li>
-										<li><I18N id="footer.links.support.joinUs" /></li>
+										<li><router-link :to="{ name: 'faq' }"><I18N id="footer.links.support.faq" /></router-link></li>
+										<li><router-link :to="{ name: 'jobs' }"><I18N id="footer.links.support.joinUs" /></router-link></li>
 									</ul>
 								</div>
 							</v-flex>
@@ -203,6 +203,10 @@
 
 	.links {
 		display: inline-block;
+	}
+
+	li a {
+		color: inherit;
 	}
 
 	.social a {

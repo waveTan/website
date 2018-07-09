@@ -29,7 +29,8 @@
 			<Dropdown
 				:items="[
 					{ title: 'page.index.download.platforms.windows' },
-					{ title: 'page.index.download.platforms.mac' }
+					{ title: 'page.index.download.platforms.mac' },
+					{ title: 'page.index.download.platforms.linux' }
 				]"
 				title="page.index.download.computer"
 			/>

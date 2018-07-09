@@ -155,6 +155,7 @@
         "platforms": {
           "windows": "Windows download",
           "mac": "MacOS download",
+		  "linux": "Linux download",
           "android": "Android",
           "iPhone": "iPhone",
           "web": "Web wallet"

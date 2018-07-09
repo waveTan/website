@@ -9,7 +9,6 @@ const jobs = require('@/routes/api/v1/jobs');
 const contact = require('@/routes/api/v1/contact');
 const news = require('@/routes/api/v1/news');
 const announcements = require('@/routes/api/v1/announcements');
-const documents = require('@/routes/api/v1/documents');
 
 const router = express.Router();
 
@@ -22,6 +21,5 @@ router.use('/jobs', jobs);
 router.use('/contact', contact);
 router.use('/news', news);
 router.use('/announcements', announcements);
-router.use('/documents', documents);
 
 module.exports = router;

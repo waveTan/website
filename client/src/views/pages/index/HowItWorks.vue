@@ -57,4 +57,10 @@
 			padding: 100px 0 70px 0;
 		}
 	}
+
+	@media screen and (max-width: 400px) {
+		.howItWorks {
+			padding: 100px 0 0 0;
+		}
+	}
 </style>

@@ -36,5 +36,9 @@
 		img.cube {
 			display: none;
 		}
+
+		.container {
+			margin-left: 70px;
+		}
 	}
 </style>

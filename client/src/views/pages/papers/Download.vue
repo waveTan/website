@@ -65,7 +65,6 @@
 		},
 		data()
 		{
-			console.log(this.$store.getters['app/apiUrl']);
 			return {
 				dialog: {
 					whitepaper: false,

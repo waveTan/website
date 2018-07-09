@@ -168,3 +168,9 @@
 		}
 	};
 </script>
+
+<style>
+	.searchInput.input-group .input-group__append-icon {
+		margin-right: 10px;
+	}
+</style>

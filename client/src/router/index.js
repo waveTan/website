@@ -13,8 +13,9 @@ import Jobs from '@/views/pages/Jobs';
 import Contact from '@/views/pages/Contact';
 import NewsAndAnnouncements from '@/views/pages/NewsAndAnnouncements';
 import NewsAndAnnouncementsItem from '@/views/pages/NewsAndAnnouncements/Item';
-import Documents from '@/views/pages/Documents';
 import Wallet from '@/views/pages/Wallet';
+import FAQ from '@/views/pages/FAQ';
+import Papers from '@/views/pages/Papers';
 
 Vue.use(Router);
 
@@ -95,9 +96,14 @@ const routeConfig = [
 		}
 	},
 	{
-		name: 'documents',
-		path: '/documents',
-		component: Documents
+		name: 'faq',
+		path: '/faq',
+		component: FAQ
+	},
+	{
+		name: 'papers',
+		path: '/papers',
+		component: Papers
 	},
 	{
 		name: 'wallet',

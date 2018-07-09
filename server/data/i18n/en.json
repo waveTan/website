@@ -47,7 +47,7 @@
       "button": "Contact us"
     },
     "links": {
-      "copyright": "Copyright &copy; 2017 NULS",
+      "copyright": "Copyright © 2017 NULS",
       "singapore": "Proudly built in Singapore",
       "design": "Website design by petravic",
       "about": {
@@ -160,6 +160,9 @@
           "web": "Web wallet"
         }
       },
+      "papers": {
+        "title": "Whitepaper and Yellowpaper"
+      },
       "roadmap": {
         "title": "Roadmap",
         "ice": {
@@ -233,7 +236,8 @@
         }
       },
       "latestHappenings": {
-        "title": "Latest Happenings"
+        "title": "Latest Happenings",
+        "more": "More..."
       }
     },
 		"about": {
@@ -360,7 +364,34 @@
 			"pageTitle": "Documents",
 			"search": "Search for documents",
 			"download": "Download this document"
-		}
+		},
+    "faq": {
+      "pageTitle": "FAQ",
+      "header": {
+        "title": "FAQ",
+        "meta": "Frequently Asked Questions"
+      },
+      "comingSoon": "Coming soon..."
+    },
+    "papers": {
+      "paperTitle": "Whitepaper and Yellowpaper",
+      "header": {
+        "title": "NULS Reports",
+        "meta": "Whitepaper and yellowpaper"
+      },
+      "whitepaper": {
+        "info": "The NULS whitepaper is a authoritative report that addresses what NULS goal is and how it plans to achieve it.",
+        "download": "Download",
+        "language": {
+          "en": "English",
+          "zh": "Chinese"
+        }
+      },
+      "yellowpaper": {
+        "info": "The NULS yellowpaper technical detailed version to that of the whitepaper which drills down into the underlying aspects of NULS.",
+        "download": "Download"
+      }
+    }
   },
   "dates": {
 	"months": {

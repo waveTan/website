@@ -2,13 +2,12 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const config = require('./config');
-const _ = require('./utils');
-// const env = require('./env.config.json');
 const Dotenv = require('dotenv-webpack');
 // const GoogleFontsPlugin = require('google-fonts-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 // const PreloadWebpackPlugin = require('preload-webpack-plugin');
+const config = require('./config');
+const _ = require('./utils');
 
 module.exports = {
 	mode: 'development',
@@ -82,13 +81,13 @@ module.exports = {
 			filename: _.outputIndexPath
 		}),
 		new webpack.LoaderOptionsPlugin(_.loadersOptions()),
-		new CopyWebpackPlugin([
-			{
-				from: _.cwd('./static'),
-				// to the roor of dist path
-				to: './'
-			}
-		]),
+		// new CopyWebpackPlugin([
+		// 	{
+		// 		from: _.cwd('./static'),
+		// 		// to the roor of dist path
+		// 		to: './'
+		// 	}
+		// ]),
 		// new PreloadWebpackPlugin(),
 		// new webpack.DefinePlugin({
 		// 	URL: JSON.stringify(env.URL) || 'http://localhost:4000/',

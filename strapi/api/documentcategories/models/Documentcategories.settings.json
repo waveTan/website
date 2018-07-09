@@ -17,9 +17,6 @@
     },
     "zh_title": {
       "type": "string"
-    },
-    "parentCategory": {
-      "model": "documentcategories"
     }
   }
 }

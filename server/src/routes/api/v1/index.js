@@ -21,5 +21,6 @@ router.use('/jobs', jobs);
 router.use('/contact', contact);
 router.use('/news', news);
 router.use('/announcements', announcements);
+router.use('/download', express.static('public'));
 
 module.exports = router;

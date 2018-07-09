@@ -6,11 +6,11 @@
 </template>
 
 <script>
-	import Download from '@/views/pages/Papers/Download';
+	import Download from '@/views/pages/papers/Download';
 
 	export default {
 		components: {
 			Download
 		}
-	}
+	};
 </script>

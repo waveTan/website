@@ -6,7 +6,7 @@
 				<p class="centered"><I18N id="page.papers.header.meta" /></p>
 				<div class="images">
 					<img
-						class="slabs"
+						class="cube"
 						:src="cube"
 						width="300px"
 					>
@@ -43,11 +43,27 @@
 		margin-top: -130px;
 	}
 
-	img.slabs {
+	img.cube {
 		float: right;
 	}
 
 	img.cubes {
 		float: left;
+	}
+
+	@media screen and (max-width: 900px) {
+		img.cube {
+			display: none;
+		}
+
+		img.cubes {
+			margin-top: 0;
+			width: 200px;
+		}
+
+		.container .images {
+			margin: 0 auto;
+			width: 270px;
+		}
 	}
 </style>

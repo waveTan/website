@@ -34,13 +34,21 @@
 				]"
 				title="page.index.download.computer"
 			/>
-			<Dropdown
+			<Button
+				colour="transparent"
+				textClass="white"
+				icon="arrow-right"
+			>
+				<I18N id="page.index.download.mobile"/>
+			</Button>
+			<!--<Dropdown
 				:items="[
 					{ title: 'page.index.download.platforms.android' },
 					{ title: 'page.index.download.platforms.iPhone' }
 				]"
 				title="page.index.download.mobile"
-			/>
+			/>-->
+
 			<Button
 				colour="transparent"
 				textClass="white"

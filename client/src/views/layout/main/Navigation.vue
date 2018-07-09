@@ -10,7 +10,7 @@
 						<li><router-link :to="{ name: 'wallet' }"><I18N id="header.navigation.wallet" /></router-link></li>
 						<li><router-link :to="{ name: 'dApps' }"><I18N id="header.navigation.dApps" /></router-link></li>
 						<li><router-link :to="{ name: 'documents' }"><I18N id="header.navigation.documents" /></router-link></li>
-						<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.blockchainExplorer" /></router-link></li>
+						<li @click="toUrl('http://explorer.nuls.io')"><router-link to=""><I18N id="header.navigation.blockchainExplorer" /></router-link></li>
 						<li>
 							<Dropdown
 								:useButton="false"
@@ -64,7 +64,7 @@
 							<li><router-link :to="{ name: 'wallet' }"><I18N id="header.navigation.wallet" /></router-link></li>
 							<li><router-link :to="{ name: 'dApps' }"><I18N id="header.navigation.dApps" /></router-link></li>
 							<li><router-link :to="{ name: 'documents' }"><I18N id="header.navigation.documents" /></router-link></li>
-							<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.blockchainExplorer" /></router-link></li>
+							<li @click="toUrl('http://explorer.nuls.io')"><router-link to=""><I18N id="header.navigation.blockchainExplorer" /></router-link></li>
 							<li>
 								<Dropdown
 									:useButton="false"
@@ -111,6 +111,9 @@
 			document.documentElement.removeEventListener('click', this.clickAway, false);
 		},
 		methods: {
+			toUrl(url){
+				window.open(url,'target')
+			},
 			toggleMobileNavigation()
 			{
 				this.mobileNavigation = !this.mobileNavigation;

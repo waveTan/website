@@ -28,6 +28,7 @@
 	@media screen and (max-width: 517px) {
 		.spaceship {
 			width: initial;
+			margin: 0 auto;
 		}
 	}
 </style>

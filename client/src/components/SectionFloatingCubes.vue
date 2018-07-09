@@ -31,4 +31,10 @@
 		position: relative;
 		z-index: 1;
 	}
+
+	@media screen and (max-width: 650px) {
+		img.cube {
+			display: none;
+		}
+	}
 </style>

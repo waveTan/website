@@ -45,4 +45,19 @@
 	img.cubes {
 		float: left;
 	}
+
+	@media screen and (max-width: 650px) {
+		img.slabs {
+			display: none;
+		}
+
+		img.cubes {
+			margin-top: 30px;
+		}
+
+		.container {
+			margin: 0 auto;
+			width: 270px;
+		}
+	}
 </style>

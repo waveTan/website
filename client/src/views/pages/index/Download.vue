@@ -197,7 +197,7 @@
 		}
 
 		.container.information {
-			top: -950px;
+			top: -750px;
 		}
 
 		.mobile.images {
@@ -215,7 +215,7 @@
 		}
 
 		.container.information {
-			top: -950px;
+			top: -750px;
 		}
 
 		.mobile.images {

@@ -19,7 +19,7 @@
 				>
 					<I18N id="footer.social.viewTeam" />
 				</Button>
-				<Button colour="transparent" routeLink="jobs"><I18N id="footer.social.joinUs" /></Button>
+				<!--<Button colour="transparent" routeLink="jobs"><I18N id="footer.social.joinUs" /></Button>-->
 			</div>
 			<div class="links">
 				<a href="https://join.slack.com/t/nuls/shared_invite/enQtMjQ4MTM4ODAyNTI4LWJjNGMwYTE0YjRlYmFlZGUwM2JhOGE4MDIwZmE4MzA2MDg1YzUyMmVkN2RhZjkyNWMzZjY5ZDU5ZmViMjZjNGQ" target="_blank"><img src="@/assets/images/icons/slack.png" alt="Slack"></a>
@@ -115,7 +115,7 @@
 									<h5><I18N id="footer.links.support.title" /></h5>
 									<ul>
 										<li><router-link :to="{ name: 'faq' }"><I18N id="footer.links.support.faq" /></router-link></li>
-										<li><router-link :to="{ name: 'jobs' }"><I18N id="footer.links.support.joinUs" /></router-link></li>
+										<!--<li><router-link :to="{ name: 'jobs' }"><I18N id="footer.links.support.joinUs" /></router-link></li>-->
 									</ul>
 								</div>
 							</v-flex>

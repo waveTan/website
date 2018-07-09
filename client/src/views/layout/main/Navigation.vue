@@ -18,7 +18,7 @@
 									{ title: 'header.navigation.whatIsNuls', link: 'about' },
 									{ title: 'header.navigation.team', link: 'team' },
 									{ title: 'header.navigation.partners', link: 'partners' },
-									{ title: 'header.navigation.joinUs', link: 'jobs' },
+									/*{ title: 'header.navigation.joinUs', link: 'jobs' },*/
 									{ title: 'header.navigation.news', link: 'news' }
 								]"
 								:arrow="whiteBackground ? '-black' : ''"
@@ -44,7 +44,7 @@
 									{ title: 'header.navigation.whatIsNuls', link: 'about' },
 									{ title: 'header.navigation.team', link: 'team' },
 									{ title: 'header.navigation.partners', link: 'partners' },
-									{ title: 'header.navigation.joinUs', link: 'jobs' },
+									/*{ title: 'header.navigation.joinUs', link: 'jobs' },*/
 									{ title: 'header.navigation.news', link: 'news' }
 								]"
 								title="header.navigation.more"
@@ -72,7 +72,7 @@
 										{ title: 'header.navigation.whatIsNuls', link: 'about' },
 										{ title: 'header.navigation.team', link: 'team' },
 										{ title: 'header.navigation.partners', link: 'partners' },
-										{ title: 'header.navigation.joinUs', link: 'jobs' },
+										/*{ title: 'header.navigation.joinUs', link: 'jobs' },*/
 										{ title: 'header.navigation.news', link: 'news' }
 									]"
 									title="header.navigation.about"

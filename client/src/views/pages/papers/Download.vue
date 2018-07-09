@@ -26,16 +26,16 @@
 			<div>
 				<h4><I18N id="page.papers.whitepaper.dialog.chooseLanguage" /></h4>
 				<ul>
-					<li><a href="/static/files/papers/white/NULS_whitepaper_zh_V1.0.pdf"><I18N id="page.papers.whitepaper.dialog.language.en" /></a></li>
-					<li><a href="/static/files/papers/white/NULS_whitepaper_zh_V1.0.pdf"><I18N id="page.papers.whitepaper.dialog.language.zh" /></a></li>
-					<li><a href="/static/files/papers/white/NulsWhitepaper1.1_Russia.pdf"><I18N id="page.papers.whitepaper.dialog.language.ru" /></a></li>
-					<li><a href="/static/files/papers/white/NulsWhitepaper1.1_Korean.pdf"><I18N id="page.papers.whitepaper.dialog.language.ko" /></a></li>
-					<li><a href="/static/files/papers/white/NulsWhitepaper1.1_JP.pdf"><I18N id="page.papers.whitepaper.dialog.language.jp" /></a></li>
-					<li><a href="/static/files/papers/white/NulsWhitepaper1.1_Germany.pdf"><I18N id="page.papers.whitepaper.dialog.language.ge" /></a></li>
-					<li><a href="/static/files/papers/white/NulsWhitepaper1.1_French.pdf"><I18N id="page.papers.whitepaper.dialog.language.fr" /></a></li>
-					<li><a href="/static/files/papers/white/NulsWhitepaper1.1_Spanish.pdf"><I18N id="page.papers.whitepaper.dialog.language.es" /></a></li>
-					<li><a href="/static/files/papers/white/NulsWhitepaper1.1_NL.pdf"><I18N id="page.papers.whitepaper.dialog.language.nl" /></a></li>
-					<li><a href="/static/files/papers/white/NulsWhitepaper1.1_portuguese.pdf"><I18N id="page.papers.whitepaper.dialog.language.pt" /></a></li>
+					<li><a :href="`${download}/white/NulsWhitepaper1.1.pdf`"><I18N id="page.papers.whitepaper.dialog.language.en" /></a></li>
+					<li><a :href="`${download}/white/NULS_whitepaper_zh_V1.0.pdf`"><I18N id="page.papers.whitepaper.dialog.language.zh" /></a></li>
+					<li><a :href="`${download}/white/NulsWhitepaper1.1_Russia.pdf`"><I18N id="page.papers.whitepaper.dialog.language.ru" /></a></li>
+					<li><a :href="`${download}/white/NulsWhitepaper1.1_Korean.pdf`"><I18N id="page.papers.whitepaper.dialog.language.ko" /></a></li>
+					<li><a :href="`${download}/white/NulsWhitepaper1.1_JP.pdf`"><I18N id="page.papers.whitepaper.dialog.language.jp" /></a></li>
+					<li><a :href="`${download}/white/NulsWhitepaper1.1_Germany.pdf`"><I18N id="page.papers.whitepaper.dialog.language.ge" /></a></li>
+					<li><a :href="`${download}/white/NulsWhitepaper1.1_French.pdf`"><I18N id="page.papers.whitepaper.dialog.language.fr" /></a></li>
+					<li><a :href="`${download}/white/NulsWhitepaper1.1_Spanish.pdf`"><I18N id="page.papers.whitepaper.dialog.language.es" /></a></li>
+					<li><a :href="`${download}/white/NulsWhitepaper1.1_NL.pdf`"><I18N id="page.papers.whitepaper.dialog.language.nl" /></a></li>
+					<li><a :href="`${download}/white/NulsWhitepaper1.1_portuguese.pdf`"><I18N id="page.papers.whitepaper.dialog.language.pt" /></a></li>
 				</ul>
 			</div>
 		</Dialog>
@@ -43,9 +43,9 @@
 			<div>
 				<h4><I18N id="page.papers.yellowpaper.dialog.downloadSources" /></h4>
 				<ul>
-					<!--<li><a href="/static/files/papers/yellow/NulsYellowpaper1.1.pdf"><I18N id="page.papers.yellowpaper.dialog.source.mega" /></a></li>-->
-					<!--<li><a href="/static/files/papers/yellow/NulsYellowpaper1.1.pdf"><I18N id="page.papers.yellowpaper.dialog.source.baidu" /></a></li>-->
-					<li><a href="/static/files/papers/yellow/NulsYellowpaper1.1.pdf"><I18N id="page.papers.yellowpaper.dialog.source.nuls" /></a></li>
+					<!--<li><a :href="`${download}/yellow/NulsYellowpaper1.1.pdf"><I18N id="page.papers.yellowpaper.dialog.source.mega" /></a></li>-->
+					<!--<li><a :href="`${download}/yellow/NulsYellowpaper1.1.pdf"><I18N id="page.papers.yellowpaper.dialog.source.baidu" /></a></li>-->
+					<li><a :href="`${download}/yellow/NulsYellowpaper1.1.pdf`"><I18N id="page.papers.yellowpaper.dialog.source.nuls" /></a></li>
 				</ul>
 			</div>
 		</Dialog>
@@ -65,11 +65,13 @@
 		},
 		data()
 		{
+			console.log(this.$store.getters['app/apiUrl']);
 			return {
 				dialog: {
 					whitepaper: false,
 					yellowpaper: false
-				}
+				},
+				download: `${this.$store.getters['app/apiUrl']}/download/files/papers`
 			};
 		},
 		methods: {

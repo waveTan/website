@@ -34,7 +34,7 @@
 							<p><I18N id="page.index.howItWorks.customizable.p2" /></p>
 						</v-flex>
 						<v-flex md4 xs12>
-							<img src="@/assets/images/animations/sustainable-improvement.svg" width="156px">
+							<img :src="sustainableImprovement" width="156px">
 							<h4><I18N id="page.index.howItWorks.sustainableImprovement.title" /></h4>
 							<p><I18N id="page.index.howItWorks.sustainableImprovement.p1" /></p>
 							<p><I18N id="page.index.howItWorks.sustainableImprovement.p2" /></p>
@@ -46,6 +46,21 @@
 		</div>
 	</div>
 </template>
+
+<script>
+	import { detect } from 'detect-browser';
+
+	export default {
+		data()
+		{
+			const browserExt = detect().name === 'firefox' ? '-ff' : '';
+
+			return {
+				sustainableImprovement: require(`@/assets/images/animations/sustainable-improvement${browserExt}.svg`)
+			};
+		}
+	};
+</script>
 
 <style scoped>
 	.howItWorks {

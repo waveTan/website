@@ -2,16 +2,32 @@
 	<div class="container">
 		<img
 			class="cube"
-			src="@/assets/images/animations/cube.svg"
+			:src="cube"
 			width="350px"
 		>
 		<img
 			class="cubes"
-			src="@/assets/images/animations/cubes.svg"
+			:src="cubes"
 			width="350px"
 		>
 	</div>
 </template>
+
+<script>
+	import { detect } from 'detect-browser';
+
+	export default {
+		data()
+		{
+			const browserExt = detect().name === 'firefox' ? '-ff' : '';
+
+			return {
+				cube: require(`@/assets/images/animations/cube${browserExt}.svg`),
+				cubes: require(`@/assets/images/animations/cubes${browserExt}.svg`)
+			};
+		}
+	};
+</script>
 
 <style scoped>
 	.container {

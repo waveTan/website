@@ -22,13 +22,13 @@
 				<Button colour="transparent" routeLink="jobs"><I18N id="footer.social.joinUs" /></Button>
 			</div>
 			<div class="links">
-				<a href="https://join.slack.com/t/nuls/shared_invite/enQtMjQ4MTM4ODAyNTI4LWJjNGMwYTE0YjRlYmFlZGUwM2JhOGE4MDIwZmE4MzA2MDg1YzUyMmVkN2RhZjkyNWMzZjY5ZDU5ZmViMjZjNGQ"><img src="@/assets/images/icons/slack.png" alt="Slack"></a>
-				<a href="https://gitter.im/nuls_io"><img src="@/assets/images/icons/gitter.png" alt="Gitter"></a>
-				<a href="https://steemit.com/@nuls"><img src="@/assets/images/icons/steemit.png" alt="Steemit"></a>
-				<a href="https://discord.gg/cUeafst"><img src="@/assets/images/icons/discord.png" alt="Discord"></a>
-				<a href="https://www.reddit.com/r/nulsservice/"><img src="@/assets/images/icons/reddit.png" alt="Reddit"></a>
-				<a href="https://github.com/nuls-io/"><img src="@/assets/images/icons/github.png" alt="Github"></a>
-				<a href="https://t.me/Nulsio"><img src="@/assets/images/icons/telegram.png" alt="Telegram"></a>
+				<a href="https://join.slack.com/t/nuls/shared_invite/enQtMjQ4MTM4ODAyNTI4LWJjNGMwYTE0YjRlYmFlZGUwM2JhOGE4MDIwZmE4MzA2MDg1YzUyMmVkN2RhZjkyNWMzZjY5ZDU5ZmViMjZjNGQ" target="_blank"><img src="@/assets/images/icons/slack.png" alt="Slack"></a>
+				<a href="https://gitter.im/nuls_io" target="_blank"><img src="@/assets/images/icons/gitter.png" alt="Gitter"></a>
+				<a href="https://steemit.com/@nuls" target="_blank"><img src="@/assets/images/icons/steemit.png" alt="Steemit"></a>
+				<a href="https://discord.gg/cUeafst" target="_blank"><img src="@/assets/images/icons/discord.png" alt="Discord"></a>
+				<a href="https://www.reddit.com/r/nulsservice/" target="_blank"><img src="@/assets/images/icons/reddit.png" alt="Reddit"></a>
+				<a href="https://github.com/nuls-io/" target="_blank"><img src="@/assets/images/icons/github.png" alt="Github"></a>
+				<a href="https://t.me/Nulsio" target="_blank"><img src="@/assets/images/icons/telegram.png" alt="Telegram"></a>
 			</div>
 		</div>
 		<div class="container">
@@ -97,9 +97,9 @@
 								<div>
 									<h5><I18N id="footer.links.social.title" /></h5>
 									<ul>
-										<li><a href="https://twitter.com/nulsservice"><I18N id="footer.links.social.twitter" /></a></li>
-										<li><a href="https://www.facebook.com/nulscommunity"><I18N id="footer.links.social.facebook" /></a></li>
-										<li><a href="https://medium.com/@nuls"><I18N id="footer.links.social.medium" /></a></li>
+										<li><a href="https://twitter.com/nulsservice" target="_blank"><I18N id="footer.links.social.twitter" /></a></li>
+										<li><a href="https://www.facebook.com/nulscommunity" target="_blank"><I18N id="footer.links.social.facebook" /></a></li>
+										<li><a href="https://medium.com/@nuls" target="_blank"><I18N id="footer.links.social.medium" /></a></li>
 										<li><I18N id="footer.links.social.youtube" /></li>
 										<li><I18N id="footer.links.social.weChat" /></li>
 										<li><I18N id="footer.links.social.weibo" /></li>

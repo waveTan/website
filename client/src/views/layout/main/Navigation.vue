@@ -10,7 +10,7 @@
 						<li><router-link :to="{ name: 'wallet' }"><I18N id="header.navigation.wallet" /></router-link></li>
 						<li><router-link :to="{ name: 'dApps' }"><I18N id="header.navigation.dApps" /></router-link></li>
 						<li><router-link :to="{ name: 'documents' }"><I18N id="header.navigation.documents" /></router-link></li>
-						<li @click="toUrl('http://explorer.nuls.io')"><router-link to=""><I18N id="header.navigation.blockchainExplorer" /></router-link></li>
+						<li><a href="http://explorer.nuls.io"><I18N id="header.navigation.blockchainExplorer" /></a></li>
 						<li>
 							<Dropdown
 								:useButton="false"
@@ -21,8 +21,8 @@
 									{ title: 'header.navigation.joinUs', link: 'jobs' },
 									{ title: 'header.navigation.news', link: 'news' }
 								]"
-								title="header.navigation.about"
 								:arrow="whiteBackground ? '-black' : ''"
+								title="header.navigation.about"
 							/>
 						</li>
 						<!--<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.forum" /></router-link></li>-->
@@ -34,7 +34,7 @@
 					<ul>
 						<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.home" /></router-link></li>
 						<li><router-link :to="{ name: 'wallet' }"><I18N id="header.navigation.wallet" /></router-link></li>
-						<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.blockchainExplorer" /></router-link></li>
+						<li><a href="http://explorer.nuls.io"><I18N id="header.navigation.blockchainExplorer" /></a></li>
 						<li>
 							<Dropdown
 								:useButton="false"
@@ -64,7 +64,7 @@
 							<li><router-link :to="{ name: 'wallet' }"><I18N id="header.navigation.wallet" /></router-link></li>
 							<li><router-link :to="{ name: 'dApps' }"><I18N id="header.navigation.dApps" /></router-link></li>
 							<li><router-link :to="{ name: 'documents' }"><I18N id="header.navigation.documents" /></router-link></li>
-							<li @click="toUrl('http://explorer.nuls.io')"><router-link to=""><I18N id="header.navigation.blockchainExplorer" /></router-link></li>
+							<li><a href="http://explorer.nuls.io"><I18N id="header.navigation.blockchainExplorer" /></a></li>
 							<li>
 								<Dropdown
 									:useButton="false"

@@ -9,7 +9,7 @@
 					<p><I18N id="page.index.architecture.logicLayer.p2" /></p>
 					<div :class="{ active: isActive('logicLayer') }" class="mobile graph">
 						<img
-							src="@/assets/images/logic-layer.jpg"
+							src="@/assets/images/logic-layer.png"
 							alt=""
 							width="100%"
 						>
@@ -21,7 +21,7 @@
 					<p><I18N id="page.index.architecture.moduleLayer.p2" /></p>
 					<div :class="{ active: isActive('moduleLayer') }" class="mobile graph">
 						<img
-							src="@/assets/images/module-layer.jpg"
+							src="@/assets/images/module-layer.png"
 							alt=""
 							width="100%"
 						>
@@ -33,7 +33,7 @@
 					<p><I18N id="page.index.architecture.chainLayer.p2" /></p>
 					<div :class="{ active: isActive('chainLayer') }" class="mobile graph">
 						<img
-							src="@/assets/images/chain-layer.jpg"
+							src="@/assets/images/chain-layer.png"
 							alt=""
 							width="100%"
 						>
@@ -45,36 +45,40 @@
 					<p><I18N id="page.index.architecture.crossChain.p2" /></p>
 					<div :class="{ active: isActive('crossChain') }" class="mobile graph">
 						<img
-							src="@/assets/images/cross-chain.jpg"
+							src="@/assets/images/cross-chain.png"
 							alt=""
 							width="100%"
 						>
 					</div>
 				</li>
 			</ul>
-			<div :class="active" class="graph">
+			<div class="graph">
 				<div class="images">
 					<img
+						:class="{ active: isActive('logicLayer') }"
 						ref="img-logicLayer"
-						src="@/assets/images/logic-layer.jpg"
+						src="@/assets/images/logic-layer.png"
 						alt=""
 						width="100%"
 					>
 					<img
+							:class="{ active: isActive('moduleLayer') }"
 						ref="img-moduleLayer"
-						src="@/assets/images/module-layer.jpg"
+						src="@/assets/images/module-layer.png"
 						alt=""
 						width="100%"
 					>
 					<img
+							:class="{ active: isActive('chainLayer') }"
 						ref="img-chainLayer"
-						src="@/assets/images/chain-layer.jpg"
+						src="@/assets/images/chain-layer.png"
 						alt=""
 						width="100%"
 					>
 					<img
+							:class="{ active: isActive('crossChain') }"
 						ref="img-crossChain"
-						src="@/assets/images/cross-chain.jpg"
+						src="@/assets/images/cross-chain.png"
 						alt=""
 						width="100%"
 					>
@@ -158,12 +162,21 @@
 	.images {
 		position: relative;
 		margin: 0 auto;
+		height: 100%;
 	}
 
 	.images img {
 		position: absolute;
 		left: 0;
 		transition: opacity 1s ease-in-out;
+		margin: auto;
+		bottom: 0;
+		top: 0;
+		display: none;
+	}
+
+	.images img.active {
+		display: block;
 	}
 
 	.images img.transparent {
@@ -187,6 +200,8 @@
 		.graph {
 			width: 100%;
 			display: none;
+			background: none;
+			height: initial;
 		}
 
 		.mobile.active {

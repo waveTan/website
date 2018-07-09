@@ -93,7 +93,7 @@ const getters = {
 
 		return state.item[rootGetters['i18n/locale']][path][id];
 	},
-	strapiUrl: () => process.env.STRAPI.substr(process.env.STRAPI.length - 1) === '/' ? process.env.STRAPI.substr(0, process.env.STRAPI.length - 1) : process.env.STRAPI
+	strapiUrl: () => (process.env.STRAPI.substr(process.env.STRAPI.length - 1) === '/' ? process.env.STRAPI.substr(0, process.env.STRAPI.length - 1) : process.env.STRAPI)
 };
 
 export default {

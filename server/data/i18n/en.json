@@ -383,14 +383,33 @@
       "whitepaper": {
         "info": "The NULS whitepaper is a authoritative report that addresses what NULS goal is and how it plans to achieve it.",
         "download": "Download",
-        "language": {
-          "en": "English",
-          "zh": "Chinese"
-        }
+				"dialog": {
+					"chooseLanguage": "Download the whitepaper in your preferred language choice",
+					"language": {
+						"en": "English",
+						"zh": "中文",
+						"ru": "Россия",
+						"ko": "한국",
+						"jp": "日本語",
+						"ge": "Deutsch",
+						"fr": "Français",
+						"es": "Español",
+						"nl": "Nederlands",
+						"pt": "Portuguese"
+					}
+				}
       },
       "yellowpaper": {
         "info": "The NULS yellowpaper technical detailed version to that of the whitepaper which drills down into the underlying aspects of NULS.",
-        "download": "Download"
+        "download": "Download",
+				"dialog": {
+					"downloadSources": "Download the yellowpaper in English from the source",
+					"source": {
+						"mega": "MEGA.zh",
+						"baidu": "BAIDU.com",
+						"nuls": "NULS.io"
+					}
+				}
       }
     }
   },

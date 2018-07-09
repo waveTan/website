@@ -34,10 +34,6 @@
 		padding: 6px 0 0 10px;
 	}
 
-	.container {
-		margin-top: 70px;
-	}
-
 	img.slabs {
 		float: right;
 	}

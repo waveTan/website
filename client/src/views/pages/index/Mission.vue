@@ -15,7 +15,7 @@
 <style scoped>
 	.spaceship {
 		min-height: 517px;
-		margin: 66px auto 78px auto;
+		margin: 0 auto -30px auto;
 		width: 517px;
 		background: url('~@/assets/images/rocket.png') no-repeat center;
 		padding-top: 90px;

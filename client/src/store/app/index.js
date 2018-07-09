@@ -106,7 +106,8 @@ const getters = {
 	loadingStack: (state) => state.loadingStack,
 	drawer: (state) => state.drawer,
 	dialog: (state) => state.dialog,
-	pageLoading: (state) => state.pageLoading
+	pageLoading: (state) => state.pageLoading,
+	apiUrl: () => `${process.env.API}api/${process.env.API_VERSION}`
 };
 
 export default {

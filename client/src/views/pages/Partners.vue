@@ -10,7 +10,7 @@
 			</div>
 		</div>
 		<div v-else>
-			<CooperationProjects :items="getItems('cooperation projects')" />
+			<CooperationProjects :items="getItems('cooperation project')" />
 			<CooperationMedia :items="getItems('cooperation media')" />
 			<Platforms :items="getItems('platform')" />
 		</div>

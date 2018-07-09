@@ -6,7 +6,7 @@
 					<slot name="header" />
 				</div>
 				<div class="close" @click="toggleOpen">
-					<img src="@/assets/images/icons/close-icon.png" alt="X" />
+					<img src="@/assets/images/icons/close-icon.png" alt="X">
 				</div>
 			</v-card-title>
 			<v-card-text>
@@ -75,10 +75,12 @@
 		background-position: center top !important;
 	}
 
-	.dialog__content h2 {
-		color: #fff;
-	}
-
+	.dialog__content h1,
+	.dialog__content h2,
+	.dialog__content h3,
+	.dialog__content h4,
+	.dialog__content h5,
+	.dialog__content a,
 	.dialog__content {
 		color: #fff;
 	}

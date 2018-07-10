@@ -160,7 +160,14 @@
           "android": "Android",
           "iPhone": "iPhone",
           "web": "Web wallet"
-        }
+        },
+				"dialog": {
+					"downloadSource": "Download the wallet from these source",
+					"source": {
+						"mega": "MEGA.zh",
+						"baidu": "BAIDU.com"
+					}
+				}
       },
       "papers": {
         "title": "Whitepaper and Yellowpaper"

@@ -1,75 +1,96 @@
 <template>
-	<div :class="{ main: padding, removeTopMargin: !padding }">
-		<div class="container images">
-			<img
-				class="top"
-				src="@/assets/images/animations/download-cube-small.svg"
-				width="110px"
-			>
-			<div class="ipad" />
-			<div class="iphone" />
-			<img
-				class="bottom"
-				src="@/assets/images/animations/download-cube-large.svg"
-				width="110px"
-			>
-			<img
-				class="middle"
-				src="@/assets/images/animations/download-cube-medium.svg"
-				width="110px"
-			>
-		</div>
-		<div class="section blue">
-			<div class="container" />
-		</div>
-		<div class="container information">
-			<h3><I18N id="page.index.download.title" /></h3>
-			<p><I18N id="page.index.download.maintainers" /></p>
-			<p><I18N id="page.index.download.platformSupport" /></p>
-			<Dropdown
-				:items="[
-					{ title: 'page.index.download.platforms.windows' },
-					{ title: 'page.index.download.platforms.mac' },
-					{ title: 'page.index.download.platforms.linux' }
-				]"
-				title="page.index.download.computer"
-			/>
-			<Button
-				colour="transparent"
-				textClass="white"
-				icon="arrow-right"
-			>
-				<I18N id="page.index.download.mobile"/>
-			</Button>
-			<!--<Dropdown
-				:items="[
-					{ title: 'page.index.download.platforms.android' },
-					{ title: 'page.index.download.platforms.iPhone' }
-				]"
-				title="page.index.download.mobile"
-			/>-->
-
-			<Button
-				colour="transparent"
-				textClass="white"
-				icon="arrow-right"
-			>
-				<I18N id="page.index.download.platforms.web" />
-			</Button>
-			<div class="mobile images">
+	<div>
+		<div :class="{ main: padding, removeTopMargin: !padding }">
+			<div class="container images">
+				<img
+					class="top"
+					src="@/assets/images/animations/download-cube-small.svg"
+					width="110px"
+				>
 				<div class="ipad" />
 				<div class="iphone" />
+				<img
+					class="bottom"
+					src="@/assets/images/animations/download-cube-large.svg"
+					width="110px"
+				>
+				<img
+					class="middle"
+					src="@/assets/images/animations/download-cube-medium.svg"
+					width="110px"
+				>
+			</div>
+			<div class="section blue">
+				<div class="container" />
+			</div>
+			<div class="container information">
+				<h3><I18N id="page.index.download.title" /></h3>
+				<p><I18N id="page.index.download.maintainers" /></p>
+				<p><I18N id="page.index.download.platformSupport" /></p>
+				<Dropdown
+					:items="[
+						{ title: 'page.index.download.platforms.windows', click: dropdownClicked, type: 'windows' },
+						{ title: 'page.index.download.platforms.mac', click: dropdownClicked, type: 'mac' },
+						{ title: 'page.index.download.platforms.linux', click: dropdownClicked, type: 'linux' }
+					]"
+					title="page.index.download.computer"
+				/>
+				<Button
+					colour="transparent"
+					textClass="white"
+					icon="arrow-right"
+				>
+					<I18N id="page.index.download.mobile"/>
+				</Button>
+				<!--<Dropdown
+					:items="[
+						{ title: 'page.index.download.platforms.android' },
+						{ title: 'page.index.download.platforms.iPhone' }
+					]"
+					title="page.index.download.mobile"
+				/>-->
+
+				<Button
+					colour="transparent"
+					textClass="white"
+					icon="arrow-right"
+				>
+					<I18N id="page.index.download.platforms.web" />
+				</Button>
+				<div class="mobile images">
+					<div class="ipad" />
+					<div class="iphone" />
+				</div>
 			</div>
 		</div>
+		<Dialog v-if="dialog !== false" :open="dialog !== false">
+			<div>
+				<h4><I18N id="page.index.download.dialog.downloadSource" /></h4>
+				<ul v-if="dialog === 'windows'">
+					<li><a href="#"><I18N id="page.index.download.dialog.source.mega" /></a></li>
+					<li><a href="#"><I18N id="page.index.download.dialog.source.baidu" /></a></li>
+				</ul>
+				<ul v-if="dialog === 'mac'">
+					<li><a href="#"><I18N id="page.index.download.dialog.source.mega" /></a></li>
+					<li><a href="#"><I18N id="page.index.download.dialog.source.baidu" /></a></li>
+				</ul>
+				<ul v-if="dialog === 'linux'">
+					<li><a href="#"><I18N id="page.index.download.dialog.source.mega" /></a></li>
+					<li><a href="#"><I18N id="page.index.download.dialog.source.baidu" /></a></li>
+				</ul>
+			</div>
+		</Dialog>
 	</div>
 </template>
 
 <script>
 	import Dropdown from '@/components/vuetify/Dropdown';
 	import Button from '@/components/vuetify/Button';
+	import Dialog from '@/components/vuetify/Dialog';
 
 	export default {
 		components: {
+			Dialog,
 			Dropdown,
 			Button
 		},
@@ -77,6 +98,23 @@
 			padding: {
 				type: Boolean,
 				default: true
+			}
+		},
+		data()
+		{
+			return {
+				dialog: false
+			};
+		},
+		methods: {
+			toggleDialog(type)
+			{
+				this.dialog = false;
+				this.$nextTick(() => (this.dialog = type));
+			},
+			dropdownClicked(item)
+			{
+				this.toggleDialog(item.type);
 			}
 		}
 	};

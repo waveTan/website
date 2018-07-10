@@ -6,7 +6,7 @@
 					<p>
 						<I18N id="page.papers.whitepaper.info" />
 					</p>
-					<Button :onClick="toggleWhitepaperDialog">
+					<Button :onClick="toggleDialog" :onClickVars="['whitepaper']">
 						<I18N id="page.papers.whitepaper.download" />
 					</Button>
 				</div>
@@ -16,13 +16,13 @@
 					<p>
 						<I18N id="page.papers.yellowpaper.info" />
 					</p>
-					<Button :onClick="toggleYellowpaperDialog">
+					<Button :onClick="toggleDialog" :onClickVars="['yellowpaper']">
 						<I18N id="page.papers.yellowpaper.download" />
 					</Button>
 				</div>
 			</v-flex>
 		</v-layout>
-		<Dialog v-if="dialog.whitepaper" :open="dialog.whitepaper">
+		<Dialog v-if="dialog === 'whitepaper'" :open="dialog === 'whitepaper'">
 			<div>
 				<h4><I18N id="page.papers.whitepaper.dialog.chooseLanguage" /></h4>
 				<ul>
@@ -39,7 +39,7 @@
 				</ul>
 			</div>
 		</Dialog>
-		<Dialog v-if="dialog.yellowpaper" :open="dialog.yellowpaper">
+		<Dialog v-if="dialog === 'yellowpaper'" :open="dialog === 'yellowpaper'">
 			<div>
 				<h4><I18N id="page.papers.yellowpaper.dialog.downloadSources" /></h4>
 				<ul>
@@ -66,23 +66,15 @@
 		data()
 		{
 			return {
-				dialog: {
-					whitepaper: false,
-					yellowpaper: false
-				},
+				dialog: false,
 				download: `${this.$store.getters['app/apiUrl']}/download/files/papers`
 			};
 		},
 		methods: {
-			toggleWhitepaperDialog()
+			toggleDialog(type)
 			{
-				this.dialog.whitepaper = false;
-				this.$nextTick(() => (this.dialog.whitepaper = true));
-			},
-			toggleYellowpaperDialog()
-			{
-				this.dialog.yellowpaper = false;
-				this.$nextTick(() => (this.dialog.yellowpaper = true));
+				this.dialog = false;
+				this.$nextTick(() => (this.dialog = type));
 			}
 		}
 	};

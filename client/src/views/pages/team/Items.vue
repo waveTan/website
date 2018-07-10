@@ -3,8 +3,10 @@
 		<v-container grid-list-md text-xs-center class="teamItems">
 			<v-layout row wrap>
 				<v-flex v-for="(item, i) in items" :key="i" sm6 md4>
-					<v-card flat tile @click="open(i)">
-						<div @click="open(i)">
+					<v-card>
+						<div>
+							<!--<v-card flat tile @click="open(i)">
+								<div @click="open(i)">-->
 							<v-card-media
 								:src="`${imageDirectory}${item.image}`"
 								height="340px"

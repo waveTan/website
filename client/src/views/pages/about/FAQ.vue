@@ -3,24 +3,24 @@
 		<h2><I18N id="page.about.faq.title" /></h2>
 		<ul>
 			<li>
-				<router-link :to="{ name: 'home' }">
+				<router-link :to="{ name: 'faq' }">
 					<I18N id="page.about.faq.faq" />
 					<img src="@/assets/images/icons/arrow-right.png" alt="">
 				</router-link>
 			</li>
 			<li>
-				<router-link :to="{ name: 'home' }">
+				<router-link :to="{ name: 'papers' }">
 					<I18N id="page.about.faq.whitepaper" />
 					<img src="@/assets/images/icons/arrow-right.png" alt="">
 				</router-link>
 			</li>
 			<li>
-				<router-link :to="{ name: 'home' }">
+				<router-link :to="{ name: 'papers' }">
 					<I18N id="page.about.faq.yellowpaper" />
 					<img src="@/assets/images/icons/arrow-right.png" alt="">
 				</router-link>
 			</li>
-			<li>
+			<!--<li>
 				<router-link :to="{ name: 'home' }">
 					<I18N id="page.about.faq.poc" />
 					<img src="@/assets/images/icons/arrow-right.png" alt="">
@@ -49,7 +49,7 @@
 					<I18N id="page.about.faq.bounty" />
 					<img src="@/assets/images/icons/arrow-right.png" alt="">
 				</router-link>
-			</li>
+			</li>-->
 		</ul>
 	</div>
 </template>

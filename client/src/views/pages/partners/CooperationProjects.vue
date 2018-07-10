@@ -1,5 +1,5 @@
 <template>
-	<div class="section">
+	<div class="section" style="background-color: #eaf4f9">
 		<div class="container">
 			<h2 class="center"><I18N id="page.partnerships.cooperationProjects" /></h2>
 			<Items :items="items" />

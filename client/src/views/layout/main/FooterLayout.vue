@@ -96,14 +96,25 @@
 							>
 								<div>
 									<h5><I18N id="footer.links.social.title" /></h5>
+
 									<ul>
+										<li><a href="https://t.me/Nulsio" target="_blank"><I18N id="footer.links.social.me" /></a></li>
+										<li><a href="https://github.com/nuls-io/" target="_blank"><I18N id="footer.links.social.github" /></a></li>
+										<li><a href="https://www.reddit.com/r/nulsservice/" target="_blank"><I18N id="footer.links.social.reddit" /></a></li>
+										<li><a href="https://discord.gg/cUeafst" target="_blank"><I18N id="footer.links.social.discord" /></a></li>
+										<li><a href="https://steemit.com/@nuls" target="_blank"><I18N id="footer.links.social.steemit" /></a></li>
+										<li><a href="https://gitter.im/nuls_io" target="_blank"><I18N id="footer.links.social.gitter" /></a></li>
+										<li><a href="https://join.slack.com/t/nuls/shared_invite/enQtMjQ4MTM4ODAyNTI4LWJjNGMwYTE0YjRlYmFlZGUwM2JhOGE4MDIwZmE4MzA2MDg1YzUyMmVkN2RhZjkyNWMzZjY5ZDU5ZmViMjZjNGQ" target="_blank"><I18N id="footer.links.social.slack" /></a></li>
+									</ul>
+
+									<!--<ul>
 										<li><a href="https://twitter.com/nulsservice" target="_blank"><I18N id="footer.links.social.twitter" /></a></li>
 										<li><a href="https://www.facebook.com/nulscommunity" target="_blank"><I18N id="footer.links.social.facebook" /></a></li>
 										<li><a href="https://medium.com/@nuls" target="_blank"><I18N id="footer.links.social.medium" /></a></li>
 										<li><I18N id="footer.links.social.youtube" /></li>
 										<li><I18N id="footer.links.social.weChat" /></li>
 										<li><I18N id="footer.links.social.weibo" /></li>
-									</ul>
+									</ul>-->
 								</div>
 							</v-flex>
 							<v-flex

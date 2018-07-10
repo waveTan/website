@@ -15,9 +15,9 @@
 								<div>
 									<h4>{{ item.name }}</h4>
 									<p class="center jobTitle">{{ item.title }}</p>
-									<p class="center readMore">
-										<I18N id="page.team.learnMore" /> <img src="@/assets/images/icons/arrow-right-grey.png" alt="">
-									</p>
+									<!--<p class="center readMore">-->
+										<!--<I18N id="page.team.learnMore" /> <img src="@/assets/images/icons/arrow-right-grey.png" alt="">-->
+									<!--</p>-->
 								</div>
 							</v-card-title>
 						</div>

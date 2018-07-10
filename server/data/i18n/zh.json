@@ -47,7 +47,7 @@
       "button": "联系我们"
     },
     "links": {
-      "copyright": "Copyright © 2017 NULS",
+      "copyright": "Copyright © 2018 NULS",
       "singapore": "Proudly built in Singapore",
       "design": "Website design by petravic",
       "about": {
@@ -64,15 +64,16 @@
         "wallet": "Wallet",
         "dApps": "DApps"
       },
-      "social": {
-        "title": "Follow us",
-        "twitter": "Twitter",
-        "facebook": "Facebook",
-        "medium": "Medium",
-        "youtube": "Youtube",
-        "weChat": "WeChat",
-        "weibo": "Weibo"
-      },
+		"social": {
+			"title": "Follow us",
+			"me": "Telegram",
+			"github": "Github",
+			"reddit": "Reddit",
+			"discord": "Discord",
+			"steemit": "Steemit",
+			"gitter": "Gitter",
+			"slack": "Slack"
+		},
       "support": {
         "title": "Support",
         "faq": "FAQ's",

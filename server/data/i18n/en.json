@@ -165,8 +165,8 @@
 				"dialog": {
 					"downloadSource": "Download the wallet from these source",
 					"source": {
-						"mega": "MEGA.zh",
-						"baidu": "BAIDU.com"
+						"mega": "MEGA",
+						"baidu": "百度云盘"
 					}
 				}
       },
@@ -414,8 +414,8 @@
 				"dialog": {
 					"downloadSources": "Download the yellowpaper in English from the source",
 					"source": {
-						"mega": "MEGA.zh",
-						"baidu": "BAIDU.com",
+						"mega": "MEGA",
+						"baidu": "百度云盘",
 						"nuls": "NULS.io"
 					}
 				}

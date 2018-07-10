@@ -73,10 +73,6 @@
 						<p class="bold"><I18N id="page.index.roadmap.ice.3NewProgrammingLanguages.p1" /></p>
 						<p><I18N id="page.index.roadmap.ice.3NewProgrammingLanguages.p2" /></p>
 					</swiper-slide>
-					<swiper-slide>Roadmap Demo Slide 6</swiper-slide>
-					<swiper-slide>Roadmap Demo Slide 7</swiper-slide>
-					<swiper-slide>Roadmap Demo Slide 8</swiper-slide>
-					<swiper-slide>Roadmap Demo Slide 9</swiper-slide>
 					<div slot="pagination" class="swiper-pagination" />
 				</swiper>
 				<div v-if="isActive('water')">

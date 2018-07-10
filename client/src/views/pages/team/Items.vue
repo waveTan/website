@@ -2,7 +2,7 @@
 	<div>
 		<v-container grid-list-md text-xs-center class="teamItems">
 			<v-layout row wrap>
-				<v-flex v-for="(item, i) in items" :key="i" sm6 md6>
+				<v-flex v-for="(item, i) in items" :key="i" sm6 md3>
 					<v-card>
 						<div>
 							<!--<v-card flat tile @click="open(i)">

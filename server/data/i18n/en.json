@@ -134,7 +134,7 @@
         "moduleLayer": {
           "title": "Module layer",
           "p1": "Ongoing development of new modules by core/community developers",
-          "p2": "Online management under NULS module depository"
+          "p2": "Online management under NULS module repository"
         },
         "chainLayer": {
           "title": "Chain layer",
@@ -178,34 +178,35 @@
         "ice": {
           "title": "ICE",
           "mainNetTesting": {
-            "date": "2018.03",
+            "date": "2018.05",
             "p1": "Main-net testing",
             "p2": "Complete the main-net's development, testing phase commence",
             "p3": "Improve the technical design documentation",
-            "p4": "Establish and expand the open-source development community"
+            "p4": ""
           },
           "continuousImprovement": {
-            "date": "2018.05",
-            "p1": "Continuous improvement",
-            "p2": "Complete development of basic modules. Continuously improve build-in modules, such as smart contracts, multi-chain modules and cross-chain consensus.",
-            "p3": "Application Promotion",
-            "p4": "Start and promote more applications to be accessed within the NULS ecosystem.",
-            "p5": "Main-net launch",
-            "p6": "Release PC wallet",
-            "p7": "Release mobile wallet",
-            "p8": "Release blockchain explorer"
+            "date": "2018.07",
+            "p1": "Main-net launch",
+            "p2": "Complete development of basic modules",
+            "p3": "",
+            "p4": "Continuous improvement the bulit-in modules",
+            "p5": "Bockchain explorer launch",
+            "p6": "Establish and expand the open-source development community",
+            "p7": "",
+            "p8": ""
           },
           "releaseSmartContractModule": {
-            "date": "2018.07",
+            "date": "2018.09",
             "p1": "Release Smart Contract module",
-            "p2": "Inchain joins NULS",
-            "p3": "Technology: main-chain's ecosystem improvements",
-            "p4": "Improve the main-chains overall ecosystem, including a blockchain browser, e-wallet, mobile wallet, Smart Contact virtual machine compiler, development tools, and multilingual adapters."
+            "p2": "Release universal Ledger module",
+            "p3": "Ecosystem improvements",
+            "p4": "Start and promote more applications to be accessed within the NULS ecosystem",
+            "p5": "Improve the main-chains overall ecosystem,web-wallet, mobile wallet, Smart Contact virtual machine"
           },
           "3NewProgrammingLanguages": {
-            "date": "2018.10",
-            "p1": "3 New programming languages",
-            "p2": "Add support for 3 programming languages to Smart Contracts"
+            "date": "2018.12",
+            "p1": "Chain Factory launch",
+            "p2": "Everybody can customize his chain,and connect the chain to other chains in NULS ecosystem"
           }
         },
         "water": {

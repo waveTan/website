@@ -9,7 +9,7 @@
 								<div @click="open(i)">-->
 							<v-card-media
 								:src="`${imageDirectory}${item.image}`"
-								height="170px"
+								height="200px"
 							/>
 							<v-card-title primary-title>
 								<div>

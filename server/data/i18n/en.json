@@ -35,11 +35,10 @@
   "footer": {
     "social": {
       "title": {
-        "body": "Join {nuls} community",
+        "body": "Join The {nuls} community",
         "nuls": "NULS"
       },
-      "cuttingEdge": "We believe that NULS has the most cutting-edge modular thinking towards reshaping the world.",
-      "globalCommunity": "We encourage fans to join our global community!",
+      "cuttingEdge": "NULS wants to re-shape the world, starting with blockchain. If you would like to be part of our growing community and share this journey, please connect on one of our social media pages. ",
       "viewTeam": "View NULS Team",
       "joinUs": "Join us"
     },
@@ -188,17 +187,17 @@
             "date": "2018.07",
             "p1": "Main-net launch",
             "p2": "Complete development of basic modules",
-            "p3": "",
-            "p4": "Continuous improvement the bulit-in modules",
-            "p5": "Bockchain explorer launch",
-            "p6": "Establish and expand the open-source development community",
+            "p3": "Continuous improvements of the built-in modules",
+            "p4": "",
+            "p5": "Launch blockchain explorer",
+            "p6": "Establish and expand an open-source development community",
             "p7": "",
             "p8": ""
           },
           "releaseSmartContractModule": {
             "date": "2018.09",
-            "p1": "Release Smart Contract module",
-            "p2": "Release universal Ledger module",
+            "p1": "Release smart contract module",
+            "p2": "Release universal ledger module",
             "p3": "Ecosystem improvements",
             "p4": "Start and promote more applications to be accessed within the NULS ecosystem",
             "p5": "Improve the main-chains overall ecosystem,web-wallet, mobile wallet, Smart Contact virtual machine"
@@ -206,7 +205,7 @@
           "3NewProgrammingLanguages": {
             "date": "2018.12",
             "p1": "Chain Factory launch",
-            "p2": "Everybody can customize his chain,and connect the chain to other chains in NULS ecosystem"
+            "p2": "NULS innovative design system, which allows for the creation of a customizable chain using our modular repository, in addition to connecting to other chains in the NULS ecosystem."
           }
         },
         "water": {
@@ -247,7 +246,7 @@
         }
       },
       "latestHappenings": {
-        "title": "Latest Happenings",
+        "title": "Latest Events",
         "more": "More..."
       }
     },
@@ -283,8 +282,8 @@
 				"title": "Our Partnerships",
 				"meta": "NULS Partner Network is a collaborative framework between NULS and partners to meet different types of cooperation needs, including technical support, communication, community assistance, market expansion and marketing, to ensure that partners and NULS to achieve their goals."
 			},
-			"cooperationProjects": "Cooperation projects",
-			"cooperationMedia": "Cooperation media",
+			"cooperationProjects": "Partners",
+			"cooperationMedia": "Media Partners",
 			"platforms": "Platforms",
 			"becomeAPartner": {
 				"title": "Become a Partner",
@@ -312,7 +311,7 @@
 			"pageTitle": "Team",
 			"header": {
 				"title": "NULS Team",
-				"meta": "The core team members are high-experienced professionals who are well versed in blockchain technology and community building. The catalyst which brought this team together, was a shared vision of blockchain, and a desire to create an open, innovative and technology advanced platform. "
+				"meta": "The core team members are high-experienced professionals who are well versed in blockchain technology and community building. The catalyst which brought this team together was a shared vision of blockchain, and a desire to create an open, innovative and technologically advanced platform."
 			},
 			"developers": "Member",
 			"community": "Community Operation",

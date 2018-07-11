@@ -8,7 +8,6 @@
 					</I18N>
 				</h3>
 				<p><I18N id="footer.social.cuttingEdge" /></p>
-				<p><I18N id="footer.social.globalCommunity" /></p>
 			</div>
 			<div class="buttons">
 				<Button

@@ -67,16 +67,16 @@
 			<div>
 				<h4><I18N id="page.index.download.dialog.downloadSource" /></h4>
 				<ul v-if="dialog === 'windows'">
-					<li><a href="#"><I18N id="page.index.download.dialog.source.mega" /></a></li>
-					<li><a href="#"><I18N id="page.index.download.dialog.source.baidu" /></a></li>
+					<li><a href="https://mega.nz/#!S3owwSwB!vsxtFkoQvhCUOx-fidZnepo-JByCCbak-_smgCalu5k" target="_blank"><I18N id="page.index.download.dialog.source.mega" /></a></li>
+					<li><a href="https://pan.baidu.com/s/1CHSVpVLvt5y6EiHMcobOhQ" target="_blank"><I18N id="page.index.download.dialog.source.baidu" /></a></li>
 				</ul>
 				<ul v-if="dialog === 'mac'">
-					<li><a href="#"><I18N id="page.index.download.dialog.source.mega" /></a></li>
-					<li><a href="#"><I18N id="page.index.download.dialog.source.baidu" /></a></li>
+					<li><a href="https://mega.nz/#!zr5mGQbS!Zz9p1bc9UKtqsqP7ncQdZFGDHufb44H8TEDhvWmxrKY" target="_blank"><I18N id="page.index.download.dialog.source.mega" /></a></li>
+					<li><a href="https://pan.baidu.com/s/1Lpl-HoS8wvscv2rKAjSV1A" target="_blank"><I18N id="page.index.download.dialog.source.baidu" /></a></li>
 				</ul>
 				<ul v-if="dialog === 'linux'">
-					<li><a href="#"><I18N id="page.index.download.dialog.source.mega" /></a></li>
-					<li><a href="#"><I18N id="page.index.download.dialog.source.baidu" /></a></li>
+					<<li><a href="https://mega.nz/#!76xgRAwY!gzBuFS459aCjmk-2Y9VYnHDgPLe4_UGPkAHQvgZek5M" target="_blank"><I18N id="page.index.download.dialog.source.mega" /></a></li>
+					<li><a href="https://pan.baidu.com/s/1ordjkccUON_8BFp_ijg5BA" target="_blank"><I18N id="page.index.download.dialog.source.baidu" /></a></li>
 				</ul>
 			</div>
 		</Dialog>

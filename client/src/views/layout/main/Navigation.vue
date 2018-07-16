@@ -36,6 +36,7 @@
 						<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.home" /></router-link></li>
 						<li><router-link :to="{ name: 'wallet' }"><I18N id="header.navigation.wallet" /></router-link></li>
 						<li><a href="http://explorer.nuls.io"><I18N id="header.navigation.blockchainExplorer" /></a></li>
+						<li><a href="https://swap.nuls.io/swap.html" target="_blank"><I18N id="header.navigation.token" /></a></li>
 						<li>
 							<Dropdown
 								:useButton="false"

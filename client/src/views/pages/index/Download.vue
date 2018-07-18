@@ -69,14 +69,17 @@
 				<ul v-if="dialog === 'windows'">
 					<li><a href="https://mega.nz/#!S3owwSwB!vsxtFkoQvhCUOx-fidZnepo-JByCCbak-_smgCalu5k" target="_blank"><I18N id="page.index.download.dialog.source.mega" /></a></li>
 					<li><a href="https://pan.baidu.com/s/1CHSVpVLvt5y6EiHMcobOhQ" target="_blank"><I18N id="page.index.download.dialog.source.baidu" /></a></li>
+					<li><a href="https://github.com/nuls-io/nuls-wallet-release/raw/master/NULS-Wallet-win64-1.0.0.zip" target="_blank"><I18N id="page.index.download.dialog.source.github" /></a></li>
 				</ul>
 				<ul v-if="dialog === 'mac'">
 					<li><a href="https://mega.nz/#!zr5mGQbS!Zz9p1bc9UKtqsqP7ncQdZFGDHufb44H8TEDhvWmxrKY" target="_blank"><I18N id="page.index.download.dialog.source.mega" /></a></li>
 					<li><a href="https://pan.baidu.com/s/1Lpl-HoS8wvscv2rKAjSV1A" target="_blank"><I18N id="page.index.download.dialog.source.baidu" /></a></li>
+					<li><a href="https://github.com/nuls-io/nuls-wallet-release/raw/master/NULS-Wallet-macOS64-1.0.0.zip" target="_blank"><I18N id="page.index.download.dialog.source.github" /></a></li>
 				</ul>
 				<ul v-if="dialog === 'linux'">
-					<<li><a href="https://mega.nz/#!76xgRAwY!gzBuFS459aCjmk-2Y9VYnHDgPLe4_UGPkAHQvgZek5M" target="_blank"><I18N id="page.index.download.dialog.source.mega" /></a></li>
+					<li><a href="https://mega.nz/#!76xgRAwY!gzBuFS459aCjmk-2Y9VYnHDgPLe4_UGPkAHQvgZek5M" target="_blank"><I18N id="page.index.download.dialog.source.mega" /></a></li>
 					<li><a href="https://pan.baidu.com/s/1ordjkccUON_8BFp_ijg5BA" target="_blank"><I18N id="page.index.download.dialog.source.baidu" /></a></li>
+					<li><a href="https://github.com/nuls-io/nuls-wallet-release/raw/master/NULS-Wallet-linux64-1.0.0.tar.gz" target="_blank"><I18N id="page.index.download.dialog.source.github" /></a></li>
 				</ul>
 			</div>
 		</Dialog>

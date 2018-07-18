@@ -75,6 +75,7 @@ module.exports = {
 		}),
 		new Dotenv(),
 		new HtmlWebpackPlugin({
+			favicon: 'src/assets/favicon.ico',
 			title: config.title,
 			chunksSortMode: 'none',
 			template: path.resolve(__dirname, 'index.html'),

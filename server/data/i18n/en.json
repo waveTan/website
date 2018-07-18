@@ -165,7 +165,8 @@
 					"downloadSource": "Download the wallet from these source",
 					"source": {
 						"mega": "MEGA",
-						"baidu": "百度云盘"
+						"baidu": "百度云盘",
+						"github":"Github"
 					}
 				}
       },

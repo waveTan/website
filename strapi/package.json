@@ -1,50 +1,51 @@
 {
-  "name": "strapi",
-  "private": true,
-  "version": "0.1.0",
-  "description": "A Strapi application.",
-  "main": "./server.js",
-  "scripts": {
-    "setup": "cd admin && npm run setup",
-    "start": "node server.js",
-    "strapi": "node_modules/strapi/bin/strapi.js",
-    "lint": "node_modules/.bin/eslint api/**/*.js config/**/*.js plugins/**/*.js",
-    "postinstall": "node node_modules/strapi/lib/utils/post-install.js"
-  },
-  "devDependencies": {
-    "babel-eslint": "^7.1.1",
-    "eslint": "^3.12.2",
-    "eslint-config-airbnb": "^13.0.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-react": "^6.8.0"
-  },
-  "dependencies": {
-    "dotenv": "^6.0.0",
-    "knex": "latest",
-    "lodash": "4.x.x",
-    "mysql": "2.15.0",
-    "strapi": "3.0.0-alpha.12.6",
-    "strapi-bookshelf": "3.0.0-alpha.12.5",
-    "strapi-knex": "3.0.0-alpha.12.5"
-  },
-  "author": {
-    "name": "A Strapi developer",
-    "email": "",
-    "url": ""
-  },
-  "maintainers": [
-    {
-      "name": "A Strapi developer",
-      "email": "",
-      "url": ""
-    }
-  ],
-  "strapi": {
-    "uuid": "f5d0ba12-a25f-4b25-89fc-20c44c2aa812"
-  },
-  "engines": {
-    "node": ">= 9.0.0",
-    "npm": ">= 5.0.0"
-  },
-  "license": "MIT"
+	"name": "myNewProject",
+	"private": true,
+	"version": "0.1.0",
+	"description": "A Strapi application.",
+	"main": "./server.js",
+	"scripts": {
+		"setup": "cd admin && npm run setup",
+		"start": "node server.js",
+		"strapi": "node_modules/strapi/bin/strapi.js",
+		"lint": "node_modules/.bin/eslint api/**/*.js config/**/*.js plugins/**/*.js",
+		"postinstall": "node node_modules/strapi/lib/utils/post-install.js"
+	},
+	"devDependencies": {
+		"babel-eslint": "^7.1.1",
+		"eslint": "^3.12.2",
+		"eslint-config-airbnb": "^13.0.0",
+		"eslint-plugin-import": "^2.2.0",
+		"eslint-plugin-react": "^6.8.0"
+	},
+	"dependencies": {
+		"dotenv": "^6.0.0",
+		"lodash": "4.x.x",
+		"strapi": "3.0.0-alpha.12.7.1",
+		"strapi-bookshelf": "3.0.0-alpha.12.7.1",
+		"strapi-knex": "3.0.0-alpha.12.7.1",
+		"knex": "latest",
+		"mysql": "2.16.0"
+	},
+	"author": {
+		"name": "A Strapi developer",
+		"email": "",
+		"url": ""
+	},
+	"maintainers": [
+		{
+			"name": "A Strapi developer",
+			"email": "",
+			"url": ""
+		}
+	],
+	"strapi": {
+		"packageManager": "npm",
+		"uuid": "77b0fcf4-de46-447c-9fa5-3db37a86baa5"
+	},
+	"engines": {
+		"node": ">= 9.0.0",
+		"npm": ">= 5.0.0"
+	},
+	"license": "MIT"
 }

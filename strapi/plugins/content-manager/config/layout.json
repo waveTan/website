@@ -1,225 +1,37 @@
 {
-  "partners": {
+  "article": {
     "attributes": {
-      "serialNumber": {
+      "title": {
         "appearance": ""
       },
-      "type": {
+      "coucou": {
         "appearance": ""
       },
-      "link": {
+      "content": {
+        "appearance": "WYSIWYG"
+      },
+      "code": {
         "appearance": ""
       }
     }
   },
-  "dapps": {
-    "attributes": {
-      "active": {
-        "appearance": ""
-      },
-      "serialNumber": {
-        "appearance": ""
-      },
-      "link": {
-        "appearance": ""
-      },
-      "en_title": {
-        "appearance": ""
-      },
-      "en_description": {
-        "appearance": ""
-      },
-      "en_content": {
-        "appearance": "WYSIWYG"
-      },
-      "zh_title": {
-        "appearance": ""
-      },
-      "zh_description": {
-        "appearance": ""
-      },
-      "zh_content": {
-        "appearance": "WYSIWYG"
-      }
-    }
-  },
-  "team": {
-    "attributes": {
-      "serialNumber": {
-        "appearance": ""
-      },
-      "en_name": {
-        "appearance": ""
-      },
-      "en_title": {
-        "appearance": ""
-      },
-      "en_description": {
-        "appearance": "WYSIWYG"
-      },
-      "linkedin": {
-        "appearance": ""
-      },
-      "category": {
-        "appearance": ""
-      },
-      "zh_name": {
-        "appearance": ""
-      },
-      "zh_title": {
-        "appearance": ""
-      },
-      "zh_description": {
-        "appearance": "WYSIWYG"
-      },
-      "en_content": {
-        "appearance": "WYSIWYG"
-      },
-      "zh_content": {
-        "appearance": "WYSIWYG"
-      }
-    }
-  },
-  "jobs": {
-    "attributes": {
-      "active": {
-        "appearance": ""
-      },
-      "feature": {
-        "appearance": ""
-      },
-      "serialNumber": {
-        "appearance": ""
-      },
-      "en_title": {
-        "appearance": ""
-      },
-      "en_description": {
-        "appearance": "WYSIWYG"
-      },
-      "description": {
-        "appearance": ""
-      },
-      "contactEmailAddress": {
-        "appearance": ""
-      },
-      "zh_title": {
-        "appearance": ""
-      },
-      "zh_description": {
-        "appearance": "WYSIWYG"
-      },
-      "en_content": {
-        "appearance": "WYSIWYG"
-      },
-      "zh_content": {
-        "appearance": "WYSIWYG"
-      }
-    }
-  },
-  "contact": {
+  "tag": {
     "attributes": {
       "name": {
         "appearance": ""
-      },
-      "email": {
-        "appearance": ""
-      },
-      "message": {
-        "appearance": ""
-      },
-      "resolved": {
+      }
+    }
+  },
+  "category": {
+    "attributes": {
+      "name": {
         "appearance": ""
       }
     }
   },
-  "news": {
+  "reference": {
     "attributes": {
-      "serialNumber": {
-        "appearance": ""
-      },
-      "featured": {
-        "appearance": ""
-      },
-      "active": {
-        "appearance": ""
-      },
-      "en_title": {
-        "appearance": ""
-      },
-      "en_description": {
-        "appearance": ""
-      },
-      "zh_title": {
-        "appearance": ""
-      },
-      "zh_description": {
-        "appearance": ""
-      },
-      "en_content": {
-        "appearance": "WYSIWYG"
-      },
-      "zh_content": {
-        "appearance": "WYSIWYG"
-      }
-    }
-  },
-  "announcements": {
-    "attributes": {
-      "serialNumber": {
-        "appearance": ""
-      },
-      "featured": {
-        "appearance": ""
-      },
-      "active": {
-        "appearance": ""
-      },
-      "en_title": {
-        "appearance": ""
-      },
-      "en_description": {
-        "appearance": "WYSIWYG"
-      },
-      "zh_title": {
-        "appearance": ""
-      },
-      "zh_description": {
-        "appearance": "WYSIWYG"
-      },
-      "en_content": {
-        "appearance": "WYSIWYG"
-      },
-      "zh_content": {
-        "appearance": "WYSIWYG"
-      }
-    }
-  },
-  "documentCategories": {
-    "attributes": {
-      "en_title": {
-        "appearance": ""
-      },
-      "zh_title": {
-        "appearance": ""
-      }
-    }
-  },
-  "documents": {
-    "attributes": {
-      "en_title": {
-        "appearance": ""
-      },
-      "zh_title": {
-        "appearance": ""
-      },
-      "zh_content": {
-        "appearance": "WYSIWYG"
-      },
-      "en_content": {
-        "appearance": "WYSIWYG"
-      },
-      "active": {
+      "name": {
         "appearance": ""
       }
     }

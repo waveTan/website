@@ -2,7 +2,7 @@
   "defaultConnection": "default",
   "connections": {
     "default": {
-      "connector": "strapi-bookshelf",
+      "connector": "strapi-hook-bookshelf",
       "settings": {
         "client": "mongo",
         "uri": "${process.env.DATABASE_URI || ''}",

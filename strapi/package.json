@@ -20,11 +20,11 @@
 	},
 	"dependencies": {
 		"dotenv": "^6.0.0",
-		"lodash": "4.x.x",
-		"strapi": "3.0.0-alpha.13",
-		"strapi-hook-bookshelf": "3.0.0-alpha.13",
-		"strapi-hook-knex": "3.0.0-alpha.13",
-		"knex": "latest",
+		"lodash": "^4.17.10",
+		"strapi": "3.0.0-alpha.13.0.1",
+		"strapi-hook-bookshelf": "3.0.0-alpha.13.0.1",
+		"strapi-hook-knex": "3.0.0-alpha.13.0.1",
+		"knex": "^0.15.2",
 		"mysql": "2.16.0"
 	},
 	"author": {
@@ -40,7 +40,7 @@
 		}
 	],
 	"strapi": {
-		"packageManager": "npm",
+		"packageManager": "yarn",
 		"uuid": "77b0fcf4-de46-447c-9fa5-3db37a86baa5"
 	},
 	"engines": {

@@ -1,5 +1,7 @@
 .env
 public/uploads/*
+admin/admin/build/*
+config/locales/*
 
 ############################
 # OS X

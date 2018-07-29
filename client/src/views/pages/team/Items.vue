@@ -16,7 +16,7 @@
 									<h4>{{ item.name }}</h4>
 									<p class="center jobTitle">{{ item.title }}</p>
 									<!--<p class="center readMore">-->
-										<!--<I18N id="page.team.learnMore" /> <img src="@/assets/images/icons/arrow-right-grey.png" alt="">-->
+									<!--<I18N id="page.team.learnMore" /> <img src="@/assets/images/icons/arrow-right-grey.png" alt="">-->
 									<!--</p>-->
 								</div>
 							</v-card-title>
@@ -82,7 +82,7 @@
 			},
 			compiledMarkdown()
 			{
-				return marked(this.dialogItem.content, { sanitize: true })
+				return marked(this.dialogItem.content, { sanitize: true });
 			}
 		},
 		methods: {

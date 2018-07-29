@@ -299,7 +299,8 @@
 			"header": {
 				"title": "NULS DApps",
 				"meta": "Developers from NULS Community can develop various modules and applications as needed or select proper modules to customize subchains. NULS is building a future for distributed applications.",
-				"create": "Create a NULS DApp"
+				"create": "Create a NULS DApp",
+				"createSoon": "Documentation on how to create DApps is coming soon"
 			},
 			"items": {
 				"search": "Search for DApps",

@@ -33,7 +33,7 @@
 		components: {
 			ItemsPro
 		}
-	}
+	};
 </script>
 
 <style>

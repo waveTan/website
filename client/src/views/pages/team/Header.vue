@@ -9,6 +9,6 @@
 
 <style scoped>
 	.header {
-		padding-bottom: 300px;
+		padding-bottom: 140px;
 	}
 </style>

@@ -1,6 +1,6 @@
 <template>
 	<div class="section container">
-		<h2 class="center"><I18N id="page.team.developers" /></h2>
+		<!--<h2 class="center"><I18N id="page.team.developers" /></h2>-->
 		<Items :items="items" />
 	</div>
 </template>
@@ -23,7 +23,7 @@
 
 <style scoped>
 	.section {
-		margin-top: -260px;
+		margin-top: -140px;
 		position: relative;
 	}
 

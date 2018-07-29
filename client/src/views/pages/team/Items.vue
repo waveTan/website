@@ -98,6 +98,7 @@
 <style>
 	.container.teamItems .card {
 		cursor: pointer;
+		box-shadow: none;
 	}
 
 	.container.teamItems .card__media {

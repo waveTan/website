@@ -24,6 +24,7 @@
 								]"
 								:arrow="whiteBackground ? '-black' : ''"
 								title="header.navigation.about"
+								class="dropdownPadding"
 							/>
 						</li>
 						<!--<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.forum" /></router-link></li>-->
@@ -50,6 +51,7 @@
 									{ title: 'header.navigation.news', link: 'news' }
 								]"
 								title="header.navigation.more"
+								class="dropdownPadding"
 							/>
 						</li>
 					</ul>
@@ -79,6 +81,7 @@
 										{ title: 'header.navigation.news', link: 'news' }
 									]"
 									title="header.navigation.about"
+									class="dropdownPadding"
 								/>
 							</li>
 							<!--<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.forum" /></router-link></li>-->
@@ -142,6 +145,10 @@
 </script>
 
 <style scoped>
+	.dropdownPadding {
+		padding: 15px;
+	}
+
 	.containerParent {
 		font-family: SofiaProLight, sans-serif;
 		font-size: 18px;

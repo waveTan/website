@@ -10,9 +10,9 @@
 			</div>
 		</div>
 		<div v-else>
-			<Developers :items="getItems('developer')" />
-			<Community :items="getItems('operation')" />
-			<Advisors :items="getItems('advisor')" />
+			<Developers v-if="getItems('developer')" :items="getItems('developer')" />
+			<Community v-if="getItems('operation')" :items="getItems('operation')" />
+			<Advisors v-if="getItems('advisor')" :items="getItems('advisor')" />
 		</div>
 	</div>
 </template>
@@ -42,14 +42,13 @@
 				if(!this.$store.getters['items/getItems']('team'))
 				{
 					this.$store.dispatch('items/loadItems', 'team');
+
+					return false;
 				}
 
-				if(!this.$store.getters['items/getItems']('team'))
-				{
-					return [];
-				}
+				const members = this.$store.getters['items/getItems']('team').filter((item) => item.category.toLowerCase() === type);
 
-				return this.$store.getters['items/getItems']('team').filter((item) => item.category.toLowerCase() === type);
+				return members.length !== 0 ? members : false;
 			}
 		}
 	};

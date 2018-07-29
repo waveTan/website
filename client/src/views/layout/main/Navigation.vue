@@ -117,8 +117,9 @@
 			document.documentElement.removeEventListener('click', this.clickAway, false);
 		},
 		methods: {
-			toUrl(url){
-				window.open(url,'target')
+			toUrl(url)
+			{
+				window.open(url, 'target');
 			},
 			toggleMobileNavigation()
 			{

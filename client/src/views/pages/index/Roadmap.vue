@@ -68,10 +68,10 @@
 						<p><I18N id="page.index.roadmap.ice.releaseSmartContractModule.p4" /></p>
 					</swiper-slide>
 					<swiper-slide>
-						<p class="date"><I18N id="page.index.roadmap.ice.3NewProgrammingLanguages.date" /></p>
+						<p class="date"><I18N id="page.index.roadmap.ice.chainFactory.date" /></p>
 						<div class="triangle" />
-						<p class="bold"><I18N id="page.index.roadmap.ice.3NewProgrammingLanguages.p1" /></p>
-						<p><I18N id="page.index.roadmap.ice.3NewProgrammingLanguages.p2" /></p>
+						<p class="bold"><I18N id="page.index.roadmap.ice.chainFactory.p1" /></p>
+						<p><I18N id="page.index.roadmap.ice.chainFactory.p2" /></p>
 					</swiper-slide>
 					<div slot="pagination" class="swiper-pagination" />
 				</swiper>

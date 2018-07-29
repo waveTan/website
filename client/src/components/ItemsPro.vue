@@ -20,7 +20,10 @@
 				grid-list-md
 				text-xs-center
 			>
-				<v-layout row wrap>
+				<div v-if="!getItems">
+					<p><I18N id="items.404" /></p>
+				</div>
+				<v-layout v-else row wrap>
 					<v-flex
 						v-for="(item, i) in getItems"
 						:key="i"
@@ -34,7 +37,7 @@
 					</v-flex>
 				</v-layout>
 			</v-container>
-			<div class="text-xs-center">
+			<div v-if="totalPages > 1" class="text-xs-center">
 				<v-pagination
 					:length="totalPages"
 					v-model="page"
@@ -101,7 +104,7 @@
 
 					this.setItemsListData(data);
 
-					return this.items;
+					return this.items.length !== 0 ? this.items : false;
 				}
 
 				if(!this.$store.getters['itemsPro/getSearchItems'](this.page))
@@ -109,7 +112,9 @@
 					this.searchItems();
 				}
 
-				return this.$store.getters['itemsPro/getSearchItems'](this.page);
+				const items = this.$store.getters['itemsPro/getSearchItems'](this.page);
+
+				return items.length !== 0 ? items : false;
 			}
 		},
 		methods: {

@@ -1,7 +1,7 @@
 <template>
 	<v-container grid-list-md text-xs-center class="partnerItems">
 		<v-layout row wrap>
-			<v-flex v-for="(item, i) in items" :key="i" sm6 md3>
+			<v-flex v-for="(item, i) in items" :key="i" xs12 sm6 md3>
 				<v-card flat tile>
 					<a :href="item.link" target="_blank">
 						<v-card-media

@@ -11,9 +11,9 @@
     "comment": ""
   },
   "attributes": {
-		"active": {
-			"type": "boolean"
-		},
+    "active": {
+      "type": "boolean"
+    },
     "feature": {
       "type": "boolean"
     },
@@ -21,9 +21,9 @@
       "unique": true,
       "type": "integer"
     },
-		"contactEmailAddress": {
-			"type": "email"
-		},
+    "contactEmailAddress": {
+      "type": "email"
+    },
     "en_title": {
       "type": "string",
       "required": true

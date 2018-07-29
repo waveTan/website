@@ -18,23 +18,23 @@
       "unique": true,
       "type": "integer"
     },
-		"link": {
-			"type": "string"
-		},
-		"image": {
-			"model": "file",
-			"via": "related",
-			"plugin": "upload"
-		},
+    "link": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
     "en_title": {
       "type": "string",
       "required": true
     },
-		"en_description": {
-			"maxLength": 200,
-			"type": "text",
-			"required": true
-		},
+    "en_description": {
+      "maxLength": 200,
+      "type": "text",
+      "required": true
+    },
     "en_content": {
       "type": "text",
       "required": true
@@ -42,10 +42,10 @@
     "zh_title": {
       "type": "string"
     },
-		"zh_description": {
-			"maxLength": 200,
-			"type": "text"
-		},
+    "zh_description": {
+      "maxLength": 200,
+      "type": "text"
+    },
     "zh_content": {
       "type": "text"
     }

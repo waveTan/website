@@ -10,9 +10,9 @@
 			</div>
 		</div>
 		<div v-else>
-			<CooperationProjects :items="getItems('cooperation project')" />
-			<CooperationMedia :items="getItems('cooperation media')" />
-			<Platforms :items="getItems('platform')" />
+			<CooperationProjects v-if="getItems('cooperation project')" :items="getItems('cooperation project')" />
+			<CooperationMedia v-if="getItems('cooperation media')" :items="getItems('cooperation media')" />
+			<Platforms v-if="getItems('platform')" :items="getItems('platform')" />
 		</div>
 		<BecomeAPartner />
 	</div>
@@ -55,7 +55,9 @@
 			{
 				if(!this.partnerships) return [];
 
-				return this.partnerships.filter((item) => item.type.toLowerCase() === type);
+				const partners = this.partnerships.filter((item) => item.type.toLowerCase() === type);
+
+				return partners.length !== 0 ? partners : false;
 			}
 		}
 	};

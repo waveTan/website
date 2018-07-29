@@ -4,6 +4,7 @@ import { sync } from 'vuex-router-sync';
 import VueI18N from 'vue-i18n';
 import VeeValidate from 'vee-validate';
 import VueMasonry from 'vue-masonry-css';
+import VueAwesomeSwiper from 'vue-awesome-swiper'
 import fontawesome from '@fortawesome/fontawesome';
 import FontAwesomeIcon from '@fortawesome/vue-fontawesome';
 import 'flexboxgrid/css/flexboxgrid.min.css';
@@ -21,6 +22,7 @@ fontawesome.library.add({ ...icons });
 store.dispatch('app/load');
 sync(store, router);
 
+Vue.use(VueAwesomeSwiper);
 Vue.use(VueMasonry);
 Vue.use(VueI18N);
 Vue.use(Vuetify);

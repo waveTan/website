@@ -98,6 +98,6 @@
 	}
 
 	.more {
-		background: url('~@/assets/images/news.jpg');
+		/*background: url('~@/assets/images/news.jpg');*/
 	}
 </style>

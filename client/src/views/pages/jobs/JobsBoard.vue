@@ -12,8 +12,10 @@
 					:key="i"
 				>
 					<template slot="header">
-						<h4>{{ job.title }}</h4>
-						<span class="readMore"><I18N id="page.jobs.readMore" /></span>
+						<div class="jobTitleMeta">
+							<div class="title"><h4>{{ job.title }}</h4></div>
+							<div class="readMore"><span class="readMore"><I18N id="page.jobs.readMore" /></span></div>
+						</div>
 					</template>
 					<div v-html="compiledMarkdown(job.content)" />
 					<div slot="footer" class="footer">
@@ -76,5 +78,20 @@
 
 	.centered {
 		padding: 0;
+	}
+
+	.jobTitleMeta {
+		display: -webkit-flex;
+		display: flex;
+		width: 100%;
+	}
+
+	.jobTitleMeta .title {
+		flex: 5;
+	}
+
+	.jobTitleMeta .readMore {
+		flex: 1;
+		text-align: right;
 	}
 </style>

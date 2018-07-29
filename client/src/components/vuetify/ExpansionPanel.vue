@@ -43,11 +43,6 @@
 		padding: 30px;
 	}
 
-	.expansionPanel .header span.readMore {
-		float: right;
-		margin-top: -25px;
-	}
-
 	.expansionPanel .card__text.content {
 		border-top: 1px solid rgba(10, 33, 64, 0.1);
 		border-bottom: 1px solid rgba(10, 33, 64, 0.1);

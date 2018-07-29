@@ -16,5 +16,5 @@
 			Header,
 			JobsBoard
 		}
-	}
+	};
 </script>

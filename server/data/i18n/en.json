@@ -328,7 +328,8 @@
 			"communityRoles": "Community Roles",
 			"pleaseUpload": "Please upload your resume with contact information, we will contact you if appropriate.",
 			"readMore": "Read more",
-			"sendResume": "Send your resume to"
+			"sendResume": "Send your resume to",
+			"noJobs": "We really appreciate your interest but we have no jobs available at the moment, please check back another time."
 		},
 		"contact": {
 			"pageTitle": "Contact",

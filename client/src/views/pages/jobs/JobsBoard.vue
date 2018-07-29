@@ -3,7 +3,14 @@
 		<div class="centered">
 			<v-progress-circular v-if="pageLoading" :size="50" indeterminate color="primary" />
 			<Panels v-else>
-				<Panel v-for="(job, i) in jobs" :key="i">
+				<p v-if="!jobs">
+					<I18N id="page.jobs.noJobs" />
+				</p>
+				<Panel
+					v-for="(job, i) in jobs"
+					v-else
+					:key="i"
+				>
 					<template slot="header">
 						<h4>{{ job.title }}</h4>
 						<span class="readMore"><I18N id="page.jobs.readMore" /></span>
@@ -36,7 +43,9 @@
 					this.$store.dispatch('items/loadItems', 'jobs');
 				}
 
-				return this.$store.getters['items/getItems']('jobs');
+				const jobs = this.$store.getters['items/getItems']('jobs');
+
+				return jobs.length !== 0 ? jobs : false;
 			},
 			pageLoading()
 			{
@@ -46,10 +55,10 @@
 		methods: {
 			compiledMarkdown(markdown)
 			{
-				return marked(markdown, { sanitize: true })
+				return marked(markdown, { sanitize: true });
 			}
 		}
-	}
+	};
 </script>
 
 <style scoped>

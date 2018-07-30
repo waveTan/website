@@ -21,7 +21,28 @@
 		gtag('js', new Date());
 		gtag('config', 'UA-122957909-1');
 	</script>
-	<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us18.list-manage.com","uuid":"8c7ff9af1a1be470924dbf570","lid":"f6e0ffd588"}) })</script>
+	<script
+		type="text/javascript"
+		src="https://downloads.mailchimp.com/js/signup-forms/popup/embed.js"
+		data-dojo-config="usePlainJson: true, isDebug: false"
+	>
+	</script>
+	<script type="text/javascript">
+		function showMailChimpStraightAway()
+		{
+			const regex = new RegExp(`[?&]${'showNewsletter'.replace(/[\[\]]/g, '\\$&')}(=([^&#]*)|&|#|$)`);
+			const results = regex.exec(window.location.href);
+
+			return !!results;
+		}
+
+		setTimeout(function(){
+			require(['mojo/signup-forms/Loader'], function (L)
+			{
+				L.start({ baseUrl: 'mc.us18.list-manage.com', uuid: '8c7ff9af1a1be470924dbf570', lid: 'f6e0ffd588' });
+			})
+		}, showMailChimpStraightAway() ? 0 : 20000);
+	</script>
 </head>
 <body>
 <div id="app"></div>

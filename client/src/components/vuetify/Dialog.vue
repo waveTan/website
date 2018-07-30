@@ -1,5 +1,9 @@
 <template>
-	<v-dialog :value="open" max-width="50%">
+	<v-dialog
+		:value="open"
+		:persistent="persistent"
+		max-width="50%"
+	>
 		<v-card :class="dialogClass">
 			<v-card-title>
 				<div class="title">
@@ -33,6 +37,10 @@
 			dialogClass: {
 				type: String,
 				default: ''
+			},
+			persistent: {
+				type: Boolean,
+				default: false
 			}
 		},
 		methods: {

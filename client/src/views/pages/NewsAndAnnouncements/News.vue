@@ -52,7 +52,6 @@
 
 	.container.newsItems .details p {
 		margin-top: 20px;
-		height: 200px;
 	}
 
 	.container.newsItems .container {

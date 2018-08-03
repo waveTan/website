@@ -52,6 +52,7 @@
 
 	.container.newsItems .details p {
 		margin-top: 20px;
+		height: 200px;
 	}
 
 	.container.newsItems .container {
@@ -65,5 +66,10 @@
 	.container.newsItems .image .card__media__background {
 		background-position: right !important;
 		border-radius: 0 6px 6px 0;
+	}
+
+	.container.newsItems h2 {
+		font-size: 36px;
+		line-height: 44px;
 	}
 </style>

@@ -15,8 +15,10 @@ const load = async (req, res) =>
 			d.id,
 			d.en_title,
 			d.en_content,
+			d.en_description,
 			d.zh_title,
 			d.zh_content,
+			d.zh_description,
 			u.url AS image
 		FROM news AS d
 		LEFT JOIN upload_file_morph AS m ON m.related_type = "news" AND m.related_id = d.id

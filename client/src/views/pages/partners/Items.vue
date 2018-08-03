@@ -4,11 +4,12 @@
 			<v-flex v-for="(item, i) in items" :key="i" xs12 sm6 md3>
 				<v-card flat tile>
 					<a :href="item.link" target="_blank">
-						<v-card-media
-							:class="{ box: container }"
-							:src="`${imageDirectory}${item.image}`"
-							height="150px"
-						/>
+						<!--<v-card-media-->
+							<!--:class="{ box: container }"-->
+							<!--:src="`${imageDirectory}${item.image}`"-->
+							<!--height="150px"-->
+						<!--/>-->
+						<img :class="{ box: container }" :src="`${imageDirectory}${item.image}`" width="278px" />
 					</a>
 				</v-card>
 			</v-flex>
@@ -54,5 +55,13 @@
 
 	.container.partnerItems .layout .flex {
 		padding: 16px;
+	}
+
+	.container.partnerItems a {
+		border: none;
+	}
+
+	.container.partnerItems a:hover img {
+		opacity: 0.5;
 	}
 </style>

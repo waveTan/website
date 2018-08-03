@@ -20,7 +20,7 @@ const getEverything = async (req, res) =>
 		FROM teams AS t
 		LEFT JOIN upload_file_morph AS m ON m.related_type = "teams" AND m.related_id = t.id
 		LEFT JOIN upload_file AS u ON m.upload_file_id = u.id
-		ORDER BY t.serialNumber DESC, t.id DESC
+		ORDER BY t.serialNumber IS NULL, t.serialNumber ASC, t.id DESC
 	`);
 
 	I18N.transformQueryResults(rows, req.get('i18n'));

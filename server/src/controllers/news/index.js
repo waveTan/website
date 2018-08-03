@@ -17,7 +17,6 @@ const load = async (req, res) =>
 			d.en_content,
 			d.zh_title,
 			d.zh_content,
-			d.active,
 			u.url AS image
 		FROM news AS d
 		LEFT JOIN upload_file_morph AS m ON m.related_type = "news" AND m.related_id = d.id
@@ -27,10 +26,7 @@ const load = async (req, res) =>
 				WHEN ? != 0 THEN d.id < ?
 				ELSE 1=1
 			END
-		ORDER BY d.id DESC
-		# CASE
-		#	 WHEN ? = 0 THEN d.serialNumber
-		# END DESC, d.id DESC
+		ORDER BY d.featured DESC, d.serialNumber IS NULL, d.serialNumber ASC, d.id DESC
 		LIMIT ?
 		`, [offsetId, offsetId, resultsLimit]);
 

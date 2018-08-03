@@ -20,7 +20,6 @@ const load = async (req, res) =>
 			d.zh_description,
 			d.zh_content,
 			d.link,
-			d.active,
 			u.url AS image
 		FROM dapps AS d
 		LEFT JOIN upload_file_morph AS m ON m.related_type = "dapps" AND m.related_id = d.id
@@ -30,10 +29,7 @@ const load = async (req, res) =>
 				WHEN ? != 0 THEN d.id < ?
 				ELSE 1=1
 			END
-		ORDER BY d.id DESC
-		# CASE
-		#	 WHEN ? = 0 THEN d.serialNumber
-		# END DESC, d.id DESC
+		ORDER BY d.serialNumber IS NULL, d.serialNumber ASC, d.id DESC
 		LIMIT ?
 		`, [offsetId, offsetId, resultsLimit]);
 

@@ -15,7 +15,7 @@ const getActive = async (req, res) =>
 			j.zh_content
 		FROM jobs AS j
 		WHERE j.active = 1
-		ORDER BY j.feature ASC, j.serialNumber DESC, j.id ASC
+		ORDER BY j.feature DESC, j.serialNumber IS NULL, j.serialNumber ASC, j.id DESC
 	`);
 
 	I18N.transformQueryResults(rows, req.get('i18n'));

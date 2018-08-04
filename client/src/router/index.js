@@ -97,6 +97,23 @@ const routeConfig = [
 		}
 	},
 	{
+		name: 'blogs',
+		path: '/blogs',
+		component: Articles,
+		props: {
+			category: 'blogs'
+		}
+	},
+	{
+		name: 'blogsItem',
+		path: '/blogs/:id/:title',
+		component: ArticlesItem,
+		props: {
+			routerName: 'blogsItem',
+			category: 'blogs'
+		}
+	},
+	{
 		name: 'faq',
 		path: '/faq',
 		component: FAQ

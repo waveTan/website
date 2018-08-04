@@ -22,6 +22,7 @@
 		</div>
 		<div v-else>
 			<HeaderMeta />
+			<MobileNavigation />
 			<router-view />
 			<FooterLayout />
 		</div>
@@ -29,12 +30,12 @@
 </template>
 
 <script>
-	import HeaderLayout from '@/views/layout/main/HeaderLayout';
+	import MobileNavigation from '@/views/layout/main/MobileNavigation';
 	import FooterLayout from '@/views/layout/main/FooterLayout';
 
 	export default {
 		components: {
-			HeaderLayout,
+			MobileNavigation,
 			FooterLayout
 		},
 		computed: {

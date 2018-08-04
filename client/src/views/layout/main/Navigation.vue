@@ -59,35 +59,6 @@
 			</div>
 			<div class="mobile">
 				<div class="hamburger" @click="toggleMobileNavigation" />
-				<div :class="{ closed: !mobileNavigation }" class="navigation">
-					<div class="logo" />
-					<div class="close" @click="toggleMobileNavigation" />
-					<div>
-						<ul>
-							<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.home" /></router-link></li>
-							<li><router-link :to="{ name: 'wallet' }"><I18N id="header.navigation.wallet" /></router-link></li>
-							<!--<li><router-link :to="{ name: 'dApps' }"><I18N id="header.navigation.dApps" /></router-link></li>-->
-							<!--<li><a href="#"><I18N id="header.navigation.documents" /></a></li>-->
-							<li><a href="http://explorer.nuls.io" target="_blank"><I18N id="header.navigation.blockchainExplorer" /></a></li>
-							<li><a href="https://swap.nuls.io/swap.html" target="_blank"><I18N id="header.navigation.token" /></a></li>
-							<li>
-								<Dropdown
-									:useButton="false"
-									:items="[
-										{ title: 'header.navigation.whatIsNuls', link: 'about' },
-										{ title: 'header.navigation.team', link: 'team' },
-										{ title: 'header.navigation.partners', link: 'partners' },
-										{ title: 'header.navigation.joinUs', link: 'jobs' },
-										{ title: 'header.navigation.news', link: 'news' }
-									]"
-									title="header.navigation.about"
-									class="dropdownPadding"
-								/>
-							</li>
-							<!--<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.forum" /></router-link></li>-->
-						</ul>
-					</div>
-				</div>
 			</div>
 		</div>
 		<slot />
@@ -109,23 +80,26 @@
 				default: false
 			}
 		},
-		data: () => ({
-			mobileNavigation: false
-		}),
 		destroyed()
 		{
 			document.documentElement.removeEventListener('click', this.clickAway, false);
+		},
+		computed: {
+			navigationMenuOpen()
+			{
+				return this.$store.getters['app/navigationMenuOpen'];
+			}
 		},
 		methods: {
 			toUrl(url)
 			{
 				window.open(url, 'target');
 			},
-			toggleMobileNavigation()
+			async toggleMobileNavigation()
 			{
-				this.mobileNavigation = !this.mobileNavigation;
+				await this.$store.dispatch('app/toggleNavigationMenu');
 
-				if(this.mobileNavigation)
+				if(this.navigationMenuOpen)
 				{
 					this.$nextTick(() => document.documentElement.addEventListener('click', this.clickAway, false));
 				}
@@ -136,7 +110,12 @@
 			},
 			clickAway(e)
 			{
-				if(!e.target.closest('.mobile') && this.mobileNavigation)
+				if(!e.target.closest('.mobile.navigation') && this.navigationMenuOpen)
+				{
+					this.toggleMobileNavigation();
+				}
+
+				if(e.target.closest('ul') && e.target.closest('ul').className === 'navLinks')
 				{
 					this.toggleMobileNavigation();
 				}

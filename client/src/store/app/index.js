@@ -6,7 +6,8 @@ const state = {
 	loadingStack: [],
 	drawer: null,
 	dialog: { active: false, id: null },
-	pageLoading: false
+	pageLoading: false,
+	navigationMenuOpen: false
 };
 
 const mutations = {
@@ -40,6 +41,10 @@ const mutations = {
 	LOADING_CONTENT(state, value)
 	{
 		state.pageLoading = value;
+	},
+	TOGGLE_NAVIGATION_MENU(state)
+	{
+		state.navigationMenuOpen = !state.navigationMenuOpen;
 	}
 };
 
@@ -60,23 +65,13 @@ const actions = {
 	load({ dispatch })
 	{
 		dispatch('usersLocalStorage');
-		// dispatch('appCallLoading', 'nulsPrice');
-		// dispatch('tokens/load', 'nuls', { root: true });
-
-		// Everything below here is collected from the localStorage because they've visited before and we don't need to request the server again
-		// if(localStorage.getItem('store') && JSON.parse(localStorage.getItem('store')).version === version && process.env.NODE_ENV !== 'development')
-		// {
-		// 	return;
-		// }
 	},
 	startLoading({ commit })
 	{
-		// commit('START_LOADING');
 		commit('PUSH_TO_LOADING_STACK');
 	},
 	stopLoading({ commit })
 	{
-		// commit('STOP_LOADING');
 		commit('POP_FROM_LOADING_STACK');
 	},
 	appCallLoading({ commit }, value)
@@ -98,6 +93,10 @@ const actions = {
 	pageLoading({ commit }, value)
 	{
 		commit('LOADING_CONTENT', value);
+	},
+	toggleNavigationMenu({ commit })
+	{
+		commit('TOGGLE_NAVIGATION_MENU');
 	}
 };
 
@@ -107,7 +106,8 @@ const getters = {
 	drawer: (state) => state.drawer,
 	dialog: (state) => state.dialog,
 	pageLoading: (state) => state.pageLoading,
-	apiUrl: () => `${process.env.API}api/${process.env.API_VERSION}`
+	apiUrl: () => `${process.env.API}api/${process.env.API_VERSION}`,
+	navigationMenuOpen: () => state.navigationMenuOpen
 };
 
 export default {

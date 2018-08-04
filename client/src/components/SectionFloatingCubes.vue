@@ -48,13 +48,17 @@
 		z-index: 1;
 	}
 
-	@media screen and (max-width: 650px) {
+	@media screen and (max-width: 800px) {
 		img.cube {
 			display: none;
 		}
 
+		img.cubes {
+			display: none;
+		}
+
 		.container {
-			margin-left: 70px;
+			padding: 0;
 		}
 	}
 </style>

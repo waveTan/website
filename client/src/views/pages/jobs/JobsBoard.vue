@@ -47,7 +47,7 @@
 
 				const jobs = this.$store.getters['items/getItems']('jobs');
 
-				return jobs.length !== 0 ? jobs : false;
+				return Array.isArray(jobs) && jobs.length !== 0 ? jobs : false;
 			},
 			pageLoading()
 			{

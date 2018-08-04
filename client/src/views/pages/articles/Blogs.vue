@@ -1,0 +1,84 @@
+<template>
+	<div>
+		<HeaderMeta title="page.blogs.pageTitle" />
+		<ItemsPro itemType="blogs" sm12 @ellipsisUpdate="ellipsisUpdate">
+			<template slot-scope="{ item, imageDirectory }">
+				<router-link :to="{ name: 'blogsItem', params: { id: item.id, title: item.title } }">
+					<div class="item" :ref="`items[${item.id}]`">
+						<div class="details">
+							<h2>{{ item.title }} </h2> <!-- A space is needed at the end of the text for `shave` to work for some reason :/ Don't remove it! lol -->
+						</div>
+						<div class="image">
+							<img :src="`${imageDirectory}${item.image}`" height="200px" />
+						</div>
+					</div>
+				</router-link>
+			</template>
+		</ItemsPro>
+	</div>
+</template>
+
+<script>
+	import shave from 'shave';
+	import ItemsPro from '@/components/ItemsPro';
+
+	export default {
+		components: {
+			ItemsPro
+		},
+		data()
+		{
+			return {
+				ellipsisCheckRan: false
+			};
+		},
+		methods: {
+			ellipsisUpdate()
+			{
+				if(this.ellipsisCheckRan) return;
+				if(Object.keys(this.$refs).length === 0) return;
+
+				shave('.container.blogsItems .item h2', 200);
+
+				this.ellipsisCheckRan = true;
+			}
+		}
+	};
+</script>
+
+<style>
+	.container.blogsItems .card {
+		background: #fff;
+		box-shadow: 0 8px 24px 0 rgba(186, 194, 198, 0.5), 0 3px 6px 0 rgba(186, 194, 198, 0.2);
+		border-radius: 6px;
+		margin: 10px 0;
+	}
+
+	.container.blogsItems .item {
+		display: flex;
+		height: 200px;
+	}
+
+	.container.blogsItems .container {
+		padding: 0;
+	}
+
+	.container.blogsItems .details {
+		text-align: left;
+		width: 100%;
+		padding: 25px 40px 20px 40px;
+	}
+
+	.container.blogsItems .image {
+		width: 320px;
+	}
+
+	.container.blogsItems .image img {
+		border-radius: 0 6px 6px 0;
+	}
+
+	.container.blogsItems h2 {
+		font-size: 36px;
+		line-height: 44px;
+	}
+</style>

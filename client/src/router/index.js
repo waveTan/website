@@ -13,7 +13,7 @@ import Team from '@/views/pages/Team';
 import Jobs from '@/views/pages/Jobs';
 import Contact from '@/views/pages/Contact';
 import Articles from '@/views/pages/Articles';
-import ArticlesItem from '@/views/pages/Articles/Item';
+import ArticlesItem from '@/views/pages/articles/Item';
 import Wallet from '@/views/pages/Wallet';
 import FAQ from '@/views/pages/FAQ';
 import Papers from '@/views/pages/Papers';
@@ -71,20 +71,20 @@ const routeConfig = [
 		}
 	},
 	{
-		name: 'announcements',
-		path: '/announcements',
-		component: Articles,
-		props: {
-			category: 'announcements'
-		}
-	},
-	{
 		name: 'newsItem',
 		path: '/news/:id/:title',
 		component: ArticlesItem,
 		props: {
 			routerName: 'newsItem',
 			category: 'news'
+		}
+	},
+	{
+		name: 'announcements',
+		path: '/announcements',
+		component: Articles,
+		props: {
+			category: 'announcements'
 		}
 	},
 	{

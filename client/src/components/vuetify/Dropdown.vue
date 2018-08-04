@@ -28,7 +28,7 @@
 			</div>
 			<slot v-else />
 		</div>
-		<v-list class="items">
+		<v-list :class="{hide: !viewable }" class="items">
 			<v-list-tile
 				v-for="(item, index) in items"
 				:key="index"
@@ -50,6 +50,10 @@
 			Button
 		},
 		props: {
+			viewable: {
+				type: Boolean,
+				default: true
+			},
 			buttonColour: {
 				type: String,
 				default: ''
@@ -72,6 +76,10 @@
 			}
 		},
 		computed: {
+			navigationMenuOpen()
+			{
+				return this.$store.getters['app/navigationMenuOpen'];
+			},
 			imagePath()
 			{
 				return require(`@/assets/images/icons/arrow-down${this.arrow}.png`)
@@ -81,6 +89,10 @@
 </script>
 
 <style scoped>
+	.hide {
+		display: none;
+	}
+
 	.dropdown {
 		box-shadow: none;
 		border-radius: 0;

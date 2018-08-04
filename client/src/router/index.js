@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+import store from '@/store';
 import LegalTerms from '@/views/pages/legal/Terms';
 import LegalPrivacy from '@/views/pages/legal/Privacy';
 import PageNotFound from '@/views/pages/PageNotFound';
@@ -130,6 +131,12 @@ const router = new Router({
 	mode: 'history',
 	scrollBehavior: () => ({ x: 0, y: 0 }),
 	routes: routeConfig
+});
+
+router.beforeEach((to, from, next) =>
+{
+	store.dispatch('app/toggleNavigationMenu', false);
+	next();
 });
 
 export default router;

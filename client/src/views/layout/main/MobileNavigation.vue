@@ -13,16 +13,17 @@
 					<li><a href="https://swap.nuls.io/swap.html" target="_blank"><I18N id="header.navigation.token" /></a></li>
 					<li>
 						<Dropdown
-								:useButton="false"
-								:items="[
-										{ title: 'header.navigation.whatIsNuls', link: 'about' },
-										{ title: 'header.navigation.team', link: 'team' },
-										{ title: 'header.navigation.partners', link: 'partners' },
-										{ title: 'header.navigation.joinUs', link: 'jobs' },
-										{ title: 'header.navigation.news', link: 'news' }
-									]"
-								title="header.navigation.about"
-								class="dropdownPadding"
+							:useButton="false"
+							:items="[
+									{ title: 'header.navigation.whatIsNuls', link: 'about' },
+									{ title: 'header.navigation.team', link: 'team' },
+									{ title: 'header.navigation.partners', link: 'partners' },
+									{ title: 'header.navigation.joinUs', link: 'jobs' },
+									{ title: 'header.navigation.news', link: 'news' }
+								]"
+							:viewable="navigationMenuOpen"
+							title="header.navigation.about"
+							class="dropdownPadding"
 						/>
 					</li>
 					<!--<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.forum" /></router-link></li>-->

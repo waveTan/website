@@ -6,7 +6,7 @@
 				<router-link :to="{ name: 'newsItem', params: { id: item.id, title: item.title } }">
 					<div class="item" :ref="`items[${item.id}]`">
 						<div class="details">
-							<h2>{{ item.title }} {{ item.title }} {{ item.title }} {{ item.title }} </h2> <!-- A space is needed at the end of the text for `shave` to work for some reason :/ Don't remove it! lol -->
+							<h2>{{ item.title }} </h2> <!-- A space is needed at the end of the text for `shave` to work for some reason :/ Don't remove it! lol -->
 						</div>
 						<div class="image">
 							<img :src="`${imageDirectory}${item.image}`" height="200px" />

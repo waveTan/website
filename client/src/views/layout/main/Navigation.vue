@@ -113,6 +113,11 @@
 					this.toggleMobileNavigation();
 				}
 
+				if(e.target.closest('.dropdownPadding'))
+				{
+					return;
+				}
+
 				if(e.target.closest('ul') && e.target.closest('ul').className === 'navLinks')
 				{
 					this.toggleMobileNavigation();

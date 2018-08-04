@@ -1,12 +1,12 @@
 <template>
 	<div>
 		<HeaderMeta title="page.news.pageTitle" />
-		<ItemsPro itemType="news" sm12>
+		<ItemsPro itemType="news" sm12 @ellipsisUpdate="ellipsisUpdate">
 			<template slot-scope="{ item, imageDirectory }">
 				<router-link :to="{ name: 'newsItem', params: { id: item.id, title: item.title } }">
-					<div class="item">
+					<div class="item" :ref="`items[${item.id}]`">
 						<div class="details">
-							<h2>{{ item.title }}</h2>
+							<h2>{{ item.title }} {{ item.title }} {{ item.title }} {{ item.title }} </h2> <!-- A space is needed at the end of the text for `shave` to work for some reason :/ Don't remove it! lol -->
 						</div>
 						<div class="image">
 							<img :src="`${imageDirectory}${item.image}`" height="200px" />
@@ -19,11 +19,29 @@
 </template>
 
 <script>
+	import shave from 'shave';
 	import ItemsPro from '@/components/ItemsPro';
 
 	export default {
 		components: {
 			ItemsPro
+		},
+		data()
+		{
+			return {
+				ellipsisCheckRan: false
+			};
+		},
+		methods: {
+			ellipsisUpdate()
+			{
+				if(this.ellipsisCheckRan) return;
+				if(Object.keys(this.$refs).length === 0) return;
+
+				shave('.container.newsItems .item h2', 200);
+
+				this.ellipsisCheckRan = true;
+			}
 		}
 	};
 </script>

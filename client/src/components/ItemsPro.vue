@@ -82,6 +82,12 @@
 				imageDirectory: this.$store.getters['items/strapiUrl']
 			};
 		},
+		updated()
+		{
+			if(this.ellipsisUpdate) return;
+
+			this.$emit('ellipsisUpdate');
+		},
 		computed: {
 			searchTextKey()
 			{

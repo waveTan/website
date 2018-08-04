@@ -112,6 +112,7 @@
     "postcss-custom-properties": "^7.0.0",
     "postcss-import": "^11.0.0",
     "promise-polyfill": "^7.1.2",
+    "shave": "^2.3.0",
     "spin": "0.0.1",
     "swiper": "^4.3.3",
     "traverse": "^0.6.6",

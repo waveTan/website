@@ -8,7 +8,7 @@
 					<ul>
 						<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.home" /></router-link></li>
 						<li><router-link :to="{ name: 'wallet' }"><I18N id="header.navigation.wallet" /></router-link></li>
-						<li><router-link :to="{ name: 'dApps' }"><I18N id="header.navigation.dApps" /></router-link></li>
+						<!--<li><router-link :to="{ name: 'dApps' }"><I18N id="header.navigation.dApps" /></router-link></li>-->
 						<!--<li><a href="#"><I18N id="header.navigation.documents" /></a></li>-->
 						<li><a href="http://explorer.nuls.io" target="_blank"><I18N id="header.navigation.blockchainExplorer" /></a></li>
 						<li><a href="https://swap.nuls.io/swap.html" target="_blank"><I18N id="header.navigation.token" /></a></li>
@@ -42,7 +42,7 @@
 							<Dropdown
 								:useButton="false"
 								:items="[
-									{ title: 'header.navigation.dApps', link: 'dApps' },
+									/*{ title: 'header.navigation.dApps', link: 'dApps' },*/
 									/*{ title: 'header.navigation.documents', link: 'home' },*/
 									{ title: 'header.navigation.whatIsNuls', link: 'about' },
 									{ title: 'header.navigation.team', link: 'team' },
@@ -66,7 +66,7 @@
 						<ul>
 							<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.home" /></router-link></li>
 							<li><router-link :to="{ name: 'wallet' }"><I18N id="header.navigation.wallet" /></router-link></li>
-							<li><router-link :to="{ name: 'dApps' }"><I18N id="header.navigation.dApps" /></router-link></li>
+							<!--<li><router-link :to="{ name: 'dApps' }"><I18N id="header.navigation.dApps" /></router-link></li>-->
 							<!--<li><a href="#"><I18N id="header.navigation.documents" /></a></li>-->
 							<li><a href="http://explorer.nuls.io" target="_blank"><I18N id="header.navigation.blockchainExplorer" /></a></li>
 							<li><a href="https://swap.nuls.io/swap.html" target="_blank"><I18N id="header.navigation.token" /></a></li>

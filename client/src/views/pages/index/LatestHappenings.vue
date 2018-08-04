@@ -15,7 +15,7 @@
 						<v-card>
 							<v-card-media :src="`${imageDirectory}${item.image}`" height="180px" />
 							<v-card-title primary-title>
-								<h5>{{ item.title }} {{ item.title }} {{ item.title }}</h5>
+								<h5>{{ item.title }} </h5>
 							</v-card-title>
 						</v-card>
 					</router-link>

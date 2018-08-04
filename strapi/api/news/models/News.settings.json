@@ -48,6 +48,9 @@
     },
     "zh_content": {
       "type": "text"
+    },
+    "scheduledPublish": {
+      "type": "date"
     }
   }
 }

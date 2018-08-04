@@ -53,7 +53,31 @@
     }
   },
   "partners": {
+    "attributes": {}
+  },
+  "blogs": {
     "attributes": {
+      "active": {
+        "appearance": ""
+      },
+      "featured": {
+        "appearance": ""
+      },
+      "serialNumber": {
+        "appearance": ""
+      },
+      "en_title": {
+        "appearance": ""
+      },
+      "en_content": {
+        "appearance": "WYSIWYG"
+      },
+      "zh_title": {
+        "appearance": ""
+      },
+      "zh_content": {
+        "appearance": "WYSIWYG"
+      }
     }
   }
 }

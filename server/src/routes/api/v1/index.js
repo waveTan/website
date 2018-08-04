@@ -8,6 +8,7 @@ const team = require('@/routes/api/v1/team');
 const jobs = require('@/routes/api/v1/jobs');
 const contact = require('@/routes/api/v1/contact');
 const news = require('@/routes/api/v1/news');
+const blogs = require('@/routes/api/v1/blogs');
 const announcements = require('@/routes/api/v1/announcements');
 
 const router = express.Router();
@@ -20,6 +21,7 @@ router.use('/team', team);
 router.use('/jobs', jobs);
 router.use('/contact', contact);
 router.use('/news', news);
+router.use('/blogs', blogs);
 router.use('/announcements', announcements);
 router.use('/download', express.static('public'));
 

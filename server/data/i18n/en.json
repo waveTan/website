@@ -354,7 +354,8 @@
 			"header": {
 				"tabs": {
 					"news": "News",
-					"announcements": "Announcements"
+					"announcements": "Announcements",
+					"blogs": "Blogs"
 				}
 			}
 		},
@@ -365,6 +366,15 @@
 			},
 			"items": {
 				"search": "Search for News"
+			}
+		},
+		"blogs": {
+			"pageTitle": "Blogs",
+			"header": {
+				"title": "Latest Blogs"
+			},
+			"items": {
+				"search": "Search for Blogs"
 			}
 		},
 		"announcements": {

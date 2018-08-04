@@ -12,8 +12,8 @@ import DAppItem from '@/views/pages/dApps/Item';
 import Team from '@/views/pages/Team';
 import Jobs from '@/views/pages/Jobs';
 import Contact from '@/views/pages/Contact';
-import NewsAndAnnouncements from '@/views/pages/NewsAndAnnouncements';
-import NewsAndAnnouncementsItem from '@/views/pages/NewsAndAnnouncements/Item';
+import Articles from '@/views/pages/Articles';
+import ArticlesItem from '@/views/pages/Articles/Item';
 import Wallet from '@/views/pages/Wallet';
 import FAQ from '@/views/pages/FAQ';
 import Papers from '@/views/pages/Papers';
@@ -65,7 +65,7 @@ const routeConfig = [
 	{
 		name: 'news',
 		path: '/news',
-		component: NewsAndAnnouncements,
+		component: Articles,
 		props: {
 			category: 'news'
 		}
@@ -73,7 +73,7 @@ const routeConfig = [
 	{
 		name: 'announcements',
 		path: '/announcements',
-		component: NewsAndAnnouncements,
+		component: Articles,
 		props: {
 			category: 'announcements'
 		}
@@ -81,7 +81,7 @@ const routeConfig = [
 	{
 		name: 'newsItem',
 		path: '/news/:id/:title',
-		component: NewsAndAnnouncementsItem,
+		component: ArticlesItem,
 		props: {
 			routerName: 'newsItem',
 			category: 'news'
@@ -90,7 +90,7 @@ const routeConfig = [
 	{
 		name: 'announcementItem',
 		path: '/announcements/:id/:title',
-		component: NewsAndAnnouncementsItem,
+		component: ArticlesItem,
 		props: {
 			routerName: 'announcementItem',
 			category: 'announcements'

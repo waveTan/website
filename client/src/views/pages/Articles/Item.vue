@@ -19,9 +19,9 @@
 
 <script>
 	import marked from 'marked';
-	import Header from '@/views/pages/NewsAndAnnouncements/Header';
-	import News from '@/views/pages/NewsAndAnnouncements/News';
-	import Announcements from '@/views/pages/NewsAndAnnouncements/Announcements';
+	import Header from '@/views/pages/Articles/Header';
+	import News from '@/views/pages/Articles/News';
+	import Announcements from '@/views/pages/Articles/Announcements';
 
 	export default {
 		components: {

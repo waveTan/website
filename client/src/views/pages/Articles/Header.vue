@@ -5,8 +5,8 @@
 			<h1 v-else-if="category === 'news'"><I18N id="page.news.header.title" /></h1>
 			<h1 v-else><I18N id="page.announcements.header.title" /></h1>
 			<ul class="centered">
-				<li :class="{ active: category === 'news' }"><router-link :to="{ name: 'news' }"><I18N id="page.newsAndAnnouncements.header.tabs.news" /></router-link></li>
-				<li :class="{ active: category === 'announcements' }"><router-link :to="{ name: 'announcements' }"><I18N id="page.newsAndAnnouncements.header.tabs.announcements" /></router-link></li>
+				<li :class="{ active: category === 'news' }"><router-link :to="{ name: 'news' }"><I18N id="page.articles.header.tabs.news" /></router-link></li>
+				<li :class="{ active: category === 'announcements' }"><router-link :to="{ name: 'announcements' }"><I18N id="page.articles.header.tabs.announcements" /></router-link></li>
 			</ul>
 		</div>
 	</div>

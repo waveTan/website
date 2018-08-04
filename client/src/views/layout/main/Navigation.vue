@@ -265,6 +265,10 @@
 		padding: 37px;
 	}
 
+	.whiteBackground .hamburger {
+		background-image: url('~@/assets/images/icons/hamburger-black.png');
+	}
+
 	.close {
 		float: right;
 		background: url('~@/assets/images/icons/close.png') no-repeat center;
@@ -290,6 +294,10 @@
 
 		.mobile {
 			display: block;
+		}
+
+		.whiteBackground .mobile {
+			height: 71px;
 		}
 	}
 </style>

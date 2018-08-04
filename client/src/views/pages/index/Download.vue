@@ -229,6 +229,16 @@
 		.mobile.images {
 			display: block;
 		}
+
+		.removeTopMargin {
+			margin-top: -100px;
+		}
+	}
+
+	@media screen and (max-width: 950px) {
+		.removeTopMargin {
+			margin-top: -100px;
+		}
 	}
 
 	@media screen and (max-width: 350px) {

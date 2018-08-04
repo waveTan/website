@@ -4,23 +4,14 @@
 		<ItemsPro itemType="news" sm12>
 			<template slot-scope="{ item, imageDirectory }">
 				<router-link :to="{ name: 'newsItem', params: { id: item.id, title: item.title } }">
-					<v-container fluid>
-						<v-layout row>
-							<v-flex xs7>
-								<div class="details">
-									<h2>{{ item.title }}</h2>
-									<p>{{ item.description }}</p>
-								</div>
-							</v-flex>
-							<v-flex xs5 class="image">
-								<v-card-media
-									:src="`${imageDirectory}${item.image}`"
-									height="200px"
-									contain
-								/>
-							</v-flex>
-						</v-layout>
-					</v-container>
+					<div class="item">
+						<div class="details">
+							<h2>{{ item.title }}</h2>
+						</div>
+						<div class="image">
+							<img :src="`${imageDirectory}${item.image}`" height="200px" />
+						</div>
+					</div>
 				</router-link>
 			</template>
 		</ItemsPro>
@@ -45,25 +36,26 @@
 		margin: 10px 0;
 	}
 
-	.container.newsItems .details {
-		text-align: left;
-		padding: 25px 40px 20px 40px;
-	}
-
-	.container.newsItems .details p {
-		margin-top: 20px;
+	.container.newsItems .item {
+		display: flex;
+		height: 200px;
 	}
 
 	.container.newsItems .container {
 		padding: 0;
 	}
 
-	.container.newsItems .image {
-		padding: 0 !important;
+	.container.newsItems .details {
+		text-align: left;
+		width: 100%;
+		padding: 25px 40px 20px 40px;
 	}
 
-	.container.newsItems .image .card__media__background {
-		background-position: right !important;
+	.container.newsItems .image {
+		width: 320px;
+	}
+
+	.container.newsItems .image img {
 		border-radius: 0 6px 6px 0;
 	}
 

@@ -55,10 +55,8 @@ const search = async (req, res) =>
 		SELECT
 			d.id,
 			d.en_title,
-			d.en_description,
 			d.en_content,
 			d.zh_title,
-			d.zh_description,
 			d.zh_content,
 			d.active,
 			u.url AS image,

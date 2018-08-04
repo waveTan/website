@@ -6,9 +6,6 @@
       },
       "zh_content": {
         "appearance": "WYSIWYG"
-      },
-      "scheduledPublish": {
-        "appearance": ""
       }
     }
   },
@@ -42,9 +39,6 @@
       },
       "zh_content": {
         "appearance": "WYSIWYG"
-      },
-      "scheduledPublish": {
-        "appearance": ""
       }
     }
   },
@@ -60,9 +54,6 @@
   },
   "partners": {
     "attributes": {
-      "scheduledPublish": {
-        "appearance": ""
-      }
     }
   }
 }

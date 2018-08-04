@@ -33,9 +33,6 @@
     "link": {
       "type": "string",
       "required": true
-    },
-		"scheduledPublish": {
-			"type": "date"
-		}
+    }
   }
 }

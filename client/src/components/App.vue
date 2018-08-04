@@ -184,7 +184,6 @@
 					#e6f4fa 92%,
 					#e6f4fa 100%
 				);
-		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
 		padding-bottom: 70px;
 	}
 
@@ -198,21 +197,37 @@
 		background: url('~@/assets/images/wallet-section-bg.jpg') no-repeat center, linear-gradient(to right, #08265e 40%, #021234 60%);
 	}
 
-	@media screen and (max-width: 800px) {
-		.section.grey {
-			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 93%);
-		}
+	.clipPath {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 93%);
 	}
 
-	@media screen and (max-width: 600px) {
-		.section.grey {
+	@media screen and (max-width: 900px) {
+		.clipPath {
 			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
 		}
 	}
 
-	@media screen and (max-width: 350px) {
-		.section.grey {
+	@media screen and (max-width: 800px) {
+		.clipPath {
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);
+		}
+	}
+
+	@media screen and (max-width: 500px) {
+		.clipPath {
 			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 97%);
+		}
+	}
+
+	@media screen and (max-width: 400px) {
+		.clipPath {
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 98%);
+		}
+	}
+
+	@media screen and (max-width: 350px) {
+		.clipPath {
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 98.5%);
 		}
 	}
 

@@ -1,5 +1,5 @@
 <template>
-	<div class="section grey">
+	<div class="section grey clipPath">
 		<div class="container">
 			<h1><I18N id="page.contact.header.title" /></h1>
 		</div>

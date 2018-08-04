@@ -1,5 +1,5 @@
 <template>
-	<div class="section grey">
+	<div class="section grey clipPath">
 		<div class="container">
 			<h1 v-if="title">{{ title }}</h1>
 			<h1 v-else-if="category === 'news'"><I18N id="page.news.header.title" /></h1>

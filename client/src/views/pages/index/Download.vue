@@ -20,7 +20,7 @@
 					width="110px"
 				>
 			</div>
-			<div class="section blue">
+			<div class="section blue clipPath">
 				<div class="container" />
 			</div>
 			<div class="container information">
@@ -147,7 +147,6 @@
 	}
 
 	.section {
-		clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 		height: 740px;
 		position: relative;
 		top: 30px;

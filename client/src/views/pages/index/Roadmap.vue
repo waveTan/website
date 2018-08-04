@@ -1,5 +1,5 @@
 <template>
-	<div class="section grey">
+	<div class="section grey clipPath">
 		<div class="container">
 			<h3><I18N id="page.index.roadmap.title" /></h3>
 			<div>

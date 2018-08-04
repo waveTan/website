@@ -1,5 +1,5 @@
 <template>
-	<div class="section grey">
+	<div class="section grey clipPath">
 		<div class="container">
 			<h2 class="center"><I18N id="page.team.community" /></h2>
 			<Items :items="items" />

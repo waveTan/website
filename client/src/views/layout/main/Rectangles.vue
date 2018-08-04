@@ -1,5 +1,5 @@
 <template>
-	<div :class="{ rectangleContainer: !whiteBackground, clip: clipBackground, whiteBackground: whiteBackground }">
+	<div :class="{ rectangleContainer: !whiteBackground, clipPath: clipBackground, whiteBackground: whiteBackground }">
 		<div v-if="!whiteBackground">
 			<div class="rectangle one grid" />
 			<div class="rectangle two grid" />
@@ -60,10 +60,6 @@
 		width: 100%;
 		top: 0;
 		left: 0;
-	}
-
-	.rectangleContainer.clip {
-		clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 	}
 
 	.rectangle {

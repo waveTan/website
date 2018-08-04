@@ -1,5 +1,5 @@
 <template>
-	<div class="section grey">
+	<div class="section grey clipPath">
 		<div class="container">
 			<h2 class="center"><I18N id="page.partnerships.cooperationMedia" /></h2>
 			<Items :items="items" />

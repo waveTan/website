@@ -1,5 +1,5 @@
 <template>
-	<div class="section grey">
+	<div class="section grey clipPath">
 		<div class="container">
 			<div class="centered">
 				<h2><I18N id="page.about.github.title" /></h2>

@@ -1,5 +1,5 @@
 <template>
-	<div class="section grey">
+	<div class="section grey clipPath">
 		<div class="container howItWorks">
 			<div class="center">
 				<h2><I18N id="page.index.howItWorks.title" /></h2>

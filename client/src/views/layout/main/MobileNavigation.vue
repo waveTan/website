@@ -1,6 +1,6 @@
 <template>
 	<div class="containerParent">
-		<div :class="{ closed: closed }" class="mobile navigation">
+		<div :class="{ closed: !navigationMenuOpen }" class="mobile navigation">
 			<div class="logo" />
 			<div class="close" @click="toggleMobileNavigation" />
 			<div>
@@ -40,15 +40,15 @@
 			Dropdown
 		},
 		computed: {
-			closed()
+			navigationMenuOpen()
 			{
-				return !this.$store.getters['app/navigationMenuOpen'];
+				return this.$store.getters['app/navigationMenuOpen'];
 			}
 		},
 		methods: {
-			toggleMobileNavigation()
+			async toggleMobileNavigation()
 			{
-				this.$store.dispatch('app/toggleNavigationMenu');
+				await this.$store.dispatch('app/toggleNavigationMenu');
 			}
 		}
 	}

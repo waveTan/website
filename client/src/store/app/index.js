@@ -42,9 +42,16 @@ const mutations = {
 	{
 		state.pageLoading = value;
 	},
-	TOGGLE_NAVIGATION_MENU(state)
+	TOGGLE_NAVIGATION_MENU(state, force)
 	{
-		state.navigationMenuOpen = !state.navigationMenuOpen;
+		if(force)
+		{
+			state.navigationMenuOpen = true;
+		}
+		else
+		{
+			state.navigationMenuOpen = !state.navigationMenuOpen;
+		}
 	}
 };
 
@@ -94,9 +101,9 @@ const actions = {
 	{
 		commit('LOADING_CONTENT', value);
 	},
-	toggleNavigationMenu({ commit })
+	toggleNavigationMenu({ commit }, force = false)
 	{
-		commit('TOGGLE_NAVIGATION_MENU');
+		commit('TOGGLE_NAVIGATION_MENU', force);
 	}
 };
 

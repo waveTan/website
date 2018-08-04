@@ -58,7 +58,7 @@
 				</div>
 			</div>
 			<div class="mobile">
-				<div class="hamburger" @click="toggleMobileNavigation" />
+				<div class="hamburger" @click="toggleMobileNavigation(true)" />
 			</div>
 		</div>
 		<slot />
@@ -95,17 +95,15 @@
 			{
 				window.open(url, 'target');
 			},
-			async toggleMobileNavigation()
+			async toggleMobileNavigation(force = false)
 			{
-				await this.$store.dispatch('app/toggleNavigationMenu');
+				await this.$store.dispatch('app/toggleNavigationMenu', force);
+
+				document.documentElement.removeEventListener('click', this.clickAway, false);
 
 				if(this.navigationMenuOpen)
 				{
 					this.$nextTick(() => document.documentElement.addEventListener('click', this.clickAway, false));
-				}
-				else
-				{
-					document.documentElement.removeEventListener('click', this.clickAway, false);
 				}
 			},
 			clickAway(e)

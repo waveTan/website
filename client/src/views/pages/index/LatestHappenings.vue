@@ -8,14 +8,14 @@
 				<v-progress-circular class="centered" :size="50" indeterminate color="primary" />
 			</div>
 		</div>
-		<div v-else class="container">
+		<div v-else class="container latestHappeningItems">
 			<swiper :options="swiperOption">
 				<swiper-slide v-for="(item, i) in getItems" :key="i" ref="items">
 					<router-link :to="{ name: 'newsItem', params: { id: item.id, title: item.title } }">
 						<v-card>
 							<v-card-media :src="`${imageDirectory}${item.image}`" height="180px" />
-							<v-card-title :style="cardTitleHeight" primary-title>
-								<h5>{{ item.title }}</h5>
+							<v-card-title primary-title>
+								<h5>{{ item.title }} {{ item.title }} {{ item.title }}</h5>
 							</v-card-title>
 						</v-card>
 					</router-link>
@@ -24,7 +24,7 @@
 					<router-link :to="{ name: 'news' }">
 						<v-card>
 							<v-card-media class="more" height="180px" />
-							<v-card-title :style="cardTitleHeight" primary-title>
+							<v-card-title primary-title>
 								<h5><I18N id="page.index.latestHappenings.more" /></h5>
 							</v-card-title>
 						</v-card>
@@ -39,6 +39,7 @@
 <script>
 	import 'swiper/dist/css/swiper.css';
 	import { swiper, swiperSlide } from 'vue-awesome-swiper';
+	import shave from 'shave';
 	import swiperOption from '@/utils/sliderConfiguration';
 
 	export default {
@@ -51,23 +52,17 @@
 			return {
 				swiperOption: swiperOption(),
 				imageDirectory: this.$store.getters['items/strapiUrl'],
-				cardTitleHeight: ''
+				ellipsisCheckRan: false
 			};
 		},
 		updated()
 		{
+			if(this.ellipsisCheckRan) return;
 			if(!this.$refs.items) return;
 
-			let tallestItem = 0;
+			shave('.container.latestHappeningItems .card__title h5', 150);
 
-			this.$refs.items.forEach((item) => (tallestItem = tallestItem < item.$el.offsetHeight ? item.$el.offsetHeight : tallestItem));
-
-			const newHeight = `height: ${tallestItem - 180}px; align-items: normal;`;
-
-			if(this.cardTitleHeight === '')
-			{
-				this.cardTitleHeight = newHeight;
-			}
+			this.ellipsisCheckRan = true;
 		},
 		computed: {
 			pageLoading()
@@ -107,6 +102,7 @@
 		background: #fff;
 		box-shadow: 0 8px 24px 0 rgba(186, 194, 198, 0.5), 0 3px 6px 0 rgba(186, 194, 198, 0.2);
 		border-radius: 6px;
+		height: 150px;
 	}
 
 	.card {

@@ -10,7 +10,7 @@
 		</div>
 		<div v-else class="container latestHappeningItems">
 			<swiper :options="swiperOption">
-				<swiper-slide v-for="(item, i) in getItems" :key="i" ref="items">
+				<swiper-slide v-for="(item, i) in getItems" :key="i">
 					<router-link :to="{ name: 'newsItem', params: { id: item.id, title: item.title } }">
 						<v-card>
 							<v-card-media :src="`${imageDirectory}${item.image}`" height="180px" />
@@ -51,18 +51,12 @@
 		{
 			return {
 				swiperOption: swiperOption(),
-				imageDirectory: this.$store.getters['items/strapiUrl'],
-				ellipsisCheckRan: false
+				imageDirectory: this.$store.getters['items/strapiUrl']
 			};
 		},
 		updated()
 		{
-			if(this.ellipsisCheckRan) return;
-			if(!this.$refs.items) return;
-
 			shave('.container.latestHappeningItems .card__title h5', 150);
-
-			this.ellipsisCheckRan = true;
 		},
 		computed: {
 			pageLoading()

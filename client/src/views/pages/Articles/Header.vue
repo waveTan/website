@@ -8,7 +8,7 @@
 			<ul class="centered">
 				<li :class="{ active: category === 'news' }"><router-link :to="{ name: 'news' }"><I18N id="page.articles.header.tabs.news" /></router-link></li>
 				<li :class="{ active: category === 'announcements' }"><router-link :to="{ name: 'announcements' }"><I18N id="page.articles.header.tabs.announcements" /></router-link></li>
-				<li :class="{ active: category === 'blogs' }"><router-link :to="{ name: 'blogs' }"><I18N id="page.articles.header.tabs.blogs" /></router-link></li>
+				<!--<li :class="{ active: category === 'blogs' }"><router-link :to="{ name: 'blogs' }"><I18N id="page.articles.header.tabs.blogs" /></router-link></li>-->
 			</ul>
 		</div>
 	</div>

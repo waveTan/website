@@ -9,10 +9,10 @@
 </template>
 
 <script>
-	import Header from '@/views/pages/articles/Header';
-	import News from '@/views/pages/articles/News';
-	import Announcements from '@/views/pages/articles/Announcements';
-	import Blogs from '@/views/pages/articles/Blogs';
+	import Header from '@/views/pages/Articles/Header';
+	import News from '@/views/pages/Articles/News';
+	import Announcements from '@/views/pages/Articles/Announcements';
+	import Blogs from '@/views/pages/Articles/Blogs';
 
 	export default {
 		components: {

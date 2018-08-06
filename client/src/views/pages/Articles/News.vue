@@ -4,7 +4,7 @@
 		<ItemsPro itemType="news" sm12 @ellipsisUpdate="ellipsisUpdate">
 			<template slot-scope="{ item, imageDirectory }">
 				<router-link :to="{ name: 'newsItem', params: { id: item.id, title: item.title } }">
-					<div class="item" :ref="`items[${item.id}]`">
+					<div class="item">
 						<div class="details">
 							<h2>{{ item.title }} </h2> <!-- A space is needed at the end of the text for `shave` to work for some reason :/ Don't remove it! lol -->
 						</div>
@@ -26,21 +26,10 @@
 		components: {
 			ItemsPro
 		},
-		data()
-		{
-			return {
-				ellipsisCheckRan: false
-			};
-		},
 		methods: {
 			ellipsisUpdate()
 			{
-				if(this.ellipsisCheckRan) return;
-				if(Object.keys(this.$refs).length === 0) return;
-
 				shave('.container.newsItems .item h2', 200);
-
-				this.ellipsisCheckRan = true;
 			}
 		}
 	};

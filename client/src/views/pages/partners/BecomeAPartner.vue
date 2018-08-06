@@ -1,7 +1,7 @@
 <template>
 	<div class="section grey noClip">
 		<div class="container">
-			<!--<h2 class="center"><I18N id="page.partnerships.becomeAPartner.title" /></h2>-->
+			<h2 class="center"><I18N id="page.partnerships.becomeAPartner.title" /></h2>
 			<v-container grid-list-md text-xs-center>
 				<v-layout row wrap>
 					<v-flex v-for="(type, i) in becomeAPartnerTypes" :key="i" sm12 md4>

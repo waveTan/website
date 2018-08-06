@@ -14,7 +14,7 @@
 			<CooperationMedia v-if="getItems('cooperation media')" :items="getItems('cooperation media')" />
 			<Platforms v-if="getItems('platform')" :items="getItems('platform')" />
 		</div>
-		<BecomeAPartner />
+		<!--<BecomeAPartner />-->
 	</div>
 </template>
 
@@ -24,7 +24,7 @@
 	import CooperationProjects from '@/views/pages/partners/CooperationProjects';
 	import CooperationMedia from '@/views/pages/partners/CooperationMedia';
 	import Platforms from '@/views/pages/partners/Platforms';
-	import BecomeAPartner from '@/views/pages/partners/BecomeAPartner';
+	// import BecomeAPartner from '@/views/pages/partners/BecomeAPartner';
 
 	export default {
 		components: {
@@ -32,8 +32,8 @@
 			Header,
 			CooperationProjects,
 			CooperationMedia,
-			Platforms,
-			BecomeAPartner
+			Platforms
+			// BecomeAPartner
 		},
 		computed: {
 			partnerships()

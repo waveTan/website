@@ -114,6 +114,7 @@ const getters = {
 	dialog: (state) => state.dialog,
 	pageLoading: (state) => state.pageLoading,
 	apiUrl: () => `${process.env.API}api/${process.env.API_VERSION}`,
+	url: () => (process.env.URL.substr(process.env.URL.length - 1) === '/' ? process.env.URL.substr(0, process.env.URL.length - 1) : process.env.URL),
 	navigationMenuOpen: () => state.navigationMenuOpen
 };
 

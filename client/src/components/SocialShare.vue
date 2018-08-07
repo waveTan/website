@@ -1,27 +1,23 @@
 <template>
 	<div>
 		<vue-goodshare-facebook
-			page_url="https://github.com"
+			:page_url="url"
 			title_social="Facebook"
-			has_counter
 			has_icon
 		/>
 		<vue-goodshare-linked-in
-			page_url="https://github.com"
+			:page_url="url"
 			title_social="LinkedIn"
-			has_counter
 			has_icon
 		/>
 		<vue-goodshare-twitter
-			page_url="https://github.com"
+			:page_url="url"
 			title_social="Twitter"
-			has_counter
 			has_icon
 		/>
 		<vue-goodshare-telegram
-			page_url="https://github.com"
+			:page_url="url"
 			title_social="Telegram"
-			has_counter
 			has_icon
 		/>
 	</div>
@@ -41,6 +37,11 @@
 			VueGoodshareReddit,
 			VueGoodshareLinkedIn,
 			VueGoodshareFacebook
+		},
+		data() {
+			return {
+				url: `${this.$store.getters['app/url']}${this.$route.fullPath}`
+			}
 		}
 	};
 </script>

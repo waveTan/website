@@ -12,6 +12,7 @@
 		<div v-else>
 			<div class="container">
 				<div v-html="compiledMarkdown" class="mardkdown" />
+				<SocialShare />
 			</div>
 		</div>
 	</div>
@@ -19,12 +20,14 @@
 
 <script>
 	import marked from 'marked';
+	import SocialShare from '@/components/SocialShare';
 	import Header from '@/views/pages/Articles/Header';
 	import News from '@/views/pages/Articles/News';
 	import Announcements from '@/views/pages/Articles/Announcements';
 
 	export default {
 		components: {
+			SocialShare,
 			Header,
 			News,
 			Announcements

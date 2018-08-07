@@ -40,7 +40,8 @@
 	}
 
 	.container.announcementsItems h3 {
-		padding: 0 0 5px 20px;
+		padding: 0 110px 5px 20px;
+		text-align: left;
 	}
 
 	.container.announcementsItems .date {

@@ -1,23 +1,24 @@
 <template>
 	<div>
+		<h5><I18N id="socialShare.title" /></h5>
 		<vue-goodshare-facebook
 			:page_url="url"
-			title_social="Facebook"
+			:title_social="$t('socialShare.facebook')"
 			has_icon
 		/>
 		<vue-goodshare-linked-in
 			:page_url="url"
-			title_social="LinkedIn"
+			:title_social="$t('socialShare.linkedIn')"
 			has_icon
 		/>
 		<vue-goodshare-twitter
 			:page_url="url"
-			title_social="Twitter"
+			:title_social="$t('socialShare.twitter')"
 			has_icon
 		/>
 		<vue-goodshare-telegram
 			:page_url="url"
-			title_social="Telegram"
+			:title_social="$t('socialShare.telegram')"
 			has_icon
 		/>
 	</div>

@@ -84,6 +84,13 @@
 	"items": {
 		"404": "No items were found"
 	},
+	"socialShare": {
+		"title": "Share this page",
+		"twitter": "Twitter",
+		"facebook": "Facebook",
+		"linkedIn": "LinkedIn",
+		"telegram": "Telegram"
+	},
   "page": {
     "index": {
       "pageTitle": "Home",

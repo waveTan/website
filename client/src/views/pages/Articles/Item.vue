@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<HeaderLayout whiteBackground />
-		<Header :category="category" :title="title " />
+		<Header :showTitle="false" :category="category" />
 		<div v-if="loading || !item" class="center">
 			<v-progress-circular
 				:size="50"
@@ -11,8 +11,14 @@
 		</div>
 		<div v-else>
 			<div class="container">
+				<h3>{{ title }}</h3>
+				<h6>{{ formatDate(item.created_at) }}</h6>
 				<div v-html="compiledMarkdown" class="mardkdown" />
 				<SocialShare />
+				<ItemsRelated
+					:title="title"
+					:type="category"
+				/>
 			</div>
 		</div>
 	</div>
@@ -20,7 +26,9 @@
 
 <script>
 	import marked from 'marked';
+	import moment from 'moment';
 	import SocialShare from '@/components/SocialShare';
+	import ItemsRelated from '@/components/ItemsRelated';
 	import Header from '@/views/pages/Articles/Header';
 	import News from '@/views/pages/Articles/News';
 	import Announcements from '@/views/pages/Articles/Announcements';
@@ -28,6 +36,7 @@
 	export default {
 		components: {
 			SocialShare,
+			ItemsRelated,
 			Header,
 			News,
 			Announcements
@@ -75,6 +84,12 @@
 			{
 				return marked(this.item.content, { sanitize: true })
 			}
+		},
+		methods: {
+			formatDate(date)
+			{
+				return moment(date).format('D MMMM YYYY');
+			}
 		}
 	};
 </script>
@@ -82,5 +97,15 @@
 <style scoped>
 	.mardkdown >>> h1 {
 		color: #0a2140;
+	}
+
+	h3 {
+		line-height: 50px;
+		padding-bottom: 0;
+	}
+
+	h6 {
+		font-size: 14px;
+		padding-bottom: 20px;
 	}
 </style>

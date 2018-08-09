@@ -74,4 +74,18 @@
 	li.active a {
 		color: #56c400;
 	}
+
+	@media screen and (max-width: 850px) {
+		li {
+			float: initial;
+		}
+
+		.section.grey .centered {
+			padding-bottom: 0;
+		}
+
+		.section.grey {
+			padding-bottom: 40px;
+		}
+	}
 </style>

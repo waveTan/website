@@ -84,10 +84,11 @@
   },
 	"items": {
 		"404": "No items were found",
-		"related": "Related articles"
+		"related": "Related Articles",
+		"featured": "Recently Featured Articles"
 	},
 	"socialShare": {
-		"title": "Share this page",
+		"title": "Share this Article",
 		"twitter": "Twitter",
 		"facebook": "Facebook",
 		"linkedIn": "LinkedIn",

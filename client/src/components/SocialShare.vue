@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h5><I18N id="socialShare.title" /></h5>
+		<h4><I18N id="socialShare.title" /></h4>
 		<vue-goodshare-facebook
 			:page_url="url"
 			:title_social="$t('socialShare.facebook')"
@@ -46,3 +46,9 @@
 		}
 	};
 </script>
+
+<style scoped>
+	h4 {
+		margin-top: 40px;
+	}
+</style>

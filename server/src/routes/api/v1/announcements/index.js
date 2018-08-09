@@ -4,6 +4,7 @@ const announcements = require('@/controllers/announcements');
 const router = express.Router();
 
 router.get('/', announcements.load);
+router.get('/featured', announcements.featured);
 router.post('/search/', announcements.search);
 router.post('/search/:offsetId', announcements.search);
 router.get('/item/:id', announcements.item);

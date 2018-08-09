@@ -53,9 +53,7 @@ const search = async (req, res) =>
 		SELECT
 			d.id,
 			d.en_title,
-			d.en_content,
 			d.zh_title,
-			d.zh_content,
 			d.created_at,
 			MATCH (d.en_title, d.zh_title) AGAINST (? IN BOOLEAN MODE) AS title_relevance,
 			MATCH (d.en_title, d.en_content, d.zh_title, d.zh_content) AGAINST (? IN BOOLEAN MODE) AS relevance
@@ -109,8 +107,31 @@ const item = async (req, res) =>
 	res.status(200).json(rows[0]);
 };
 
+const featured = async (req, res) =>
+{
+	const db = new Database();
+	await db.init();
+
+	const [rows] = await db.connection.execute(`
+		SELECT
+			d.id,
+			d.en_title,
+			d.zh_title
+		FROM announcements AS d
+		LEFT JOIN upload_file_morph AS m ON m.related_type = "announcements" AND m.related_id = d.id
+		LEFT JOIN upload_file AS u ON m.upload_file_id = u.id
+		WHERE d.active = 1 AND d.featured = 1
+		LIMIT 6
+		`);
+
+	I18N.transformQueryResults(rows, req.get('i18n'));
+
+	res.status(200).json(rows);
+};
+
 module.exports = {
 	load,
 	search,
-	item
+	item,
+	featured
 };

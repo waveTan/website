@@ -5,6 +5,7 @@ const router = express.Router();
 
 router.get('/', blogs.load);
 router.get('/latest', blogs.latest);
+router.get('/featured', blogs.featured);
 router.post('/search/', blogs.search);
 router.post('/search/:offsetId', blogs.search);
 router.get('/item/:id', blogs.item);

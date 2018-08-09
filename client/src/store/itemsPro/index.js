@@ -11,11 +11,12 @@ const state = {
 	searchResults: [],
 	searchResultsLanguage: '',
 	searchQuery: '',
-	searchTotalItems: 0
+	searchTotalItems: 0,
+	featuredItems: {}
 };
 
 const mutations = {
-	SET_APPS(state, { type, locale, data })
+	SET_ITEMS(state, { type, locale, data })
 	{
 		if(!state.items[type])
 		{
@@ -29,7 +30,7 @@ const mutations = {
 
 		state.items[type][locale].push(...data);
 	},
-	SET_APP(state, { type, locale, data })
+	SET_ITEM(state, { type, locale, data })
 	{
 		if(!state.fullItems[type])
 		{
@@ -43,7 +44,7 @@ const mutations = {
 
 		state.fullItems[type][locale][data.id] = data;
 	},
-	SET_TOTAL_APPS(state, { type, count })
+	SET_TOTAL_ITEMS(state, { type, count })
 	{
 		Vue.set(state.totalItems, type, count);
 	},
@@ -51,7 +52,7 @@ const mutations = {
 	{
 		state.loading = !state.loading;
 	},
-	SET_SEARCH_TOTAL_APPS(state, count)
+	SET_SEARCH_TOTAL_ITEMS(state, count)
 	{
 		state.searchTotalItems = count;
 	},
@@ -63,6 +64,15 @@ const mutations = {
 	SET_SEARCH_QUERY(state, query)
 	{
 		state.searchQuery = query;
+	},
+	SET_FEATURED_ITEMS(state, { type, locale, data })
+	{
+		if(!state.featuredItems[type])
+		{
+			Vue.set(state.featuredItems, type, {});
+		}
+
+		state.featuredItems[type][locale] = data;
 	}
 };
 
@@ -79,8 +89,8 @@ const actions = {
 
 				({ data } = await get(`${type}/`));
 
-				commit('SET_TOTAL_APPS', { type, count: data.count });
-				commit('SET_APPS', { type, locale: rootGetters['i18n/locale'], data: data.rows });
+				commit('SET_TOTAL_ITEMS', { type, count: data.count });
+				commit('SET_ITEMS', { type, locale: rootGetters['i18n/locale'], data: data.rows });
 				commit('TOGGLE_LOADING');
 
 				return data;
@@ -91,7 +101,7 @@ const actions = {
 
 				({ data } = await get(`${type}/${state.items[type][rootGetters['i18n/locale']][state.items[type][rootGetters['i18n/locale']].length - 1].id}`));
 
-				commit('SET_APPS', { type, locale: rootGetters['i18n/locale'], data: data.rows });
+				commit('SET_ITEMS', { type, locale: rootGetters['i18n/locale'], data: data.rows });
 				commit('TOGGLE_LOADING');
 
 				return data;
@@ -108,7 +118,7 @@ const actions = {
 
 			const { data } = await get(`${type}/item/${id}`);
 
-			commit('SET_APP', { type, locale: rootGetters['i18n/locale'], data });
+			commit('SET_ITEM', { type, locale: rootGetters['i18n/locale'], data });
 			commit('TOGGLE_LOADING');
 		}
 
@@ -126,7 +136,7 @@ const actions = {
 
 				({ data } = await post(`${type}/search/`, { searchQuery, limit }));
 
-				commit('SET_SEARCH_TOTAL_APPS', data.count);
+				commit('SET_SEARCH_TOTAL_ITEMS', data.count);
 				commit('SET_SEARCH_RESULTS', { locale: rootGetters['i18n/locale'], data: data.rows });
 				commit('SET_SEARCH_QUERY', searchQuery);
 				commit('TOGGLE_LOADING');
@@ -148,6 +158,17 @@ const actions = {
 		}
 
 		return { count: state.searchTotalItems, rows: getters.getSearchItems(page) };
+	},
+	async loadFeaturedItems({ state, commit, rootGetters }, { type })
+	{
+		if(!state.featuredItems[type] || !state.featuredItems[type][rootGetters['i18n/locale']])
+		{
+			const { data } = await get(`${type}/featured`);
+
+			commit('SET_FEATURED_ITEMS', { type, locale: rootGetters['i18n/locale'], data });
+		}
+
+		return state.fullItems[type][rootGetters['i18n/locale']];
 	}
 };
 
@@ -175,7 +196,13 @@ const getters = {
 	},
 	getLoading: (state) => state.loading,
 	getTotalItems: (state) => (type) => state.totalItems[type],
-	itemsPerPage: (state) => state.itemsPerPage
+	itemsPerPage: (state) => state.itemsPerPage,
+	getFeatured: (state, getters, rootState, rootGetters) => (type) =>
+	{
+		if(!state.featuredItems[type] || !state.featuredItems[type][rootGetters['i18n/locale']]) return null;
+
+		return state.featuredItems[type][rootGetters['i18n/locale']];
+	}
 };
 
 export default {

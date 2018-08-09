@@ -49,7 +49,7 @@ const search = async (req, res) =>
 	const extra = {};
 	await db.init();
 
-	resultsLimit = limit || resultsLimit;
+	resultsLimit = limit < resultsLimit ? limit : resultsLimit;
 
 	const [rows] = await db.connection.execute(`
 		SELECT

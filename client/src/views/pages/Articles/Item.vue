@@ -11,14 +11,26 @@
 		</div>
 		<div v-else>
 			<div class="container">
-				<h3>{{ title }}</h3>
-				<h6>{{ formatDate(item.created_at) }}</h6>
-				<div v-html="compiledMarkdown" class="mardkdown" />
-				<SocialShare />
-				<ItemsRelated
-					:title="title"
-					:type="category"
-				/>
+				<v-container grid-list-lg>
+					<v-layout row wrap>
+						<v-flex sm12 md8>
+							<h3>{{ title }}</h3>
+							<h6>{{ formatDate(item.created_at) }}</h6>
+							<div v-html="compiledMarkdown" class="mardkdown" />
+							<SocialShare />
+							<ItemsRelated
+								:title="title"
+								:type="category"
+							/>
+						</v-flex>
+						<v-flex sm12 md4>
+							<ItemsFeatured
+								:title="title"
+								:type="category"
+							/>
+						</v-flex>
+					</v-layout>
+				</v-container>
 			</div>
 		</div>
 	</div>
@@ -29,6 +41,7 @@
 	import moment from 'moment';
 	import SocialShare from '@/components/SocialShare';
 	import ItemsRelated from '@/components/ItemsRelated';
+	import ItemsFeatured from '@/components/ItemsFeatured';
 	import Header from '@/views/pages/Articles/Header';
 	import News from '@/views/pages/Articles/News';
 	import Announcements from '@/views/pages/Articles/Announcements';
@@ -37,6 +50,7 @@
 		components: {
 			SocialShare,
 			ItemsRelated,
+			ItemsFeatured,
 			Header,
 			News,
 			Announcements

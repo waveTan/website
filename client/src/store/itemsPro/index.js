@@ -114,7 +114,7 @@ const actions = {
 
 		return state.fullItems[type][rootGetters['i18n/locale']][id];
 	},
-	async search({ state, commit, getters, rootGetters }, { type, searchQuery, page })
+	async search({ state, commit, getters, rootGetters }, { type, searchQuery, page, limit = null })
 	{
 		if(state.searchQuery !== searchQuery || page !== 1 || state.searchResultsLanguage !== rootGetters['i18n/locale'])
 		{
@@ -124,7 +124,7 @@ const actions = {
 			{
 				commit('TOGGLE_LOADING');
 
-				({ data } = await post(`${type}/search/`, { searchQuery }));
+				({ data } = await post(`${type}/search/`, { searchQuery, limit }));
 
 				commit('SET_SEARCH_TOTAL_APPS', data.count);
 				commit('SET_SEARCH_RESULTS', { locale: rootGetters['i18n/locale'], data: data.rows });
@@ -137,7 +137,7 @@ const actions = {
 			{
 				commit('TOGGLE_LOADING');
 
-				({ data } = await post(`${type}/search/${state.searchResults[state.searchResults.length - 1].id}`, { searchQuery }));
+				({ data } = await post(`${type}/search/${state.searchResults[state.searchResults.length - 1].id}`, { searchQuery, limit }));
 
 				commit('SET_SEARCH_RESULTS', { locale: rootGetters['i18n/locale'], data: [...state.searchResults, ...data.rows] });
 				commit('TOGGLE_LOADING');

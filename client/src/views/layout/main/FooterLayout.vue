@@ -26,6 +26,7 @@
 				<a href="https://steemit.com/@nuls" target="_blank"><img src="@/assets/images/icons/steemit.png" alt="Steemit"></a>
 				<a href="https://discord.gg/cUeafst" target="_blank"><img src="@/assets/images/icons/discord.png" alt="Discord"></a>
 				<a href="https://www.reddit.com/r/nulsservice/" target="_blank"><img src="@/assets/images/icons/reddit.png" alt="Reddit"></a>
+				<a href="https://medium.com/@nuls" target="_blank"><img src="@/assets/images/icons/medium.png" alt="Medium"></a>
 				<a href="https://github.com/nuls-io/" target="_blank"><img src="@/assets/images/icons/github.png" alt="Github"></a>
 				<a href="https://t.me/Nulsio" target="_blank"><img src="@/assets/images/icons/telegram.png" alt="Telegram"></a>
 			</div>
@@ -97,8 +98,9 @@
 									<h5><I18N id="footer.links.social.title" /></h5>
 
 									<ul>
-										<li><a href="https://t.me/Nulsio" target="_blank"><I18N id="footer.links.social.me" /></a></li>
+										<li><a href="https://t.me/Nulsio" target="_blank"><I18N id="footer.links.social.telegram" /></a></li>
 										<li><a href="https://github.com/nuls-io/" target="_blank"><I18N id="footer.links.social.github" /></a></li>
+										<li><a href="https://medium.com/@nuls" target="_blank"><I18N id="footer.links.social.medium" /></a></li>
 										<li><a href="https://www.reddit.com/r/nulsservice/" target="_blank"><I18N id="footer.links.social.reddit" /></a></li>
 										<li><a href="https://discord.gg/cUeafst" target="_blank"><I18N id="footer.links.social.discord" /></a></li>
 										<li><a href="https://steemit.com/@nuls" target="_blank"><I18N id="footer.links.social.steemit" /></a></li>

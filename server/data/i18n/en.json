@@ -66,8 +66,9 @@
       },
       "social": {
 		  "title": "Follow us",
-        "me": "Telegram",
+        "telegram": "Telegram",
         "github": "Github",
+				"medium": "Medium",
         "reddit": "Reddit",
         "discord": "Discord",
         "steemit": "Steemit",

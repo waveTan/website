@@ -88,7 +88,7 @@ const routeConfig = [
 		}
 	},
 	{
-		name: 'announcementItem',
+		name: 'announcementsItem',
 		path: '/announcements/:id/:title',
 		component: ArticlesItem,
 		props: {

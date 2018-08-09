@@ -35,13 +35,13 @@
 					]"
 					title="page.index.download.computer"
 				/>
-				<Button
-					colour="transparent"
-					textClass="white"
-					icon="arrow-right"
-				>
-					<I18N id="page.index.download.mobile"/>
-				</Button>
+				<!--<Button-->
+					<!--colour="transparent"-->
+					<!--textClass="white"-->
+					<!--icon="arrow-right"-->
+				<!--&gt;-->
+					<!--<I18N id="page.index.download.mobile"/>-->
+				<!--</Button>-->
 				<!--<Dropdown
 					:items="[
 						{ title: 'page.index.download.platforms.android' },
@@ -50,17 +50,17 @@
 					title="page.index.download.mobile"
 				/>-->
 
-				<Button
-					colour="transparent"
-					textClass="white"
-					icon="arrow-right"
-				>
-					<I18N id="page.index.download.platforms.web" />
-				</Button>
-				<div class="mobile images">
-					<div class="ipad" />
-					<div class="iphone" />
-				</div>
+				<!--<Button-->
+					<!--colour="transparent"-->
+					<!--textClass="white"-->
+					<!--icon="arrow-right"-->
+				<!--&gt;-->
+					<!--<I18N id="page.index.download.platforms.web" />-->
+				<!--</Button>-->
+				<!--<div class="mobile images">-->
+					<!--<div class="ipad" />-->
+					<!--<div class="iphone" />-->
+				<!--</div>-->
 			</div>
 		</div>
 		<Dialog v-if="dialog !== false" :open="dialog !== false">

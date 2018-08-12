@@ -14,7 +14,7 @@
 							<img :src="`${imageDirectory}${item.image}`"  >
 						</div>
 						<div class="content">
-							<h4>{{ item.title }} {{ item.title }} {{ item.title }}</h4>
+							<h4>{{ item.title }}</h4>
 							<!--<p class="center">{{ item.description }}</p>-->
 						</div>
 					</div>

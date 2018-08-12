@@ -11,7 +11,7 @@
 					<v-card-title primary-title>
 						<div class="item">
 							<div class="details">
-								<h2>{{ item.title }} {{ item.title }} {{ item.title }}</h2>
+								<h2>{{ item.title }}</h2>
 							</div>
 							<div class="date">
 								<p>{{ createdDate(item.created_at) }}</p>

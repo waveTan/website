@@ -1,15 +1,19 @@
 <template>
 	<div>
 		<HeaderMeta title="page.news.pageTitle" />
-		<ItemsPro itemType="news" sm12 @ellipsisUpdate="ellipsisUpdate">
+		<ItemsPro
+			itemType="news"
+			sm12
+			@ellipsisUpdate="ellipsisUpdate"
+		>
 			<template slot-scope="{ item, imageDirectory }">
 				<router-link :to="{ name: 'newsItem', params: { id: item.id, title: item.title } }">
 					<div class="item">
 						<div class="details">
-							<h2>{{ item.title }}</h2>
+							<h2>{{ item.title }} {{ item.title }} {{ item.title }}</h2>
 						</div>
 						<div class="image">
-							<img :src="`${imageDirectory}${item.image}`" height="200px" />
+							<img :src="`${imageDirectory}${item.image}`">
 						</div>
 					</div>
 				</router-link>
@@ -64,10 +68,39 @@
 
 	.container.newsItems .image img {
 		border-radius: 0 6px 6px 0;
+		height: 200px;
+		width: auto;
 	}
 
 	.container.newsItems h2 {
 		font-size: 36px;
-		line-height: 44px;
+		line-height: 40px;
+	}
+
+	@media screen and (max-width: 600px) {
+		.container.newsItems h2 {
+			font-size: 24px;
+			line-height: 26px;
+			padding: 10px;
+		}
+
+		.container.newsItems .item {
+			display: table;
+		}
+
+		.container.newsItems .details {
+			display: table-footer-group;
+			padding: 0;
+		}
+
+		.container.newsItems .image {
+			display: table-header-group;
+		}
+
+		.container.newsItems .image img {
+			border-radius: 6px 6px 0 0;
+			height: auto;
+			width: 100%;
+		}
 	}
 </style>

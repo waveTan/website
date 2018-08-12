@@ -117,6 +117,10 @@
 				return items.length !== 0 ? items : false;
 			}
 		},
+		updated()
+		{
+			this.$emit('ellipsisUpdate');
+		},
 		methods: {
 			async loadItems()
 			{

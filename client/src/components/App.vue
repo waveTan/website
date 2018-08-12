@@ -57,6 +57,10 @@
 			// {
 			// 	return this.$store.getters['app/pageLoading'];
 			// }
+		},
+		created()
+		{
+			require('@/assets/mailchimp-popup-embed.js');
 		}
 	};
 </script>

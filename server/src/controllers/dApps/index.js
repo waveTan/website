@@ -1,11 +1,10 @@
-const Database = require('@/models/Database');
 const I18N = require('@/models/I18N');
 
 let resultsLimit = 8; // This should be changed on the frontend too -> `\client\src\store\dApps\index.js::appsPerPage`
 
 const load = async (req, res) =>
 {
-	const db = new Database();
+	const { db } = req;
 	const { offsetId = 0 } = req.params;
 	const extra = {};
 	await db.init();
@@ -46,7 +45,7 @@ const load = async (req, res) =>
 
 const search = async (req, res) =>
 {
-	const db = new Database();
+	const { db } = req;
 	const { offsetId = 0 } = req.params;
 	const { searchQuery, limit } = req.body;
 	const extra = {};
@@ -97,7 +96,7 @@ const search = async (req, res) =>
 
 const item = async (req, res) =>
 {
-	const db = new Database();
+	const { db } = req;
 	const { id } = req.params;
 	await db.init();
 

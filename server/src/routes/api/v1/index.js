@@ -10,8 +10,21 @@ const contact = require('@/routes/api/v1/contact');
 const news = require('@/routes/api/v1/news');
 const blogs = require('@/routes/api/v1/blogs');
 const announcements = require('@/routes/api/v1/announcements');
+const Database = require('@/models/Database');
 
 const router = express.Router();
+
+router.use((req, res, next) =>
+{
+	req.db = new Database();
+
+	res.on('finish', () =>
+	{
+		req.db.end();
+	});
+
+	next();
+});
 
 router.use(cors());
 router.use('/i18n', i18n);

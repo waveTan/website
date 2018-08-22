@@ -1,9 +1,8 @@
-const Database = require('@/models/Database');
 const I18N = require('@/models/I18N');
 
 const getActive = async (req, res) =>
 {
-	const db = new Database();
+	const { db } = req;
 	await db.init();
 
 	const [rows] = await db.connection.execute(`

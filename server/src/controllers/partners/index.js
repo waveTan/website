@@ -1,8 +1,6 @@
-const Database = require('@/models/Database');
-
 const getEverything = async (req, res) =>
 {
-	const db = new Database();
+	const { db } = req;
 	await db.init();
 
 	const [rows] = await db.connection.execute(`

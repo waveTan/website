@@ -32,6 +32,14 @@ class Database
 			throw new Error(e.message);
 		}
 	}
+
+	end()
+	{
+		if(this.connection)
+		{
+			this.connection.end();
+		}
+	}
 }
 
 module.exports = Database;

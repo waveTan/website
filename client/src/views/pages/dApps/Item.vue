@@ -12,7 +12,7 @@
 		</div>
 		<div v-else>
 			<div class="container">
-				<div v-html="compiledMarkdown" class="mardkdown" />
+				<div v-html="compiledMarkdown" class="markdown" />
 			</div>
 		</div>
 	</div>
@@ -64,7 +64,11 @@
 </script>
 
 <style scoped>
-	.mardkdown >>> h1 {
+	.markdown >>> h1 {
 		color: #0a2140;
+	}
+
+	.markdown >>> img {
+		width: 100%;
 	}
 </style>

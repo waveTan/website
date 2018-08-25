@@ -16,7 +16,7 @@
 						<v-flex sm12 md8>
 							<h3>{{ title }}</h3>
 							<h6>{{ formatDate(item.created_at) }}</h6>
-							<div v-html="compiledMarkdown" class="mardkdown" />
+							<div v-html="compiledMarkdown" class="markdown" />
 							<SocialShare />
 							<ItemsRelated
 								:title="title"
@@ -109,8 +109,12 @@
 </script>
 
 <style scoped>
-	.mardkdown >>> h1 {
+	.markdown >>> h1 {
 		color: #0a2140;
+	}
+
+	.markdown >>> img {
+		width: 100%;
 	}
 
 	h3 {

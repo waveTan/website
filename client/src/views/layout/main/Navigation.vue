@@ -7,7 +7,20 @@
 				<div class="navigation">
 					<ul>
 						<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.home" /></router-link></li>
-						<li><router-link :to="{ name: 'wallet' }"><I18N id="header.navigation.wallet" /></router-link></li>
+						<!--<li><router-link :to="{ name: 'wallet' }"><I18N id="header.navigation.wallet" /></router-link></li>-->
+
+						<li>
+							<Dropdown
+								:useButton="false"
+								:items="[
+									{ title: 'header.navigation.wallet', link: 'wallet' },
+									{ title: 'header.navigation.webWallet', url: 'https://wallet.nuls.io/' }
+								]"
+								:arrow="whiteBackground ? '-black' : ''"
+								title="header.navigation.wallet"
+								class="dropdownPadding"
+							/>
+						</li>
 						<!--<li><router-link :to="{ name: 'dApps' }"><I18N id="header.navigation.dApps" /></router-link></li>-->
 						<!--<li><a href="#"><I18N id="header.navigation.documents" /></a></li>-->
 						<li><a href="http://explorer.nuls.io" target="_blank"><I18N id="header.navigation.blockchainExplorer" /></a></li>
@@ -35,7 +48,19 @@
 				<div class="navigation">
 					<ul>
 						<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.home" /></router-link></li>
-						<li><router-link :to="{ name: 'wallet' }"><I18N id="header.navigation.wallet" /></router-link></li>
+						<!--<li><router-link :to="{ name: 'wallet' }"><I18N id="header.navigation.wallet" /></router-link></li>-->
+						<li>
+							<Dropdown
+								:useButton="false"
+								:items="[
+									{ title: 'header.navigation.wallet', link: 'wallet' },
+									{ title: 'header.navigation.webWallet', url: 'https://wallet.nuls.io/' }
+								]"
+								:arrow="whiteBackground ? '-black' : ''"
+								title="header.navigation.wallet"
+								class="dropdownPadding"
+							/>
+						</li>
 						<li><a href="http://explorer.nuls.io"><I18N id="header.navigation.blockchainExplorer" /></a></li>
 						<li><a href="https://swap.nuls.io/swap.html" target="_blank"><I18N id="header.navigation.token" /></a></li>
 						<li>

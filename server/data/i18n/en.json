@@ -18,6 +18,7 @@
 		"navigation": {
 			"home": "Home",
 			"wallet": "Wallet",
+			"webWallet": "Web",
 			"dApps": "DApps",
 			"documents": "Documents",
 			"blockchainExplorer": "Blockchain Explorer",

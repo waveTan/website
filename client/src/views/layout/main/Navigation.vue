@@ -23,7 +23,7 @@
 						</li>
 						<!--<li><router-link :to="{ name: 'dApps' }"><I18N id="header.navigation.dApps" /></router-link></li>-->
 						<!--<li><a href="#"><I18N id="header.navigation.documents" /></a></li>-->
-						<li><a href="http://explorer.nuls.io" target="_blank"><I18N id="header.navigation.blockchainExplorer" /></a></li>
+						<li><a href="https://nulscan.io" target="_blank"><I18N id="header.navigation.blockchainExplorer" /></a></li>
 						<li><a href="https://swap.nuls.io/swap.html" target="_blank"><I18N id="header.navigation.token" /></a></li>
 						<li>
 							<Dropdown
@@ -61,7 +61,7 @@
 								class="dropdownPadding"
 							/>
 						</li>
-						<li><a href="http://explorer.nuls.io"><I18N id="header.navigation.blockchainExplorer" /></a></li>
+						<li><a href="https://nulscan.io"><I18N id="header.navigation.blockchainExplorer" /></a></li>
 						<li><a href="https://swap.nuls.io/swap.html" target="_blank"><I18N id="header.navigation.token" /></a></li>
 						<li>
 							<Dropdown
